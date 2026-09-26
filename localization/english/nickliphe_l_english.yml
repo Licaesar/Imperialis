@@ -1,0 +1,98 @@
+﻿l_english:
+  #nick_the_book_lover:0 "the Book-Lover"
+  #nick_the_book_lover_desc:1 "$nick_the_sage_desc$"
+
+  nick_omnissiah:0 "Omnissiah"
+  nick_omnissiah_desc:1 "Hail the Omnissiah! He is the master of mankind by the will of the gods. He is the savior, the promised Messiah, the Source of All Creation"
+
+  nick_kwisatzhaderach:0 "Kwisatz Haderach"
+  nick_kwisatzhaderach_desc:1 "Voice from the Outer World, the evangelist of Omnissiah himself, the one who preaches holy wisdom to the world"
+
+  nick_undomiel:0 "Undómiel"
+  nick_undomiel_desc:1 "The Evenstar, the most beautiful and wise woman ever created, carries the grace of the Omnissiah himself"
+  
+  nick_azorahai:0 "Azor Ahai"
+  nick_azorahai_desc:1 "Princeps quod promissum est, bellator in tenebris"
+  
+  # Lipheria Traditions
+  tradition_liphe_codes_name:0 "Lipheria Codes"
+  tradition_liphe_codes_desc:1 "The Code of Laws defined by the Omnissiah Himself in His revelation to the Codex Imperialis, which explains a model of ideal society."
+
+  tradition_liphe_chivalry_name:0 "Lipheria Chivalry"
+  tradition_liphe_chivalry_desc:1 "The inheritance of world travel marked Omnissiah, with the valorization of chivalry, honor, and glory."
+  
+  ##############################################
+  # IMPERIALIS NICKNAMES — VERSION B
+  ##############################################
+
+  nick_the_great_one:0 "Magnus Imperator"
+  nick_the_great_one_desc:0 "His deeds echo through the halls of the Celestial Throne — a living hymn to the Imperium’s eternity."
+
+  nick_the_other_fat_one:0 "Imperator Pinguis"
+  nick_the_other_fat_one_desc:0 "A ruler of excess, whose body mirrored the corpulence of an empire grown decadent."
+
+  nick_the_one_after_the_fat_one:0 "Succesor Carnis"
+  nick_the_one_after_the_fat_one_desc:0 "Forever remembered as the heir to fleshly failure — the shadow that followed gluttony."
+
+  nick_the_gay_one:0 "Aeternus Gaudium"
+  nick_the_gay_one_desc:0 "Bearer of unending joy — their laughter sang like a choir in the sanctum."
+
+  nick_the_small_one:0 "Imperator Parvus"
+  nick_the_small_one_desc:0 "Small in form but vast in faith, their command shook worlds through devotion alone."
+
+  nick_the_sharp_one:0 "Acumen Aeternum"
+  nick_the_sharp_one_desc:0 "Sharper than any blade, this mind danced with the precision of divine logic."
+
+  nick_the_bright_one:0 "Lux Vitae"
+  nick_the_bright_one_desc:0 "The Light of Life — whose intellect and radiance guided the lost through the void."
+
+  nick_the_strong_one:0 "Fortissimus"
+  nick_the_strong_one_desc:0 "The Unbent Arm of the Imperium — whose will struck harder than any hammer of Mars."
+
+  nick_the_pretty_one:0 "Pulchritudo Divina"
+  nick_the_pretty_one_desc:0 "Their beauty was a reflection of divine geometry — symmetry forged by holy design."
+
+  nick_the_nice_one:0 "Manus Clementis"
+  nick_the_nice_one_desc:0 "The Gentle Hand — bringing mercy where others brought fire."
+
+  nick_the_kind_one:0 "Pietas Maxima"
+  nick_the_kind_one_desc:0 "The embodiment of sacred compassion — a saint among sinners."
+
+  nick_the_quiet_one:0 "Silentium Aeternum"
+  nick_the_quiet_one_desc:0 "A silence deeper than prayer — their rule, a wordless devotion."
+
+  nick_the_fair_one:0 "Justitia Magna"
+  nick_the_fair_one_desc:0 "Their law was pure, their balance divine — the Imperium’s living scale."
+
+  nick_the_pure_one:0 "Immaculatus"
+  nick_the_pure_one_desc:0 "Purity beyond measure — untouched by warp or whisper."
+
+  nick_the_tranquil_one:0 "Pax Caelestis"
+  nick_the_tranquil_one_desc:0 "They ruled as the heavens do — serene, vast, and unbroken."
+
+  nick_the_funny_one:0 "Joculator Sanctus"
+  nick_the_funny_one_desc:0 "Holy jester of the Imperium — whose mirth masked divine wisdom."
+
+  nick_the_modest_one:0 "Humilis Servus"
+  nick_the_modest_one_desc:0 "Servant without pride — who wore humility as armor and faith as crown."
+
+  nick_the_meek_one:0 "Mansuetus"
+  nick_the_meek_one_desc:0 "The meek who inherited not the world, but its grace."
+
+  nick_the_bold_one:0 "Audax Dominus"
+  nick_the_bold_one_desc:0 "Fearless before gods or men — a living thunder of holy defiance."
+
+  nick_the_fierce_one:0 "Furor Divinus"
+  nick_the_fierce_one_desc:0 "A tempest of righteous fury — the storm given voice."
+
+  nick_the_magnanimous_one:0 "Magnanimitas"
+  nick_the_magnanimous_one_desc:0 "Grand of spirit and hand — generosity elevated to divine principle."
+
+  nick_the_moody_one:0 "Variabilis"
+  nick_the_moody_one_desc:0 "Their temper was the warp itself — calm one moment, consuming the next."
+
+  nick_the_staunch_one:0 "Fidelis Aeternum"
+  nick_the_staunch_one_desc:0 "Unyielding faith made flesh — the eternal sentinel of creed and crown."
+
+  nick_the_stalwart_one:0 "Constans Imperialis"
+  nick_the_stalwart_one_desc:0 "The Imperium’s living bastion — steadfast where all others fell."

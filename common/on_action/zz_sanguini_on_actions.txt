@@ -1,0 +1,29 @@
+﻿# Encadeia o nosso on_action personalizado sem sobrescrever o vanilla
+on_birth_child = {
+    on_actions = { sanguini_on_birth_child }
+}
+
+# Lógica sanguini executada quando um(a) filho(a) nasce
+# Observação: este on_action é chamado pelo bloco acima e herda os mesmos escopos
+# do on_birth_child vanilla (ex.: scope:child, scope:mother, scope:father, scope:real_father, etc.)
+sanguini_on_birth_child = {
+    effect = {
+        # Filho principal
+        if = {
+            limit = { exists = scope:child }
+            scope:child = { sanguini_inheritance_effect = yes }
+        }
+
+        # Gêmeos (quando o escopo direto existir)
+        if = {
+            limit = { exists = scope:child_2 }
+            scope:child_2 = { sanguini_inheritance_effect = yes }
+        }
+
+        # Trigêmeos (compatibilidade futura)
+        if = {
+            limit = { exists = scope:child_3 }
+            scope:child_3 = { sanguini_inheritance_effect = yes }
+        }
+    }
+}

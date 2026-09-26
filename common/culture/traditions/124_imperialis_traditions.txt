@@ -1,0 +1,83 @@
+﻿tradition_liphe_codes = {
+	category = regional
+
+	layers = {
+		0 = diplo
+		1 = mena
+		4 = jirga.dds
+	}
+	
+
+	can_pick = {
+		scope:character = {
+			has_religion = religion:imperialis_religion
+		}
+		
+	}
+
+	parameters = {
+		#number_of_spouses = 4
+		#number_of_consorts_hegemony = 20
+		#number_of_consorts_empire = 10
+		unlock_maa_horse_archers = yes
+		unlock_horse_pastures_building = yes
+		unlock_maa_cataphract = yes
+		unlock_maa_cataphract_archers = yes
+		expensive_convert_to_local_culture = yes
+		guardian_education_better_outcomes = yes
+		can_blind_prisoners = yes
+		can_castrate_prisoners = yes
+	}
+
+	character_modifier = {
+		monthly_learning_lifestyle_xp_gain_mult = 0.2
+		learning_per_piety_level = 1
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					trigger_if = {
+						limit = {
+							scope:character = {
+								is_ai = no
+							}
+						}
+						NAND = {
+							any_ruler = {
+								count >= 3
+								culture = prev
+								primary_title.tier >= tier_county
+								is_male = yes
+							}
+							any_ruler = {
+								count >= 3
+								culture = prev
+								primary_title.tier >= tier_county
+								is_female = yes
+							}
+						}
+					}
+					trigger_else = {
+						always = yes
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = three_gender_rulers_desc
+				}
+			}
+
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+
+	ai_will_do = { value = 200 }
+}
+

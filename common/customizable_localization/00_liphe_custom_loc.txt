@@ -1,0 +1,1687 @@
+﻿
+ToleranceValue = {
+	type = character
+
+	text = {
+		localization_key = tolerance_righteous
+
+		trigger = {
+			faith = {
+				faith_hostility_level = {
+					target = scope:second.faith
+					value = faith_fully_accepted_level
+				}
+			}
+		}
+	}
+	text = {
+		localization_key = tolerance_astray
+
+		trigger = {
+			faith = {
+				faith_hostility_level = {
+					target = scope:second.faith
+					value = faith_astray_level
+				}
+			}
+		}
+	}
+	text = {
+		localization_key = tolerance_sinister
+
+		trigger = {
+			faith = {
+				faith_hostility_level = {
+					target = scope:second.faith
+					value = faith_hostile_level
+				}
+			}
+		}
+	}
+	text = {
+		localization_key = tolerance_evil
+
+		trigger = {
+			faith = {
+				faith_hostility_level = {
+					target = scope:second.faith
+					value = faith_evil_level
+				}
+			}
+		}
+	}
+}
+
+ToleranceValueConcept = {
+	type = character
+
+	text = {
+		localization_key = FAITH_HOSTILITY_RIGHTEOUS
+
+		trigger = {
+			faith = {
+				faith_hostility_level = {
+					target = scope:second.faith
+					value = faith_fully_accepted_level
+				}
+			}
+		}
+	}
+	text = {
+		localization_key = FAITH_HOSTILITY_ASTRAY
+
+		trigger = {
+			faith = {
+				faith_hostility_level = {
+					target = scope:second.faith
+					value = faith_astray_level
+				}
+			}
+		}
+	}
+	text = {
+		localization_key = FAITH_HOSTILITY_HOSTILE
+
+		trigger = {
+			faith = {
+				faith_hostility_level = {
+					target = scope:second.faith
+					value = faith_hostile_level
+				}
+			}
+		}
+	}
+	text = {
+		localization_key = FAITH_HOSTILITY_EVIL
+
+		trigger = {
+			faith = {
+				faith_hostility_level = {
+					target = scope:second.faith
+					value = faith_evil_level
+				}
+			}
+		}
+	}
+}
+
+MyPriestTitle = {
+	type = character
+
+	text = {
+		trigger = {
+			exists = cp:councillor_court_chaplain
+			cp:councillor_court_chaplain = {
+				is_female = no
+			}
+		}
+		localization_key = male_priest_title
+	}
+	text = {
+		trigger = {
+			exists = cp:councillor_court_chaplain
+			cp:councillor_court_chaplain = {
+				is_female = yes
+			}
+		}
+		localization_key = female_priest_title
+	}
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = neuter_priest_title
+		fallback = yes
+	}
+}
+
+PriestTitle = {
+	type = character
+
+	text = {
+		trigger = { is_female = no }
+		localization_key = male_priest_title
+	}
+	text = {
+		trigger = { is_female = yes }
+		localization_key = female_priest_title
+	}
+	text = {
+		trigger = { always = no }
+		localization_key = neuter_priest_title
+		fallback = yes
+	}
+}
+
+# For use when refering to a priest of unspecified gender, or the concept of priests in general.
+DefaultPriestTitle = {
+	type = character
+
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = doctrine_clerical_gender_male_only
+					AND = {
+						has_doctrine = doctrine_clerical_gender_either
+						has_doctrine = doctrine_gender_male_dominated
+					}
+				}
+			}
+		}
+		localization_key = male_priest_title
+	}
+
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = doctrine_clerical_gender_female_only
+					AND = {
+						has_doctrine = doctrine_clerical_gender_either
+						has_doctrine = doctrine_gender_female_dominated
+					}
+				}
+			}
+		}
+		localization_key = female_priest_title
+	}
+
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = doctrine_clerical_gender_either
+				has_doctrine = doctrine_gender_equal
+			}
+		}
+		localization_key = neuter_priest_title
+		fallback = yes
+	}
+}
+
+DefaultPriestTitlePlural = {
+	type = character
+
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = doctrine_clerical_gender_male_only
+					AND = {
+						has_doctrine = doctrine_clerical_gender_either
+						has_doctrine = doctrine_gender_male_dominated
+					}
+				}
+			}
+		}
+		localization_key = male_priest_title_plural
+	}
+
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = doctrine_clerical_gender_female_only
+					AND = {
+						has_doctrine = doctrine_clerical_gender_either
+						has_doctrine = doctrine_gender_female_dominated
+					}
+				}
+			}
+		}
+		localization_key = female_priest_title_plural
+	}
+
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = doctrine_clerical_gender_either
+				has_doctrine = doctrine_gender_equal
+			}
+		}
+		localization_key = neuter_priest_title_plural
+		fallback = yes
+	}
+}
+
+# For use when refering to a priest of unspecified gender, or the concept of priests in general.
+DefaultPriestWomenMen = {
+	type = character
+
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = doctrine_clerical_gender_male_only
+					AND = {
+						has_doctrine = doctrine_clerical_gender_either
+						has_doctrine = doctrine_gender_male_dominated
+					}
+				}
+			}
+		}
+		localization_key = CHARACTER_MEN
+	}
+
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = doctrine_clerical_gender_female_only
+					AND = {
+						has_doctrine = doctrine_clerical_gender_either
+						has_doctrine = doctrine_gender_female_dominated
+					}
+				}
+			}
+		}
+		localization_key = CHARACTER_WOMEN
+	}
+
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = doctrine_clerical_gender_either
+				has_doctrine = doctrine_gender_equal
+			}
+		}
+		localization_key = CHARACTER_MEN
+		fallback = yes
+	}
+}
+
+DefaultBishopTitle = {
+	type = character
+
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = doctrine_clerical_gender_male_only
+					AND = {
+						has_doctrine = doctrine_clerical_gender_either
+						has_doctrine = doctrine_gender_male_dominated
+					}
+				}
+			}
+		}
+		localization_key = male_bishop_title
+	}
+
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = doctrine_clerical_gender_female_only
+					AND = {
+						has_doctrine = doctrine_clerical_gender_either
+						has_doctrine = doctrine_gender_female_dominated
+					}
+				}
+			}
+		}
+		localization_key = female_bishop_title
+	}
+
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = doctrine_clerical_gender_either
+				has_doctrine = doctrine_gender_equal
+			}
+		}
+		localization_key = neuter_bishop_title
+		fallback = yes
+	}
+}
+
+DefaultBishopTitlePlural = {
+	type = character
+
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = doctrine_clerical_gender_male_only
+					AND = {
+						has_doctrine = doctrine_clerical_gender_either
+						has_doctrine = doctrine_gender_male_dominated
+					}
+				}
+			}
+		}
+		localization_key = male_bishop_title_plural
+	}
+
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = doctrine_clerical_gender_female_only
+					AND = {
+						has_doctrine = doctrine_clerical_gender_either
+						has_doctrine = doctrine_gender_female_dominated
+					}
+				}
+			}
+		}
+		localization_key = female_bishop_title_plural
+	}
+
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = doctrine_clerical_gender_either
+				has_doctrine = doctrine_gender_equal
+			}
+		}
+		localization_key = neuter_bishop_title_plural
+		fallback = yes
+	}
+}
+
+#Returns Heathen for Pagans and Infidels for other Faiths.
+GetUnbelieverName = {
+	type = character
+
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = pagan_hostility_doctrine
+			}
+		}
+		localization_key = unbeliever_heathen
+	}
+	text = {
+		trigger = {
+			faith = {
+				NOT = { has_doctrine = pagan_hostility_doctrine }
+			}
+		}
+		localization_key = unbeliever_infidel
+	}
+}
+
+
+#Returns Heathens for Pagans and Infidels for other Faiths.
+GetUnbelieverNamePlural = {
+	type = character
+
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = pagan_hostility_doctrine
+			}
+		}
+		localization_key = unbeliever_heathen_plural
+	}
+	text = {
+		trigger = {
+			faith = {
+				NOT = { has_doctrine = pagan_hostility_doctrine }
+			}
+		}
+		localization_key = unbeliever_infidel_plural
+	}
+}
+
+GetUnbelieverTerm = {
+	type = character
+
+	text = {
+		trigger = {
+			is_infidel_trigger = { WHO = scope:second TARGET = root}
+		}
+		localization_key = unbeliever_infidel
+	}
+	text = {
+		trigger = {
+			is_heathen_trigger = { WHO = scope:second TARGET = root}
+		}
+		localization_key = unbeliever_heathen
+	}
+	text = {
+		trigger = {
+			is_heretic_trigger = { WHO = scope:second TARGET = root}
+		}
+		localization_key = unbeliever_heretic
+	}
+	text = {
+		trigger = { always = yes }
+		localization_key = unbeliever_unbeliever
+	}
+}
+
+GetUnbelieverTermPlural = {
+	type = character
+	parent = GetUnbelieverTerm
+	suffix = _plural
+}
+
+GetUnbelieverTermAdjective = {
+	type = character
+
+	text = {
+		trigger = {
+			is_infidel_trigger = { WHO = scope:second TARGET = root}
+		}
+		localization_key = unbeliever_infidel_adj
+	}
+	text = {
+		trigger = {
+			is_heathen_trigger = { WHO = scope:second TARGET = root}
+		}
+		localization_key = unbeliever_heathen_adj
+	}
+	text = {
+		trigger = {
+			is_heretic_trigger = { WHO = scope:second TARGET = root}
+		}
+		localization_key = unbeliever_heretic_adj
+	}
+	text = {
+		trigger = { always = yes }
+		localization_key = unbeliever_unbeliever_adj
+	}
+}
+
+GetUnbelieverAndForeignerTerm = {
+	type = character
+
+	text = {
+		trigger = {
+			is_infidel_trigger = { WHO = scope:second TARGET = root}
+			scope:second.culture != root.culture
+		}
+		localization_key = unbeliever_foreign_infidel
+	}
+	text = {
+		trigger = {
+			is_heathen_trigger = { WHO = scope:second TARGET = root}
+			scope:second.culture != root.culture
+		}
+		localization_key = unbeliever_foreign_heathen
+	}
+	text = {
+		trigger = {
+			is_heretic_trigger = { WHO = scope:second TARGET = root}
+			scope:second.culture != root.culture
+		}
+		localization_key = unbeliever_foreign_heretic
+	}
+	text = {
+		trigger = {
+			is_infidel_trigger = { WHO = scope:second TARGET = root}
+		}
+		localization_key = unbeliever_infidel
+	}
+	text = {
+		trigger = {
+			is_heathen_trigger = { WHO = scope:second TARGET = root}
+		}
+		localization_key = unbeliever_heathen
+	}
+	text = {
+		trigger = {
+			is_heretic_trigger = { WHO = scope:second TARGET = root}
+		}
+		localization_key = unbeliever_heretic
+	}
+	text = {
+		fallback = yes
+		localization_key = unbeliever_believer
+	}
+}
+
+#Intended to be used only for faith_creation.1001, and references scopes defined in that event.
+GetFaithCreationReaction = {
+	type = character
+
+	text = {
+		trigger = {
+			root = scope:second
+		}
+		localization_key = faith_creation.1001.o.personal
+	}
+	text = {
+		trigger = {
+			scope:second = {
+				faith = {
+					save_temporary_scope_as = reformed_faith
+				}
+			}
+			faith = {
+				religion = scope:reformed_faith.religion
+				faith_hostility_level = {
+					target = scope:reformed_faith
+					value > 1
+				}
+			}
+
+		}
+		localization_key = faith_creation.1001.o.heretical
+	}
+	text = {
+		trigger = {
+			scope:second = {
+				faith = {
+					save_temporary_scope_as = reformed_faith
+				}
+			}
+			scope:reformed_faith = {
+				OR = {
+					has_doctrine_parameter = great_holy_wars_active
+					has_doctrine_parameter = great_holy_wars_active_if_reformed
+				}
+				OR = {
+					has_doctrine_parameter = cannibalism_legal
+					has_doctrine_parameter = human_sacrifice_active
+				}
+			}
+			NOR = {
+				faith = {
+					has_doctrine_parameter = cannibalism_legal
+					has_doctrine_parameter = human_sacrifice_active
+				}
+			}
+		}
+		localization_key = faith_creation.1001.o.frightened
+	}
+	text = {
+		trigger = {
+			scope:second = {
+				faith = {
+					save_temporary_scope_as = reformed_faith
+				}
+			}
+			faith = {
+				OR = {
+					has_doctrine_parameter = great_holy_wars_active
+					AND = {
+						has_doctrine_parameter = great_holy_wars_active_if_reformed
+						NOT = { has_doctrine_parameter = unreformed }
+					}
+				}
+				faith_hostility_level = {
+					target = scope:reformed_faith
+					value > 1
+				}
+			}
+		}
+		localization_key = faith_creation.1001.o.crusader
+	}
+	text = {
+		trigger = {
+			scope:second = {
+				faith = {
+					save_temporary_scope_as = reformed_faith
+				}
+			}
+			faith = {
+				faith_hostility_level = {
+					target = scope:reformed_faith
+					value <= 1
+				}
+			}
+		}
+		localization_key = faith_creation.1001.o.interested
+	}
+	text = {
+		localization_key = faith_creation.1001.o.uninterested
+	}
+}
+
+GetAfterLifeDestination = {
+	type = character
+
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine_parameter = reincarnation_resistance_to_conversion
+			}
+		}
+		localization_key = character_afterlife_reincarnation
+	}
+
+	text = {
+		trigger = {
+			num_sinful_traits > num_virtuous_traits
+		}
+		localization_key = character_afterlife_negative
+	}
+
+	text = {
+		localization_key = character_afterlife_positive
+	}
+}
+
+# GetActualBishopTitlePossessive should be updated synchronously with this
+GetActualBishopTitle = {
+	type = character
+
+	# 'Early Out' keys for Head of Faith/Landed Rulers.
+	text = {
+		trigger = {
+			exists = faith.religious_head
+			this = faith.religious_head
+		}
+		localization_key = religious_head_name
+	}
+
+	#	text = { # No longer relevant now that we scope directly to the court owner
+	#		trigger = {
+	#			is_playable_character = yes
+	#		}
+	#		localization_key = ruler_title_name
+	#	}
+
+	# Religion-By-Religion Titles for Bishops based on Liege's Tier.
+
+	#Imperialis
+	text = {
+		trigger = {
+			OR = {
+				faith.religion = faith:imperialis.religion
+				faith.religion = faith:sororitas.religion
+				faith.religion = faith:omnissiah.religion
+				faith.religion = faith:homus.religion
+			}
+			is_female = no
+		}
+		localization_key = councillor_court_chaplain_imperialis_religion_kingdom
+	}
+	text = {
+		trigger = {
+			OR = {
+				faith.religion = faith:imperialis.religion
+				faith.religion = faith:sororitas.religion
+				faith.religion = faith:omnissiah.religion
+				faith.religion = faith:homus.religion
+			}
+			is_female = yes
+		}
+		localization_key = councillor_court_chaplain_imperialis_religion_kingdom_female
+	}
+	#Imperialis
+	
+
+	#Remembrant
+	text = {
+		trigger = {
+			faith.religion = faith:remembrant.religion
+			NOT = {
+				liege.dynasty = dynasty:dynn_canada_irving
+			}
+			NOT = {
+				liege.culture = { has_name_list = name_list_gaidheal }
+			}
+		}
+		localization_key = court_chaplain_remembrant_other
+	}
+
+	text = {
+		trigger = {
+			faith.religion = faith:remembrant.religion
+			liege.culture = { has_name_list = name_list_gaidheal }
+		}
+		localization_key = court_chaplain_remembrant_gaelic
+	}
+
+	text = {
+		trigger = {
+			faith.religion = faith:remembrant.religion
+			liege.dynasty = dynasty:dynn_canada_irving
+		}
+		localization_key = court_chaplain_remembrant_irving
+	}
+
+	#Americanist
+	text = {
+		trigger = {
+			religion = religion:americanist_religion
+		}
+		localization_key = court_chaplain_americanist
+	}
+
+	#Rastafari
+	text = {
+		trigger = {
+			religion = religion:rastafari_religion
+		}
+		localization_key = court_chaplain_rastafari
+	}
+
+	#Consumerist
+	text = {
+		trigger = {
+			faith.religion = faith:consumerist.religion
+		}
+		localization_key = court_chaplain_consumerist
+	}
+
+	#Lacustrine
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = doctrine_viking_virsin
+			}
+			
+		}
+		localization_key = court_chaplain_norse
+	}
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = doctrine_lakeshore_virsin
+			}
+		}
+		localization_key = court_chaplain_lakeshore
+	}
+	
+	#Industrial
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = special_doctrine_workers_of_the_world
+					this = faith:galvanist
+				}
+			}
+			
+		}
+		localization_key = realm_priest_galvanist
+	}
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = special_doctrine_cult_of_the_titans
+					this = faith:promethean
+				}
+			}
+			
+		}
+		localization_key = realm_priest_promethean
+	}
+	text = {
+		trigger = {
+			religion = religion:industrialist_religion
+			faith = {
+				NOR = {
+					has_doctrine = special_doctrine_workers_of_the_world
+					has_doctrine = special_doctrine_cult_of_the_titans
+					this = faith:galvanist
+					this = faith:promethean
+				}
+			}
+		}
+		localization_key = realm_priest_industrial
+	}
+	
+	#Jewish
+	text = {
+		trigger = {
+			religion = religion:judaism_religion
+		}
+		localization_key = realm_priest_jewish
+	}
+	
+	#Zetanology
+	text = {
+		trigger = {
+			faith = faith:zetanology
+		}
+		localization_key = realm_priest_zetanology
+	}
+	
+	#Tranquillism
+	text = {
+		trigger = {
+			faith = faith:tranquillism
+		}
+		localization_key = realm_priest_tranquillism
+	}
+	
+	#LDS
+	text = {
+		trigger = {
+			religion = religion:mormon_religion
+		}
+		localization_key = realm_priest_mormon
+	}
+	
+	#Court Pastor
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					this = faith:evangelical
+					this = faith:jesusfreak
+					this = faith:redemptionist
+					this = faith:river_baptist
+					this = faith:springsearcher
+				}
+			}
+		}
+		localization_key = realm_priest_evangelical
+	}
+	
+	#Vernacular
+	text = {
+		trigger = {
+			faith = faith:revelationist
+		}
+		localization_key = realm_priest_revelationist
+	}
+	
+	text = {
+		trigger = {
+			faith = faith:omenteller
+		}
+		localization_key = realm_priest_omenteller
+	}
+	
+	#Trailwalker
+	text = {
+		trigger = {
+			or = {
+			faith = faith:interranger
+			faith = faith:dustrider
+			faith = faith:midnight_sun
+			faith = faith:real_road
+			faith = faith:sagestepper
+			faith = faith:saguarorrinche } 
+		}
+		localization_key = realm_priest_trailwalker
+	}
+	
+	#Rivertracer
+	text = {
+		trigger = { faith = faith:rivertracer
+			
+		}
+		localization_key = rivertracer_priest
+	}
+
+	#Gnarlism
+	text = {
+		trigger = {
+			faith = faith:gnarlist
+			is_female = no
+		}
+		localization_key = realm_priest_male_gnarlist
+	}
+	text = {
+		trigger = {
+			faith = faith:gnarlist
+			is_female = yes
+		}
+		localization_key = realm_priest_female_gnarlist
+	}
+	
+	#Santeria
+	text = {
+		trigger = {
+			faith = faith:lucumi
+			is_female = no
+		}
+		localization_key = realm_priest_male_santeria
+	}
+	text = {
+		trigger = {
+			faith = faith:lucumi
+			is_female = yes
+		}
+		localization_key = realm_priest_female_santeria
+	}
+	
+	#Palo
+	text = {
+		trigger = {
+			faith = faith:palo
+			is_female = no
+		}
+		localization_key = realm_priest_male_palo
+	}
+	text = {
+		trigger = {
+			faith = faith:palo
+			is_female = yes
+		}
+		localization_key = realm_priest_female_palo
+	}
+	
+	#Vodou
+	text = {
+		trigger = {
+			faith = faith:vodou
+			is_female = no
+		}
+		localization_key = realm_priest_male_vodou
+	}
+	text = {
+		trigger = {
+			faith = faith:vodou
+			is_female = yes
+		}
+		localization_key = realm_priest_female_vodou
+	}
+	
+	#Voodoo
+	text = {
+		trigger = {
+			faith = faith:voodoo
+			is_female = no
+		}
+		localization_key = realm_priest_male_voodoo
+	}
+	text = {
+		trigger = {
+			faith = faith:voodoo
+			is_female = yes
+		}
+		localization_key = realm_priest_female_voodoo
+	}
+	
+	#Candomble + Tambor de Mina
+	text = {
+		trigger = {
+			OR = {
+				faith = faith:candomble
+				faith = faith:tambor_de_mina
+			}
+			is_female = no
+		}
+		localization_key = realm_priest_male_candomble_tambor
+	}
+	text = {
+		trigger = {
+			OR = {
+				faith = faith:candomble
+				faith = faith:tambor_de_mina
+			}
+			is_female = yes
+		}
+		localization_key = realm_priest_female_candomble_tambor
+	}
+	
+	#Rezadeiros
+	text = {
+		trigger = {
+			religion = religion:rezadeiros_religion
+			is_female = no
+		}
+		localization_key = court_chaplain_rezadeiro
+	}
+	text = {
+		trigger = {
+			religion = religion:rezadeiros_religion
+			is_female = yes
+		}
+		localization_key = court_chaplain_rezadeiro_female
+	}
+	
+	#Spiritist
+	text = {
+		trigger = {
+			religion = religion:spiritualist_religion
+			NOT = {
+				faith = faith:transcendentalist
+			}
+		}
+		localization_key = court_chaplain_espiritist
+	}
+	text = {
+		trigger = {
+			faith = faith:transcendentalist
+		}
+		localization_key = court_chaplain_transcendentalist
+	}
+	
+	#Head Dryad
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					this = faith:gaian
+					this = faith:holocenian
+					this = faith:revengeant
+				}
+			}
+		}
+		localization_key = councillor_court_chaplain_dryad
+	}
+	
+	#Modernists
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = special_doctrine_worship_of_the_past
+					this = faith:macunaism
+				}
+			}
+		}
+		localization_key = court_chaplain_modernist_historian
+	}
+	
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = special_doctrine_quest_for_the_future
+					this = faith:anthropophagic
+				}
+			}
+		}
+		localization_key = court_chaplain_modernist_author
+	}
+	
+	#Fallback
+	text = {
+		trigger = { 
+			highest_held_title_tier >= tier_empire 
+			NOT = { # Required formatting to include male/female check as well as vacancy
+				cp:councillor_court_chaplain ?= {
+					is_female = yes
+				}
+			}
+		}
+		localization_key = councillor_court_chaplain_theocrat_empire
+	}
+	text = {
+		trigger = { 
+			highest_held_title_tier >= tier_empire 
+			NOT = { # Required formatting to include male/female check as well as vacancy
+				cp:councillor_court_chaplain ?= {
+					is_female = no
+				}
+			}
+		}
+		localization_key = councillor_court_chaplain_theocrat_empire_female
+	}
+	text = {
+		trigger = { highest_held_title_tier >= tier_kingdom }
+		localization_key = councillor_court_chaplain_theocrat_kingdom
+	}
+	text = {
+		trigger = { highest_held_title_tier >= tier_duchy }
+		localization_key = councillor_court_chaplain_theocrat_duchy
+	}
+	text = {
+		trigger = { highest_held_title_tier < tier_duchy }
+		localization_key = councillor_court_chaplain_theocrat_county
+	}
+}
+
+# GetActualBishopTitle should be updated synchronously with this
+GetActualBishopTitlePossessive = {
+	type = character
+
+	# Religion-By-Religion Titles for Bishops based on Liege's Tier.
+
+	#Imperialis
+	text = {
+		trigger = {
+			OR = {
+				faith.religion = faith:imperialis.religion
+				faith.religion = faith:sororitas.religion
+				faith.religion = faith:omnissiah.religion
+				faith.religion = faith:homus.religion
+			}
+			is_female = no
+		}
+		localization_key = councillor_court_chaplain_imperialis_religion_kingdom_possessive
+	}
+	text = {
+		trigger = {
+			OR = {
+				faith.religion = faith:imperialis.religion
+				faith.religion = faith:sororitas.religion
+				faith.religion = faith:omnissiah.religion
+				faith.religion = faith:homus.religion
+			}
+			is_female = yes
+		}
+		localization_key = councillor_court_chaplain_imperialis_religion_kingdom_female_possessive
+	}
+	#Imperialis
+
+	#Remembrant
+	text = {
+		trigger = {
+			faith.religion = faith:remembrant.religion
+			NOT = {
+				liege.dynasty = dynasty:dynn_canada_irving
+			}
+			NOT = {
+				liege.culture = { has_name_list = name_list_gaidheal }
+			}
+		}
+		localization_key = court_chaplain_remembrant_other_possessive
+	}
+
+	text = {
+		trigger = {
+			faith.religion = faith:remembrant.religion
+			liege.culture = { has_name_list = name_list_gaidheal }
+		}
+		localization_key = court_chaplain_remembrant_gaelic_possessive
+	}
+
+	text = {
+		trigger = {
+			faith.religion = faith:remembrant.religion
+			liege.dynasty = dynasty:dynn_canada_irving
+		}
+		localization_key = court_chaplain_remembrant_irving_possessive
+	}
+
+	#Americanist
+	text = {
+		trigger = {
+			religion = religion:americanist_religion
+		}
+		localization_key = court_chaplain_americanist_possessive
+	}
+
+	#Rastafari
+	text = {
+		trigger = {
+			religion = religion:rastafari_religion
+		}
+		localization_key = court_chaplain_rastafari_possessive
+	}
+
+	#Consumerist
+	text = {
+		trigger = {
+			faith.religion = faith:consumerist.religion
+		}
+		localization_key = court_chaplain_consumerist_possessive
+	}
+
+	#Lacustrine
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = doctrine_viking_virsin
+			}
+			
+		}
+		localization_key = court_chaplain_norse_possessive
+	}
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = doctrine_lakeshore_virsin
+			}
+		}
+		localization_key = court_chaplain_lakeshore_possessive
+	}
+	
+	#Industrial
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = special_doctrine_workers_of_the_world
+					this = faith:galvanist
+				}
+			}
+			
+		}
+		localization_key = realm_priest_galvanist_possessive
+	}
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = special_doctrine_cult_of_the_titans
+					this = faith:promethean
+				}
+			}
+			
+		}
+		localization_key = realm_priest_promethean_possessive
+	}
+	text = {
+		trigger = {
+			religion = religion:industrialist_religion
+			faith = {
+				NOR = {
+					has_doctrine = special_doctrine_workers_of_the_world
+					this = faith:galvanist
+					this = faith:promethean
+				}
+			}
+		}
+		localization_key = realm_priest_industrial_possessive
+	}
+	#Jewish
+	text = {
+		trigger = {
+			religion = religion:judaism_religion
+		}
+		localization_key = realm_priest_jewish_possessive
+	}
+	
+	#Zetanology
+	text = {
+		trigger = {
+			faith = faith:zetanology
+		}
+		localization_key = realm_priest_zetanology_possessive
+	}
+	
+	#Tranquillism
+	text = {
+		trigger = {
+			faith = faith:tranquillism
+		}
+		localization_key = realm_priest_tranquillism_possessive
+	}
+	
+	#LDS
+	text = {
+		trigger = {
+			religion = religion:mormon_religion
+		}
+		localization_key = realm_priest_mormon_possessive
+	}
+	
+	#Court Pastor
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					this = faith:evangelical
+					this = faith:jesusfreak
+					this = faith:redemptionist
+					this = faith:river_baptist
+					this = faith:springsearcher
+				}
+			}
+		}
+		localization_key = realm_priest_evangelical_possessive
+	}
+	
+	#Vernacular
+	text = {
+		trigger = {
+			faith = faith:revelationist
+		}
+		localization_key = realm_priest_revelationist_possessive
+	}
+	
+	text = {
+		trigger = {
+			faith = faith:omenteller
+		}
+		localization_key = realm_priest_omenteller_possessive
+	}
+	
+	#Trailwalker
+	text = {
+		trigger = {
+			or = {
+			faith = faith:interranger
+			faith = faith:dustrider
+			faith = faith:midnight_sun
+			faith = faith:real_road
+			faith = faith:sagestepper
+			faith = faith:saguarorrinche } 
+		}
+		localization_key = realm_priest_trailwalker_possessive
+	}
+	
+	#Rivertracer
+	text = {
+		trigger = { faith = faith:rivertracer
+			
+		}
+		localization_key = rivertracer_priest
+	}
+	
+	#Gnarlism
+	text = {
+		trigger = {
+			faith = faith:gnarlist
+			is_female = no
+		}
+		localization_key = realm_priest_male_gnarlist_possessive
+	}
+	text = {
+		trigger = {
+			faith = faith:gnarlist
+			is_female = yes
+		}
+		localization_key = realm_priest_female_gnarlist_possessive
+	}
+	
+	#Santeria
+	text = {
+		trigger = {
+			faith = faith:lucumi
+			is_female = no
+		}
+		localization_key = realm_priest_male_santeria_possessive
+	}
+	text = {
+		trigger = {
+			faith = faith:lucumi
+			is_female = yes
+		}
+		localization_key = realm_priest_female_santeria_possessive
+	}
+	
+	#Palo
+	text = {
+		trigger = {
+			faith = faith:palo
+			is_female = no
+		}
+		localization_key = realm_priest_male_palo_possessive
+	}
+	text = {
+		trigger = {
+			faith = faith:palo
+			is_female = yes
+		}
+		localization_key = realm_priest_female_palo_possessive
+	}
+	
+	#Vodou
+	text = {
+		trigger = {
+			faith = faith:vodou
+			is_female = no
+		}
+		localization_key = realm_priest_male_vodou_possessive
+	}
+	text = {
+		trigger = {
+			faith = faith:vodou
+			is_female = yes
+		}
+		localization_key = realm_priest_female_vodou_possessive
+	}
+	
+	#Voodoo
+	text = {
+		trigger = {
+			faith = faith:voodoo
+			is_female = no
+		}
+		localization_key = realm_priest_male_voodoo_possessive
+	}
+	text = {
+		trigger = {
+			faith = faith:voodoo
+			is_female = yes
+		}
+		localization_key = realm_priest_female_voodoo_possessive
+	}
+	
+	#Candomble + Tambor de Mina
+	text = {
+		trigger = {
+			OR = {
+				faith = faith:candomble
+				faith = faith:tambor_de_mina
+			}
+			is_female = no
+		}
+		localization_key = realm_priest_male_candomble_tambor_possessive
+	}
+	text = {
+		trigger = {
+			OR = {
+				faith = faith:candomble
+				faith = faith:tambor_de_mina
+			}
+			is_female = yes
+		}
+		localization_key = realm_priest_female_candomble_tambor_possessive
+	}
+	
+	#Rezadeiros
+	text = {
+		trigger = {
+			religion = religion:rezadeiros_religion
+			is_female = no
+		}
+		localization_key = court_chaplain_rezadeiro_possessive
+	}
+	text = {
+		trigger = {
+			religion = religion:rezadeiros_religion
+			is_female = yes
+		}
+		localization_key = court_chaplain_rezadeiro_female_possessive
+	}
+	
+	#Spiritist
+	text = {
+		trigger = {
+			religion = religion:spiritualist_religion
+		}
+		localization_key = court_chaplain_espiritist_possessive
+	}
+	
+	text = {
+		trigger = {
+			faith = faith:transcendentalist
+		}
+		localization_key = court_chaplain_transcendentalist_possessive
+	}
+	
+	#Head Dryad
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					this = faith:gaian
+					this = faith:holocenian
+					this = faith:revengeant
+				}
+			}
+		}
+		localization_key = councillor_court_chaplain_dryad_possessive
+	}
+	
+	#Modernists
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = special_doctrine_worship_of_the_past
+					this = faith:macunaism
+				}
+			}
+		}
+		localization_key = court_chaplain_modernist_historian_possessive
+	}
+	
+	text = {
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = special_doctrine_quest_for_the_future
+					this = faith:anthropophagic
+				}
+			}
+		}
+		localization_key = court_chaplain_modernist_author_possessive
+	}
+
+	#Fallback
+	text = {
+		trigger = { 
+			highest_held_title_tier >= tier_empire 
+			NOT = { # Required formatting to include male/female check as well as vacancy
+				cp:councillor_court_chaplain ?= {
+					is_female = yes
+				}
+			}
+		}
+		localization_key = councillor_court_chaplain_theocrat_empire_possessive
+	}
+	text = {
+		trigger = { 
+			highest_held_title_tier >= tier_empire 
+			NOT = { # Required formatting to include male/female check as well as vacancy
+				cp:councillor_court_chaplain ?= {
+					is_female = no
+				}
+			}
+		}
+		localization_key = councillor_court_chaplain_theocrat_empire_female_possessive
+	}
+	text = {
+		trigger = { highest_held_title_tier >= tier_kingdom }
+		localization_key = councillor_court_chaplain_theocrat_kingdom_possessive
+	}
+	text = {
+		trigger = { highest_held_title_tier >= tier_duchy }
+		localization_key = councillor_court_chaplain_theocrat_duchy_possessive
+	}
+	text = {
+		trigger = { highest_held_title_tier < tier_duchy }
+		localization_key = councillor_court_chaplain_theocrat_county_possessive
+	}
+}
+
+GetBirthOmen = {
+	type = character
+	random_valid = yes
+
+	text = {
+		localization_key = birth_omen_caul
+	}
+	text = {
+		localization_key = birth_omen_finger
+	}
+	text = {
+		localization_key = birth_omen_birthmark	
+	}
+}
+
+GetTaltosTerm = {
+	type = character
+
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = chosen_one_fallback
+		fallback = yes
+	}
+}
+
+GetReligiousRite = {
+	type = character
+
+	text = {
+		localization_key = rite_mass
+		trigger = {
+			faith = { 
+				OR = { 
+					religion_tag = catholic_religion
+					#religion_tag = protestant_religion
+					#religion_tag = mormon_religion
+					#religion_tag = eastern_christian_religion
+				}
+			}
+		 }
+	}
+	text = {
+		localization_key = rite_prayer
+		trigger = {
+			faith = {
+				OR = {
+					religion = religion:islam_religion
+					religion = religion:judaism_religion
+				}
+			}
+		}
+	}
+
+
+
+	text = {
+		trigger = {
+			always = no
+		}
+		fallback = yes
+		localization_key = rite_worship
+	}
+}
+
+# Doctrine Parameters
+#GetRiteEcumenismFullOrEmpty = {
+#	type = character
+#
+#	text = {
+#		trigger = {
+#			faith = { has_doctrine = special_doctrine_ecumenical_christian }
+#		}
+#		localization_key = GetRiteEcumenismFullOrEmpty_full
+#	}
+#	text = {
+#		trigger = {
+#			NOT = {
+#				faith = { has_doctrine = special_doctrine_ecumenical_christian }
+#			}
+#		}
+#		localization_key = GetRiteEcumenismFullOrEmpty_empty
+#	}
+#}
+
+# Does the character's faith have Armed Pilgrimages or Struggle & Submission?
+ghw_from_which_tenet = {
+	type = character
+
+	text = {
+		trigger = {
+			faith = { has_doctrine = tenet_armed_pilgrimages }
+		}
+		localization_key = ghw_from_which_tenet_armed_pilgrimages
+	}
+
+	text = {
+		trigger = {
+			faith = { has_doctrine = tenet_struggle_submission }
+		}
+		localization_key = ghw_from_which_tenet_struggle_submission
+	}
+
+	text = {
+		trigger = {
+			faith = { has_doctrine = tenet_warmonger }
+		}
+		localization_key = ghw_from_which_tenet_warmonger
+	}
+}
+
+# Which institutions would be exempt from tax in this faith?
+GetFaithTaxExemptInstitution = {
+	type = character
+
+	# Theocratic clergy faiths exempt the Church.
+	text = {
+		trigger = {
+			faith = { has_doctrine_parameter = theocracy_temple_lease }
+		}
+		localization_key = faithtaxexemption_the_church
+	}
+
+	# Lay clergy faiths exempt charities.
+	text = {
+		trigger = {
+			faith = { has_doctrine_parameter = lay_clergy }
+		}
+		fallback = yes
+		localization_key = faithtaxexemption_charities
+	}
+}

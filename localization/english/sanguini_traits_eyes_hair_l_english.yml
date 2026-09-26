@@ -1,0 +1,28 @@
+﻿l_english:
+  ##############################################
+  # DIVINUS SANGUINIUS TRAITS — IMPERIAL BLOODLINE
+  ##############################################
+
+  trait_sanguini_1:0 "Sanguinius"
+  trait_sanguini_1_desc:0 "A trace of the Omnissiah essence flows within their veins — a faint glimmer of divinity amidst mortal flesh."
+  trait_sanguini_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] bears a distant spark of the Blood of the Omnissiah."
+
+  trait_sanguini_2:0 "Nobilis Sanguinius"
+  trait_sanguini_2_desc:0 "Their eyes gleam faintly with violet light and silver strands touch their hair — the mark of a true descendant of the Omnissiah."
+  trait_sanguini_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] carries the blessed Bloodline of the Omnissiah, purer than most."
+ 
+  trait_sanguini_3:0 "Purus Sanguinius"
+  trait_sanguini_3_desc:0 "Their eyes burn with a distinct violet radiance, and silver hair frames their face. The divine blood of the Omnissiah is clear and potent in their veins."
+  trait_sanguini_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] bears the pure blood of the Omnissiah, marking them as a magnificent instrument of the divine."
+
+  trait_sanguini_4:0 "Sacro Sanguinius"
+  trait_sanguini_4_desc:0 "Shining silver hair and deep violet eyes that glow with inner power reveal them to be an exalted vessel of the Omnissiah, elevated far above common mortals."
+  trait_sanguini_4_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] carries the highly refined and noble bloodline of the Omnissiah, radiating intellect and peerless physical grace."
+
+  trait_sanguini_5:0 "Divinus Sanguinius"
+  trait_sanguini_5_desc:0 "A living avatar of the Omnissiah. Shrouded in a halo of divine authority, with eyes of blinding violet light and hair of pure lustrous silver, their perfection is absolute."
+  trait_sanguini_5_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a transcendent avatar of the Omnissiah, carrying the ultimate perfection of the divine bloodline."
+
+  trait_apostolus:0 "Apostolus"
+  trait_apostolus_desc:0 "Ego sum servus Omnissiah, is sum qui in missionem mittitur. Per me, voluntas Omnissiah implebitur, et mundus eius perfectionem cognoscet."
+  trait_apostolus_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] bears the sacred blood of the Omnissiah Apostolus, chosen to carry forth the divine mission and enact the will of the Omnissiah."

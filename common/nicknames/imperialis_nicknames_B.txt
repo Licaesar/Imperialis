@@ -1,0 +1,34 @@
+﻿##############################################
+# CHARACTER NICKNAMES
+##############################################
+nick_omnissiah = {}
+nick_kwisatzhaderach = {}
+nick_undomiel = {}
+nick_azorahai = {}
+##############################################
+# IMPERIALIS NICKNAMES — VERSION B
+##############################################
+nick_the_great_one = {}
+nick_the_other_fat_one = {}
+nick_the_one_after_the_fat_one = {}
+nick_the_gay_one = {}
+nick_the_small_one = {}
+nick_the_sharp_one = {}
+nick_the_bright_one = {}
+nick_the_strong_one = {}
+nick_the_pretty_one = {}
+nick_the_nice_one = {}
+nick_the_kind_one = {}
+nick_the_quiet_one = {}
+nick_the_fair_one = {}
+nick_the_pure_one = {}
+nick_the_tranquil_one = {}
+nick_the_funny_one = {}
+nick_the_modest_one = {}
+nick_the_meek_one = {}
+nick_the_bold_one = {}
+nick_the_fierce_one = {}
+nick_the_magnanimous_one = {}
+nick_the_moody_one = {}
+nick_the_staunch_one = {}
+nick_the_stalwart_one = {}

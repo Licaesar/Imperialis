@@ -1,0 +1,106 @@
+﻿temple_authority_cult_imperialis_doctrine = {
+	icon = "temple_authority_cult_imperialis_doctrine" # Culto aos Liphes
+	piety_cost = {
+		value = faith_tenet_cost_mid
+	}
+	traits = {
+		virtues = {
+			sanguini_5
+			sanguini_4
+			education_learning_3
+			education_learning_4
+			education_learning_5
+			scholar
+			lifestyle_mystic
+		}
+	}
+	character_modifier = {
+		clergy_opinion = 5
+		church_holding_build_gold_cost = -0.1
+	}
+	parameters = {
+		other_culture_conversion_penalty_active = yes
+		invasion_cb_enabled = yes
+		tenet_esotericism_mystic_education = yes
+		fervor_per_holy_site = 2
+		take_vows_active = yes
+	}
+}
+
+temple_authority_cult_omnissiah_doctrine = { # Culto apenas ao Omnissiah
+	icon = "temple_authority_cult_omnissiah_doctrine" # Culto apenas ao Omnissiah
+	piety_cost = {
+		value = faith_tenet_cost_mid
+	}
+	traits = {
+		virtues = {
+			education_learning_3
+			education_learning_4
+			education_learning_5
+			scholar
+			lifestyle_mystic
+		}
+	}
+	character_modifier = {
+		artifact_decay_reduction_mult = -0.1
+	}
+	parameters = {
+		invasion_cb_enabled = yes
+		tenet_esotericism_mystic_education = yes
+		fervor_per_holy_site = 2
+		take_vows_active = yes
+	}
+}
+
+temple_authority_cult_sororitas_doctrine = { # Culto a Undomiel
+	icon = "temple_authority_cult_sororitas_doctrine"
+	piety_cost = {
+		value = faith_tenet_cost_mid
+	}
+	traits = {
+		virtues = {
+			sanguini_5
+			sanguini_4
+			education_learning_3
+			education_learning_4
+			education_learning_5
+			scholar
+			lifestyle_mystic
+		}
+	}
+	character_modifier = {
+		domain_tax_different_faith_mult = 0.2
+		levy_reinforcement_rate_same_faith = 0.25
+		levy_reinforcement_rate_different_faith = -0.25
+	}
+	parameters = {
+		other_culture_conversion_penalty_active = yes
+		tenet_esotericism_mystic_education = yes
+		take_vows_active = yes
+	}
+}
+temple_authority_cult_homus_doctrine = { # Multiculturalismo Liphe
+	icon = "temple_authority_cult_homus_doctrine"
+	piety_cost = {
+		value = faith_tenet_cost_mid
+	}
+	traits = {
+		virtues = {
+			education_learning_3
+			education_learning_4
+			education_learning_5
+			scholar
+			lifestyle_mystic
+		}
+	}
+	parameters = {
+		tenet_esotericism_mystic_education = yes
+		take_vows_active = yes
+	}
+	character_modifier = {
+		different_faith_opinion = 10
+		same_faith_opinion = 5
+		domain_tax_same_faith_mult = 0.05
+		levy_reinforcement_rate_same_faith = 0.1
+	}
+}

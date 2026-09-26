@@ -1,0 +1,3 @@
+﻿portrait_religious_imperialis_trigger = {
+	religion = religion:imperialis_religion
+}

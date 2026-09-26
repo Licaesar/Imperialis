@@ -1,0 +1,38 @@
+﻿namespace = regeneratio
+
+regeneratio.1 = {
+	type = character_event
+	title = regeneratio.1.t
+	desc = regeneratio.1.desc
+	theme = faith
+	picture = GFX_evt_religious_revelation
+
+	is_triggered_only = yes
+
+	immediate = {
+		death = { death_reason = death_ascended }
+	}
+
+	option = {
+		name = regeneratio.1.a
+		add_trait = saint
+
+		root.dynasty = {
+			add_dynasty_prestige = 1500
+		}
+
+		#hidden_effect = {
+		#	trigger_event = { id = regeneratio.2 days = 1 }
+		#}
+	}
+}
+
+#regeneratio.2 = {
+#	type = character_event
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	immediate = {
+#		death = { death_reason = death_ascended }
+#	}
+#}

@@ -1,0 +1,15 @@
+﻿l_english:
+
+#Imperator Tenets
+ temple_authority_cult_imperialis_doctrine_name:0 "Ordo Imperialis"
+ temple_authority_cult_imperialis_doctrine_desc:0 "Imperator vivit, Imperator regnat, Imperator al omni malo te defendat."
+
+ temple_authority_cult_omnissiah_doctrine_name:0 "Ordo Omnissiah"
+ temple_authority_cult_omnissiah_doctrine_desc:0 "Omnissiah est Mens Divina, Machina Vitae, et Verbum Creatoris."
+
+ temple_authority_cult_sororitas_doctrine_name:0 "Ordo Sororitas"
+ temple_authority_cult_sororitas_doctrine_desc:0 "Sanguinis purificat omnia; in flamma, fides renascitur."
+
+ temple_authority_cult_homus_doctrine_name:0 "Ordo Harmoniae"
+ temple_authority_cult_homus_doctrine_desc:0 "Silentium est oratio, pax est lux, Omnissiah est Equilibrium aeternum."
+

@@ -1,0 +1,146 @@
+﻿# Herança de traços Sanguini considerando pai biológico
+# Nota: pai biológico = scope:real_father se existir; caso contrário usa scope:father
+sanguini_inheritance_effect = {
+	# Recebe o recém-nascido como ROOT (ou scope:child)
+	hidden_effect = {
+		
+		# 1. Define o pai biológico para simplificar as comparações seguintes
+		if = {
+			limit = {
+				exists = scope:real_father
+			}
+			scope:real_father = {
+				save_scope_as = sanguini_father
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:father
+			}
+			scope:father = {
+				save_scope_as = sanguini_father
+			}
+		}
+
+		# 2. Limpa qualquer traço Sanguini existente no recém-nascido para evitar duplicatas
+		remove_trait = sanguini_1
+		remove_trait = sanguini_2
+		remove_trait = sanguini_3
+		remove_trait = sanguini_4
+		remove_trait = sanguini_5
+
+		# 3. LÓGICA DE HERANÇA EM CASCATA
+
+		# --- NÍVEL 5 ---
+		# Regra: Se AMBOS são nível 5 -> Herda nível 5
+		if = {
+			limit = {
+				scope:mother = { has_trait = sanguini_5 }
+				exists = scope:sanguini_father
+				scope:sanguini_father = { has_trait = sanguini_5 }
+			}
+			add_trait = sanguini_5
+		}
+		# Regra: Se apenas UM dos pais é nível 5 (e o outro é menor ou não-sanguini) -> Regride para nível 4
+		else_if = {
+			limit = {
+				OR = {
+					scope:mother = { has_trait = sanguini_5 }
+					AND = { exists = scope:sanguini_father scope:sanguini_father = { has_trait = sanguini_5 } }
+				}
+			}
+			add_trait = sanguini_4
+		}
+
+		# --- NÍVEL 4 ---
+		# Se o código chegou aqui, garantidamente NENHUM dos pais é nível 5.
+		# Regra: Se AMBOS são nível 4 -> Mantém nível 4
+		else_if = {
+			limit = {
+				scope:mother = { has_trait = sanguini_4 }
+				exists = scope:sanguini_father
+				scope:sanguini_father = { has_trait = sanguini_4 }
+			}
+			add_trait = sanguini_4
+		}
+		# Regra: Se apenas UM é nível 4 (e o outro é menor ou não-sanguini) -> Regride para nível 3
+		else_if = {
+			limit = {
+				OR = {
+					scope:mother = { has_trait = sanguini_4 }
+					AND = { exists = scope:sanguini_father scope:sanguini_father = { has_trait = sanguini_4 } }
+				}
+			}
+			add_trait = sanguini_3
+		}
+
+		# --- NÍVEL 3 ---
+		# Se chegou aqui, nenhum dos pais passa do nível 3.
+		# Regra: Se AMBOS são nível 3 -> Mantém nível 3
+		else_if = {
+			limit = {
+				scope:mother = { has_trait = sanguini_3 }
+				exists = scope:sanguini_father
+				scope:sanguini_father = { has_trait = sanguini_3 }
+			}
+			add_trait = sanguini_3
+		}
+		# Regra: Se apenas UM é nível 3 (e o outro é menor ou não-sanguini) -> Regride para nível 2
+		else_if = {
+			limit = {
+				OR = {
+					scope:mother = { has_trait = sanguini_3 }
+					AND = { exists = scope:sanguini_father scope:sanguini_father = { has_trait = sanguini_3 } }
+				}
+			}
+			add_trait = sanguini_2
+		}
+
+		# --- NÍVEL 2 ---
+		# Se chegou aqui, nenhum dos pais passa do nível 2.
+		# Regra: Se AMBOS são nível 2 -> Mantém nível 2
+		else_if = {
+			limit = {
+				scope:mother = { has_trait = sanguini_2 }
+				exists = scope:sanguini_father
+				scope:sanguini_father = { has_trait = sanguini_2 }
+			}
+			add_trait = sanguini_2
+		}
+		# Regra: Se apenas UM é nível 2 (e o outro é 1 ou não-sanguini) -> Regride para nível 1
+		else_if = {
+			limit = {
+				OR = {
+					scope:mother = { has_trait = sanguini_2 }
+					AND = { exists = scope:sanguini_father scope:sanguini_father = { has_trait = sanguini_2 } }
+				}
+			}
+			add_trait = sanguini_1
+		}
+
+		# --- NÍVEL 1 ---
+		# Se chegou aqui, o maior nível presente entre os pais é o 1.
+		# Regra: Se AMBOS são nível 1 -> Mantém nível 1
+		else_if = {
+			limit = {
+				scope:mother = { has_trait = sanguini_1 }
+				exists = scope:sanguini_father
+				scope:sanguini_father = { has_trait = sanguini_1 }
+			}
+			add_trait = sanguini_1
+		}
+		# Regra final: Se apenas UM é nível 1 (e o outro é não-sanguini) -> 40% de chance de herdar o nível 1
+		else_if = {
+			limit = {
+				OR = {
+					scope:mother = { has_trait = sanguini_1 }
+					AND = { exists = scope:sanguini_father scope:sanguini_father = { has_trait = sanguini_1 } }
+				}
+			}
+			random = {
+				chance = 40
+				add_trait = sanguini_1
+			}
+		}
+	}
+}

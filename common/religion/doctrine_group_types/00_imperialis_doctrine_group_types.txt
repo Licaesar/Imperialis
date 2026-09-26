@@ -1,0 +1,14 @@
+﻿doctrine_imperialis_branches = {
+	category = "main_group"
+
+	is_available_on_create = {
+		religion_tag = imperialis_religion
+	}
+
+	doctrine_types = {
+		temple_authority_cult_imperialis_doctrine
+		temple_authority_cult_omnissiah_doctrine
+		temple_authority_cult_sororitas_doctrine
+		temple_authority_cult_homus_doctrine
+	}
+}

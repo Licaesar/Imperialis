@@ -1,0 +1,171 @@
+﻿l_english:
+
+ imperialis_religion:0 "Imperialis"
+ imperialis_religion_adj:0 "Imperialis"
+ 
+ sororitas_religion:0 "Cult Undomiel"
+ sororitas_religion_adj:0 "Sororita"
+ 
+ omnissiah_religion:0 "Cult Omnissiah"
+ omnissiah_religion_adj:0 "Omnissiae"
+ 
+ homus_religion:0 "Cult Harmoniae"
+ homus_religion_adj:0 "Harmoniae"
+
+ #Sol Invictus - god
+ imperialis_religion_high_god_name:0 "Omnissiah"
+ imperialis_religion_high_god_name_possessive:0 "Omnissiah's"
+ imperialis_religion_high_god_name_alternate:0 "Deus Imperator"
+ imperialis_religion_high_god_name_alternate_possessive:0 "Deus Imperator's"
+
+ imperialis_religion_devil_name:0 "Daemon Princeps"
+ imperialis_religion_devil_name_possessive:0 "Daemon Princeps"
+ imperialis_religion_evil_god_infidel:0 "Infideles"
+ imperialis_religion_evil_god_prophetae:0 "Falsi Prophetae"
+
+#Outer GODS
+ imperialis_religion_creator_god_name:0 "Omnissiah"
+ imperialis_religion_creator_god_name_possessive:0 "Omnissiah's"
+ imperialis_religion_health_god_name:0 "Manus Omnissiah"
+ imperialis_religion_health_god_name_possessive:0 "Manus Omnissiah's"
+ imperialis_religion_fertility_god_name:0 "Mater Undómiel"
+ imperialis_religion_fertility_god_name_possessive:0 "Mater Undómiel's"
+ imperialis_religion_wealth_god_name:0 "Adeptus Ministorum"
+ imperialis_religion_wealth_god_name_possessive:0 "Adeptus Ministorum's"
+ imperialis_religion_household_god_name:0 "Divinus Sanguinius"
+ imperialis_religion_household_god_name_possessive:0 "Divinus Sanguinius"
+ imperialis_religion_fate_god_name:0 "Designum Magnum"
+ imperialis_religion_fate_god_name_possessive:0 "Designum Magnum's"
+ imperialis_religion_knowledge_god_name:0 "Divinus Sanguinius"
+ imperialis_religion_knowledge_god_name_possessive:0 "Divinus Sanguinius"
+ imperialis_religion_war_god_name:0 "Gloria Omnissiae"
+ imperialis_religion_war_god_name_possessive:0 "Gloria Omnissiae's"
+ imperialis_religion_trickster_god_name:0 "Kwisatz Haderach"
+ imperialis_religion_trickster_god_name_possessive:0 "Kwisatz Haderach's"
+ imperialis_religion_night_god_name:0 "Undómiel"
+ imperialis_religion_night_god_name_possessive:0 "Undómiel"
+ imperialis_religion_water_god_name:0 "Aqua Vitae"
+ imperialis_religion_water_god_name_possessive:0 "Aqua Vitae's"
+
+ imperialis_religion_death_deity_name:0 "Ascendit ad Divinitatem"
+ imperialis_religion_death_deity_name_possessive:0 "Ascendit ad Divinitatem's"
+
+ #Sol Invictus
+ holy_order_shields_of_sol:0 "Ordo Malleus"
+ holy_order_knights_of_caesar:0 "Ordo Sanguis Angelorum"
+ holy_order_knights_of_lux:0 "Ordo Angeli Tenebrosi"
+ holy_order_knights_of_sororita:0 "Ordo Adepta Sororitas"
+ holy_order_knights_of_omnissiah:0 "Ordo Omnissiah"
+ holy_order_knights_of_imperialis:0 "Ordo Legio Imperialis"
+ holy_order_knights_of_undomiel:0 "Ordo Undómiel"
+
+
+ sol_religious_symbol:0 "Signa Imperialis"
+ sol_religious_text:0 "Codex Imperialis"
+ imperialis_religion_divine_realm:0 "Aeternitas Paradisus"
+
+
+ imperialis:0 "Cult Imperialis"
+ imperialis_adj:0 "Imperialis"
+ imperialis_adherent:0 "Imperialis"
+ imperialis_adherent_plural:0 "Imperiales"
+ imperialis_desc:0 "There can only be one Divinus, one Imperator, one Savior. His holy bloodline is our only light in the dark; without the Sanguinis, our souls are but fodder for the ever-thirsty evils of the Daemon Princeps and his Falsi Prophetae. When mortals abandon their duty, they strip themselves of humanity, degenerating into something less than beasts. They have no place in the bosom of the Imperium, nor in the heart of the Omnissiah. Let the unworthy perish and be forever forgotten."
+ 
+ sororitas:0 "Cult Undomiel"
+ sororitas_adj:0 "Sororita"
+ sororitas_adherent:0 "Sororita"
+ sororitas_adherent_plural:0 "Sororitas"
+ sororitas_desc:0 "The Cult Undomiel is a sisterhood of unwavering zeal, devoted to the veneration of the Sanguinis and the martyrdom of the faithful. Fighting in the memory of the sacred Undómiel, who they venerate as a Goddess, they embody divine devotion through purity, sacrifice, and holy war against all who oppose them. Their chants echo across battlefields as hymns of flame and redemption, purging the unworthy in the Holy Mother’s name."
+ 
+ omnissiah:0 "Cult Omnissiah"
+ omnissiah_adj:0 "Omnissiacus"
+ omnissiah_adherent:0 "Omnissiae"
+ omnissiah_adherent_plural:0 "Omnissiaes"
+ omnissiah_desc:0 "The Cult Omnissiah venerates Kensoriel Liphe as the sole incarnation of the divine, the supreme God of Creation. Rejecting both the idolization of the Sanguinis and the authority of the Adeptus Ministorum, its adepts seek enlightenment strictly through understanding the sacred patterns that govern existence. To them, true faith is not inherited in blood or dictated by clerics, but earned through perfect knowledge of the Omnissiah’s grand design."
+
+ homus:0 "Cult Harmoniae"
+ homus_adj:0 "Harmonian"
+ homus_adherent:0 "Harmonian"
+ homus_adherent_plural:0 "Harmonians"
+ homus_desc:0 "Followers of the Cultus Harmoniae believe that the Omnissiah, Kensoriel Liphe, is not a distant ruler, but the eternal balance that binds all things. Rejecting the rigid dogma of the Ministorum and the worship of mortal bloodlines, they merge His word with the esoteric wisdom of ancient prophets. Through rigorous mental discipline, meditation, and mastery of the inner self, they seek profound unity between the divine and the mortal. To them, worldly conflict is but fleeting dissonance, and an unshakeable inner peace is the truest reflection of the Omnissiah’s perfection."
+
+ imperialis_religion_house_of_worship:0 "templum"
+ imperialis_religion_house_of_worship_plural:0 "templa"
+ 
+ #Title
+ k_sol_article:0 ""
+ k_sol:0 "Adeptus Ministorum"
+ 
+ #Adeptus Ministorum titulo
+ solis_man:0 "Patriarcha Oecumenicus"
+ solis_woman:0 "Abbatissa Sanctorum"
+ sol_religious_head_title:0 "Ecclesia Maximus"
+ sol_religious_head_title_name:0 "Imperialis Ecclesiar"
+ 
+  #Imperator Tenets
+ tenet_lipheric_name:0 "Ordo Lipherium"
+ tenet_lipheric_desc:0 "When the people forget their duty they are no longer Human and become something less than beasts. They have no place in the bosom of Humanity nor in the heart of the Omnissiah. Let them die and be forever forgotten."
+ 
+ 
+#DEVOTOS
+ imperialis_religion_devotee:0 "illuminatum"
+ imperialis_religion_devotee_plural:0 "illustratus"
+ imperialis_religion_devotee_male:0 "diaconu"
+ imperialis_religion_devotee_male_plural:0 "diaconus"
+ imperialis_religion_devotee_female:0 "sororita"
+ imperialis_religion_devotee_female_plural:0 "sororitas"
+ imperialis_religion_devotee_neuter:0 "missionarii"
+ imperialis_religion_devotee_neuter_plural:0 "missionarius"
+ 
+#TITULOS
+ imperialis_religion_priest_male:0 "ecclesiastes"
+ imperialis_religion_priest_male_plural:0 "ecclesiastis"
+ imperialis_religion_priest_female:0 "abbatissa"
+ imperialis_religion_priest_female_plural:0 "abbatissis"
+ imperialis_religion_priest_neuter:0 "archi-confessori"
+ imperialis_religion_priest_neuter_plural:0 "archi-confessoris"
+
+ #imperialis_religion_priest:0 "Ecclesiastes"
+ #imperialis_religion_priest_plural:0 "Ecclesiastes"
+ 
+ imperialis_religion_bishop_male:0 "episcopus"
+ imperialis_religion_bishop_male_plural:0 "episcopi"
+ imperialis_religion_bishop_female:0 "priorissa"
+ imperialis_religion_bishop_female_plural:0 "priorissae"
+ imperialis_religion_bishop_neuter:0 "episcopus"
+ imperialis_religion_bishop_neuter_plural:0 "episcopi"
+ 
+ #witchgodname_paganism_the_shadow:0 "Immaterium Regnum"
+ #witchgodname_paganism_the_shadow_possessive:0 "the Immaterium's"
+ imperialis_religion_witchgodname_immaterium:0 "Immaterium Regnum"
+ imperialis_religion_witchgodname_immaterium_possessive:0 "the Immaterium's"
+ 
+
+#titulos
+
+ councillor_court_chaplain_imperialis_religion_county:0 "Ecclesiastes"
+ councillor_court_chaplain_imperialis_religion_county_female:0 "Abbatissa"
+ councillor_court_chaplain_imperialis_religion_county_possessive:0 "Ecclesiastis"
+ councillor_court_chaplain_imperialis_religion_county_female_possessive:0 "Abbatissis"
+ councillor_court_chaplain_imperialis_religion_duchy:0 "Episcopus"
+ councillor_court_chaplain_imperialis_religion_duchy_possessive:0 "Episcopi"
+ councillor_court_chaplain_imperialis_religion_kingdom:0 "Ecclesiastes"
+ councillor_court_chaplain_imperialis_religion_kingdom_female:0 "Sororita"
+ councillor_court_chaplain_imperialis_religion_kingdom_possessive:0 "Ecclesiastis"
+ councillor_court_chaplain_imperialis_religion_kingdom_female_possessive:0 "Sororita's"
+ 
+ baron_theocracy_male_imperialis_religion:0 "Ecclesiastes"
+ baron_theocracy_female_imperialis_religion:0 "Abbatissa"
+ barony_theocracy_imperialis_religion:0 "Templum"
+ count_theocracy_male_imperialis_religion:0 "Archipresbyter"
+ count_theocracy_female_imperialis_religion:0 "Priorissa"
+ county_theocracy_imperialis_religion:0 "Ecclesia"
+ duke_theocracy_male_imperialis_religion:0 "Archi-Ecclesiastes"
+ duke_theocracy_female_imperialis_religion:0 "Archi-Priorissa"
+ duchy_theocracy_imperialis_religion:0 "Archi-Ecclesiar"
+ king_theocracy_male_imperialis_religion:0 "Pontifex"
+ king_theocracy_female_imperialis_religion:0 "Pontificessa"
+ kingdom_theocracy_imperialis_religion:0 "Pontificium"
+ emperor_theocracy_male_imperialis_religion:0 "Patriarcha"
+ emperor_theocracy_female_imperialis_religion:0 "Archi-Abbatissa"
+ empire_theocracy_imperialis_religion:0 "Ecclesiar Imperialis"

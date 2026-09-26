@@ -1,0 +1,38 @@
+﻿regeneratio_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+	desc = regeneratio_decision_desc
+
+	decision = realm
+	selection_tooltip = regeneratio_decision_tooltip
+	sort_order = 1000
+
+	is_shown = {
+		is_lowborn = no
+		is_landless_adventurer = no
+		has_trait = sanguini_5
+	}
+
+	is_valid = {
+		has_trait = sanguini_5
+		age >= 60
+		piety_level >= 5
+		prestige_level >= 5
+	}
+	is_valid_showing_failures_only = {
+		highest_held_title_tier >= 3 #Dukes and higher.
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		trigger_event = { id = regeneratio.1 }
+	}
+
+	ai_check_interval = 24
+	ai_will_do = {
+		base = 50
+	}
+
+}

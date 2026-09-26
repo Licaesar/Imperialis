@@ -1,0 +1,89 @@
+﻿headgear_imperialis_religious = {
+
+	usage = game
+	selection_behavior = weighted_random
+	priority = 3
+
+## Imperialis ##
+
+	religious_imperialis_high = { # # Imperialis Bishops and Priests
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = ate_headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = religious_orthodox_high
+				range = { 0 1 }
+			}
+		}
+		outfit_tags = { priest_outfit bishop_outfit }
+		weight = {
+			base = 0
+			modifier = {
+				add = 130
+				portrait_religious_high_trigger = yes
+				religion = religion:imperialis_religion
+			}
+		}
+	}
+
+	religious_imperialis_head = { # k_sol
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = ate_headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = religious_orthodox_head
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				portrait_religious_head_trigger = yes
+				religion = religion:imperialis_religion
+			}
+		}
+	}
+
+	
+	
+#	imperialis_devoted = {
+#		dna_modifiers = {
+#			accessory = {
+#				mode = add
+#				gene = headgear
+#				template = religious_catholic_devoted
+#				range = { 0 1 } # For the randomness to work correctly
+#			}
+#			accessory = {
+#				mode = add
+#				gene = additive_headgear
+#				template = no_additive
+#				range = { 0 1 }
+#			}
+#		}
+#		outfit_tags = { monk_outfit }
+#		weight = {
+#			base = 0
+#			modifier = {
+#				add = 100
+#				portrait_religious_devoted_trigger = yes
+#				portrait_religious_imperialis_trigger = yes
+#			}
+#		}
+#	}
+
+
+}

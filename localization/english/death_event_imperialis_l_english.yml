@@ -1,0 +1,8 @@
+﻿l_english:
+ death_ascended:0 "Ascended to Godhood"
+
+ regeneratio_decision:0 "Ascendit ad Divinitatem"
+ regeneratio_decision_desc:0 "All who carry the Pure Divinus Sanguinius can leave this world and ascend to the heavens to live with the divine and rule souls with him, that is if he is worthy enough."
+ regeneratio_decision_confirm:0 "Start the Ascent" regeneratio.1.t:0 "The Final Ascent"
+ regeneratio.1.desc:0 "You feel the call of the heavens. Your mortal shell will soon be shed as you rise to divinity. Make your preparations."
+ regeneratio.1.a:0 "I embrace my Ascension"
