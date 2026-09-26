@@ -1,0 +1,53 @@
+﻿custodia_imperialis = {
+	category = combat
+	layers = {
+		0 = martial
+		1 = mediterranean
+		2 = "rec4 copy 2.dds"
+		3 = 6.dds
+		4 = indomitable_azatani.dds
+	}
+	parameters = {
+		unlock_maa_cataphract = yes
+		unlock_horse_pastures_building = yes
+		unlock_maa_horse_archers = yes
+	}
+	cost = {
+		prestige = 2000
+	}
+}
+
+constitutio_imperialis = {
+	layers = {
+		0 = default5.dds
+		1 = mediterranean
+		2 = "rec5 copy 2.dds"
+		3 = 4.dds
+		4 = quill.dds
+	}
+	parameters = {
+		less_likely_to_culture_convert = yes
+	}
+	cost = {
+		prestige = 2000
+	}
+	category = realm
+}
+
+administratum = {
+	category = realm
+	layers = {
+		0 = intrigue
+		1 = mediterranean
+		2 = "rec5 copy 2.dds"
+		3 = 2.dds
+		4 = palace_politics.dds
+	}
+	parameters = {
+		number_of_consorts_hegemony = yes
+		ambitious_trait_more_common = yes
+	}
+	cost = {
+		prestige = 2000
+	}
+}
