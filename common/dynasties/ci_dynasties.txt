@@ -1,0 +1,209 @@
+﻿# Cultus Imperialis - Casas Fundadoras e casas das esposas (867)
+# Sem coat of arms definido: o jogo gera um brasao aleatorio.
+# Para fixar o brasao, crie em common/coat_of_arms/coat_of_arms uma entrada com a mesma chave (ex.: ci_liphe = { ... }).
+
+############################
+# Nucleo Fundador
+############################
+
+ci_liphe = {
+	name = "dynn_ci_liphe"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_liphe_motto
+}
+
+ci_undomiel = {
+	name = "dynn_ci_undomiel"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_undomiel_motto
+}
+
+############################
+# Casas dos Apostolos
+############################
+
+ci_astrea = {
+	name = "dynn_ci_astrea"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_astrea_motto
+}
+
+ci_auditore = {
+	name = "dynn_ci_auditore"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_auditore_motto
+}
+
+ci_emreis = {
+	name = "dynn_ci_emreis"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_emreis_motto
+}
+
+ci_granhieron = {
+	name = "dynn_ci_granhieron"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_granhieron_motto
+}
+
+ci_martyr = {
+	name = "dynn_ci_martyr"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_martyr_motto
+}
+
+ci_ultramar = {
+	name = "dynn_ci_ultramar"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_ultramar_motto
+}
+
+ci_lumere = {
+	name = "dynn_ci_lumere"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_lumere_motto
+}
+
+ci_ramashiri = {
+	name = "dynn_ci_ramashiri"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_ramashiri_motto
+}
+
+ci_drakenfyr = {
+	name = "dynn_ci_drakenfyr"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_drakenfyr_motto
+}
+
+ci_musashi = {
+	name = "dynn_ci_musashi"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_musashi_motto
+}
+
+ci_solerius = {
+	name = "dynn_ci_solerius"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_solerius_motto
+}
+
+ci_shaokan = {
+	name = "dynn_ci_shaokan"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_shaokan_motto
+}
+
+ci_viriata = {
+	name = "dynn_ci_viriata"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_viriata_motto
+}
+
+ci_euclius = {
+	name = "dynn_ci_euclius"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_euclius_motto
+}
+
+ci_varakh = {
+	name = "dynn_ci_varakh"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_varakh_motto
+}
+
+ci_atreides = {
+	name = "dynn_ci_atreides"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_atreides_motto
+}
+
+ci_sun = {
+	name = "dynn_ci_sun"
+	culture = "lipherianii_culture"
+	motto = dynn_ci_sun_motto
+}
+
+############################
+# Casas das esposas
+############################
+
+ci_valeria = {
+	name = "dynn_ci_valeria"
+	culture = "lipherianii_culture"
+}
+
+ci_claudia = {
+	name = "dynn_ci_claudia"
+	culture = "lipherianii_culture"
+}
+
+ci_cornelia = {
+	name = "dynn_ci_cornelia"
+	culture = "lipherianii_culture"
+}
+
+ci_aemilia = {
+	name = "dynn_ci_aemilia"
+	culture = "lipherianii_culture"
+}
+
+ci_fabia = {
+	name = "dynn_ci_fabia"
+	culture = "lipherianii_culture"
+}
+
+ci_julia = {
+	name = "dynn_ci_julia"
+	culture = "lipherianii_culture"
+}
+
+ci_flavia = {
+	name = "dynn_ci_flavia"
+	culture = "lipherianii_culture"
+}
+
+ci_cassia = {
+	name = "dynn_ci_cassia"
+	culture = "lipherianii_culture"
+}
+
+ci_livia = {
+	name = "dynn_ci_livia"
+	culture = "lipherianii_culture"
+}
+
+ci_domitia = {
+	name = "dynn_ci_domitia"
+	culture = "lipherianii_culture"
+}
+
+ci_licinia = {
+	name = "dynn_ci_licinia"
+	culture = "lipherianii_culture"
+}
+
+ci_marcia = {
+	name = "dynn_ci_marcia"
+	culture = "lipherianii_culture"
+}
+
+ci_sergia = {
+	name = "dynn_ci_sergia"
+	culture = "lipherianii_culture"
+}
+
+ci_antonia = {
+	name = "dynn_ci_antonia"
+	culture = "lipherianii_culture"
+}
+
+ci_tullia = {
+	name = "dynn_ci_tullia"
+	culture = "lipherianii_culture"
+}
+
+ci_octavia = {
+	name = "dynn_ci_octavia"
+	culture = "lipherianii_culture"
+}

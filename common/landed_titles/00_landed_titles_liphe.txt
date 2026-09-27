@@ -5,7 +5,7 @@
 	ruler_uses_title_name = no
 	landless = yes
 
-	capital = c_washington
+	capital = c_rome
 
 	ai_primary_priority = {
 		add = @always_primary_score
