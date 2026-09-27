@@ -1,3 +1,8 @@
 ﻿l_english:
- imperialis_prefix:0 "Imperialis"
- imperialis_collective_noun:0 "Imperialis"
+ imperialis_culture:0 "Imperialis"
+ imperialis_culture_prefix:0 "Imperial"
+ imperialis_culture_collective_noun:0 "Imperiales"
+
+ lipherianii_culture:0 "Lipherinarii"
+ lipherianii_culture_prefix:0 "Lipherianii"
+ lipherianii_culture_collective_noun:0 "Lipheriani"

@@ -11,6 +11,14 @@
 		unlock_maa_cataphract = yes
 		unlock_horse_pastures_building = yes
 		unlock_maa_horse_archers = yes
+
+		unlock_warrior_monk_units = yes
+		prowess_from_religious_traits = yes
+		culture_clergy_can_fight = yes
+		monastery_prowess_martial_bonus = yes
+	}
+	character_modifier = {
+		prowess_per_piety_level = 1
 	}
 	cost = {
 		prestige = 2000
@@ -44,8 +52,29 @@ administratum = {
 		4 = palace_politics.dds
 	}
 	parameters = {
-		number_of_consorts_hegemony = yes
+		number_of_consorts_hegemony = 20
+		number_of_consorts_emperor = 5
 		ambitious_trait_more_common = yes
+	}
+	cost = {
+		prestige = 2000
+	}
+}
+
+mysterium_divinitas = {
+	category = societal
+	layers = {
+		0 = learning
+		1 = mediterranean
+		2 = "rec5 copy 2.dds"
+		3 = 7.dds
+		4 = beacon_of_learning.dds
+	}
+	parameters = {
+		mystic_trait_more_common = yes
+		mystic_trait_from_education = yes
+		mystic_trait_gives_bonuses = yes
+		mendicant_mystics_may_appear = yes
 	}
 	cost = {
 		prestige = 2000
