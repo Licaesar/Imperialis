@@ -10,6 +10,7 @@
 
 ci_kensoriel_liphe = {
 	name = "Kensoriel"
+	dna = ci_kensoriel_liphe_dna
 	dynasty = ci_liphe
 	religion = imperialis
 	culture = lipherianii_culture
@@ -63,6 +64,7 @@ ci_kensoriel_liphe = {
 
 ci_helaena_undomiel = {
 	name = "Helaena"
+	dna = ci_helaena_undomiel_dna
 	female = yes
 	dynasty = ci_undomiel
 	religion = imperialis
