@@ -107,6 +107,7 @@ ci_helaena_undomiel = {
 # 01
 ci_reid_astrea = {
 	name = "Reid"
+	dna = ci_reid_astrea_dna
 	dynasty = ci_astrea
 	religion = imperialis
 	culture = lipherianii_culture
@@ -149,6 +150,7 @@ ci_reid_astrea = {
 # 02
 ci_ezio_auditore = {
 	name = "Ezio"
+	dna = ci_ezio_auditore_dna
 	dynasty = ci_auditore
 	religion = imperialis
 	culture = lipherianii_culture
@@ -184,6 +186,7 @@ ci_ezio_auditore = {
 # 03
 ci_emhyr_emreis = {
 	name = "Emhyr"
+	dna = ci_emhyr_emreis_dna
 	dynasty = ci_emreis
 	religion = imperialis
 	culture = lipherianii_culture
@@ -220,6 +223,7 @@ ci_emhyr_emreis = {
 # 04
 ci_vistarios_granhieron = {
 	name = "Vistários"
+	dna = ci_vistarios_granhieron_dna
 	dynasty = ci_granhieron
 	religion = imperialis
 	culture = lipherianii_culture
@@ -255,6 +259,7 @@ ci_vistarios_granhieron = {
 # 05
 ci_legarde_martyr = {
 	name = "Le'garde"
+	dna = ci_legarde_martyr_dna
 	dynasty = ci_martyr
 	religion = imperialis
 	culture = lipherianii_culture
@@ -291,6 +296,7 @@ ci_legarde_martyr = {
 # 06
 ci_hrodric_gyliman = {
 	name = "Hrodric"
+	dna = ci_hrodric_gyliman_dna
 	dynasty = ci_ultramar
 	religion = imperialis
 	culture = lipherianii_culture
@@ -327,6 +333,7 @@ ci_hrodric_gyliman = {
 # 07
 ci_verso_lumere = {
 	name = "Verso"
+	dna = ci_verso_lumere_dna
 	dynasty = ci_lumere
 	religion = imperialis
 	culture = lipherianii_culture
@@ -363,6 +370,7 @@ ci_verso_lumere = {
 # 08
 ci_altair_ramashiri = {
 	name = "Altaïr"
+	dna = ci_altair_ramashiri_dna
 	dynasty = ci_ramashiri
 	religion = imperialis
 	culture = lipherianii_culture
@@ -398,6 +406,7 @@ ci_altair_ramashiri = {
 # 09
 ci_sigvardr_drakenfyr = {
 	name = "Sigvardr"
+	dna = ci_sigvardr_drakenfyr_dna
 	dynasty = ci_drakenfyr
 	religion = imperialis
 	culture = lipherianii_culture
@@ -440,6 +449,7 @@ ci_sigvardr_drakenfyr = {
 # 10
 ci_miyamoto_musashi = {
 	name = "Miyamoto"
+	dna = ci_miyamoto_musashi_dna
 	dynasty = ci_musashi
 	religion = imperialis
 	culture = lipherianii_culture
@@ -482,6 +492,7 @@ ci_miyamoto_musashi = {
 # 11
 ci_aurelian_solerius = {
 	name = "Aurelian"
+	dna = ci_aurelian_solerius_dna
 	dynasty = ci_solerius
 	religion = imperialis
 	culture = lipherianii_culture
@@ -519,6 +530,7 @@ ci_aurelian_solerius = {
 # 12
 ci_lakan_shaokan = {
 	name = "Lakan"
+	dna = ci_lakan_shaokan_dna
 	dynasty = ci_shaokan
 	religion = imperialis
 	culture = lipherianii_culture
@@ -555,6 +567,7 @@ ci_lakan_shaokan = {
 # 13
 ci_astarinus_viriata = {
 	name = "Astarinus"
+	dna = ci_astarinus_viriata_dna
 	dynasty = ci_viriata
 	religion = imperialis
 	culture = lipherianii_culture
@@ -598,6 +611,7 @@ ci_astarinus_viriata = {
 # 14
 ci_julius_euclius = {
 	name = "Julius"
+	dna = ci_julius_euclius_dna
 	dynasty = ci_euclius
 	religion = imperialis
 	culture = lipherianii_culture

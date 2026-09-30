@@ -1,72 +1,195 @@
 ﻿name_list_imperialis = {
 
 	cadet_dynasty_names = {
-		"dynn_Julio_Claudian"
+		"dynn_Aquila"
+		"dynn_Aurelian"
+		"dynn_Augustor"
+		"dynn_Bellator"
+		"dynn_Caelestis"
+		"dynn_Cassian"
+		"dynn_Castellan"
+		"dynn_Constantis"
+		"dynn_Cornelian"
+		"dynn_Corvinus"
+		"dynn_Decimar"
+		"dynn_Dominor"
+		"dynn_Draconis"
 		"dynn_Flavian"
-		"dynn_Nerva_Antonine"
+		"dynn_Honorius"
+		"dynn_Imperator"
+		"dynn_Invictus"
+		"dynn_Laurentis"
+		"dynn_Lucerian"
+		"dynn_Marcellan"
+		"dynn_Martialis"
+		"dynn_Maximor"
+		"dynn_Navis"
+		"dynn_Octavian"
+		"dynn_Phaeton"
+		"dynn_Praetor"
 		"dynn_Severan"
-		"dynn_Gordian"
-		"dynn_Constantinian"
-		"dynn_Valentinian"
+		"dynn_Solaris"
+		"dynn_Tempestus"
 		"dynn_Theodosian"
-		"dynn_Leonid"
+		"dynn_Tiberian"
+		"dynn_Traianus"
+		"dynn_Valerian"
+		"dynn_Varonis"
+		"dynn_Vesper"
+		"dynn_Victorius"
+		"dynn_Aelian"
+		"dynn_Aemilian"
+		"dynn_Apollonis"
+		"dynn_Arcadius"
+		"dynn_Calpurnus"
+		"dynn_Crispian"
+		"dynn_Drusor"
+		"dynn_Fabian"
+		"dynn_Faustus"
+		"dynn_Galeron"
+		"dynn_Gratian"
+		"dynn_Hadrian"
+		"dynn_Ignatius"
 		"dynn_Justinian"
-		"dynn_Heraclian"
-		"dynn_Isaurian"
-		"dynn_Nikephorian"
-		"dynn_Amorian"
-		"dynn_Macedonian"
-		"dynn_Doukid"
-		"dynn_Komnenid"
-		"dynn_Angelid"
-		"dynn_Laskarid"
-		"dynn_Palaiologan"
+		"dynn_Lucian"
+		"dynn_Marian"
+		"dynn_Quintilian"
+		"dynn_Sabinian"
+		"dynn_Tacitus"
+		"dynn_Ulpian"
+		"dynn_Valentinus"
+		"dynn_Viridian"
+		"dynn_Caelestor"
+		"dynn_Custodes"
+		"dynn_Dominatus"
+		"dynn_Glorian"
+		"dynn_Lucentis"
+		"dynn_Sacrator"
+		"dynn_Sanctus"
+		"dynn_Seraphis"
+		"dynn_Triumphus"
+		"dynn_Vigilar"
+		"dynn_Orator"
+		"dynn_Palatinus"
 	}
 
 	dynasty_names = {
-		"dynn_Julio_Claudian"
+
+		# Grandes Casas Imperialis
+		"dynn_Aquila"
+		"dynn_Aurelian"
+		"dynn_Augustor"
+		"dynn_Bellator"
+		"dynn_Caelestis"
+		"dynn_Cassian"
+		"dynn_Castellan"
+		"dynn_Constantis"
+		"dynn_Cornelian"
+		"dynn_Corvinus"
+		"dynn_Decimar"
+		"dynn_Dominor"
+		"dynn_Draconis"
 		"dynn_Flavian"
-		"dynn_Nerva_Antonine"
+		"dynn_Honorius"
+		"dynn_Imperator"
+		"dynn_Invictus"
+		"dynn_Laurentis"
+		"dynn_Lucerian"
+		"dynn_Marcellan"
+		"dynn_Martialis"
+		"dynn_Maximor"
+		"dynn_Navis"
+		"dynn_Octavian"
+		"dynn_Phaeton"
+		"dynn_Praetor"
 		"dynn_Severan"
-		"dynn_Gordian"
-		"dynn_Constantinian"
-		"dynn_Valentinian"
+		"dynn_Solaris"
+		"dynn_Tempestus"
 		"dynn_Theodosian"
-		"dynn_Leonid"
+		"dynn_Tiberian"
+		"dynn_Traianus"
+		"dynn_Valerian"
+		"dynn_Varonis"
+		"dynn_Vesper"
+		"dynn_Victorius"
+		"dynn_Aelian"
+		"dynn_Aemilian"
+		"dynn_Apollonis"
+		"dynn_Arcadius"
+
+		# Casas adicionais de inspiracao latino-high gothic
+		"dynn_Calpurnus"
+		"dynn_Caesarion"
+		"dynn_Crispian"
+		"dynn_Drusor"
+		"dynn_Fabian"
+		"dynn_Faustus"
+		"dynn_Galeron"
+		"dynn_Gratian"
+		"dynn_Hadrian"
+		"dynn_Ignatius"
 		"dynn_Justinian"
-		"dynn_Heraclian"
-		"dynn_Isaurian"
-		"dynn_Nikephorian"
-		"dynn_Amorian"
-		"dynn_Macedonian"
-		"dynn_Doukid"
-		"dynn_Komnenid"
-		"dynn_Angelid"
-		"dynn_Laskarid"
-		"dynn_Palaiologan"
-		"dynn_Fabricius"
+		"dynn_Licentis"
+		"dynn_Lucian"
+		"dynn_Marian"
+		"dynn_Quintilian"
+		"dynn_Sabinian"
+		"dynn_Sacrator"
+		"dynn_Serapion"
+		"dynn_Tacitus"
+		"dynn_Ulpian"
+
+		# Novas Casas High Gothic Imperialis
+		"dynn_Valentinus"
+		"dynn_Viridian"
+		"dynn_Caelestor"
+		"dynn_Custodes"
+		"dynn_Dominatus"
+		"dynn_Glorian"
+		"dynn_Lucentis"
+		"dynn_Sanctus"
+		"dynn_Seraphis"
+		"dynn_Triumphus"
+		"dynn_Vigilar"
+		"dynn_Orator"
+		"dynn_Palatinus"
+		"dynn_Consularis"
+		"dynn_Auctoritas"
+	}
+	male_names = {
+		# Latim classico e romano
+		Abiel Adrianus Aelius Aemilius Agatho Alaric Alexander Alexianus Amadeus Ambrosius Amon Andronicus Antoninus Antonus Apollinaris Apollonius Arcadius Argel Argus Artorius Astelan Augustus Aurelius Aurelian Aurelianus
+		Bael Balthasar Belisarius Benedictus Boreas Brutus Caelianus Caius Calistus Cassianus Cassius Castor Castus Cato Celsus Cestus Claudianus Claudius Cleon Constans Constantianus Constantin Constantinus Corvinus Crispianus Cyprianus Cyrus
+		Decimus Diocletian Diocletianus Domitianus Dominicus Drusianus Drusus Erasmus Evander Fabius Faustus Felix Flavianus Flavius Gaius Galerianus Gallienus Germanicus Gratianus Hadrianus Hektor Heliodorus Honorianus Honorius
+		Ignace Ignatius Iosef Iulianus Iulius Julian Julius Justinianus Justus Lactantius Laurentianus Laurentius Leo Lucianus Lucius Magnus Marcellianus Marcellus Marcus Marianus Marius Martianus Maxentianus Maximianus Maximus Neros Octavian Octavianus Octavius Orestes
+		Paulus Philemon Priamus Quintilianus Quintus Remus Sabinianus Sabinus Scipio Secundus Septimus Severian Severianus Severus Solon Tacitianus Tacitus Tarentus Theodorus Theodosianus Theodosius Tiberianus Tiberius Titus Traianus Trajann Ulpianus Valens Valentinianus Valerian Valerianus Valerius Varro Velleius Vespasian Vespasianus Victor Victorianus
+
+		# Greco-bizantino, cristao e tardo-imperial
+		Alexios Anastasios Andronikos Basileios Cassiodorus Demetrios Dorotheos Eirenaios Epiphanios Eusebios Eustathios Georgios Gregorios Herakleios Ioannes Isidoros Konstantios Leontios Methodios Niketas Nikephoros Nikolaos Photios Prokopios Romanos Stephanos Theophanes Theophilos Theophylaktos
+
+		# High Gothic Imperialis original
+		Aquilinus Aquilianus Aquilion Aurelion Aurelior Augustian Bellator Bellatorius Caelorian Caelorius Cassarion Castorian Castorius Corvian Corvianus Dominian Dominianus Dominion Draconian Draconis Draconor Imperian Imperianus Imperatorius Invictian Lucerian Lucerianus Lucerion Martyrion Praetorian Praetorianus Sacratian Sacratorian Solarian Solarianus Solarion Vesperian Vesperianus Vesperion Victorian Victorion
+		Caesarion Caelestian Caelestinus Custodian Custodius Dominor Glorianus Glorion Invictor Lucentian Lucentius Maximion Oratorian Oratorius Sacramentus Sanctian Sanctianus Seraphian Seraphion Triumphian Triumphius Valerion Vesperor
+
+		# Nomes mantidos por afinidade com High Gothic / 40k
+		Agatone Argel Artellus Azrael Calas Corax Corswain Corvus Cygnis Cypher Danark Dante Dominus Draigo Eckhart Eidolon Endryd Erebus Eros Fafnir Falk Ferrus Gabriel Galladon Garro Garviel Gendor Gideon Grimaldus Haemotalion Helbrecht Helvetius Hrodric Ibram Iktinos Ilys Iskandar Jago Jubal Kaelen Karstodes Kastor Kensoriel Kharn Korso Kyril Learchus Leman Lexell Lion Logan Loken Lorghar Luciel Lysander Macharius Malakor Malcador Marneus Medon Mephiston Mikal Namaan Nathaniel Nykona Orion Ortan Pasanius Phael Phosis Qruze Rafen Raldoron Rogal Rylanor Sanguinius Sarpedon Saul Sejanus Sevrin Shiban Sigismund Silas Sindermann Solomon Stern Strabo Sulla Tarik Tarvitz Telemachon Thalassian Toradon Torgaddon Tycho Tylos Typhon Uriel Valdor Ventris Vitek Vulkan Xaphen Yarrick Zael Zardu Zephon
 	}
 
-	male_names = {
-		Aemilian Aemilius Aetius Albinus Alexander Anastasius Anicius Annius Antoninus Antonius Arcadius Aurelian Aurelius
-		Avitus Belisarius Britannicus Caecilius Caesar Callistus Carinus Carus Cassius Claudius Clementius Constans Constantine
-		Constantius Cornelius Crassus Decimus Decius Diocletian Domitian Domitius Drusus Ennodius Fabianus Fabius Fabricius Faustus Felix Flavianus Florian
-		Gaius Galerius Gallienus Gallus Germanus Gordian Gracchus Gratian Hadrian Herculius Honorius Joannes Jovian
-		Julian Julius Julius-Caesar Junius Justin Justinian Leo Leontius Liberius Licinius Lucius Magnus Marcellinus
-		Marcellus Marcian Marcus Marinus Marius Martinus Maximian Maximinus Maximus Nepotian Nerva Numerian Octavianus Octavius Otho
-		Paulinus Paulus Petronius Philip Pompeius Pontianus Priscus Probus Publius Quintus Romanus Romulus Rufinus Rutilius Sabinianus
-		Saturninus Sempronius Septimius Sergius Severinus Severus Sextus Symmachus Tacitus Theodosius Tiberius
-		Titius Titus Trajan Urbanus Valens Valentinian Valerian Valerius Venantius Vespasian Victor Victorinus Vigilius Vitalianus Volusianus
-	}
 	female_names = {
-		Aelia Agrippina Antonia Antonina Aquilia Aurelia Caecilia Caesaris Candida Cassia Claudia Clementia Constantia
-		Constantina Cornelia Crispina Dominica Domitiana Domna Domnina Drusilla Fausta Faustina Flacilla Flavia Fortunata Frontina Gaia Galeria
-		Gordiana Hadriana Helvia Hilara Honoria Hortensia Julia Juliana Junia Justa Justina Justiniana Licinia Livia Livilla Lucilla
-		Magnia Magnilla Marcella Marcia Marciana Marina Martina Matrona Maxima Maximiana Messalina Minervina Minucia Modia Mustela
-		Octavia Palatina Paula Paulina Petronella Petronia Placidia Plautia Plautilla Pompeia Poppaea Praeiecta Publia Pulcheria
-		Rusticiana Sabina Sallustia Salonina Salvianella Scantilla Serena Sergia Severa Severina Silvia Spadusa Sulpicia Tarsilla Titiana Ulpia Valeria
-		Verina Victoria Vigilantia Viviana
+		# Latim classico e romano
+		Aelia Aemilia Aenid Agatha Agnessa Agrippina Alethea Alicia Amalia Amelia Antonia Aquilia Arabella Arcadia Augusta Aurelia Aureliana Aveline Caecilia Caesonia Calpurnia Camilla Carmilla Cassia Cassiana Catalina Celestia Claudia Clementia Cornelia Decima Diana Domitia Domitilla Drusilla Elena Fabia Faustina Flavia Fulvia Helena Honoria Hortensia Iuliana Julia Junia Justina Lavinia Licinia Livia Lucia Lucilla Lucretia Marcella Marcellina Marcia Mariana Maxima Octavia Octaviana Patricia Paula Paulina Placidia Pompeia Porcia Prisca Priscilla Rufina Sabina Secundilla Severa Severina Sulpicia Tacita Tertia Theodora Tullia Ulpia Valentina Valeria Valeriana Verginia Vipsania Virginia
+
+		# Greco-bizantino, cristao e tardo-imperial
+		Alexiana Anastasia Anatolia Apollonia Ariadne Athena Constantina Eudocia Eudoxia Euphemia Euphrosyne Helena Irene Kallista Katerina Marciana Pulcheria Sophia Theophania Theophila Theodosia Zoe
+
+		# High Gothic Imperialis original
+		Aquilia Aquiliana Aurelissa Augustiana Bellatoria Caelestiana Cassariana Castoriana Corviana Custodia Dominica Dominiana Gloriana Imperia Imperiana Imperatrixa Invicta Lucentia Luceria Luceriana Martyria Maximiana Praetoria Sacramenta Sanctiana Seraphiana Solaria Solariana Triumphia Valerissa Vespera Vesperiana Victoria Victoriania Victoriana
+		Aquilissa Caeloria Cassaria Dominissa Draconia Glorissa Honoriana Imperissa Lucerissa Praetoriana Sacratia Severiana Solariae Theophoria Valerissa Vesperissa
+
+		# Nomes ja presentes e mantidos por afinidade de estilo
+		Alizabeth Alivia Amberley Amendera Aria Belladonna Bequin Berenice Cassilda Celandine Cressida Cyntia Cyrene Dalia Danica Electra Eleonore Elivia Ephrael Eralia Erda Erina Euphrati Eurydice Evangeline Fenella Florence Galatea Gemma Genevieve Gwendolin Helaena Hestia Ignatia Ilya Iona Isabella Isadora Isolde Jenetia Jocasta Judith Julika Klementina Lachesis Laetitia Leontia Leticia Lotara Lumina Macharia Magdalena Marguerite Mathilda Medea Melita Mersadie Minerva Miranda Miriael Morgana Moriana Morvenn Nadia Natalia Nefertari Nera Niobe Novia Olton Olympia Ophelia Oriana Orianthi Orla Pandora Parthenia Penelope Petra Petronella Philomena Pia Portia Primetta Regina Renata Rhea Rosalia Rosalind Rowena Roxana Sabbat Salome Sanguinia Sappho Selena Serena Sibylla Silvana Silvia Solange Stella Sylvia Tacia Tali Talitha Tariel Tatiana Teodora Theresa Titiana Undomiel Urania Ursula Veda Velia Venetia Verena Veronica Vestia Vicoria Viorica Vittoria Xenia Yvraine Zanthia Zita
 	}
+
 	dynasty_of_location_prefix = "dynnp_of"
 	patronym_prefix_male = "dynnpat_pre_filius"
 
@@ -74,11 +197,9 @@
 	pat_grf_name_chance = 50
 	mat_grf_name_chance = 0
 	father_name_chance = 50
-	
+
 	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
 	pat_grm_name_chance = 50
 	mat_grm_name_chance = 50
 	mother_name_chance = 0
-
-	
 }
