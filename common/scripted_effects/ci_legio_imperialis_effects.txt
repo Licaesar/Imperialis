@@ -30,7 +30,7 @@ ci_legio_imperialis_gather_effect = {
 			character:ci_julius_euclius ?= { add_to_list = ci_legio_members }
 			character:ci_radahn_varakh ?= { add_to_list = ci_legio_members }
 			character:ci_alia_atreides ?= { add_to_list = ci_legio_members }
-			character:ci_sun_tzu ?= { add_to_list = ci_legio_members }
+			character:ci_elessar_telcontar ?= { add_to_list = ci_legio_members }
 			character:ci_aurelia_valeria ?= { add_to_list = ci_legio_members }
 			character:ci_lucia_claudia ?= { add_to_list = ci_legio_members }
 			character:ci_helena_cornelia ?= { add_to_list = ci_legio_members }
@@ -80,7 +80,7 @@ ci_founders_friendships_effect = {
 	character:ci_julius_euclius ?= { add_to_list = ci_apostoli }
 	character:ci_radahn_varakh ?= { add_to_list = ci_apostoli }
 	character:ci_alia_atreides ?= { add_to_list = ci_apostoli }
-	character:ci_sun_tzu ?= { add_to_list = ci_apostoli }
+	character:ci_elessar_telcontar ?= { add_to_list = ci_apostoli }
 
 	every_in_list = {
 		list = ci_apostoli

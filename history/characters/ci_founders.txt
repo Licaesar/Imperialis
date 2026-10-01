@@ -654,6 +654,7 @@ ci_julius_euclius = {
 # 15
 ci_radahn_varakh = {
 	name = "Radahn"
+	dna = ci_radahn_varakh_dna
 	dynasty = ci_varakh
 	religion = imperialis
 	culture = lipherianii_culture
@@ -697,6 +698,7 @@ ci_radahn_varakh = {
 # 16 - nao casada
 ci_alia_atreides = {
 	name = "Alia"
+	dna = ci_alia_atreides_dna
 	female = yes
 	dynasty = ci_atreides
 	religion = imperialis
@@ -724,9 +726,10 @@ ci_alia_atreides = {
 }
 
 # 17
-ci_sun_tzu = {
+ci_elessar_telcontar = {
 	name = "Elessar"
-	dynasty = ci_sun
+	dna = ci_elessar_telcontar_dna
+	dynasty = ci_telcontar
 	religion = imperialis
 	culture = lipherianii_culture
 	sexuality = heterosexual
@@ -765,6 +768,7 @@ ci_sun_tzu = {
 
 ci_aurelia_valeria = {
 	name = "Aurelia"
+	dna = ci_aurelia_valeria_dna
 	female = yes
 	dynasty = ci_valeria
 	religion = imperialis
@@ -787,6 +791,7 @@ ci_aurelia_valeria = {
 
 ci_lucia_claudia = {
 	name = "Lucia"
+	dna = ci_lucia_claudia_dna
 	female = yes
 	dynasty = ci_claudia
 	religion = imperialis
@@ -809,6 +814,7 @@ ci_lucia_claudia = {
 
 ci_helena_cornelia = {
 	name = "Helena"
+	dna = ci_helena_cornelia_dna
 	female = yes
 	dynasty = ci_cornelia
 	religion = imperialis
@@ -831,6 +837,7 @@ ci_helena_cornelia = {
 
 ci_sophia_aemilia = {
 	name = "Sophia"
+	dna = ci_sophia_aemilia_dna
 	female = yes
 	dynasty = ci_aemilia
 	religion = imperialis
@@ -853,6 +860,7 @@ ci_sophia_aemilia = {
 
 ci_marcella_fabia = {
 	name = "Marcella"
+	dna = ci_marcella_fabia_dna
 	female = yes
 	dynasty = ci_fabia
 	religion = imperialis
@@ -875,6 +883,7 @@ ci_marcella_fabia = {
 
 ci_octavia_julia = {
 	name = "Octavia"
+	dna = ci_octavia_julia_dna
 	female = yes
 	dynasty = ci_julia
 	religion = imperialis
@@ -897,6 +906,7 @@ ci_octavia_julia = {
 
 ci_eliana_flavia = {
 	name = "Eliana"
+	dna = ci_eliana_flavia_dna
 	female = yes
 	dynasty = ci_flavia
 	religion = imperialis
@@ -919,6 +929,7 @@ ci_eliana_flavia = {
 
 ci_samira_cassia = {
 	name = "Samira"
+	dna = ci_samira_cassia_dna
 	female = yes
 	dynasty = ci_cassia
 	religion = imperialis
@@ -941,6 +952,7 @@ ci_samira_cassia = {
 
 ci_astrid_livia = {
 	name = "Astrid"
+	dna = ci_astrid_livia_dna
 	female = yes
 	dynasty = ci_livia
 	religion = imperialis
@@ -963,6 +975,7 @@ ci_astrid_livia = {
 
 ci_akemi_domitia = {
 	name = "Akemi"
+	dna = ci_akemi_domitia_dna
 	female = yes
 	dynasty = ci_domitia
 	religion = imperialis
@@ -985,6 +998,7 @@ ci_akemi_domitia = {
 
 ci_caelia_licinia = {
 	name = "Caelia"
+	dna = ci_caelia_licinia_dna
 	female = yes
 	dynasty = ci_licinia
 	religion = imperialis
@@ -1007,6 +1021,7 @@ ci_caelia_licinia = {
 
 ci_meilin_marcia = {
 	name = "Meilin"
+	dna = ci_meilin_marcia_dna
 	female = yes
 	dynasty = ci_marcia
 	religion = imperialis
@@ -1029,6 +1044,7 @@ ci_meilin_marcia = {
 
 ci_aurea_sergia = {
 	name = "Aurea"
+	dna = ci_aurea_sergia_dna
 	female = yes
 	dynasty = ci_sergia
 	religion = imperialis
@@ -1051,6 +1067,7 @@ ci_aurea_sergia = {
 
 ci_livia_antonia = {
 	name = "Livia"
+	dna = ci_livia_antonia_dna
 	female = yes
 	dynasty = ci_antonia
 	religion = imperialis
@@ -1073,6 +1090,7 @@ ci_livia_antonia = {
 
 ci_valeria_tullia = {
 	name = "Valeria"
+	dna = ci_valeria_tullia_dna
 	female = yes
 	dynasty = ci_tullia
 	religion = imperialis
@@ -1095,6 +1113,7 @@ ci_valeria_tullia = {
 
 ci_minerva_octavia = {
 	name = "Minerva"
+	dna = ci_minerva_octavia_dna
 	female = yes
 	dynasty = ci_octavia
 	religion = imperialis

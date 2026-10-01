@@ -118,10 +118,10 @@ ci_atreides = {
 	motto = dynn_ci_atreides_motto
 }
 
-ci_sun = {
-	name = "dynn_ci_sun"
+ci_telcontar = {
+	name = "dynn_ci_telcontar"
 	culture = "lipherianii_culture"
-	motto = dynn_ci_sun_motto
+	motto = dynn_ci_telcontar_motto
 }
 
 ############################
