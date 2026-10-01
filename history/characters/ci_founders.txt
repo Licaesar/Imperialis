@@ -124,6 +124,8 @@ ci_reid_astrea = {
 	trait = just
 	trait = honest
 	trait = gallant
+	trait = physique_good_3
+	trait = beauty_good_3
 
 	trait = aggressive_attacker
 	trait = open_terrain_expert
@@ -167,6 +169,8 @@ ci_ezio_auditore = {
 	trait = deceitful
 	trait = gregarious
 	trait = schemer
+	trait = physique_good_3
+	trait = beauty_good_3
 
 	trait = organizer
 	trait = cautious_leader
@@ -204,6 +208,8 @@ ci_emhyr_emreis = {
 	trait = arrogant
 	trait = administrator
 	trait = architect
+	trait = intellect_good_3
+	trait = beauty_good_3
 
 	trait = logistician
 	trait = organizer
@@ -240,6 +246,8 @@ ci_vistarios_granhieron = {
 	trait = zealous
 	trait = theologian
 	trait = scholar
+	trait = intellect_good_3
+	trait = beauty_good_3
 
 	trait = holy_warrior
 	trait = cautious_leader
@@ -277,6 +285,8 @@ ci_legarde_martyr = {
 	trait = stubborn
 	trait = strategist
 	trait = gallant
+	trait = physique_good_3
+	trait = beauty_good_3
 
 	trait = holy_warrior
 	trait = aggressive_attacker
@@ -313,6 +323,8 @@ ci_hrodric_gyliman = {
 	trait = diligent
 	trait = calm
 	trait = administrator
+	trait = intellect_good_3
+	trait = beauty_good_3
 
 	trait = organizer
 	trait = logistician
@@ -351,6 +363,8 @@ ci_verso_lumere = {
 	trait = ambitious
 	trait = strategist
 	trait = gallant
+	trait = beauty_good_3
+	trait = physique_good_3
 
 	trait = aggressive_attacker
 	trait = flexible_leader
@@ -387,6 +401,8 @@ ci_altair_ramashiri = {
 	trait = temperate
 	trait = scholar
 	trait = theologian
+	trait = beauty_good_3
+	trait = intellect_good_3
 
 	trait = cautious_leader
 	trait = flexible_leader
@@ -423,6 +439,8 @@ ci_sigvardr_drakenfyr = {
 	trait = wrathful
 	trait = stubborn
 	trait = strategist
+	trait = beauty_good_3
+	trait = physique_good_3
 
 	trait = aggressive_attacker
 	trait = reaver
@@ -466,6 +484,8 @@ ci_miyamoto_musashi = {
 	trait = patient
 	trait = callous
 	trait = strategist
+	trait = beauty_good_3
+	trait = physique_good_3
 
 	trait = cautious_leader
 	trait = flexible_leader
@@ -510,6 +530,8 @@ ci_aurelian_solerius = {
 	trait = ambitious
 	trait = strategist
 	trait = gallant
+	trait = beauty_good_3
+	trait = physique_good_3
 
 	trait = organizer
 	trait = military_engineer
@@ -548,6 +570,8 @@ ci_lakan_shaokan = {
 	trait = paranoid
 	trait = administrator
 	trait = architect
+	trait = beauty_good_3
+	trait = intellect_good_3
 
 	trait = cautious_leader
 	trait = logistician
@@ -584,6 +608,8 @@ ci_astarinus_viriata = {
 	trait = vengeful
 	trait = generous
 	trait = strategist
+	trait = beauty_good_3
+	trait = physique_good_3
 
 	trait = rough_terrain_expert
 	trait = reaver
@@ -628,6 +654,8 @@ ci_julius_euclius = {
 	trait = just
 	trait = compassionate
 	trait = gallant
+	trait = beauty_good_3
+	trait = physique_good_3
 
 	trait = unyielding_defender
 	trait = organizer
@@ -671,6 +699,8 @@ ci_radahn_varakh = {
 	trait = wrathful
 	trait = generous
 	trait = strategist
+	trait = beauty_good_3
+	trait = physique_good_3
 
 	trait = aggressive_attacker
 	trait = reckless
@@ -715,6 +745,9 @@ ci_alia_atreides = {
 	trait = cynical
 	trait = scholar
 	trait = schemer
+	trait = beauty_good_3
+	trait = intellect_good_3
+	trait = physique_good_3
 
 	trait = cautious_leader
 	trait = organizer
@@ -745,6 +778,8 @@ ci_elessar_telcontar = {
 	trait = deceitful
 	trait = strategist
 	trait = scholar
+	trait = beauty_good_3
+	trait = physique_good_3
 
 	trait = cautious_leader
 	trait = organizer
