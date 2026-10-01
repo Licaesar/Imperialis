@@ -725,7 +725,7 @@ ci_alia_atreides = {
 
 # 17
 ci_sun_tzu = {
-	name = "Tzu"
+	name = "Elessar"
 	dynasty = ci_sun
 	religion = imperialis
 	culture = lipherianii_culture
