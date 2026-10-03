@@ -1,0 +1,32 @@
+﻿##############################################
+# CULTUS IMPERIALIS - LOCAL SANTO DE RAVENA (marco 2, fase d)
+#
+# Sede do Adeptus Ministorum (capital do k_sol) e sepultura da Helaena. Terceiro local santo EMINENTE da fe (depois de Roma e
+# Jerusalem), listado em common/religion/faith_types/ci_faith_types.txt. A chave leva o prefixo ci_ porque o jogo nao tem local
+# santo em Ravena; o nome vem de localization/english/ci_holy_sites_l_english.yml (holy_site_ci_ravenna_name).
+#
+# TODO_LORE: os efeitos abaixo sao PROVISORIOS, no formato dos locais santos do vanilla (parecidos com os de Jerusalem), ate o
+# autor definir os efeitos proprios deste local especial. county_holder_* vale para o dono do condado da mesma fe; faith_*
+# vale para todos os fieis, so porque o local e eminente; os blocos scaled crescem com a raridade das reliquias entronizadas.
+##############################################
+ci_ravenna = {
+	county = c_ravenna
+
+	county_holder_character_modifier = {
+		monthly_piety_gain_mult = 0.05
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+	}
+
+	faith_character_modifier = {
+		monthly_piety_gain_mult = 0.05
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_piety_gain_mult = 0.01
+	}
+}

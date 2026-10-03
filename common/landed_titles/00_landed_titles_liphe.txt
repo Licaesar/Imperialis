@@ -12,7 +12,7 @@ k_sol = {
 	allow_domicile = no
 	can_use_nomadic_naming = no
 
-	capital = c_roma
+	capital = c_ravenna # sede do Ministorum e local santo eminente da fe (ci_ravenna); onde Helaena e sepultada
 
 	ai_primary_priority = {
 		add = @always_primary_score

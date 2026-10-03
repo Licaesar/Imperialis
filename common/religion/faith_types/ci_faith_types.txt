@@ -14,16 +14,17 @@ imperialis = {
 		icon = imperialis
 	}
 
+	# Eminentes: Roma, Jerusalem e Ravena (ci_ravenna, sede do Ministorum e sepultura da Helaena; terceiro eminente, o ultimo).
 	eminent_holy_sites = {
 		rome
 		jerusalem
+		ci_ravenna
 	}
 
+	# Alexandria e Cartago sairam em 03/10/2026 (decisao do autor).
 	holy_sites = {
 		athens
 		constantinople
-		alexandria
-		carthage
 		olympus
 		baghdad
 	}

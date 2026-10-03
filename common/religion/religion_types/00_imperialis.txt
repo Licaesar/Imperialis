@@ -6,8 +6,8 @@
 
 	#pagan_roots = yes #cuidado!
 
-	# Locais santos (marco 2, fase d): ate 12 no total (os 8 iniciais da fe mais 4 dinamicos) e 3 eminentes; Roma e Jerusalem ocupam
-	# dois, o terceiro eminente fica livre. Os tipos dinamicos (valor, martires, milagres...) sao do vanilla e aparecem para todas as
+	# Locais santos (marco 2, fase d): ate 12 no total (os 7 iniciais da fe mais ate 5 dinamicos) e 3 eminentes (Roma, Jerusalem e
+	# Ravena: nao sobra eminente livre). Os tipos dinamicos (valor, martires, milagres...) sao do vanilla e aparecem para todas as
 	# fes; nao ha tipos ci_. O Head of Faith cria o local com reliquias entronizadas de raridade total 3 ou mais.
 	eminent_holy_sites_max = 3
 	holy_sites_max = 12
