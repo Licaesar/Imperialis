@@ -1,0 +1,10 @@
+﻿l_english:
+
+ # Nomes dos niveis da realizacao espiritual do Imperialis (ci_imperial_fulfillment). TODO_LORE: nomes provisorios.
+ ci_imperial_fulfillment_level_0: "Fallen"
+ ci_imperial_fulfillment_level_1: "Estranged"
+ ci_imperial_fulfillment_level_2: "Wavering"
+ ci_imperial_fulfillment_level_3: "Faithful"
+ ci_imperial_fulfillment_level_4: "Steadfast"
+ ci_imperial_fulfillment_level_5: "Resolute"
+ ci_imperial_fulfillment_level_6: "Exalted"

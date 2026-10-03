@@ -1,0 +1,103 @@
+﻿# Realizacao espiritual do Cultus Imperialis (marco 2, fase a).
+# Tipo exclusivo de imperialis_religion: so um tipo pode ter a lista de religioes vazia (o fallback default_fulfillment) e duas listas
+# nao podem repetir a mesma religiao. Mesma estrutura de 7 niveis do christian_fulfillment, com os mesmos limiares (-95/-65/-30/0/30/65/95:
+# muito script do jogo le esses valores crus) e os mesmos modificadores de estresse e piedade.
+# Flags: somente as que funcionam para qualquer fe. Ficam de fora: flagelacao, suicidio, humilhacao cerimonial, assassinato sem perda,
+# ato de devocao, mentor, dizimo/legado (dependem de christian_fulfillment ou da situacao da Igreja Crista) e as opcoes de puppet.
+# default_sf_personal_tenet_change_no_stress: largar um tenet pessoal nao causa estresse nos niveis negativos (como no tipo reserva).
+# Nomes dos niveis: localization/english/ci_spiritual_fulfillment_l_english.yml (TODO_LORE).
+
+ci_imperial_fulfillment = {
+	religions = { imperialis_religion }
+
+	level = { # 0
+		threshold = -95
+		modifier = {
+			stress_gain_mult = 0.5
+			monthly_piety_gain_mult = -0.1
+			enemy_hostile_scheme_success_chance_add = -20
+		}
+		flags = {
+			sp_harder_conversion
+			sp_fabricate_hook_court_chaplain
+			sp_fabricate_hook_hor
+			sp_hostile_schemes_minus_murder_no_stress_loss
+			default_sf_personal_tenet_change_no_stress
+		}
+		icon = "gfx/interface/icons/spiritual_fulfillment_levels/spiritual_fulfillment_01.dds"
+	}
+
+	level = { # 1
+		threshold = -65
+		modifier = {
+			stress_gain_mult = 0.25
+			monthly_piety_gain_mult = -0.05
+		}
+		flags = {
+			sp_harder_conversion
+			sp_fabricate_hook_court_chaplain
+			sp_hostile_schemes_minus_murder_no_sp_or_stress_loss
+			default_sf_personal_tenet_change_no_stress
+		}
+		icon = "gfx/interface/icons/spiritual_fulfillment_levels/spiritual_fulfillment_02.dds"
+	}
+
+	level = { # 2
+		threshold = -30
+		modifier = {
+			stress_gain_mult = 0.1
+		}
+		flags = {
+			sp_harder_conversion
+			default_sf_personal_tenet_change_no_stress
+		}
+		icon = "gfx/interface/icons/spiritual_fulfillment_levels/spiritual_fulfillment_03.dds"
+	}
+
+	level = { # 3
+		threshold = 0 # Neutro, nada acontece
+		icon = "gfx/interface/icons/spiritual_fulfillment_levels/spiritual_fulfillment_04.dds"
+	}
+
+	level = { # 4
+		threshold = 30
+		modifier = {
+			stress_loss_mult = 0.1
+		}
+		flags = {
+			sp_befriend_chaplain
+			sp_cheaper_pilgrimage
+		}
+		icon = "gfx/interface/icons/spiritual_fulfillment_levels/spiritual_fulfillment_05.dds"
+	}
+
+	level = { # 5
+		threshold = 65
+		modifier = {
+			stress_loss_mult = 0.25
+		}
+		flags = {
+			sp_befriend_chaplain
+			sp_befriend_hor
+			sp_cheaper_pilgrimage
+			sp_easier_conversion
+		}
+		icon = "gfx/interface/icons/spiritual_fulfillment_levels/spiritual_fulfillment_06.dds"
+	}
+
+	level = { # 6
+		threshold = 95
+		modifier = {
+			stress_loss_mult = 0.5
+			enemy_hostile_scheme_success_chance_add = 20
+		}
+		flags = {
+			sp_befriend_chaplain
+			sp_befriend_hor
+			sp_befriend_hof
+			sp_cheaper_pilgrimage_major
+			sp_easier_conversion
+		}
+		icon = "gfx/interface/icons/spiritual_fulfillment_levels/spiritual_fulfillment_07.dds"
+	}
+}

@@ -1,5 +1,5 @@
 ﻿# Doutrinas de identidade de cada rito do Cultus Imperialis (grupo doctrine_imperialis_branches).
-# Cada rito carrega exatamente uma delas. Todas somam:
+# Cada rito carrega exatamente uma delas. As virtudes de realizacao espiritual (peso 15) estao aqui; sanguini_4/5 estao na religiao. Todas somam:
 #  - same_faith_different_rite_opinion / _county_opinion_add: rivalidade media entre ritos (modificadores lidos como "como os outros te veem", igual a tenet_communal_identity).
 #  - block_from_create_hof_parameter: esconde a decisao vanilla create_hof_decision (Establish a Ecclesia Maximus), que criaria um Head of Faith
 #    aleatorio com prioridade sobre o k_sol. O chefe da fe so nasce pela decisao ci_found_ministorum_decision.
@@ -16,13 +16,11 @@ temple_authority_cult_imperialis_doctrine = {
 	}
 	traits = {
 		virtues = {
-			sanguini_5
-			sanguini_4
-			education_learning_3
-			education_learning_4
-			education_learning_5
-			erudite
-			lifestyle_mystic
+			education_learning_3 = { weight = 15 scale = 1 }
+			education_learning_4 = { weight = 15 scale = 1 }
+			education_learning_5 = { weight = 15 scale = 1 }
+			erudite = { weight = 15 scale = 1 }
+			lifestyle_mystic = { weight = 15 scale = 1 }
 		}
 	}
 	character_modifier = {
@@ -53,11 +51,11 @@ temple_authority_cult_omnissiah_doctrine = { # Culto apenas ao Omnissiah
 	}
 	traits = {
 		virtues = {
-			education_learning_3
-			education_learning_4
-			education_learning_5
-			erudite
-			lifestyle_mystic
+			education_learning_3 = { weight = 15 scale = 1 }
+			education_learning_4 = { weight = 15 scale = 1 }
+			education_learning_5 = { weight = 15 scale = 1 }
+			erudite = { weight = 15 scale = 1 }
+			lifestyle_mystic = { weight = 15 scale = 1 }
 		}
 	}
 	character_modifier = {
@@ -86,13 +84,11 @@ temple_authority_cult_sororitas_doctrine = { # Culto a Undomiel
 	}
 	traits = {
 		virtues = {
-			sanguini_5
-			sanguini_4
-			education_learning_3
-			education_learning_4
-			education_learning_5
-			erudite
-			lifestyle_mystic
+			education_learning_3 = { weight = 15 scale = 1 }
+			education_learning_4 = { weight = 15 scale = 1 }
+			education_learning_5 = { weight = 15 scale = 1 }
+			erudite = { weight = 15 scale = 1 }
+			lifestyle_mystic = { weight = 15 scale = 1 }
 		}
 	}
 	character_modifier = {
@@ -122,11 +118,11 @@ temple_authority_cult_homus_doctrine = { # Multiculturalismo Liphe
 	}
 	traits = {
 		virtues = {
-			education_learning_3
-			education_learning_4
-			education_learning_5
-			erudite
-			lifestyle_mystic
+			education_learning_3 = { weight = 15 scale = 1 }
+			education_learning_4 = { weight = 15 scale = 1 }
+			education_learning_5 = { weight = 15 scale = 1 }
+			erudite = { weight = 15 scale = 1 }
+			lifestyle_mystic = { weight = 15 scale = 1 }
 		}
 	}
 	character_modifier = {

@@ -49,9 +49,21 @@
 	#Coronation tradition
 	doctrine = doctrine_imperial_anointment
 
+	# Pesos da realizacao espiritual (marco 2, fase a): scale 1 em tudo, porque a escala tambem mexe em opiniao e piedade.
+	# sanguini_4/5 ficam aqui (nao nas doutrinas de identidade) para valer igual nos quatro ritos.
 	traits = {
-		virtues = { generous just temperate }
-		sins = { greedy arbitrary gluttonous }
+		virtues = {
+			just = { weight = 40 scale = 1 }
+			temperate = { weight = 25 scale = 1 }
+			generous = { weight = 25 scale = 1 }
+			sanguini_4 = { weight = 10 scale = 1 }
+			sanguini_5 = { weight = 15 scale = 1 }
+		}
+		sins = {
+			arbitrary = { weight = 40 scale = 1 }
+			gluttonous = { weight = 25 scale = 1 }
+			greedy = { weight = 25 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
