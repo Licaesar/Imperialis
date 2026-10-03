@@ -1,39 +1,33 @@
 # Cultus Imperialis
 
-Crusader Kings III mod. Target build: 1.20.x (instalado: 1.20.0.3 Crozier), com a DLC By God Alone obrigatória. Source folder: C:\Users\rique\Documents\Paradox Interactive\Crusader Kings III\mod\Imperialis. Launcher descriptor: C:\Users\rique\Documents\Paradox Interactive\Crusader Kings III\mod\Imperialis.mod. Prefix: ci_.
+Crusader Kings III mod, prefixo `ci_`. Alvo: 1.20.x (instalado: 1.20.0.3 Crozier), com a DLC By God Alone obrigatória. Pasta do mod: `C:\Users\rique\Documents\Paradox Interactive\Crusader Kings III\mod\Imperialis`. Descritor do launcher: `...\mod\Imperialis.mod`.
 
-Use ck3-modding for script and content work, ck3-gui for interface work, and ck3-playtest for runtime verification. These skills provide the reusable workflow. This file holds project-specific facts.
+**Leia primeiro:** `C:\Users\rique\Documents\Workspace\Meus Mods CK3\docs\ESTADO - Imperialis.md` (estado do código, decisões vigentes, plano do marco 2, ferramentas). Depois o checklist ativo `...\docs\Imperialis - Checklist de playtest marco 2.md`. Lore: Bíblia V4 em `...\Referencia\Biblias`. Não leia por padrão `research_notes`, `reports`, `Referencia` (exceto a Bíblia V4) nem `DNA`: use grep.
 
-## Machine paths
+Use ck3-modding para script e conteúdo, ck3-gui para interface e ck3-playtest para verificação em jogo. Este arquivo guarda só fatos do projeto.
 
-| Resource | Path |
+## Caminhos
+
+| Recurso | Caminho |
 |---|---|
-| Installed game directory | H:\SteamLibrary\steamapps\common\Crusader Kings III |
-| CK3 logs | C:\Users\rique\Documents\Paradox Interactive\Crusader Kings III\logs |
-| Launcher mod directory | C:\Users\rique\Documents\Paradox Interactive\Crusader Kings III\mod |
-| Workshop sources, if used | H:\SteamLibrary\steamapps\workshop\content\1158310 (somente leitura) |
-| ck3-tiger executable | C:\Tools\ck3-tiger\ck3-tiger.exe (1.19.0; o jogo está na 1.20.0.3) |
-| Docs, bíblias e relatórios | C:\Users\rique\Documents\Workspace\Meus Mods CK3 |
+| Jogo | `H:\SteamLibrary\steamapps\common\Crusader Kings III` |
+| Logs, saves e dumps | `C:\Users\rique\Documents\Paradox Interactive\Crusader Kings III\logs` (e `save games`) |
+| Workshop (somente leitura) | `H:\SteamLibrary\steamapps\workshop\content\1158310` |
+| ck3-tiger | `C:\Tools\ck3-tiger\ck3-tiger.exe` (1.19.0; o jogo é mais novo) |
+| Docs, bíblias, ferramentas | `C:\Users\rique\Documents\Workspace\Meus Mods CK3` (scripts em `docs\dev`) |
 
-## Project conventions
+## Convenções
 
-- Design pillars: Kensoriel Liphe (deus encarnado), a linhagem Sanguinis e o culto imperial. Ver a Bíblia mais recente em `Workspace\Meus Mods CK3\Referencia\Biblias`. Não inventar lore: texto novo usa o marcador `TODO_LORE` até o autor elaborar.
-- Modelagem religiosa (decisão 03/10/2026): religião `imperialis_religion` com uma única fé `imperialis` e quatro ritos: `imperialis` (principal), `sororitas` (Cultus Undómiel), `omnissiah` e `homus` (Cultus Harmoniae). O `k_sol` (Adeptus Ministorum) vira o Head of Faith (`religious_head`) quando a decisão `ci_found_ministorum_decision` o cria; antes disso a fé não tem chefe.
-- Sistemas em mudança e pontos de entrada: `common/religion/` (religion_types, faith_types, rite_types, doctrine_types, doctrine_group_types), `history/faiths/`, `common/customizable_localization/00_liphe_custom_loc.txt`, `common/landed_titles/00_landed_titles_liphe.txt` e `history/characters/ci_founders.txt`.
-- Filename and script-key prefix: ci_. Arquivos antigos com outras convenções não são renomeados automaticamente.
-- Encoding: UTF-8 com BOM em scripts (.txt) e em localização (.yml), como já está em todos os arquivos do mod e como o jogo exige. O descriptor.mod fica sem BOM.
-- Compatibility: a DLC By God Alone é obrigatória (sem fallbacks). Sem compatibilidade com saves anteriores; usar campanha nova. O mod é independente do LegioImperialis e nunca roda junto com ele.
-- Shipping folder: C:\Users\rique\Documents\Paradox Interactive\Crusader Kings III\mod\Imperialis. Keep test captures and development files outside it.
-- Git: o repositório da pasta do mod já existe. A migração para a 1.20 acontece na branch `migracao-1.20`, com commits locais por fase e sem push sem pedido do autor.
+- **Não inventar lore.** Texto novo usa `TODO_LORE`; o autor elabora depois. Nomes de personagens não mudam.
+- Prefixo `ci_` em arquivos e chaves novas; arquivos antigos com outro prefixo não são renomeados sozinhos.
+- UTF-8 **com BOM** em scripts (`.txt`) e localização (`.yml`); `descriptor.mod` sem BOM.
+- DLC obrigatória, sem fallbacks. Sem compatibilidade com saves antigos; campanha nova a cada teste.
+- O mod é independente do LegioImperialis e nunca roda junto com ele.
+- Git local sem remoto: commit por fase na branch de trabalho (hoje `marco-2`), sem push sem o autor pedir. Mantenha testes e arquivos de desenvolvimento fora da pasta do mod.
 
-## Validation and playtesting
+## Validação e playtest
 
-- Validator command: `C:\Tools\ck3-tiger\ck3-tiger.exe --no-color "C:\Users\rique\Documents\Paradox Interactive\Crusader Kings III\mod\Imperialis.mod"`. O Tiger 1.19.0 avisa que o jogo é mais novo e erra em `rite`, `faith_types`, leis novas e registros da DLC. Esses falsos positivos são esperados; separá-los de erros reais.
-- Baseline de referência (03/10/2026, antes da migração, no estado da 1.19): 0 fatal, 297 erros, 176 avisos, 3 untidy. Relatório em `Workspace\Meus Mods CK3\reports\tiger_imperialis_baseline_2026-10-03.txt`.
-- Falsos positivos e diagnósticos aceitos fora do escopo do marco 1: texturas `cat_*` dos mods de heráldica do autor, genes dos mods no DNA (`dna_data`), `landless_adventurer_succession_law` (origem Legio), campos de `regeneratio_event.txt` e `sanguini.txt` (Ascensão e Sanguinis, marco posterior).
-- Checklist e notas de sessão: `Workspace\Meus Mods CK3\docs`.
-- Campanha de teste separada, com save base nomeado: criar antes do primeiro playtest do marco 1; nunca testar em campanha existente.
-- Ferramentas de controle do jogo: nenhuma autorizada. O autor abre o jogo, gera os dumps `script_docs` e executa os checklists; o agente lê os logs frescos.
-- Correções aguardando recarga: nenhuma.
-
-Preserve existing campaigns. Read fresh logs after reproduction. Keep static validation and runtime results separate. This file grants no additional permission to launch, operate, commit, or publish.
+- O Tiger 1.19.0 não conhece `faith_types`, `rite_types`, `rite =`, `doctrine_group_type` etc. e gera falsos positivos esperados. Use `docs\dev\check_imperialis_religion.py` (verificação estática própria) e `docs\dev\tiger_diff.py` (só o que é novo). Baseline do Tiger: `reports\tiger_imperialis_baseline_2026-10-03.txt`.
+- Aceitos e fora de escopo: texturas `cat_*` e genes de DNA de mods de heráldica e de genes do autor; `regeneratio` (Ascensão, será refeita na fase c do marco 2).
+- Ninguém controla o jogo. O autor joga, gera os dumps (`script_docs`, modo debug) e relata; o agente lê logs frescos (`docs\dev\log_errors.py`) e saves (`docs\dev\extract_save.py`). Resultado estático e resultado em jogo ficam separados nos relatórios.
+- Preserve campanhas existentes. Este arquivo não concede permissão para abrir o jogo, comitar com push ou publicar.
