@@ -7,6 +7,8 @@
 
 imperialis = {
 	faith = imperialis
+	# Nome proprio para o rito nao repetir o da fe (fe "Veritas Imperialis", rito "Cultus Imperialis"); desc continua imperialis_desc.
+	name = imperialis_rite
 
 	color = { 0.36 0.20 0.35 }
 
