@@ -1,0 +1,8 @@
+﻿# Pontuacao do candidato a primeiro titular do Adeptus Ministorum (escopo: personagem).
+# Soma de aprendizado e nivel de piedade, como definido na decisao de 03/10/2026.
+# Observacao de balanceamento: aprendizado costuma ficar entre 8 e 25 e o nivel de piedade entre 0 e 5,
+# entao na pratica o aprendizado pesa mais. Ajustar depois do playtest, se necessario.
+ci_ministorum_candidate_score = {
+	value = learning
+	add = piety_level
+}

@@ -1,11 +1,18 @@
-﻿k_sol = {
+﻿@always_primary_score = 1000
+
+# Adeptus Ministorum. Titulo religioso sem terras, head_of_rite da fe imperialis (ver faith_types/ci_faith_types.txt).
+# O titular chefia o rito que segue. O titulo so passa a ter titular pela decisao ci_found_ministorum_decision
+# (common/decisions/ci_ministorum_decisions.txt). Flags iguais as dos titulos de chefia vanilla (k_orthodox, d_coptic_papacy...).
+k_sol = {
 	color = { 50 50 50 }
 	#color2 = { 220 220 0 }
 	definite_form = yes
 	ruler_uses_title_name = no
 	landless = yes
+	allow_domicile = no
+	can_use_nomadic_naming = no
 
-	capital = c_rome
+	capital = c_roma
 
 	ai_primary_priority = {
 		add = @always_primary_score

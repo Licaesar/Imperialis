@@ -1,0 +1,9 @@
+﻿l_english:
+
+ # Decisao que funda o Adeptus Ministorum (k_sol). Textos provisorios: TODO_LORE ate o autor elaborar.
+ ci_found_ministorum_decision:0 "Found the Adeptus Ministorum"
+ ci_found_ministorum_decision_desc:0 "TODO_LORE: the Empire of Italy stands, and the faith of the Sanguinis can now give itself a church."
+ ci_found_ministorum_decision_tooltip:0 "Found the Adeptus Ministorum"
+ ci_found_ministorum_decision_confirm:0 "Found the Ministorum"
+ ci_found_ministorum_decision_effect_tooltip:0 "The #V Adeptus Ministorum#! title is created. Its first holder is Helaena Undómiel, or, if she cannot serve, the adult follower of the faith with the highest learning and piety level among your court and your direct vassals. The holder leads their own rite."
+ ci_found_ministorum_holder_exists_tt:0 "Helaena Undómiel, or an adult follower of the faith in your court or among your direct vassals, can hold the title"

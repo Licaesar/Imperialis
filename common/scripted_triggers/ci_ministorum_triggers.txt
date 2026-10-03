@@ -1,0 +1,28 @@
+﻿# Triggers da decisao que funda o Adeptus Ministorum (k_sol).
+
+# Escopo: personagem. Helaena Undomiel e a primeira titular quando esta viva, adulta e seguidora da fe imperialis.
+ci_ministorum_helaena_available_trigger = {
+	exists = character:ci_helaena_undomiel
+	character:ci_helaena_undomiel = {
+		is_alive = yes
+		is_adult = yes
+		faith = faith:imperialis
+	}
+}
+
+# Escopo: personagem. Candidato a titular na falta de Helaena: seguidor adulto da fe (qualquer rito).
+ci_ministorum_candidate_trigger = {
+	is_alive = yes
+	is_adult = yes
+	is_imprisoned = no
+	faith = faith:imperialis
+}
+
+# Escopo: governante que toma a decisao. Ha alguem para ocupar o titulo (Helaena, ou candidato na corte ou entre os vassalos).
+ci_ministorum_holder_exists_trigger = {
+	OR = {
+		ci_ministorum_helaena_available_trigger = yes
+		any_courtier_or_guest = { ci_ministorum_candidate_trigger = yes }
+		any_vassal = { ci_ministorum_candidate_trigger = yes }
+	}
+}
