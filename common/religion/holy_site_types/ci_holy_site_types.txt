@@ -5,28 +5,32 @@
 # Jerusalem), listado em common/religion/faith_types/ci_faith_types.txt. A chave leva o prefixo ci_ porque o jogo nao tem local
 # santo em Ravena; o nome vem de localization/english/ci_holy_sites_l_english.yml (holy_site_ci_ravenna_name).
 #
-# TODO_LORE: os efeitos abaixo sao PROVISORIOS, no formato dos locais santos do vanilla (parecidos com os de Jerusalem), ate o
-# autor definir os efeitos proprios deste local especial. county_holder_* vale para o dono do condado da mesma fe; faith_*
-# vale para todos os fieis, so porque o local e eminente; os blocos scaled crescem com a raridade das reliquias entronizadas.
+# Efeitos: copia exata dos do local santo de Colonia (cologne) do vanilla, por decisao do autor em 03/10/2026.
+# county_holder_* vale para o dono do condado da mesma fe; faith_* vale para todos os fieis, so porque o local e eminente;
+# os blocos scaled crescem com a raridade das reliquias entronizadas. O autor pode trocar por efeitos proprios depois.
+# O check_imperialis_religion.py avisa quando os efeitos deixam de ser iguais aos de cologne.
 ##############################################
 ci_ravenna = {
 	county = c_ravenna
 
 	county_holder_character_modifier = {
-		monthly_piety_gain_mult = 0.05
+		learning = 1
+		monthly_county_control_growth_factor = 0.05
 	}
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		tax_mult = 0.01
+		county_opinion_add = 1
 	}
 
 	faith_character_modifier = {
-		monthly_piety_gain_mult = 0.05
+		cultural_head_fascination_mult = 0.05
 	}
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
+		cultural_head_fascination_mult = 0.01
+		monthly_county_control_growth_factor = 0.01
 	}
 }
