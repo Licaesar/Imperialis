@@ -21,6 +21,16 @@ imperialis = {
 			tenet_mendicant_preachers
 			tenet_esotericism
 			tenet_asceticism
+
+			# marco 2, fase b: versoes imperiais dos tenets cristaos (common/religion/tenet_types/ci_tenet_types.txt)
+			tenet_ci_ancestor_veneration
+			tenet_ci_celestial_hierarchy
+			tenet_ci_codex_study
+			tenet_ci_maternal_authority
+			tenet_ci_soldiers_of_faith
+			tenet_ci_apostles_mission
+			tenet_ci_codex_liturgy
+			tenet_ci_charity
 		}
 	}
 }

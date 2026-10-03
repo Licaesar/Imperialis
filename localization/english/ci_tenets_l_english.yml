@@ -1,0 +1,35 @@
+﻿l_english:
+
+ # Tenets ci_ (marco 2, fase b): versoes imperiais dos tenets cristaos da By God Alone. TODO_LORE: nomes e descricoes provisorios.
+
+ # clone de dulia: saints and relics
+ tenet_ci_ancestor_veneration_name: "Veneration of Ancestors"
+ tenet_ci_ancestor_veneration_desc: "TODO_LORE: description of Veneration of Ancestors."
+
+ # clone de celestial_hierarchy: imperial order and clerical career
+ tenet_ci_celestial_hierarchy_name: "Celestial Hierarchy"
+ tenet_ci_celestial_hierarchy_desc: "TODO_LORE: description of Celestial Hierarchy."
+
+ # clone de scholasticism: learning
+ tenet_ci_codex_study_name: "Codex Study"
+ tenet_ci_codex_study_desc: "TODO_LORE: description of Codex Study."
+
+ # clone de hyperdulia: Mater Undomiel, women
+ tenet_ci_maternal_authority_name: "Maternal Authority"
+ tenet_ci_maternal_authority_desc: "TODO_LORE: description of Maternal Authority."
+
+ # clone de miles_christi: Legio and Sororitas
+ tenet_ci_soldiers_of_faith_name: "Soldiers of the Faith"
+ tenet_ci_soldiers_of_faith_desc: "TODO_LORE: description of Soldiers of the Faith."
+
+ # clone de acts_of_apostles: conversion and Legio Apostolus (adventure bonus needs EP3)
+ tenet_ci_apostles_mission_name: "Mission of the Apostles"
+ tenet_ci_apostles_mission_desc: "TODO_LORE: description of Mission of the Apostles."
+
+ # clone de divine_liturgy: temple piety
+ tenet_ci_codex_liturgy_name: "Liturgy of the Codex"
+ tenet_ci_codex_liturgy_desc: "TODO_LORE: description of Liturgy of the Codex."
+
+ # clone de philanthropia: alms, Harmoniae
+ tenet_ci_charity_name: "Charity"
+ tenet_ci_charity_desc: "TODO_LORE: description of Charity."

@@ -1,0 +1,454 @@
+﻿##############################################
+# CULTUS IMPERIALIS - TENETS ci_ (marco 2, fase b)
+#
+# Versoes imperiais dos tenets cristaos da By God Alone. Cada tenet clona a estrutura do original (parametros, modificadores
+# e virtudes/pecados iguais), trocando so a trava de religiao: vale para imperialis_religion em vez de christianity_religion.
+# O script do jogo le os PARAMETROS (has_doctrine_parameter / has_personal_tenet_flag), por isso os clones funcionam sem mais codigo.
+# O que o jogo liga a CHAVE do tenet (eventos de concilio, de peticao ao Head of Faith, evangelizacao) nao e herdado.
+#
+# Todos entram como permitidos nos quatro ritos (history/faiths/ci_faith_history.txt): sao escolha de tenet pessoal e somam
+# virtudes e pecados com peso 0.5 (o personal tenet vale em dobro). Parametros e modificadores de fe so valem se um rito
+# os adotar como central. A linha "clone:" abaixo e lida por docs/dev/check_imperialis_religion.py para conferir que os
+# parametros continuam iguais aos do original.
+#
+# Nomes provisorios (TODO_LORE): ver localization/english/ci_tenets_l_english.yml.
+##############################################
+
+# clone: tenet_dulia
+tenet_ci_ancestor_veneration = {
+	icon = tenet_dulia
+
+	requires_dlc_flag = by_god_alone
+
+	is_shown = {
+		religion = religion:imperialis_religion
+	}
+
+	can_pick = {
+		religion = religion:imperialis_religion
+	}
+
+	can_pick_as_personal_tenet = {
+		faith = { religion = religion:imperialis_religion }
+	}
+
+	piety_cost = {
+		value = faith_tenet_cost_low
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { rite_has_tenet = tenet_ci_ancestor_veneration }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	parameters = {
+		tenet_dulia_cheaper_saint_costs
+		tenet_dulia_extra_relic_modifier
+		tenet_dulia_dynasty_prestige_from_relics
+		tenet_dulia_canonization_faith_bonus
+	}
+
+	personal_tenet_parameters = {
+		tenet_dulia_can_select_patron_saint
+		tenet_dulia_personal_sainthood_chance
+	}
+
+	personal_tenet_modifier = {
+		artifact_decay_reduction_mult = -0.25
+	}
+
+	traits = {
+		virtues = {
+			consecrated_blood = { weight = 15 scale = 2 }
+			zealous = { weight = 10 scale = 1 }
+		}
+		sins = {
+			cynical = { weight = 10 scale = 1 }
+		}
+	}
+}
+
+# clone: tenet_celestial_hierarchy
+tenet_ci_celestial_hierarchy = {
+	icon = tenet_celestial_hierarchy
+
+	requires_dlc_flag = by_god_alone
+
+	is_shown = {
+		religion = religion:imperialis_religion
+	}
+
+	can_pick = {
+		religion = religion:imperialis_religion
+	}
+
+	piety_cost = {
+		value = faith_tenet_cost_low
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { rite_has_tenet = tenet_ci_celestial_hierarchy }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	parameters = {
+		tenet_celestial_hierarchy_court_aptitude_bonus
+		tenet_celestial_hierarchy_clergy_acceptance
+		tenet_celestial_hierarchy_religious_relations_bonus
+	}
+
+	character_modifier = {
+		piety_level_impact_mult = 0.25
+	}
+
+	county_modifier = {
+		travel_danger = -10
+	}
+
+	personal_tenet_parameters = {
+		tenet_celestial_hierarchy_sp_from_court_position
+		tenet_celestial_hierarchy_interaction_acceptance
+	}
+
+	traits = {
+		virtues = {
+			loyal = { weight = 20 scale = 1 }
+			humble = { weight = 15 scale = 1 }
+			content = { weight = 15 scale = 1 }
+		}
+		sins = {
+			disloyal = { weight = 20 scale = 1 }
+			ambitious = { weight = 15 scale = 1 }
+		}
+	}
+}
+
+# clone: tenet_scholasticism
+tenet_ci_codex_study = {
+	icon = tenet_scholasticism
+
+	requires_dlc_flag = by_god_alone
+
+	is_shown = {
+		religion = religion:imperialis_religion
+	}
+
+	can_pick = {
+		religion = religion:imperialis_religion
+	}
+
+	piety_cost = {
+		value = faith_tenet_cost_low
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { rite_has_tenet = tenet_ci_codex_study }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	parameters = {
+		tenet_scholasticism_muslim_hebrew_greek_poi
+		tenet_scholasticism_university_bonus
+		tenet_scholasticism_cheaper_adult_education
+		tenet_scholasticism_court_scholar
+		tenet_scholasticism_study_scripture_bonus
+		sanctify_artifacts_knowledge
+	}
+
+	character_modifier = {
+		cultural_head_fascination_mult = 0.1
+		learning_scheme_phase_duration = -15
+		learning_scheme_resistance = 10
+	}
+
+	personal_tenet_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.1
+	}
+
+	personal_tenet_parameters = {
+		tenet_scholasticism_scholar_trait
+		tenet_scholasticism_travelling_studium
+		tenet_scholasticism_university_chance
+		tenet_scholasticism_study_scripture_bonus
+	}
+
+	traits = {
+		virtues = {
+			diligent = { weight = 20 scale = 1 }
+		}
+		sins = {
+			lazy = { weight = 20 scale = 1 }
+		}
+	}
+}
+
+# clone: tenet_hyperdulia
+tenet_ci_maternal_authority = {
+	icon = tenet_hyperdulia
+
+	requires_dlc_flag = by_god_alone
+
+	is_shown = {
+		religion = religion:imperialis_religion
+	}
+
+	can_pick = {
+		religion = religion:imperialis_religion
+	}
+
+	piety_cost = {
+		value = faith_tenet_cost_low
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { rite_has_tenet = tenet_ci_maternal_authority }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	parameters = {
+		tenet_hyperdulia_female_preference_law
+		tenet_hyperdulia_female_claims_are_strong
+	}
+
+	personal_tenet_parameters = {
+		tenet_hyperdulia_fulfillment_per_female_child
+		tenet_hyperdulia_daughter_vows_bonus
+		tenet_hyperdulia_women_can_be_councillors
+	}
+
+	divergence_multiplier = 1.5
+
+	traits = {
+		virtues = {
+			pregnant = { weight = 15 scale = 1 }
+			compassionate = { weight = 10 scale = 1 }
+		}
+		sins = {
+			callous = { weight = 10 scale = 1 }
+		}
+	}
+}
+
+# clone: tenet_miles_christi
+tenet_ci_soldiers_of_faith = {
+	icon = tenet_miles_christi
+
+	requires_dlc_flag = by_god_alone
+
+	is_shown = {
+		religion = religion:imperialis_religion
+	}
+
+	can_pick = {
+		religion = religion:imperialis_religion
+	}
+
+	piety_cost = {
+		value = faith_tenet_cost_low
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { rite_has_tenet = tenet_ci_soldiers_of_faith }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	parameters = {
+		tenet_miles_christi_white_peace_defender_bonus
+		tenet_miles_christi_combat_fulfillment
+		tenet_miles_christi_holy_weapon_blessing
+		sanctify_artifacts_weapons
+	}
+
+	character_modifier = {
+		prowess_per_piety_level = 1
+		knight_limit = 1
+		accolade_glory_gain_mult = 0.2
+		monthly_piety_gain_per_knight_mult = 0.01
+		holy_order_hire_cost_mult = -0.15
+	}
+
+	personal_tenet_modifier = {
+		martial_per_piety_level = 1
+		knight_limit = 1
+	}
+
+	personal_tenet_parameters = {
+		tenet_miles_christi_holy_warrior_trait
+	}
+
+	traits = {
+		virtues = {
+			brave = { weight = 25 scale = 2 }
+			faith_warrior = { weight = 25 scale = 2 }
+			crusader_king = { weight = 25 scale = 2 }
+		}
+		sins = {
+			craven = { weight = 25 scale = 2 }
+		}
+	}
+}
+
+# clone: tenet_acts_of_apostles
+tenet_ci_apostles_mission = {
+	icon = tenet_acts_of_apostles
+
+	requires_dlc_flag = by_god_alone
+
+	is_shown = {
+		religion = religion:imperialis_religion
+	}
+
+	can_pick = {
+		religion = religion:imperialis_religion
+	}
+
+	piety_cost = {
+		value = faith_tenet_cost_low
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { rite_has_tenet = tenet_ci_apostles_mission }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	parameters = {
+		tenet_acts_of_apostles_laamp_missionary_bonus
+		tenet_acts_of_apostles_legitimacy_from_converts
+		tenet_acts_of_apostles_head_of_rite_sway
+		tenet_acts_of_apostles_conversion_learning
+		tenet_acts_of_apostles_piety_from_converts
+	}
+
+	personal_tenet_modifier = {
+		owned_legend_spread_mult = 0.2
+	}
+
+	personal_tenet_parameters = {
+		tenet_acts_of_apostles_fulfillment_from_converts
+	}
+
+	traits = {
+		virtues = {
+			pilgrim = { weight = 15 scale = 1 }
+			humble = { weight = 10 scale = 1 }
+			gregarious = { weight = 10 scale = 1 }
+		}
+		sins = {
+			shy = { weight = 10 scale = 1 }
+		}
+	}
+}
+
+# clone: tenet_divine_liturgy
+tenet_ci_codex_liturgy = {
+	icon = tenet_divine_liturgy
+
+	requires_dlc_flag = by_god_alone
+
+	is_shown = {
+		religion = religion:imperialis_religion
+	}
+
+	can_pick = {
+		religion = religion:imperialis_religion
+	}
+
+	piety_cost = {
+		value = faith_tenet_cost_low
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { rite_has_tenet = tenet_ci_codex_liturgy }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	parameters = {
+		tenet_divine_liturgy_temple_piety
+	}
+
+	character_modifier = {
+		monthly_piety_from_buildings_mult = 0.25
+	}
+
+	personal_tenet_parameters = {
+		tenet_divine_liturgy_well_sung_liturgy
+		tenet_divine_liturgy_schola_cantorum
+	}
+
+	traits = {
+		virtues = {
+			temperate = { weight = 20 scale = 1 }
+		}
+		sins = {
+			gluttonous = { weight = 20 scale = 1 }
+		}
+	}
+}
+
+# clone: tenet_philanthropia
+tenet_ci_charity = {
+	icon = tenet_philanthropia
+
+	requires_dlc_flag = by_god_alone
+
+	is_shown = {
+		religion = religion:imperialis_religion
+	}
+
+	can_pick = {
+		religion = religion:imperialis_religion
+	}
+
+	piety_cost = {
+		value = faith_tenet_cost_low
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { rite_has_tenet = tenet_ci_charity }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	parameters = {
+		piety_from_gifts_active
+		tenet_philanthropia_high_almoner_court_position
+		tenet_philanthropia_generous_bonus
+		tenet_philanthropia_greedy_penalty
+	}
+
+	personal_tenet_parameters = {
+		tenet_philanthropia_ransom_captives
+		tenet_philanthropia_alms_to_the_destitute
+	}
+
+	character_modifier = {
+		piety_standalone_gain_mult = 0.1
+	}
+
+	county_modifier = {
+		county_opinion_add = 10
+		epidemic_resistance = 5
+		tax_mult = -0.03
+	}
+
+	personal_tenet_modifier = {
+		diplomacy_per_piety_level = 1
+	}
+
+	traits = {
+		virtues = {
+			generous = { weight = 25 scale = 1 }
+			compassionate = { weight = 20 scale = 1 }
+		}
+		sins = {
+			greedy = { weight = 25 scale = 1 }
+		}
+	}
+}
