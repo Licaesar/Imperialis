@@ -1,0 +1,30 @@
+﻿### Venerados da fe Imperialis (marco 2, fase c) ###
+# Mesma logica do hellenic_saint do vanilla (common/flavorization/20_pam_flavorization.txt): o personagem venerado (trait saint)
+# ganha o titulo no nome, como "Divus Diocletian". A localizacao esta em localization/english/ci_saint_names_l_english.yml.
+imperialis_saint = {
+	type = character
+	special = saint
+	gender = male
+	flavourization_rules = {
+		target_character = yes
+		top_liege = no
+	}
+
+	priority = 9999
+
+	religions = { imperialis_religion }
+}
+
+imperialis_female_saint = {
+	type = character
+	special = saint
+	gender = female
+	flavourization_rules = {
+		target_character = yes
+		top_liege = no
+	}
+
+	priority = 9999
+
+	religions = { imperialis_religion }
+}
