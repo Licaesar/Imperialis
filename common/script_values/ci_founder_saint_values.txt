@@ -1,0 +1,3 @@
+﻿# Fervor ganho pela fe Imperialis quando Kensoriel ou Helaena morrem (events/ci_founder_saint_events.txt).
+# O fervor maximo do jogo e 100 (MAX_FERVOR), entao 100 leva a fe ao teto.
+ci_founder_death_fervor_gain = 100

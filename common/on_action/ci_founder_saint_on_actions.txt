@@ -4,6 +4,8 @@
 # nem aprovacao do Head of Faith:
 #   Kensoriel -> sepultado no local santo do Monte Olimpo (b_servia, c_thessalia)
 #   Helaena   -> sepultada em Ravena (capital de c_ravenna)
+# Cada morte tambem leva o fervor da fe a +100 (ci_founder_death_fervor_gain) e dispara um evento informativo proprio
+# para cada jogador da fe (events/ci_founder_saint_events.txt).
 # Os demais venerados (herdeiros, ascendidos, apostolos) seguem a decisao nativa de venerar um antepassado.
 # Encadeia o on_death do vanilla sem substitui-lo.
 ##############################################
@@ -20,6 +22,7 @@ ci_founder_saint_on_death = {
 				NOT = { has_trait = saint }
 			}
 			ci_founder_canonize_on_death_effect = { PROVINCE = title:b_servia.title_province }
+			ci_founder_death_fervor_effect = { EVENT = ci_founder_saint.0001 DESC = ci_fervor_gain_kensoriel_death }
 		}
 		else_if = {
 			limit = {
@@ -28,6 +31,7 @@ ci_founder_saint_on_death = {
 				NOT = { has_trait = saint }
 			}
 			ci_founder_canonize_on_death_effect = { PROVINCE = title:c_ravenna.title_province }
+			ci_founder_death_fervor_effect = { EVENT = ci_founder_saint.0002 DESC = ci_fervor_gain_helaena_death }
 		}
 	}
 }

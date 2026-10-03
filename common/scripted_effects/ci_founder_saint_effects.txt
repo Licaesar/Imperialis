@@ -63,3 +63,23 @@ ci_founder_canonize_on_death_effect = {
 		add_trait = saint
 	}
 }
+
+# Escopo: o fundador que acabou de morrer (root do on_death); depois de ci_founder_canonize_on_death_effect, que salva scope:ci_founder.
+# Aplica o fervor UMA vez na fe e avisa cada jogador da fe com um evento informativo (o efeito nao depende de haver jogador).
+# EVENT - evento do fundador (ci_founder_saint.0001 Kensoriel, ci_founder_saint.0002 Helaena)
+# DESC  - chave de localizacao do registro de fervor da fe
+ci_founder_death_fervor_effect = {
+	faith ?= {
+		change_fervor = {
+			value = ci_founder_death_fervor_gain
+			desc = $DESC$
+		}
+	}
+	every_player = {
+		limit = {
+			is_alive = yes
+			faith = scope:ci_founder.faith
+		}
+		trigger_event = { id = $EVENT$ }
+	}
+}

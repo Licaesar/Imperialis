@@ -3,3 +3,15 @@
  # Mensagem da veneracao automatica de Kensoriel e Helaena ao morrer. Texto funcional, sem lore novo.
  ci_founder_canonized_t:0 "A Founder Is Venerated"
  ci_founder_canonized_desc:0 "[ci_founder.GetTitledFirstName] is now venerated by the faith and has been laid to rest at [consecration_province.GetName]."
+
+ # Eventos da morte dos fundadores (events/ci_founder_saint_events.txt). TODO_LORE: textos provisorios; cada evento tem texto proprio.
+ ci_founder_saint.0001.t:0 "TODO_LORE: The death of Kensoriel"
+ ci_founder_saint.0001.desc:0 "TODO_LORE: event text for the death of Kensoriel. The fervor of the faith rises to its peak."
+ ci_founder_saint.0001.a:0 "Continue"
+ ci_founder_saint.0002.t:0 "TODO_LORE: The death of Helaena"
+ ci_founder_saint.0002.desc:0 "TODO_LORE: event text for the death of Helaena. The fervor of the faith rises to its peak."
+ ci_founder_saint.0002.a:0 "Continue"
+
+ # Registro de fervor da fe (funcional)
+ ci_fervor_gain_kensoriel_death:0 "The death of Kensoriel"
+ ci_fervor_gain_helaena_death:0 "The death of Helaena"

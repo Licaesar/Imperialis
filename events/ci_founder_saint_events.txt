@@ -1,0 +1,59 @@
+﻿namespace = ci_founder_saint
+
+##############################################
+# MORTE DOS FUNDADORES (marco 2, fase c). Disparados por ci_founder_death_fervor_effect, chamado de
+# common/on_action/ci_founder_saint_on_actions.txt quando Kensoriel ou Helaena morrem (de qualquer causa).
+# O fervor da fe (+ci_founder_death_fervor_gain) ja foi aplicado uma vez pelo on_action; o evento so informa, com uma unica opcao.
+# Os dois eventos tem texto proprio e o mesmo resultado. TODO_LORE: textos provisorios ate o autor escrever.
+# scope:ci_founder - o fundador que morreu
+# 0001 - Morte do Kensoriel
+# 0002 - Morte da Helaena
+##############################################
+
+ci_founder_saint.0001 = {
+	type = character_event
+	title = ci_founder_saint.0001.t
+	desc = ci_founder_saint.0001.desc
+	theme = faith
+
+	left_portrait = {
+		character = scope:ci_founder
+		animation = dead
+	}
+
+	option = {
+		name = ci_founder_saint.0001.a
+		show_as_tooltip = {
+			faith = {
+				change_fervor = {
+					value = ci_founder_death_fervor_gain
+					desc = ci_fervor_gain_kensoriel_death
+				}
+			}
+		}
+	}
+}
+
+ci_founder_saint.0002 = {
+	type = character_event
+	title = ci_founder_saint.0002.t
+	desc = ci_founder_saint.0002.desc
+	theme = faith
+
+	left_portrait = {
+		character = scope:ci_founder
+		animation = dead
+	}
+
+	option = {
+		name = ci_founder_saint.0002.a
+		show_as_tooltip = {
+			faith = {
+				change_fervor = {
+					value = ci_founder_death_fervor_gain
+					desc = ci_fervor_gain_helaena_death
+				}
+			}
+		}
+	}
+}
