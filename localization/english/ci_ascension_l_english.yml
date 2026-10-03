@@ -7,8 +7,7 @@
  ci_ascension_decision_desc:0 "All who carry the Pure Divinus Sanguinius can leave this world and ascend to the heavens to live with the divine and rule souls with him, that is if he is worthy enough."
  ci_ascension_decision_tooltip:0 "Ascend to Godhood"
  ci_ascension_decision_confirm:0 "Start the Ascent"
- ci_ascension_decision_req_site:0 "A free holy site of your faith in your realm, or a free county capital next to one, can receive your tomb. Rome and Jerusalem do not count"
- ci_ascension_decision_effect_tt:0 "You will ascend and die, and your heir will inherit as usual. You are venerated by your faith, with your tomb and complete relics at a free holy site of your realm. Your dynasty gains #V 1500#! prestige. This cannot be undone once you embrace the Ascension"
+ ci_ascension_decision_effect_tt:0 "You will ascend and die, and your heir will inherit as usual. Your dynasty gains #V 1500#! prestige. Whether you are venerated, and where you rest, is decided afterwards by your heirs. This cannot be undone once you embrace the Ascension"
 
  ci_ascension.0001.t:0 "The Final Ascent"
  ci_ascension.0001.desc:0 "You feel the call of the heavens. Your mortal shell will soon be shed as you rise to divinity. Make your preparations."

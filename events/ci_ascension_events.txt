@@ -23,26 +23,14 @@ ci_ascension.0001 = {
 		trigger = {
 			has_title = title:e_italy
 			has_trait = sanguini_5
-			pam_has_consecration_site_trigger = yes
 		}
 
-		# O mesmo mecanismo dos santos comuns escolhe a sepultura: local santo livre do reino, senao capital vizinha
-		pam_pick_actor_consecration_province_effect = yes
-		if = {
-			limit = { exists = scope:consecration_province }
-			# Registro de venerado (trait saint, add_saint, tumulo e reliquias); o corpo fica, entao as reliquias sao completas
-			pam_canonize_saint_effect = {
-				CANONIZER = root
-				CANDIDATE = root
-				CONSECRATION_PROVINCE = scope:consecration_province
-				PRESET = no
-			}
-			dynasty ?= {
-				add_dynasty_prestige = 1500
-			}
-			# A morte vem por ultimo
-			death = { death_reason = death_ascended }
+		dynasty ?= {
+			add_dynasty_prestige = 1500
 		}
+		# A morte vem por ultimo. A veneracao (trait saint) e a sepultura ficam para os herdeiros, pela decisao nativa
+		# de venerar um antepassado; so Kensoriel e Helaena sao venerados sozinhos (ci_founder_saint_on_actions.txt)
+		death = { death_reason = death_ascended }
 	}
 
 	option = {

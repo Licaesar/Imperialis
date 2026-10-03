@@ -1,0 +1,65 @@
+﻿##############################################
+# CULTUS IMPERIALIS - VENERACAO DOS FUNDADORES (marco 2, fase c)
+#
+# Kensoriel e Helaena sao venerados sozinhos ao morrer (ver common/on_action/ci_founder_saint_on_actions.txt).
+# Mesmo caminho do vanilla para fundadores monasticos que morrem (common/on_action/death.txt): pam_canonize_saint_effect
+# (trait saint, add_saint, tumulo, reliquias). Aqui o local e fixo por personagem, com plano B se estiver ocupado.
+##############################################
+
+# Escopo: o fundador que acabou de morrer (root do on_death).
+# PROVINCE - provincia reservada para o tumulo (por exemplo title:b_servia.title_province)
+ci_founder_canonize_on_death_effect = {
+	save_scope_as = ci_founder
+
+	# 1) O local reservado, se estiver livre (com propriedade e sem outro santo)
+	$PROVINCE$ = {
+		if = {
+			limit = { pam_province_is_free_burial_site_trigger = yes }
+			save_scope_as = consecration_province
+		}
+	}
+	# 2) Senao, qualquer local santo livre da fe (o mesmo recurso do vanilla para fundadores monasticos)
+	if = {
+		limit = { NOT = { exists = scope:consecration_province } }
+		faith ?= {
+			random_holy_site_barony = {
+				limit = { title_province ?= { pam_province_is_free_burial_site_trigger = yes } }
+				title_province = { save_scope_as = consecration_province }
+			}
+		}
+	}
+
+	if = {
+		limit = { exists = scope:consecration_province }
+		pam_canonize_saint_effect = {
+			CANONIZER = root
+			CANDIDATE = root
+			CONSECRATION_PROVINCE = scope:consecration_province
+			PRESET = no
+		}
+		# O vanilla soma 1 ao contador de santos da dinastia, o que encarece a proxima canonizacao dela;
+		# a veneracao automatica de um fundador nao deve pesar nas canonizacoes dos herdeiros
+		dynasty ?= {
+			change_variable = {
+				name = pam_dynasty_saint_count
+				add = -1
+			}
+		}
+		every_player = {
+			limit = {
+				is_alive = yes
+				faith = scope:ci_founder.faith
+			}
+			send_interface_message = {
+				type = msg_pam_new_saint_canonized
+				title = ci_founder_canonized_t
+				desc = ci_founder_canonized_desc
+				left_icon = scope:ci_founder
+			}
+		}
+	}
+	# Todo local santo da fe esta ocupado: venera mesmo assim, sem tumulo (o vanilla faz o mesmo com fundadores monasticos)
+	else = {
+		add_trait = saint
+	}
+}

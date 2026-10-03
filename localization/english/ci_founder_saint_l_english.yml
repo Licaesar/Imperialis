@@ -1,0 +1,5 @@
+﻿l_english:
+
+ # Mensagem da veneracao automatica de Kensoriel e Helaena ao morrer. Texto funcional, sem lore novo.
+ ci_founder_canonized_t:0 "A Founder Is Venerated"
+ ci_founder_canonized_desc:0 "[ci_founder.GetTitledFirstName] is now venerated by the faith and has been laid to rest at [consecration_province.GetName]."

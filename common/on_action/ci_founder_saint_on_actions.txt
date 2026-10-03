@@ -1,0 +1,33 @@
+﻿##############################################
+# CULTUS IMPERIALIS - VENERACAO DOS FUNDADORES (marco 2, fase c)
+# Quando Kensoriel ou Helaena morrem (de qualquer causa, inclusive a Ascensao), a fe Imperialis os venera sozinha, sem decisao
+# nem aprovacao do Head of Faith:
+#   Kensoriel -> sepultado no local santo do Monte Olimpo (b_servia, c_thessalia)
+#   Helaena   -> sepultada em Ravena (capital de c_ravenna)
+# Os demais venerados (herdeiros, ascendidos, apostolos) seguem a decisao nativa de venerar um antepassado.
+# Encadeia o on_death do vanilla sem substitui-lo.
+##############################################
+on_death = {
+	on_actions = { ci_founder_saint_on_death }
+}
+
+ci_founder_saint_on_death = {
+	effect = {
+		if = {
+			limit = {
+				this = character:ci_kensoriel_liphe
+				faith.religion = religion:imperialis_religion
+				NOT = { has_trait = saint }
+			}
+			ci_founder_canonize_on_death_effect = { PROVINCE = title:b_servia.title_province }
+		}
+		else_if = {
+			limit = {
+				this = character:ci_helaena_undomiel
+				faith.religion = religion:imperialis_religion
+				NOT = { has_trait = saint }
+			}
+			ci_founder_canonize_on_death_effect = { PROVINCE = title:c_ravenna.title_province }
+		}
+	}
+}
