@@ -1,0 +1,35 @@
+﻿##############################################
+# CULTUS IMPERIALIS - AVISO AOS JOGADORES DA FE (marco 2, fase c)
+##############################################
+
+# Escopo: o personagem que acabou de morrer ou vai morrer (a fe dele e a fe avisada).
+# Dispara $EVENT$ para cada jogador vivo da mesma fe e para o herdeiro principal, 1 dia depois. O herdeiro cobre o caso em que
+# o morto era o proprio jogador: ele deixa de ser jogador na hora da morte e o evento so chega a quem assume depois.
+# Os escopos salvos antes da chamada (por exemplo scope:ci_founder, scope:ci_ascendant) seguem com o evento.
+# EVENT - id do evento
+ci_notify_faith_players_effect = {
+	faith ?= { save_scope_as = ci_notify_faith }
+	every_player = {
+		limit = {
+			is_alive = yes
+			faith = scope:ci_notify_faith
+		}
+		add_to_list = ci_event_recipients
+	}
+	primary_heir ?= {
+		if = {
+			limit = {
+				is_alive = yes
+				faith = scope:ci_notify_faith
+			}
+			add_to_list = ci_event_recipients
+		}
+	}
+	every_in_list = {
+		list = ci_event_recipients
+		trigger_event = {
+			id = $EVENT$
+			days = 1
+		}
+	}
+}

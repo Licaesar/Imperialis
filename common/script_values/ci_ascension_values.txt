@@ -1,0 +1,2 @@
+﻿# Fervor ganho pela fe Imperialis a cada Ascensao (events/ci_ascension_events.txt). O maximo do jogo e 100 (MAX_FERVOR).
+ci_ascension_fervor_gain = 25

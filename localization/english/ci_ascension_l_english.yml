@@ -13,3 +13,9 @@
  ci_ascension.0001.desc:0 "You feel the call of the heavens. Your mortal shell will soon be shed as you rise to divinity. Make your preparations."
  ci_ascension.0001.a:0 "I embrace my Ascension"
  ci_ascension.0001.b:0 "Not yet"
+
+ # Aviso informativo da Ascensao (ci_ascension.0002). TODO_LORE: texto provisorio.
+ ci_ascension.0002.t:0 "TODO_LORE: An Ascension"
+ ci_ascension.0002.desc:0 "TODO_LORE: event text for an Ascension. The fervor of the faith rises."
+ ci_ascension.0002.a:0 "Continue"
+ ci_fervor_gain_ascension:0 "An Ascension"

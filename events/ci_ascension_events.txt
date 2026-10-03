@@ -3,6 +3,8 @@
 ##############################################
 # ASCENSAO (marco 2, fase c). Disparado so por ci_ascension_decision (common/decisions/ci_ascension_decisions.txt).
 # 0001 - Confirmacao do jogador. Opcao a: ascende. Opcao b: adia (nada acontece).
+# 0002 - Aviso informativo da Ascensao (uma unica opcao): o fervor da fe ja subiu ci_ascension_fervor_gain (25) no 0001.
+#        TODO_LORE: texto provisorio ate o autor escrever. scope:ci_ascendant - quem ascendeu.
 ##############################################
 
 ci_ascension.0001 = {
@@ -28,6 +30,15 @@ ci_ascension.0001 = {
 		dynasty ?= {
 			add_dynasty_prestige = 1500
 		}
+		# Fervor da fe (uma vez) e aviso aos jogadores da fe e ao herdeiro (ci_ascension.0002, 1 dia depois)
+		save_scope_as = ci_ascendant
+		faith ?= {
+			change_fervor = {
+				value = ci_ascension_fervor_gain
+				desc = ci_fervor_gain_ascension
+			}
+		}
+		ci_notify_faith_players_effect = { EVENT = ci_ascension.0002 }
 		# A morte vem por ultimo. A veneracao (trait saint) e a sepultura ficam para os herdeiros, pela decisao nativa
 		# de venerar um antepassado; so Kensoriel e Helaena sao venerados sozinhos (ci_founder_saint_on_actions.txt)
 		death = { death_reason = death_ascended }
@@ -35,5 +46,29 @@ ci_ascension.0001 = {
 
 	option = {
 		name = ci_ascension.0001.b
+	}
+}
+
+ci_ascension.0002 = {
+	type = character_event
+	title = ci_ascension.0002.t
+	desc = ci_ascension.0002.desc
+	theme = faith
+
+	left_portrait = {
+		character = scope:ci_ascendant
+		animation = personality_zealous
+	}
+
+	option = {
+		name = ci_ascension.0002.a
+		show_as_tooltip = {
+			faith = {
+				change_fervor = {
+					value = ci_ascension_fervor_gain
+					desc = ci_fervor_gain_ascension
+				}
+			}
+		}
 	}
 }
