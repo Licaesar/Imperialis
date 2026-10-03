@@ -18,7 +18,7 @@ Use ck3-modding for script and content work, ck3-gui for interface work, and ck3
 ## Project conventions
 
 - Design pillars: Kensoriel Liphe (deus encarnado), a linhagem Sanguinis e o culto imperial. Ver a Bíblia mais recente em `Workspace\Meus Mods CK3\Referencia\Biblias`. Não inventar lore: texto novo usa o marcador `TODO_LORE` até o autor elaborar.
-- Modelagem religiosa (decisão 03/10/2026): religião `imperialis_religion` com uma única fé `imperialis` e quatro ritos: `imperialis` (principal), `sororitas` (Cultus Undómiel), `omnissiah` e `homus` (Cultus Harmoniae). O `k_sol` (Adeptus Ministorum) é `head_of_rite`, sem `religious_head`.
+- Modelagem religiosa (decisão 03/10/2026): religião `imperialis_religion` com uma única fé `imperialis` e quatro ritos: `imperialis` (principal), `sororitas` (Cultus Undómiel), `omnissiah` e `homus` (Cultus Harmoniae). O `k_sol` (Adeptus Ministorum) vira o Head of Faith (`religious_head`) quando a decisão `ci_found_ministorum_decision` o cria; antes disso a fé não tem chefe.
 - Sistemas em mudança e pontos de entrada: `common/religion/` (religion_types, faith_types, rite_types, doctrine_types, doctrine_group_types), `history/faiths/`, `common/customizable_localization/00_liphe_custom_loc.txt`, `common/landed_titles/00_landed_titles_liphe.txt` e `history/characters/ci_founders.txt`.
 - Filename and script-key prefix: ci_. Arquivos antigos com outras convenções não são renomeados automaticamente.
 - Encoding: UTF-8 com BOM em scripts (.txt) e em localização (.yml), como já está em todos os arquivos do mod e como o jogo exige. O descriptor.mod fica sem BOM.
