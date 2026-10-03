@@ -12,7 +12,9 @@
 	doctrine = pagan_hostility_doctrine
 
 	#Main Group
-	#doctrine = doctrine_monotheist
+	# Teismo (autor, 03/10/2026): sem doutrina de teismo a UI contava 75 de divergencia ao escolher uma. Monoteista nao combina com
+	# tenet_household_gods (so politeistas), por isso esse tenet foi trocado por tenet_pentarchy (Ecclesiarchy).
+	doctrine = doctrine_monotheist
 	doctrine = doctrine_spiritual_head
 	doctrine = doctrine_gender_male_dominated
 	doctrine = doctrine_pluralism_righteous

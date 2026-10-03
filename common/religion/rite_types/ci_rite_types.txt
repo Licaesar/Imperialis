@@ -2,8 +2,8 @@
 # (religion_types/00_imperialis.txt). A doutrina de identidade (temple_authority_cult_*) define o culto.
 # Os nomes de exibicao sao os da localizacao (chaves iguais as dos ritos). Texto novo usa TODO_LORE ate o autor elaborar.
 #
-# Atencao: tenet_household_gods (so hellenism_religion + variavel da EP3) e tenet_aniconism (exige abrahamic_hostility_doctrine)
-# tem can_pick que o Imperialis nao cumpre. Se o jogo validar can_pick tambem na definicao inicial, trocar o tenet.
+# Tenets trocados em 03/10/2026 por decisao do autor: household_gods -> pentarchy (household_gods exige politeismo e a religiao agora
+# e monoteista) e aniconism -> esotericism (aniconism exige abrahamic_hostility_doctrine).
 
 imperialis = {
 	faith = imperialis
@@ -11,7 +11,7 @@ imperialis = {
 	color = { 0.36 0.20 0.35 }
 
 	tenets = {
-		tenet_household_gods
+		tenet_pentarchy # Ecclesiarchy (nome generico fora do cristianismo); substituiu tenet_household_gods
 		tenet_communion
 		tenet_ancestor_worship
 	}
@@ -55,7 +55,7 @@ omnissiah = {
 	tenets = {
 		tenet_mendicant_preachers
 		tenet_legalism
-		tenet_aniconism
+		tenet_esotericism # substituiu tenet_aniconism
 	}
 
 	doctrines = {
