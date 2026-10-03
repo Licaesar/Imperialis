@@ -1,0 +1,53 @@
+﻿### Ascensao (Ascendit ad Divinitatem) ###
+# Marco 2, fase c. Reescrita da antiga decisao de Ascensao (que usava sintaxe invalida e um evento quebrado).
+# Regras (grill de 03/10/2026): so o jogador; exige sanguini_5, fe Imperialis (qualquer rito), e_italy, 60 anos ou mais,
+# nivel 5 de piedade e de prestigio, disponivel e em paz. A confirmacao e o efeito ficam no evento ci_ascension.0001
+# (events/ci_ascension_events.txt): sepultura num local santo livre do reino ou capital vizinha (mesmo mecanismo dos santos comuns,
+# sem Vaticano e Jerusalem), registro de venerado com reliquias completas, +1500 de prestigio da dinastia, a morte death_ascended
+# por ultimo, e o herdeiro assume normalmente.
+ci_ascension_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+	desc = ci_ascension_decision_desc
+	selection_tooltip = ci_ascension_decision_tooltip
+	confirm_text = ci_ascension_decision_confirm
+	decision_group_type = major
+	sort_order = 1000
+
+	ai_check_interval = 0
+
+	is_shown = {
+		is_ai = no
+		faith ?= faith:imperialis
+		has_trait = sanguini_5
+		has_pam_dlc_trigger = yes
+	}
+
+	is_valid = {
+		has_title = title:e_italy
+		age >= 60
+		piety_level >= 5
+		prestige_level >= 5
+		custom_description = {
+			text = ci_ascension_decision_req_site
+			pam_has_consecration_site_trigger = yes
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		custom_tooltip = ci_ascension_decision_effect_tt
+		hidden_effect = {
+			trigger_event = ci_ascension.0001
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+}

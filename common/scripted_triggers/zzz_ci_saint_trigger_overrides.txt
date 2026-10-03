@@ -1,0 +1,140 @@
+﻿##############################################
+# CULTUS IMPERIALIS - SANTOS E VENERADOS (marco 2, fase c)
+#
+# As decisoes de santo da By God Alone (pam_canonize_saint_decision, pam_choose_consecration_site_decision, pam_extract_relic_decision)
+# ja funcionam para a fe Imperialis, entao o mod NAO as duplica: sobrescreve so os triggers pequenos abaixo, todos condicionados a fe.
+# O arquivo vem depois do vanilla na ordem alfabetica (ultimo carregado vence). Os corpos copiam os de
+# game/common/scripted_triggers/pam_saint_triggers.txt (1.20.0.3) e acrescentam so as linhas marcadas com "CI:".
+# A cada atualizacao do jogo, confira se pam_saint_triggers.txt mudou e refaca as copias.
+#
+# 1) Fundadores como candidatos: Helaena e os 17 apostolos podem ser venerados por quem for da fe e os tiver como antepassado de
+#    sangue, mesmo de outra dinastia. A lista do seletor vanilla percorre so os antepassados (every_ancestor): quem nao descende
+#    de um fundador nao o ve. Mesmas virtudes e mesma aprovacao do Head of Faith do vanilla.
+# 2) Local de consagracao sem o Vaticano e Jerusalem (tumulos de Pedro e Maria) para quem canoniza na fe Imperialis.
+#    Jerusalem ja vem ocupada pela Maria do vanilla; o Vaticano (provincia 2577) nao tem tumulo no vanilla e e travado aqui.
+#    A trava vale nos seletores, no requisito e na escolha automatica; a escolha da IA no passo 2 (ai_select_item) nao valida.
+# 3) A fe Imperialis fica sempre no modo "local santo", mesmo depois que ganhar regioes clericais (fase e): as catedrais dependem
+#    da realizacao espiritual crista.
+##############################################
+
+# Escopo: personagem. Helaena e os 17 apostolos de history/characters/ci_founders.txt.
+ci_is_founder_saint_candidate_trigger = {
+	OR = {
+		this = character:ci_helaena_undomiel
+		this = character:ci_reid_astrea
+		this = character:ci_ezio_auditore
+		this = character:ci_emhyr_emreis
+		this = character:ci_vistarios_granhieron
+		this = character:ci_legarde_martyr
+		this = character:ci_hrodric_gyliman
+		this = character:ci_verso_lumere
+		this = character:ci_altair_ramashiri
+		this = character:ci_sigvardr_drakenfyr
+		this = character:ci_miyamoto_musashi
+		this = character:ci_aurelian_solerius
+		this = character:ci_lakan_shaokan
+		this = character:ci_astarinus_viriata
+		this = character:ci_julius_euclius
+		this = character:ci_radahn_varakh
+		this = character:ci_alia_atreides
+		this = character:ci_elessar_telcontar
+	}
+}
+
+# Escopo: provincia. Vaticano (b_vaticano) e Jerusalem (b_jerusalem), quando quem canoniza e da fe Imperialis. O canonizador chega
+# por scope:actor (seletores e requisitos das decisoes) ou por scope:pam_burial_site_actor / pam_primary_site_actor (efeitos e
+# triggers de escolha de local); ?= nao falha quando o escopo nao existe.
+ci_saint_site_locked_trigger = {
+	OR = {
+		this = province:2577
+		this = province:5965
+	}
+	OR = {
+		scope:actor ?= { faith ?= faith:imperialis }
+		scope:pam_burial_site_actor ?= { faith ?= faith:imperialis }
+		scope:pam_primary_site_actor ?= { faith ?= faith:imperialis }
+	}
+}
+
+# Can this dead ancestor be canonized? CANONIZER is passed in because the picker runs with root = none; virtue/sin are judged by the canonizer's rite.
+pam_is_canonization_candidate_trigger = {
+	is_alive = no
+	NOT = { has_trait = saint }
+	faith ?= $CANONIZER$.faith
+	# CI: os fundadores dispensam a regra da mesma dinastia para quem e da fe Imperialis
+	trigger_if = {
+		limit = {
+			$CANONIZER$ = { faith ?= faith:imperialis }
+			ci_is_founder_saint_candidate_trigger = yes
+		}
+		always = yes
+	}
+	trigger_else = {
+		dynasty ?= $CANONIZER$.dynasty
+	}
+	# Saintly life: at least one virtue and no sins by our rite's reckoning.
+	num_virtuous_traits = {
+		value >= 1
+		target = this.rite
+	}
+	num_sinful_traits = {
+		value = 0
+		target = this.rite
+	}
+}
+
+# Faiths with clerical regions and a temporal/appointed clergy build cathedrals; every other faith consecrates at a holy site instead.
+pam_faith_uses_cathedrals_trigger = {
+	faith ?= {
+		# CI: a fe Imperialis fica no modo local santo
+		NOT = { this = faith:imperialis }
+		has_doctrine_parameter = has_clerical_regions
+	}
+	NOT = { rite = { rite_has_doctrine = doctrine_theocracy_lay_clergy } }
+}
+
+# A consecration barony (barony scope) whose province has no saint buried yet.
+pam_site_free_trigger = {
+	title_province ?= {
+		NOR = {
+			has_variable = hide_location_for_saint
+			has_travel_point_of_interest = poi_buried_saint
+			ci_saint_site_locked_trigger = yes # CI
+		}
+	}
+}
+
+# Province can take add_saint: holding present, no buried-saint PoI yet.
+pam_province_is_free_burial_site_trigger = {
+	has_holding = yes
+	NOR = {
+		has_variable = hide_location_for_saint
+		has_travel_point_of_interest = poi_buried_saint
+		ci_saint_site_locked_trigger = yes # CI
+	}
+}
+
+# Does the actor have a free primary consecration site? Cathedral faiths: an unoccupied cathedral in their realm. Others: an unoccupied holy site of their faith in realm.
+pam_has_free_primary_site_trigger = {
+	trigger_if = {
+		limit = { pam_faith_uses_cathedrals_trigger = yes }
+		OR = {
+			AND = {
+				pam_character_has_cathedral_trigger = yes
+				domicile ?= { domicile_location = { barony ?= { pam_site_free_trigger = yes } } }
+			}
+			any_realm_province = {
+				barony ?= { pam_site_free_trigger = yes }
+				any_province_domicile = { owner = { pam_character_has_cathedral_trigger = yes } }
+			}
+		}
+	}
+	trigger_else = {
+		save_temporary_scope_as = pam_primary_site_actor
+		any_realm_province = {
+			barony ?= { is_holy_site_of = scope:pam_primary_site_actor.faith }
+			NOT = { has_travel_point_of_interest = poi_buried_saint }
+			NOT = { ci_saint_site_locked_trigger = yes } # CI
+		}
+	}
+}

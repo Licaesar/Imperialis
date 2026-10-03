@@ -1,0 +1,51 @@
+﻿namespace = ci_ascension
+
+##############################################
+# ASCENSAO (marco 2, fase c). Disparado so por ci_ascension_decision (common/decisions/ci_ascension_decisions.txt).
+# 0001 - Confirmacao do jogador. Opcao a: ascende. Opcao b: adia (nada acontece).
+##############################################
+
+ci_ascension.0001 = {
+	type = character_event
+	title = ci_ascension.0001.t
+	desc = ci_ascension.0001.desc
+	theme = faith
+
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	option = {
+		name = ci_ascension.0001.a
+
+		# Mesmas condicoes da decisao: o estado pode ter mudado entre o clique e a resposta
+		trigger = {
+			has_title = title:e_italy
+			has_trait = sanguini_5
+			pam_has_consecration_site_trigger = yes
+		}
+
+		# O mesmo mecanismo dos santos comuns escolhe a sepultura: local santo livre do reino, senao capital vizinha
+		pam_pick_actor_consecration_province_effect = yes
+		if = {
+			limit = { exists = scope:consecration_province }
+			# Registro de venerado (trait saint, add_saint, tumulo e reliquias); o corpo fica, entao as reliquias sao completas
+			pam_canonize_saint_effect = {
+				CANONIZER = root
+				CANDIDATE = root
+				CONSECRATION_PROVINCE = scope:consecration_province
+				PRESET = no
+			}
+			dynasty ?= {
+				add_dynasty_prestige = 1500
+			}
+			# A morte vem por ultimo
+			death = { death_reason = death_ascended }
+		}
+	}
+
+	option = {
+		name = ci_ascension.0001.b
+	}
+}
