@@ -10,6 +10,7 @@
 		25 = caucasian_ginger
 	}
 	ethos = ethos_courtly
+	head_determination = head_determination_domain
 	heritage = heritage_byzantine
 	language = language_latin
 	martial_custom = martial_custom_male_only
@@ -35,6 +36,7 @@ lipherianii_culture = {
 		25 = caucasian_ginger
 	}
 	ethos = ethos_bellicose
+	head_determination = head_determination_domain
 	heritage = heritage_byzantine
 	language = language_latin
 	martial_custom = martial_custom_equal

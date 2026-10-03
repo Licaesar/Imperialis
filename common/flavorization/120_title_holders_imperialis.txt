@@ -22,7 +22,6 @@ kingdom_theocracy_imperialis_religion = {
 	type = title
 	tier = kingdom
 	priority = 47
-	holding = church_holding
 	
 	religions = { imperialis_religion }
 	governments = { theocracy_government }
