@@ -25,7 +25,7 @@ ci_kensoriel_liphe = {
 	trait = honest
 	trait = ambitious
 	trait = strategist
-	trait = scholar
+	trait = erudite
 	trait = gallant
 	trait = pure_blooded
 	trait = intellect_good_3
@@ -115,7 +115,7 @@ ci_reid_astrea = {
 	disallow_random_traits = yes
 
 	trait = apostolus
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = pure_blooded
 
@@ -160,7 +160,7 @@ ci_ezio_auditore = {
 	disallow_random_traits = yes
 
 	trait = apostolus
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = pure_blooded
 
@@ -198,7 +198,7 @@ ci_emhyr_emreis = {
 	disallow_random_traits = yes
 
 	trait = apostolus
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = pure_blooded
 
@@ -245,7 +245,7 @@ ci_vistarios_granhieron = {
 	trait = patient
 	trait = zealous
 	trait = theologian
-	trait = scholar
+	trait = erudite
 	trait = intellect_good_3
 	trait = beauty_good_3
 
@@ -275,7 +275,7 @@ ci_legarde_martyr = {
 	disallow_random_traits = yes
 
 	trait = apostolus
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = pure_blooded
 
@@ -314,7 +314,7 @@ ci_hrodric_gyliman = {
 	disallow_random_traits = yes
 
 	trait = apostolus
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = pure_blooded
 
@@ -353,7 +353,7 @@ ci_verso_lumere = {
 	disallow_random_traits = yes
 
 	trait = apostolus
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = pure_blooded
 
@@ -399,7 +399,7 @@ ci_altair_ramashiri = {
 	trait = patient
 	trait = cynical
 	trait = temperate
-	trait = scholar
+	trait = erudite
 	trait = theologian
 	trait = beauty_good_3
 	trait = intellect_good_3
@@ -430,7 +430,7 @@ ci_sigvardr_drakenfyr = {
 	disallow_random_traits = yes
 
 	trait = apostolus
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = pure_blooded
 
@@ -475,7 +475,7 @@ ci_miyamoto_musashi = {
 	disallow_random_traits = yes
 
 	trait = apostolus
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = pure_blooded
 
@@ -520,7 +520,7 @@ ci_aurelian_solerius = {
 	disallow_random_traits = yes
 
 	trait = apostolus
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = pure_blooded
 
@@ -560,7 +560,7 @@ ci_lakan_shaokan = {
 	disallow_random_traits = yes
 
 	trait = apostolus
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = pure_blooded
 
@@ -599,7 +599,7 @@ ci_astarinus_viriata = {
 	disallow_random_traits = yes
 
 	trait = apostolus
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = pure_blooded
 
@@ -645,7 +645,7 @@ ci_julius_euclius = {
 	disallow_random_traits = yes
 
 	trait = apostolus
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = pure_blooded
 
@@ -690,7 +690,7 @@ ci_radahn_varakh = {
 	disallow_random_traits = yes
 
 	trait = apostolus
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = pure_blooded
 
@@ -743,7 +743,7 @@ ci_alia_atreides = {
 	trait = patient
 	trait = ambitious
 	trait = cynical
-	trait = scholar
+	trait = erudite
 	trait = schemer
 	trait = beauty_good_3
 	trait = intellect_good_3
@@ -777,7 +777,7 @@ ci_elessar_telcontar = {
 	trait = calm
 	trait = deceitful
 	trait = strategist
-	trait = scholar
+	trait = erudite
 	trait = beauty_good_3
 	trait = physique_good_3
 
@@ -817,7 +817,7 @@ ci_aurelia_valeria = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -840,7 +840,7 @@ ci_lucia_claudia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -863,7 +863,7 @@ ci_helena_cornelia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -886,7 +886,7 @@ ci_sophia_aemilia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -909,7 +909,7 @@ ci_marcella_fabia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -932,7 +932,7 @@ ci_octavia_julia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -955,7 +955,7 @@ ci_eliana_flavia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -978,7 +978,7 @@ ci_samira_cassia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -1001,7 +1001,7 @@ ci_astrid_livia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -1024,7 +1024,7 @@ ci_akemi_domitia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -1047,7 +1047,7 @@ ci_caelia_licinia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -1070,7 +1070,7 @@ ci_meilin_marcia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -1093,7 +1093,7 @@ ci_aurea_sergia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -1116,7 +1116,7 @@ ci_livia_antonia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -1139,7 +1139,7 @@ ci_valeria_tullia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
@@ -1162,7 +1162,7 @@ ci_minerva_octavia = {
 	trait = lifestyle_mystic
 	trait = zealous
 	trait = witch
-	trait = scholar
+	trait = erudite
 	trait = fecund
 	trait = beauty_good_3
 
