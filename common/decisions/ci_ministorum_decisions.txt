@@ -1,6 +1,8 @@
 ﻿### Fundar o Adeptus Ministorum ###
-# Cria o titulo k_sol, head_of_rite da fe imperialis. Exige que o governante da fe (qualquer rito) detenha e_italy.
-# So aparece enquanto o k_sol nao tem titular: se o titulo for destruido por falta de herdeiro valido, a decisao reaparece.
+# Cria o titulo k_sol e o torna o Head of Faith da fe imperialis. Exige que o governante da fe (qualquer rito) detenha e_italy.
+# E o unico caminho para a fe ter chefe: a decisao vanilla create_hof_decision (Establish a Ecclesia Maximus) esta bloqueada
+# pelo parametro block_from_create_hof_parameter nas doutrinas de identidade dos ritos.
+# So aparece enquanto a fe esta sem chefe: se o titulo for destruido por falta de herdeiro valido, a decisao reaparece.
 ci_found_ministorum_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
@@ -21,6 +23,9 @@ ci_found_ministorum_decision = {
 
 	is_shown = {
 		faith ?= faith:imperialis
+		faith ?= {
+			NOT = { exists = religious_head }
+		}
 		NOT = { exists = title:k_sol.holder }
 		is_playable_character = yes
 		is_ruler = yes

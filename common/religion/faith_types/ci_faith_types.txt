@@ -1,8 +1,10 @@
 ﻿# Fe unica do Cultus Imperialis (decisao 03/10/2026: uma fe, quatro ritos).
 # Os ritos estao em common/religion/rite_types/ci_rite_types.txt e o estado inicial em history/faiths/ci_faith_history.txt.
 #
-# Chefia: a fe nao tem religious_head. O k_sol (Adeptus Ministorum) e head_of_rite: o titular chefia o rito que segue,
-# como o Papa no cristianismo de 867. O k_sol so passa a existir pela decisao que exige e_italy.
+# Chefia: ate o Ministorum ser fundado a fe nao tem chefe. A decisao ci_found_ministorum_decision (exige e_italy) cria o k_sol e
+# chama set_religious_head_title: o titular passa a ser o Head of Faith (governo teocratico e lei de sucessao teocratica).
+# Testado em jogo em 03/10/2026: com head_of_rite o titular ficou feudal e o jogo oferecia criar um segundo chefe aleatorio
+# (create_hof_decision), por isso a opcao Y (head_of_rite) foi trocada por religious_head dinamico.
 imperialis = {
 	main_rite = imperialis
 
@@ -10,7 +12,6 @@ imperialis = {
 		religion = imperialis_religion
 		color = { 0.36 0.20 0.35 }
 		icon = imperialis
-		head_of_rite = k_sol
 	}
 
 	eminent_holy_sites = {

@@ -1,4 +1,4 @@
-﻿# Funda o Adeptus Ministorum: cria o titulo k_sol e o entrega a primeira titular.
+﻿# Funda o Adeptus Ministorum: cria o titulo k_sol, o entrega a primeira titular e o torna o Head of Faith da fe imperialis.
 # Escopo: governante que toma a decisao (ci_found_ministorum_decision).
 # Primeira titular: Helaena Undomiel, se viva, adulta e da fe imperialis. Senao, o seguidor adulto da fe com a maior soma de
 # aprendizado e nivel de piedade entre a corte (cortesaos e convidados) e os vassalos diretos do decisor.
@@ -38,4 +38,24 @@ ci_found_ministorum_effect = {
 		}
 	}
 	resolve_title_and_vassal_change = scope:ci_ministorum_change
+
+	# O Ministorum passa a ser a chefia da fe (Head of Faith), como o restore_papacy_scripted_effect vanilla faz com k_papal_state.
+	# Isso precisa vir antes da lei de sucessao: same_faith_theocratic_succession_law so pode ser mantida por quem e religious_head.
+	faith:imperialis = {
+		set_religious_head_title = title:k_sol
+	}
+	scope:ci_ministorum_first_head = {
+		hidden_effect = {
+			# Sucessao padrao dos chefes de fe de religioes sem sucessao propria (mesma lei que o vanilla aplica a um HoF dinamico).
+			if = {
+				limit = { NOT = { has_realm_law = same_faith_theocratic_succession_law } }
+				add_realm_law_skip_effects = same_faith_theocratic_succession_law
+			}
+			# O Head of Faith recebe o governo teocratico sempre que possivel (comentario de theocracy_government no vanilla).
+			if = {
+				limit = { NOT = { government_has_flag = government_is_theocracy } }
+				change_government = theocracy_government
+			}
+		}
+	}
 }

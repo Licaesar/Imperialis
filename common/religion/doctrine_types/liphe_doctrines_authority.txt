@@ -1,6 +1,8 @@
 ﻿# Doutrinas de identidade de cada rito do Cultus Imperialis (grupo doctrine_imperialis_branches).
 # Cada rito carrega exatamente uma delas. Todas somam:
 #  - same_faith_different_rite_opinion / _county_opinion_add: rivalidade media entre ritos (modificadores lidos como "como os outros te veem", igual a tenet_communal_identity).
+#  - block_from_create_hof_parameter: esconde a decisao vanilla create_hof_decision (Establish a Ecclesia Maximus), que criaria um Head of Faith
+#    aleatorio com prioridade sobre o k_sol. O chefe da fe so nasce pela decisao ci_found_ministorum_decision.
 #  - heresy_threshold = 100: protege os quatro ritos canonicos contra serem tratados como heresia por divergencia
 #    (a divergencia so de doutrinas entre homus e imperialis ja passa de 65). Ritos criados dinamicamente continuam
 #    virando fe nova ao chegar em 100 de divergencia (RITE_CREATION_DIVERGENCE_FAITH_THRESHOLD).
@@ -30,6 +32,7 @@ temple_authority_cult_imperialis_doctrine = {
 		same_faith_different_rite_county_opinion_add = -5
 	}
 	parameters = {
+		block_from_create_hof_parameter
 		other_culture_conversion_penalty_active
 		invasion_cb_enabled
 		tenet_esotericism_mystic_education
@@ -63,6 +66,7 @@ temple_authority_cult_omnissiah_doctrine = { # Culto apenas ao Omnissiah
 		same_faith_different_rite_county_opinion_add = -5
 	}
 	parameters = {
+		block_from_create_hof_parameter
 		invasion_cb_enabled
 		tenet_esotericism_mystic_education
 		take_vows_active
@@ -99,6 +103,7 @@ temple_authority_cult_sororitas_doctrine = { # Culto a Undomiel
 		same_faith_different_rite_county_opinion_add = -5
 	}
 	parameters = {
+		block_from_create_hof_parameter
 		other_culture_conversion_penalty_active
 		tenet_esotericism_mystic_education
 		take_vows_active
@@ -133,6 +138,7 @@ temple_authority_cult_homus_doctrine = { # Multiculturalismo Liphe
 		same_faith_different_rite_county_opinion_add = -5
 	}
 	parameters = {
+		block_from_create_hof_parameter
 		tenet_esotericism_mystic_education
 		take_vows_active
 	}
