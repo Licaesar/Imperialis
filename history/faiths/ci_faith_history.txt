@@ -23,7 +23,6 @@ imperialis = {
 			tenet_asceticism
 
 			# marco 2, fase b: tenets proprios da fe (common/religion/tenet_types/ci_tenet_types.txt)
-			tenet_ci_sanguini_hierarchy
 			tenet_ci_militarum
 			tenet_ci_codex_liturgy
 		}

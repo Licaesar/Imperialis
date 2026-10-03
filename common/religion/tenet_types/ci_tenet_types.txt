@@ -1,7 +1,7 @@
 ﻿##############################################
 # CULTUS IMPERIALIS - TENETS ci_ (marco 2, fase b)
 #
-# Tres tenets-base que o autor vai reescrever para virarem tenets unicos da fe Imperialis. Hoje cada um ainda clona o tenet
+# Dois tenets-base que o autor vai reescrever para virarem tenets unicos da fe Imperialis. Hoje cada um ainda clona o tenet
 # cristao da By God Alone (mesmos parametros, modificadores e virtudes/pecados); o script do jogo le os PARAMETROS
 # (has_doctrine_parameter / has_personal_tenet_flag), por isso funcionam sem codigo extra. O que o jogo liga a CHAVE do tenet
 # vanilla (eventos de concilio, de peticao ao Head of Faith, evangelizacao) nao e herdado.
@@ -13,73 +13,13 @@
 # Todos entram como permitidos nos quatro ritos (history/faiths/ci_faith_history.txt): escolha de tenet pessoal e virtudes e
 # pecados com peso 0.5 (o personal tenet vale em dobro). Parametros e modificadores de fe so valem se um rito os adotar como
 # central. O Head of Faith (decisoes vanilla pam_permit_tenet_decision e pam_prohibit_tenet_decision) pode permitir ou proibir
-# tenets da fe: no teste de 899, dois dos tres ficaram proibidos nos quatro ritos.
+# tenets da fe: no teste de 899, dois dos antigos ci_ ficaram proibidos nos quatro ritos.
 #
 # A linha "# clone:" e lida por docs/dev/check_imperialis_religion.py, que AVISA (nao falha) quando um tenet passa a diferir
 # do original; apague a linha de um tenet quando ele virar totalmente proprio.
 #
 # Nomes provisorios (TODO_LORE): ver localization/english/ci_tenets_l_english.yml.
 ##############################################
-
-# clone: tenet_celestial_hierarchy
-tenet_ci_sanguini_hierarchy = {
-	icon = tenet_celestial_hierarchy
-
-	requires_dlc_flag = by_god_alone
-
-	is_shown = {
-		religion = religion:imperialis_religion
-	}
-
-	can_pick = {
-		religion = religion:imperialis_religion
-	}
-
-	can_pick_as_personal_tenet = {
-		faith = { religion = religion:imperialis_religion }
-	}
-
-	piety_cost = {
-		value = faith_tenet_cost_low
-
-		# Multiplier for keeping same tenet
-		if = {
-			limit = { rite_has_tenet = tenet_ci_sanguini_hierarchy }
-			multiply = faith_unchanged_doctrine_cost_mult
-		}
-	}
-
-	parameters = {
-		tenet_celestial_hierarchy_court_aptitude_bonus
-		tenet_celestial_hierarchy_clergy_acceptance
-		tenet_celestial_hierarchy_religious_relations_bonus
-	}
-
-	character_modifier = {
-		piety_level_impact_mult = 0.25
-	}
-
-	county_modifier = {
-		travel_danger = -10
-	}
-
-	personal_tenet_parameters = {
-		tenet_celestial_hierarchy_sp_from_court_position
-		tenet_celestial_hierarchy_interaction_acceptance
-	}
-
-	traits = {
-		virtues = {
-			loyal = { weight = 20 scale = 1 }
-			humble = { weight = 15 scale = 1 }
-			content = { weight = 15 scale = 1 }
-		}
-		sins = {
-			disloyal = { weight = 20 scale = 1 }
-			ambitious = { weight = 15 scale = 1 }
-		}
-	}
-}
 
 # clone: tenet_miles_christi
 tenet_ci_militarum = {
@@ -145,9 +85,9 @@ tenet_ci_militarum = {
 	}
 }
 
-# clone: tenet_divine_liturgy
+# clone: tenet_scholasticism
 tenet_ci_codex_liturgy = {
-	icon = tenet_divine_liturgy
+	icon = tenet_scholasticism
 
 	requires_dlc_flag = by_god_alone
 
@@ -174,24 +114,37 @@ tenet_ci_codex_liturgy = {
 	}
 
 	parameters = {
-		tenet_divine_liturgy_temple_piety
+		tenet_scholasticism_muslim_hebrew_greek_poi
+		tenet_scholasticism_university_bonus
+		tenet_scholasticism_cheaper_adult_education
+		tenet_scholasticism_court_scholar
+		tenet_scholasticism_study_scripture_bonus
+		sanctify_artifacts_knowledge
 	}
 
 	character_modifier = {
-		monthly_piety_from_buildings_mult = 0.25
+		cultural_head_fascination_mult = 0.1
+		learning_scheme_phase_duration = -15
+		learning_scheme_resistance = 10
+	}
+
+	personal_tenet_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.1
 	}
 
 	personal_tenet_parameters = {
-		tenet_divine_liturgy_well_sung_liturgy
-		tenet_divine_liturgy_schola_cantorum
+		tenet_scholasticism_scholar_trait
+		tenet_scholasticism_travelling_studium
+		tenet_scholasticism_university_chance
+		tenet_scholasticism_study_scripture_bonus
 	}
 
 	traits = {
 		virtues = {
-			temperate = { weight = 20 scale = 1 }
+			diligent = { weight = 20 scale = 1 }
 		}
 		sins = {
-			gluttonous = { weight = 20 scale = 1 }
+			lazy = { weight = 20 scale = 1 }
 		}
 	}
 }

@@ -1,15 +1,11 @@
 ﻿l_english:
 
- # Tenets ci_ (marco 2, fase b): tres tenets-base que o autor vai reescrever. TODO_LORE: nomes e descricoes provisorios.
-
- # base: celestial_hierarchy: imperial order and clerical career
- tenet_ci_sanguini_hierarchy_name: "Sanguini Hierarchy"
- tenet_ci_sanguini_hierarchy_desc: "TODO_LORE: description of Sanguini Hierarchy."
+ # Tenets ci_ (marco 2, fase b): dois tenets-base que o autor vai reescrever. TODO_LORE: nomes e descricoes provisorios.
 
  # base: miles_christi: Legio and Sororitas
  tenet_ci_militarum_name: "Militarum"
  tenet_ci_militarum_desc: "TODO_LORE: description of Militarum."
 
- # base: divine_liturgy: temple piety
+ # base: scholasticism: learning, university, study of scripture
  tenet_ci_codex_liturgy_name: "Liturgy of the Codex"
  tenet_ci_codex_liturgy_desc: "TODO_LORE: description of Liturgy of the Codex."
