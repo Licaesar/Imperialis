@@ -2,7 +2,7 @@
 
 Crusader Kings III mod, prefixo `ci_`. Alvo: 1.20.x (instalado: 1.20.0.3 Crozier), com a DLC By God Alone obrigatória. Pasta do mod: `C:\Users\rique\Documents\Paradox Interactive\Crusader Kings III\mod\Imperialis`. Descritor do launcher: `...\mod\Imperialis.mod`.
 
-**Leia primeiro:** `C:\Users\rique\Documents\Workspace\Meus Mods CK3\docs\ESTADO - Imperialis.md` (estado do código, decisões vigentes, plano do marco 2, ferramentas). Depois o checklist ativo `...\docs\Imperialis - Checklist de playtest marco 2.md`. Lore: Bíblia V4 em `...\Referencia\Biblias`. Não leia por padrão `research_notes`, `reports`, `Referencia` (exceto a Bíblia V4) nem `DNA`: use grep.
+**Leia primeiro:** `C:\Users\rique\Documents\Workspace\Meus Mods CK3\docs\ESTADO - Imperialis.md` (estado do código, decisões vigentes, marcos 1 e 2 concluídos, marco 3 a planejar, ferramentas). O checklist do marco 2 (concluído) está em `...\docs\Imperialis - Checklist de playtest marco 2.md`; o do marco 3 ainda não existe. Lore: Bíblia V5 em `...\Referencia\Biblias`. Não leia por padrão `research_notes`, `reports`, `Referencia` (exceto a Bíblia V5) nem `DNA`: use grep.
 
 Use ck3-modding para script e conteúdo, ck3-gui para interface e ck3-playtest para verificação em jogo. Este arquivo guarda só fatos do projeto.
 
