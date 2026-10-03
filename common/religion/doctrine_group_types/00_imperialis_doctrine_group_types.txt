@@ -1,14 +1,9 @@
-﻿doctrine_imperialis_branches = {
+﻿# Grupo das doutrinas de identidade dos ritos (liphe_doctrines_authority.txt).
+# Na 1.20 a doutrina aponta para o grupo com doctrine_group_type; o grupo nao lista mais as doutrinas.
+doctrine_imperialis_branches = {
 	category = "main_group"
 
 	is_available_on_create = {
 		religion_tag = imperialis_religion
-	}
-
-	doctrine_types = {
-		temple_authority_cult_imperialis_doctrine
-		temple_authority_cult_omnissiah_doctrine
-		temple_authority_cult_sororitas_doctrine
-		temple_authority_cult_homus_doctrine
 	}
 }

@@ -1,4 +1,13 @@
-﻿temple_authority_cult_imperialis_doctrine = {
+﻿# Doutrinas de identidade de cada rito do Cultus Imperialis (grupo doctrine_imperialis_branches).
+# Cada rito carrega exatamente uma delas. Todas somam:
+#  - same_faith_different_rite_opinion / _county_opinion_add: rivalidade media entre ritos (modificadores lidos como "como os outros te veem", igual a tenet_communal_identity).
+#  - heresy_threshold = 100: protege os quatro ritos canonicos contra serem tratados como heresia por divergencia
+#    (a divergencia so de doutrinas entre homus e imperialis ja passa de 65). Ritos criados dinamicamente continuam
+#    virando fe nova ao chegar em 100 de divergencia (RITE_CREATION_DIVERGENCE_FAITH_THRESHOLD).
+
+temple_authority_cult_imperialis_doctrine = {
+	doctrine_group_type = doctrine_imperialis_branches
+	index = 0
 	icon = "temple_authority_cult_imperialis_doctrine" # Culto aos Liphes
 	piety_cost = {
 		value = faith_tenet_cost_mid
@@ -10,24 +19,31 @@
 			education_learning_3
 			education_learning_4
 			education_learning_5
-			scholar
+			erudite
 			lifestyle_mystic
 		}
 	}
 	character_modifier = {
 		clergy_opinion = 5
 		church_holding_build_gold_cost = -0.1
+		same_faith_different_rite_opinion = -10
+		same_faith_different_rite_county_opinion_add = -5
 	}
 	parameters = {
-		other_culture_conversion_penalty_active = yes
-		invasion_cb_enabled = yes
-		tenet_esotericism_mystic_education = yes
+		other_culture_conversion_penalty_active
+		invasion_cb_enabled
+		tenet_esotericism_mystic_education
+		take_vows_active
+	}
+	special_parameters = {
 		fervor_per_holy_site = 2
-		take_vows_active = yes
+		heresy_threshold = 100
 	}
 }
 
 temple_authority_cult_omnissiah_doctrine = { # Culto apenas ao Omnissiah
+	doctrine_group_type = doctrine_imperialis_branches
+	index = 1
 	icon = "temple_authority_cult_omnissiah_doctrine" # Culto apenas ao Omnissiah
 	piety_cost = {
 		value = faith_tenet_cost_mid
@@ -37,22 +53,29 @@ temple_authority_cult_omnissiah_doctrine = { # Culto apenas ao Omnissiah
 			education_learning_3
 			education_learning_4
 			education_learning_5
-			scholar
+			erudite
 			lifestyle_mystic
 		}
 	}
 	character_modifier = {
 		artifact_decay_reduction_mult = -0.1
+		same_faith_different_rite_opinion = -10
+		same_faith_different_rite_county_opinion_add = -5
 	}
 	parameters = {
-		invasion_cb_enabled = yes
-		tenet_esotericism_mystic_education = yes
+		invasion_cb_enabled
+		tenet_esotericism_mystic_education
+		take_vows_active
+	}
+	special_parameters = {
 		fervor_per_holy_site = 2
-		take_vows_active = yes
+		heresy_threshold = 100
 	}
 }
 
 temple_authority_cult_sororitas_doctrine = { # Culto a Undomiel
+	doctrine_group_type = doctrine_imperialis_branches
+	index = 2
 	icon = "temple_authority_cult_sororitas_doctrine"
 	piety_cost = {
 		value = faith_tenet_cost_mid
@@ -64,7 +87,7 @@ temple_authority_cult_sororitas_doctrine = { # Culto a Undomiel
 			education_learning_3
 			education_learning_4
 			education_learning_5
-			scholar
+			erudite
 			lifestyle_mystic
 		}
 	}
@@ -72,14 +95,22 @@ temple_authority_cult_sororitas_doctrine = { # Culto a Undomiel
 		domain_tax_different_faith_mult = 0.2
 		levy_reinforcement_rate_same_faith = 0.25
 		levy_reinforcement_rate_different_faith = -0.25
+		same_faith_different_rite_opinion = -10
+		same_faith_different_rite_county_opinion_add = -5
 	}
 	parameters = {
-		other_culture_conversion_penalty_active = yes
-		tenet_esotericism_mystic_education = yes
-		take_vows_active = yes
+		other_culture_conversion_penalty_active
+		tenet_esotericism_mystic_education
+		take_vows_active
+	}
+	special_parameters = {
+		heresy_threshold = 100
 	}
 }
+
 temple_authority_cult_homus_doctrine = { # Multiculturalismo Liphe
+	doctrine_group_type = doctrine_imperialis_branches
+	index = 3
 	icon = "temple_authority_cult_homus_doctrine"
 	piety_cost = {
 		value = faith_tenet_cost_mid
@@ -89,18 +120,23 @@ temple_authority_cult_homus_doctrine = { # Multiculturalismo Liphe
 			education_learning_3
 			education_learning_4
 			education_learning_5
-			scholar
+			erudite
 			lifestyle_mystic
 		}
-	}
-	parameters = {
-		tenet_esotericism_mystic_education = yes
-		take_vows_active = yes
 	}
 	character_modifier = {
 		different_faith_opinion = 10
 		same_faith_opinion = 5
 		domain_tax_same_faith_mult = 0.05
 		levy_reinforcement_rate_same_faith = 0.1
+		same_faith_different_rite_opinion = -10
+		same_faith_different_rite_county_opinion_add = -5
+	}
+	parameters = {
+		tenet_esotericism_mystic_education
+		take_vows_active
+	}
+	special_parameters = {
+		heresy_threshold = 100
 	}
 }

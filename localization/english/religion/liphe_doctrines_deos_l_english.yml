@@ -1,5 +1,8 @@
 ﻿l_english:
 
+#Grupo das doutrinas de identidade dos ritos (TODO_LORE: nome definitivo)
+ doctrine_imperialis_branches_name:0 "Cultus"
+
 #Imperator Tenets
  temple_authority_cult_imperialis_doctrine_name:0 "Ordo Imperialis"
  temple_authority_cult_imperialis_doctrine_desc:0 "Imperator vivit, Imperator regnat, Imperator al omni malo te defendat."

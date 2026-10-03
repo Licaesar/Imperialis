@@ -1,0 +1,93 @@
+﻿# Ritos da fe imperialis. Cada rito tem tres tenets centrais e as doutrinas que o diferenciam das doutrinas comuns da religiao
+# (religion_types/00_imperialis.txt). A doutrina de identidade (temple_authority_cult_*) define o culto.
+# Os nomes de exibicao sao os da localizacao (chaves iguais as dos ritos). Texto novo usa TODO_LORE ate o autor elaborar.
+#
+# Atencao: tenet_household_gods (so hellenism_religion + variavel da EP3) e tenet_aniconism (exige abrahamic_hostility_doctrine)
+# tem can_pick que o Imperialis nao cumpre. Se o jogo validar can_pick tambem na definicao inicial, trocar o tenet.
+
+imperialis = {
+	faith = imperialis
+
+	color = { 0.36 0.20 0.35 }
+
+	tenets = {
+		tenet_household_gods
+		tenet_communion
+		tenet_ancestor_worship
+	}
+
+	doctrines = {
+		temple_authority_cult_imperialis_doctrine
+	}
+
+	cultures = { lipherianii_culture imperialis_culture }
+}
+
+# Cultus Undomiel (antiga fe sororitas)
+sororitas = {
+	faith = imperialis
+
+	color = { 0.80 0.10 0.10 }
+	icon = sororitas
+
+	tenets = {
+		tenet_unrelenting_faith
+		tenet_legalism
+		tenet_mendicant_preachers
+	}
+
+	doctrines = {
+		temple_authority_cult_sororitas_doctrine
+		doctrine_gender_female_dominated
+		doctrine_pluralism_fundamentalist
+		doctrine_clerical_function_recruitment
+		doctrine_clerical_gender_female_only
+	}
+}
+
+# Cultus Omnissiah
+omnissiah = {
+	faith = imperialis
+
+	color = { 0.85 0.75 0.25 }
+	icon = omnissiah
+
+	tenets = {
+		tenet_mendicant_preachers
+		tenet_legalism
+		tenet_aniconism
+	}
+
+	doctrines = {
+		temple_authority_cult_omnissiah_doctrine
+		doctrine_gender_equal
+		doctrine_witchcraft_virtuous
+		doctrine_clerical_function_alms_and_pacification
+	}
+}
+
+# Cultus Harmoniae (antiga fe homus)
+homus = {
+	faith = imperialis
+
+	color = { 0.25 0.55 0.85 }
+	icon = homus
+
+	tenets = {
+		tenet_mendicant_preachers
+		tenet_esotericism
+		tenet_asceticism
+	}
+
+	doctrines = {
+		temple_authority_cult_homus_doctrine
+		doctrine_pluralism_pluralistic
+		doctrine_polygamy
+		doctrine_divorce_allowed
+		doctrine_bastardry_none
+		doctrine_homosexuality_accepted
+		doctrine_kinslaying_any_dynasty_member_crime
+		doctrine_clerical_function_alms_and_pacification
+		doctrine_no_anointment
+	}
+}

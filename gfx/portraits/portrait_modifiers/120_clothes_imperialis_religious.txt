@@ -1,83 +1,113 @@
 ﻿clothes_imperialis_religious = { # All clothes triggers are found in 00_clothing_triggers.txt
 
-    usage = game
-    selection_behavior = weighted_random
-    priority = 3
+	usage = game
+	selection_behavior = weighted_random
+	priority = 3
 
-## Imperialis ##
+## Imperialis: mesmas roupas dos catolicos (decisao 03/10/2026). A DLC By God Alone e obrigatoria, entao usamos os modelos PAM. ##
 
-    religious_imperialis_head_clothes = { # k_sol
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = clothes
-                template = religious_orthodox_head_clothes
-                range = { 0 1 }
-            }
-            accessory = {
-                mode = add
-                gene = ate_clothes
-                template = ate_empty_clothing
-                range = { 0 1 } # For the randomness to work correctly
-            }
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 150
-                portrait_religious_head_trigger = yes
-                #portrait_religious_imperialis_trigger = yes
-                religion = religion:imperialis_religion
-            }
-        }
-    }  
+	religious_imperialis_head_clothes = { # k_sol
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = religious_catholic_head_clothes
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 150
+				portrait_religious_head_trigger = yes
+				portrait_religious_imperialis_trigger = yes
+			}
+		}
+	}
 
-    religious_imperialis_high_clothes = { # Imperialis Bishops and Priests
-         dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = clothes
-                template = religious_orthodox_high_clothes
-                range = { 0 1 }
-            }
-            accessory = {
-                mode = add
-                gene = ate_clothes
-                template = ate_empty_clothing
-                range = { 0 1 } # For the randomness to work correctly
-            }
-        }
-        outfit_tags = { priest_outfit bishop_outfit }
-        weight = {
-            base = 0
-            modifier = {
-                add = 120
-                portrait_religious_high_trigger = yes
-                #portrait_religious_imperialis_trigger = yes
-                religion = religion:imperialis_religion
-            }
-        }
-    }
-	
-#	religious_imperialis_devoted_clothes = { # Imperialis Monks and Nuns
-#        dna_modifiers = {
-#            accessory = {
-#                mode = add
-#                gene = clothes
-#                template = religious_catholic_devoted_clothes
-#                range = { 0 1 } # For the randomness to work correctly
-#            }
-#        }
-#        outfit_tags = { monk_outfit }
-#        weight = {
-#            base = 0
-#            modifier = {
-#                add = 100
-#                portrait_religious_devoted_trigger = yes
-#                portrait_religious_imperialis_trigger = yes
-#            }
-#        }
-#    }
+	religious_imperialis_archbishop_clothes = { # Teocratas de ducado ou superior
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = pam_catholic_archbishop_clothes
+				range = { 0 1 }
+			}
+		}
+		outfit_tags = { priest_outfit bishop_outfit }
+		weight = {
+			base = 0
+			modifier = {
+				add = 125
+				portrait_religious_high_trigger = yes
+				portrait_religious_imperialis_trigger = yes
+				portrait_is_archbishop_trigger = yes
+			}
+		}
+	}
 
+	religious_imperialis_prince_bishop_clothes = { # Teocratas de condado
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = pam_catholic_prince_bishop_clothes
+				range = { 0 1 }
+			}
+		}
+		outfit_tags = { priest_outfit bishop_outfit }
+		weight = {
+			base = 0
+			modifier = {
+				add = 122
+				portrait_religious_high_trigger = yes
+				portrait_religious_imperialis_trigger = yes
+				portrait_is_prince_bishop_trigger = yes
+			}
+		}
+	}
 
+	religious_imperialis_clergy_clothes = { # Clero menor (arrendatarios, capelaes da corte)
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = pam_catholic_clergy_clothes
+				range = { 0 1 }
+			}
+		}
+		outfit_tags = { priest_outfit bishop_outfit }
+		weight = {
+			base = 0
+			modifier = {
+				add = 120
+				portrait_religious_high_trigger = yes
+				portrait_religious_imperialis_trigger = yes
+				NOR = {
+					portrait_is_archbishop_trigger = yes
+					portrait_is_prince_bishop_trigger = yes
+				}
+			}
+		}
+	}
+
+	religious_imperialis_devoted_clothes = { # Monges e freiras
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = religious_catholic_devoted_clothes
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		outfit_tags = { monk_outfit eskil_outfit }
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				portrait_religious_devoted_trigger = yes
+				portrait_religious_imperialis_trigger = yes
+			}
+		}
+	}
 }

@@ -1,0 +1,33 @@
+﻿# Fe unica do Cultus Imperialis (decisao 03/10/2026: uma fe, quatro ritos).
+# Os ritos estao em common/religion/rite_types/ci_rite_types.txt e o estado inicial em history/faiths/ci_faith_history.txt.
+#
+# Chefia: a fe nao tem religious_head. O k_sol (Adeptus Ministorum) e head_of_rite: o titular chefia o rito que segue,
+# como o Papa no cristianismo de 867. O k_sol so passa a existir pela decisao que exige e_italy.
+imperialis = {
+	main_rite = imperialis
+
+	faith_details = {
+		religion = imperialis_religion
+		color = { 0.36 0.20 0.35 }
+		icon = imperialis
+		head_of_rite = k_sol
+	}
+
+	eminent_holy_sites = {
+		rome
+		jerusalem
+	}
+
+	holy_sites = {
+		athens
+		constantinople
+		alexandria
+		carthage
+		olympus
+		baghdad
+	}
+
+	# Tenets centrais e doutrinas especificas ficam nos ritos (rite_types). As doutrinas comuns estao na religiao.
+
+	cultures = { lipherianii_culture imperialis_culture }
+}

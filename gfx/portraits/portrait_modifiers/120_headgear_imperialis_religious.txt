@@ -4,46 +4,21 @@
 	selection_behavior = weighted_random
 	priority = 3
 
-## Imperialis ##
-
-	religious_imperialis_high = { # # Imperialis Bishops and Priests
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = ate_headgear
-				template = no_headgear
-				range = { 0 1 }
-			}
-			accessory = {
-				mode = add
-				gene = headgear
-				template = religious_orthodox_high
-				range = { 0 1 }
-			}
-		}
-		outfit_tags = { priest_outfit bishop_outfit }
-		weight = {
-			base = 0
-			modifier = {
-				add = 130
-				portrait_religious_high_trigger = yes
-				religion = religion:imperialis_religion
-			}
-		}
-	}
+## Imperialis: mesmos chapeus dos catolicos (decisao 03/10/2026) ##
 
 	religious_imperialis_head = { # k_sol
+		outfit_tags = { rank_headgear }
 		dna_modifiers = {
 			accessory = {
 				mode = add
-				gene = ate_headgear
-				template = no_headgear
+				gene = headgear
+				template = catholic_head
 				range = { 0 1 }
 			}
 			accessory = {
 				mode = add
-				gene = headgear
-				template = religious_orthodox_head
+				gene = additive_headgear
+				template = no_additive
 				range = { 0 1 }
 			}
 		}
@@ -52,38 +27,88 @@
 			modifier = {
 				add = 200
 				portrait_religious_head_trigger = yes
-				religion = religion:imperialis_religion
+				portrait_religious_imperialis_trigger = yes
 			}
 		}
 	}
 
-	
-	
-#	imperialis_devoted = {
-#		dna_modifiers = {
-#			accessory = {
-#				mode = add
-#				gene = headgear
-#				template = religious_catholic_devoted
-#				range = { 0 1 } # For the randomness to work correctly
-#			}
-#			accessory = {
-#				mode = add
-#				gene = additive_headgear
-#				template = no_additive
-#				range = { 0 1 }
-#			}
-#		}
-#		outfit_tags = { monk_outfit }
-#		weight = {
-#			base = 0
-#			modifier = {
-#				add = 100
-#				portrait_religious_devoted_trigger = yes
-#				portrait_religious_imperialis_trigger = yes
-#			}
-#		}
-#	}
+	religious_imperialis_archbishop = { # Teocratas de ducado ou superior
+		outfit_tags = { priest_outfit bishop_outfit }
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = catholic_archbishop_mitre
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = additive_headgear
+				template = no_additive
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 130
+				portrait_religious_high_trigger = yes
+				portrait_religious_imperialis_trigger = yes
+				portrait_is_archbishop_trigger = yes
+			}
+		}
+	}
 
+	religious_imperialis_high = { # Demais bispos e sacerdotes
+		outfit_tags = { priest_outfit bishop_outfit }
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = catholic_bishop_mitre
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = additive_headgear
+				template = no_additive
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 125
+				portrait_religious_high_trigger = yes
+				portrait_religious_imperialis_trigger = yes
+				portrait_is_archbishop_trigger = no
+			}
+		}
+	}
 
+	religious_imperialis_devoted = { # Monges e freiras
+		outfit_tags = { monk_outfit }
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = religious_catholic_devoted
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = additive_headgear
+				template = no_additive
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				portrait_religious_devoted_trigger = yes
+				portrait_religious_imperialis_trigger = yes
+			}
+		}
+	}
 }

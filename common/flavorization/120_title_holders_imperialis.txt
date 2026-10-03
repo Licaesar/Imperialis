@@ -6,7 +6,7 @@
 	priority = 50
 	
 	governments = { theocracy_government }
-	faiths = { imperialis sororitas omnissiah homus }
+	religions = { imperialis_religion }
 }
 king_theocracy_female_imperialis_religion = {
 	type = character

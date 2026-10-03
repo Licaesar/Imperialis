@@ -1,0 +1,27 @@
+﻿# Estado inicial da fe imperialis em 867.
+# Os tenets centrais do rito principal ja sao permitidos aos demais ritos. Como o rito principal pode mudar
+# (sem religious_head o jogo recalcula o principal por condados e locais santos), listamos os tenets de todos os ritos
+# como permitidos: o historico ignora os que ja sao centrais do rito principal.
+imperialis = {
+	867.1.1 = {
+		created = yes
+
+		rites = {
+			sororitas = {}
+			omnissiah = {}
+			homus = {}
+		}
+
+		permitted = {
+			tenet_household_gods
+			tenet_communion
+			tenet_ancestor_worship
+			tenet_unrelenting_faith
+			tenet_legalism
+			tenet_mendicant_preachers
+			tenet_aniconism
+			tenet_esotericism
+			tenet_asceticism
+		}
+	}
+}

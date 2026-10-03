@@ -2,6 +2,9 @@
 
  imperialis_religion:0 "Imperialis"
  imperialis_religion_adj:0 "Imperialis"
+ imperialis_religion_adherent:0 "Imperialis"
+ imperialis_religion_adherent_plural:0 "Imperiales"
+ imperialis_religion_desc:0 "TODO_LORE: Imperialis religion description."
  
  sororitas_religion:0 "Cult Undomiel"
  sororitas_religion_adj:0 "Sororita"
@@ -95,6 +98,7 @@
  #Title
  k_sol_article:0 ""
  k_sol:0 "Adeptus Ministorum"
+ k_sol_adj:0 "Ministorum"
  
  #Adeptus Ministorum titulo
  solis_man:0 "Patriarcha Oecumenicus"
