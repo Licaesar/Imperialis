@@ -57,6 +57,11 @@
 	# nao tinha nenhuma. Sem doctrine_sacraments_central o parametro excommunication_active fica desligado e a interacao de pedir a
 	# excomunhao nao aparece (o autor quer tudo o que o vanilla liga). A decisao vanilla de extrema-uncao (last_rites_active) tambem exige christian_fulfillment e continua fora do Imperialis.
 	doctrine = doctrine_sacraments_central
+
+	#Monasticism (pedido do autor, 04/10/2026): mosteiros como os do Cristianismo, que usa doctrine_monasticism_accepted. Sem uma doutrina do
+	# grupo monasticism_group faith_has_monasticism_trigger e falso: a decisao de fundar ordem monastica (create_holy_order_monastic_decision),
+	# os votos monasticos (take_vows_active) e as ordens monasticas genericas do vanilla (sem restricao de religiao) ficam desligados.
+	doctrine = doctrine_monasticism_accepted
 	
 
 
