@@ -1,11 +1,14 @@
-﻿king_theocracy_male_imperialis_religion = {
+﻿# Marco 3: o clero com terras da fe passou ao governo eclesiastico (theocracy_government_type da religiao), como no cristianismo;
+# o vanilla lista os dois governos em todas as entradas de clero (00_title_holders.txt). Com so theocracy_government, condes e duques
+# eclesiasticos perdiam os nomes abaixo e saiam como Count e Duke.
+king_theocracy_male_imperialis_religion = {
 	type = character
 	gender = male
 	special = holder
 	tier = kingdom
 	priority = 50
 	
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	religions = { imperialis_religion }
 }
 king_theocracy_female_imperialis_religion = {
@@ -15,7 +18,7 @@ king_theocracy_female_imperialis_religion = {
 	tier = kingdom
 	priority = 50
 	
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	religions = { imperialis_religion }
 }
 kingdom_theocracy_imperialis_religion = {
@@ -24,7 +27,7 @@ kingdom_theocracy_imperialis_religion = {
 	priority = 47
 	
 	religions = { imperialis_religion }
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	
 }
 emperor_theocracy_male_imperialis_religion = {
@@ -34,7 +37,7 @@ emperor_theocracy_male_imperialis_religion = {
 	tier = empire
 	priority = 102
 	
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	religions = { imperialis_religion }
 }
 emperor_theocracy_female_imperialis_religion = {
@@ -44,7 +47,7 @@ emperor_theocracy_female_imperialis_religion = {
 	tier = empire
 	priority = 102
 	
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	religions = { imperialis_religion }
 }
 empire_theocracy_imperialis_religion = {
@@ -53,7 +56,7 @@ empire_theocracy_imperialis_religion = {
 	priority = 102
 
 	religions = { imperialis_religion }
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	
 }
 baron_theocracy_male_imperialis_religion = {
@@ -63,7 +66,7 @@ baron_theocracy_male_imperialis_religion = {
 	tier = barony
 	priority = 10
 	
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	religions = { imperialis_religion }
 }
 baron_theocracy_female_imperialis_religion = {
@@ -73,7 +76,7 @@ baron_theocracy_female_imperialis_religion = {
 	tier = barony
 	priority = 10
 	
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	religions = { imperialis_religion }
 }
 # Imperialis Barony Title Holders
@@ -92,7 +95,7 @@ count_theocracy_male_imperialis_religion = {
 	tier = county
 	priority = 20
 	
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	religions = { imperialis_religion }
 }
 count_theocracy_female_imperialis_religion = {
@@ -102,7 +105,7 @@ count_theocracy_female_imperialis_religion = {
 	tier = county
 	priority = 20
 	
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	religions = { imperialis_religion }
 }
 # Imperialis County Title Holders
@@ -111,7 +114,7 @@ county_theocracy_imperialis_religion = {
 	tier = county
 	
 	priority = 20
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	religions = { imperialis_religion }
 }
 duke_theocracy_male_imperialis_religion = {
@@ -121,7 +124,7 @@ duke_theocracy_male_imperialis_religion = {
 	tier = duchy
 	priority = 30
 	
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	religions = { imperialis_religion }
 }
 duke_theocracy_female_imperialis_religion = {
@@ -131,7 +134,7 @@ duke_theocracy_female_imperialis_religion = {
 	tier = duchy
 	priority = 30
 	
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	religions = { imperialis_religion }
 }
 # Imperialis Duchy Title Holders
@@ -140,7 +143,7 @@ duchy_theocracy_imperialis_religion = {
 	tier = duchy
 	
 	priority = 30
-	governments = { theocracy_government }
+	governments = { theocracy_government ecclesiastical_government }
 	religions = { imperialis_religion }
 }
 # Imperialis Solis Holders
@@ -163,4 +166,19 @@ solis_woman = {
 	titles = { k_sol }
 	#top_liege = no
 	
+}
+
+# Cardinalatos (marco 3, 3a): titulo de ducado sem terras dos eleitores do colegio. No vanilla o nome "Cardinalate" so vale para
+# cristaos e dualistas (20_pam_flavorization.txt); sem esta entrada o cardinalato sairia como o ducado eclesiastico comum.
+clerical_elector_duchy_cardinalate_imperialis = {
+	type = title
+	tier = duchy
+	priority = 75
+	governments = { ecclesiastical_government }
+	religions = { imperialis_religion }
+	flavourization_rules = {
+		only_holder = yes
+		top_liege = no
+	}
+	special_title = clerical_elector
 }

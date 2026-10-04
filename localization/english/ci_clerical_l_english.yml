@@ -4,3 +4,4 @@
  ci_found_ministorum_college_tooltip:0 "The #V College of Cardinals#! is filled with up to 10 electors, and future Heads of Faith are chosen by election. The Head of Faith, the cardinals and the landed clergy of the faith use the #V Ecclesiastical#! government."
  ci_found_ministorum_county_tt:0 "You hold a county other than your capital, to be given to the Head of Faith"
  ci_found_ministorum_vassal_tooltip:0 "The Head of Faith receives a county from you (#V Ravenna#! if you hold it) and becomes your vassal."
+ clerical_elector_duchy_cardinalate_imperialis:0 "Cardinalate"
