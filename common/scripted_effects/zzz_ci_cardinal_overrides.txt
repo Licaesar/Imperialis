@@ -117,12 +117,19 @@ grant_cardinal_title_effect = {
 			}
 		}
 		# Imperialis: o condado capital do Head of Faith (Ravena) tem uma igreja so; as outras vem do imperio de jure dele,
-		# so para dar nome unico ao cardinalato (a capital do titulo continua sendo o condado do Head of Faith, ver abaixo)
+		# so para dar nome unico ao cardinalato (a capital do titulo continua sendo o condado do Head of Faith, ver abaixo).
+		# O escopo cardinal_temple_barony sobrevive entre chamadas deste efeito (o preenchimento do colegio chama-o dez vezes) e a busca
+		# do vanilla, quando nao acha igreja livre, deixa a anterior: por isso se confere tambem se ela ja deu nome a outro cardinalato.
 		if = {
 			limit = {
 				ci_has_own_college_trigger = yes
 				exists = scope:cardinal_county
-				NOT = { exists = scope:cardinal_temple_barony }
+				OR = {
+					NOT = { exists = scope:cardinal_temple_barony }
+					scope:cardinal_recipient.faith = {
+						any_clerical_elector_title = { var:named_after ?= scope:cardinal_temple_barony }
+					}
+				}
 			}
 			scope:cardinal_county.empire ?= {
 				random_de_jure_county = {
@@ -136,6 +143,15 @@ grant_cardinal_title_effect = {
 						save_scope_as = cardinal_temple_barony
 					}
 				}
+			}
+			if = {
+				limit = {
+					exists = scope:cardinal_temple_barony
+					scope:cardinal_recipient.faith = {
+						any_clerical_elector_title = { var:named_after ?= scope:cardinal_temple_barony }
+					}
+				}
+				clear_saved_scope = cardinal_temple_barony
 			}
 		}
 		create_dynamic_title = {

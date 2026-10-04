@@ -1,0 +1,25 @@
+﻿# Override de same_faith_theocratic_succession_law (common/laws/00_succession_laws.txt, CK3 1.20.0.3), copia do vanilla.
+# Mudanca marcada com 'Imperialis' (marco 3, fase 3a): a lei teocratica padrao (grupo succession_rel_head, ordem theocratic com
+# pool de personagens) nao vale para fe com colegio de cardeais. O jogo a aplicava sozinho ao titular do k_sol, e com ela ativa o
+# titulo ficava com succession_result_type = generate_from_template (gera um sucessor), nao election (colegio), como o do Papa.
+# Regerar a partir do vanilla a cada atualizacao do jogo.
+
+same_faith_theocratic_succession_law = {
+	law_group_type = succession_rel_head
+	index = 0
+
+	shown_in_encyclopedia = no
+	can_keep = {
+		religion != religion:christianity_religion
+		faith = {
+			religious_head = root
+			has_doctrine = doctrine_spiritual_head
+			NOT = { has_doctrine_parameter = has_clerical_electors } # Imperialis: a fe com colegio de cardeais usa a lei eletiva
+		}
+	}
+	succession = {
+		order_of_succession = theocratic
+		faith = same_faith
+		pool_character_config = pool_theocratic_succession
+	}
+}

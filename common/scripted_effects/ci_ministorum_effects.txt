@@ -52,9 +52,10 @@ ci_found_ministorum_effect = {
 				limit = { NOT = { government_has_flag = government_is_ecclesiastical } }
 				change_government = ecclesiastical_government
 			}
-			# Sucessao por eleicao do colegio de cardeais (theocratic_elective). Nao aplicar tambem same_faith_theocratic_succession_law
-			# (grupo succession_rel_head, a lei padrao de antes do marco 3): duas leis de ordem de sucessao no mesmo titulo nao tem
-			# precedencia documentada, e o vanilla so a usa para religioes que nao sao cristas e nao tem colegio.
+			# Sucessao por eleicao do colegio de cardeais (theocratic_elective). O jogo aplicava sozinho tambem a lei teocratica padrao
+			# (same_faith_theocratic_succession_law, grupo succession_rel_head) e, com as duas, o titular ficava com
+			# succession_result_type = generate_from_template em vez de election (visto no save de 892, playtest de 04/10/2026):
+			# common/laws/zzz_ci_law_overrides.txt impede essa lei para fe com colegio.
 			if = {
 				limit = { NOT = { has_realm_law = theocratic_elective_succession_law } }
 				add_realm_law_skip_effects = theocratic_elective_succession_law
