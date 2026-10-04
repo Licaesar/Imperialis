@@ -1,0 +1,9 @@
+﻿l_english:
+
+ # Decisao de tornar o Ministorum vassalo (marco 3). Textos funcionais; o texto de lore e do autor.
+ ci_ministorum_vassalage_decision:0 "Make the Ministorum your vassal"
+ ci_ministorum_vassalage_decision_desc:0 "TODO_LORE"
+ ci_ministorum_vassalage_decision_tooltip:0 "Make the holder of the Adeptus Ministorum your vassal"
+ ci_ministorum_vassalage_decision_confirm:0 "Make them my vassal"
+ ci_ministorum_vassalage_decision_effect_tooltip:0 "The holder of the #V Adeptus Ministorum#! becomes your vassal."
+ ci_ministorum_vassalage_not_vassal_tt:0 "The holder of the Adeptus Ministorum is not already your vassal"

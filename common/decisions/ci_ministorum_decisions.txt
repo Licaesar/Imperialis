@@ -37,10 +37,6 @@ ci_found_ministorum_decision = {
 			text = ci_found_ministorum_holder_exists_tt
 			ci_ministorum_holder_exists_trigger = yes
 		}
-		custom_tooltip = {
-			text = ci_found_ministorum_county_tt
-			any_held_title = { ci_ministorum_grantable_county_trigger = { FOUNDER = root } }
-		}
 	}
 
 	is_valid_showing_failures_only = {
@@ -52,7 +48,7 @@ ci_found_ministorum_decision = {
 	effect = {
 		custom_tooltip = ci_found_ministorum_decision_effect_tooltip
 		custom_tooltip = ci_found_ministorum_college_tooltip
-		custom_tooltip = ci_found_ministorum_vassal_tooltip
+		custom_tooltip = ci_found_ministorum_romagna_tooltip
 		hidden_effect = {
 			ci_found_ministorum_effect = yes
 		}
@@ -61,6 +57,67 @@ ci_found_ministorum_decision = {
 	ai_potential = {
 		faith ?= faith:imperialis
 		has_title = title:e_italy
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+### Tornar o Ministorum vassalo ###
+# Marco 3 (decisao do autor, 04/10/2026): o titular do k_sol nasce independente (ci_found_ministorum_effect so lhe da a Romagna). O
+# imperador da Italia da fe Imperialis com o traco sanguini_5 pode, por esta decisao, torna-lo seu vassalo. Sem custo.
+ci_ministorum_vassalage_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	desc = ci_ministorum_vassalage_decision_desc
+	selection_tooltip = ci_ministorum_vassalage_decision_tooltip
+	confirm_text = ci_ministorum_vassalage_decision_confirm
+	decision_group_type = major
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 12
+		hegemony = 12
+	}
+
+	is_shown = {
+		faith ?= faith:imperialis
+		has_title = title:e_italy
+		has_trait = sanguini_5
+		exists = title:k_sol.holder
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = ci_ministorum_vassalage_not_vassal_tt
+			title:k_sol.holder ?= {
+				NOT = { liege ?= root }
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_landed = yes
+		is_capable_adult = yes
+		is_imprisoned = no
+	}
+
+	effect = {
+		custom_tooltip = ci_ministorum_vassalage_decision_effect_tooltip
+		hidden_effect = {
+			ci_ministorum_vassalize_effect = yes
+		}
+	}
+
+	ai_potential = {
+		faith ?= faith:imperialis
+		has_title = title:e_italy
+		has_trait = sanguini_5
 	}
 
 	ai_will_do = {

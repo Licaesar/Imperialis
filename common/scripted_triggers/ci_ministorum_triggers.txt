@@ -26,10 +26,3 @@ ci_ministorum_holder_exists_trigger = {
 		any_vassal = { ci_ministorum_candidate_trigger = yes }
 	}
 }
-
-# Escopo: titulo. Condado que o fundador pode ceder ao titular do k_sol: de tier condado e que nao seja a capital do fundador.
-# Parametro FOUNDER: o governante que funda o Ministorum.
-ci_ministorum_grantable_county_trigger = {
-	tier = tier_county
-	NOT = { this = $FOUNDER$.capital_county }
-}
