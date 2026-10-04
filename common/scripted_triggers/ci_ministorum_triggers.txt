@@ -26,3 +26,18 @@ ci_ministorum_holder_exists_trigger = {
 		any_vassal = { ci_ministorum_candidate_trigger = yes }
 	}
 }
+
+# Falta integrar o Ministorum ao imperio? (escopo: o imperador da Italia, quem toma ci_ministorum_vassalage_decision)
+# Verdadeiro enquanto o titular do k_sol nao for vassalo do imperador, o d_romagna nao for de jure do k_sol, o k_sol nao for de jure do
+# e_italy ou o titular nao tiver o d_et_ravenna. Quando nada falta a decisao de vassalagem some (is_shown) e a IA nao a considera
+# (ai_potential). Mesmo conjunto de partes que ci_ministorum_vassalize_effect aplica.
+ci_ministorum_integration_pending_trigger = {
+	OR = {
+		title:k_sol.holder ?= {
+			NOT = { liege ?= root }
+		}
+		NOT = { title:d_romagna.de_jure_liege ?= title:k_sol }
+		NOT = { title:k_sol.de_jure_liege ?= title:e_italy }
+		NOT = { title:d_et_ravenna.holder ?= title:k_sol.holder }
+	}
+}

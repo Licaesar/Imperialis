@@ -85,25 +85,14 @@ ci_ministorum_vassalage_decision = {
 		hegemony = 12
 	}
 
+	# So aparece enquanto faltar alguma parte (autor, 04/10/2026: depois de usada deve sumir, nao ficar bloqueada). A fundacao ja deixa o
+	# titular do k_sol vassalo, entao a vassalagem sozinha nao basta como condicao.
 	is_shown = {
 		faith ?= faith:imperialis
 		has_title = title:e_italy
 		has_trait = sanguini_5
 		exists = title:k_sol.holder
-	}
-
-	is_valid = {
-		custom_tooltip = {
-			text = ci_ministorum_vassalage_pending_tt
-			OR = {
-				title:k_sol.holder ?= {
-					NOT = { liege ?= root }
-				}
-				NOT = { title:d_romagna.de_jure_liege ?= title:k_sol }
-				NOT = { title:k_sol.de_jure_liege ?= title:e_italy }
-				NOT = { title:d_et_ravenna.holder ?= title:k_sol.holder }
-			}
-		}
+		ci_ministorum_integration_pending_trigger = yes
 	}
 
 	is_valid_showing_failures_only = {
@@ -126,6 +115,8 @@ ci_ministorum_vassalage_decision = {
 		faith ?= faith:imperialis
 		has_title = title:e_italy
 		has_trait = sanguini_5
+		exists = title:k_sol.holder
+		ci_ministorum_integration_pending_trigger = yes
 	}
 
 	ai_will_do = {
