@@ -7,3 +7,6 @@
  ci_doctrine_has_clerical_regions_name:0 "Clerical Regions"
  ci_has_clerical_regions_name:0 "$ci_doctrine_has_clerical_regions_name$"
  ci_doctrine_has_clerical_regions_desc:0 "The clergy of the faith are organised in clerical regions under archbishops."
+ # Titular de regiao clerical: mesmo termo do duque do clero (arcebispo sem terras). O autor pode trocar.
+ duke_theocracy_male_imperialis_religion_clerical_region:0 "$duke_theocracy_male_imperialis_religion$"
+ duke_theocracy_female_imperialis_religion_clerical_region:0 "$duke_theocracy_female_imperialis_religion$"

@@ -110,6 +110,8 @@ ci_ministorum_vassalage_decision = {
 	effect = {
 		custom_tooltip = ci_ministorum_vassalage_decision_effect_tooltip
 		custom_tooltip = ci_ministorum_vassalage_romagna_tooltip
+		custom_tooltip = ci_ministorum_vassalage_empire_tooltip
+		custom_tooltip = ci_ministorum_vassalage_region_tooltip
 		hidden_effect = {
 			ci_ministorum_vassalize_effect = yes
 		}

@@ -203,6 +203,36 @@ duchy_theocracy_imperialis_religion = {
 		top_liege = no
 	}
 }
+# Titular de regiao clerical (marco 3, 3b.1; playtest de 04/10/2026): quem tinha so um d_et_ (arcebispo sem condado nem ducado) saia como
+# "Master"/"Mistress". special = clerical_region_holder vale quando o titulo usado na flavorizacao e uma regiao clerical (o vanilla tem uma
+# entrada dessas por religiao e por fe em 00_title_holders.txt). Prioridade acima da do duque (30) e do conde (20): o titular de uma
+# regiao e chamado pela regiao, mesmo que tenha tambem um condado.
+duke_theocracy_male_imperialis_religion_clerical_region = {
+	type = character
+	gender = male
+	special = clerical_region_holder
+	tier = duchy
+	priority = 31
+	governments = { theocracy_government ecclesiastical_government }
+	religions = { imperialis_religion }
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}
+duke_theocracy_female_imperialis_religion_clerical_region = {
+	type = character
+	gender = female
+	special = clerical_region_holder
+	tier = duchy
+	priority = 31
+	governments = { theocracy_government ecclesiastical_government }
+	religions = { imperialis_religion }
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}
 # Imperialis Solis Holders
 solis_man = {
 	type = character

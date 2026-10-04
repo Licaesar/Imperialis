@@ -138,20 +138,11 @@ ci_found_ministorum_effect = {
 }
 
 # Torna o titular do k_sol vassalo de quem toma a decisao ci_ministorum_vassalage_decision (o imperador da Italia) e poe a Romagna de
-# jure do k_sol.
+# jure do k_sol, o k_sol de jure do e_italy e da ao titular a regiao clerical de Roma (d_et_roma).
 # Escopo: o imperador. Mesmo padrao da vassalizacao do vanilla (swear_fealty e change_liege no mesmo lote).
 ci_ministorum_vassalize_effect = {
 	save_scope_as = ci_ministorum_liege
 	title:k_sol.holder = { save_scope_as = ci_ministorum_vassal }
-	# Romagna de jure do k_sol (decisao do autor, 04/10/2026): sem isso o rei do k_romagna e o imperador da Italia ficam com base de
-	# jure sobre o ducado e os condados, e a IA tenta retira-los do Head of Faith. O k_sol nao tem suserano de jure (de_jure_drift_disabled).
-	# Fica aqui, e nao na fundacao, a pedido do autor: o k_sol precisa ja existir e ter dono.
-	title:d_romagna = {
-		if = {
-			limit = { NOT = { de_jure_liege ?= title:k_sol } }
-			set_de_jure_liege_title = title:k_sol
-		}
-	}
 	create_title_and_vassal_change = {
 		type = swear_fealty
 		save_scope_as = ci_ministorum_vassal_change
@@ -163,5 +154,50 @@ ci_ministorum_vassalize_effect = {
 			change = scope:ci_ministorum_vassal_change
 		}
 		resolve_title_and_vassal_change = scope:ci_ministorum_vassal_change
+	}
+
+	# DE JURE (decisao do autor, 04/10/2026), DEPOIS da troca de suserano e sem condicao: a Romagna passa a ser de jure do k_sol, e o
+	# k_sol passa a ser de jure do e_italy. Sem isso o rei do k_romagna e o imperador da Italia ficam com base de jure sobre o ducado e os
+	# condados, e a IA tenta retira-los do Head of Faith. Fica aqui, e nao na fundacao, a pedido do autor: o k_sol precisa ja existir e
+	# ter dono. No playtest anterior a versao com condicao e antes da troca de suserano nao mudou o de jure (d_romagna seguiu no k_romagna).
+	title:d_romagna = { set_de_jure_liege_title = title:k_sol }
+	title:k_sol = { set_de_jure_liege_title = title:e_italy }
+
+	# REGIAO CLERICAL (decisao do autor, 04/10/2026): o titular do k_sol nao tinha titulo clerical (so ganhava d_et_ravenna anos depois,
+	# pela IA). Logo apos a vassalagem recebe a regiao clerical de Roma, de quem a tiver. Regiao e titulo de ducado sem terras: se ainda
+	# nao existir nasce nas maos dele; se for dele, nada a fazer.
+	if = {
+		limit = {
+			NOT = { title:d_et_roma.holder ?= scope:ci_ministorum_vassal }
+		}
+		if = {
+			limit = { title:d_et_roma = { is_title_created = no } }
+			create_title_and_vassal_change = {
+				type = created
+				save_scope_as = ci_ministorum_region_created
+				add_claim_on_loss = no
+			}
+			title:d_et_roma = {
+				change_title_holder = {
+					holder = scope:ci_ministorum_vassal
+					change = scope:ci_ministorum_region_created
+				}
+			}
+			resolve_title_and_vassal_change = scope:ci_ministorum_region_created
+		}
+		else = {
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = ci_ministorum_region_change
+				add_claim_on_loss = no
+			}
+			title:d_et_roma = {
+				change_title_holder = {
+					holder = scope:ci_ministorum_vassal
+					change = scope:ci_ministorum_region_change
+				}
+			}
+			resolve_title_and_vassal_change = scope:ci_ministorum_region_change
+		}
 	}
 }
