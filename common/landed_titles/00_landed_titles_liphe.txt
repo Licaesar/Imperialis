@@ -1,14 +1,16 @@
 ﻿@always_primary_score = 1000
 
-# Adeptus Ministorum. Titulo religioso sem terras, head_of_rite da fe imperialis (ver faith_types/ci_faith_types.txt).
-# O titular chefia o rito que segue. O titulo so passa a ter titular pela decisao ci_found_ministorum_decision
-# (common/decisions/ci_ministorum_decisions.txt). Flags iguais as dos titulos de chefia vanilla (k_orthodox, d_coptic_papacy...).
+# Adeptus Ministorum. Titulo de reino da chefia da fe imperialis (ver faith_types/ci_faith_types.txt), com o ducado de Romagna como
+# de jure (definido pela decisao ci_found_ministorum_decision, common/decisions/ci_ministorum_decisions.txt). O titular chefia o
+# rito que segue. O titulo so passa a ter titular por essa decisao. Sem landless = yes (marco 3, decisao do autor, 04/10/2026): nenhum
+# titulo landless do vanilla (1.598) tem filhos de jure, e o autor quer a Romagna de jure do k_sol para a IA nao ter base de jure
+# para retirar os titulos; o Estado Papal do mod College of Cardinals tambem e um reino com terras. Capital em Ravena, como o
+# k_danelaw e outros reinos vanilla sem filhos de jure no inicio. Demais flags iguais as dos titulos de chefia vanilla.
 k_sol = {
 	color = { 50 50 50 }
 	#color2 = { 220 220 0 }
 	definite_form = yes
 	ruler_uses_title_name = no
-	landless = yes
 	allow_domicile = no
 	can_use_nomadic_naming = no
 

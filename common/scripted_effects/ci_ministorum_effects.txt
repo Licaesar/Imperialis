@@ -93,6 +93,14 @@ ci_found_ministorum_effect = {
 		}
 	}
 	resolve_title_and_vassal_change = scope:ci_ministorum_romagna_change
+	# Romagna de jure do k_sol (decisao do autor, 04/10/2026): sem isso o rei do k_romagna e o imperador da Italia ficam com base de jure
+	# sobre o ducado e os condados, e a IA tenta retira-los do Head of Faith. O k_sol nao tem suserano de jure (de_jure_drift_disabled).
+	title:d_romagna = {
+		if = {
+			limit = { NOT = { de_jure_liege ?= title:k_sol } }
+			set_de_jure_liege_title = title:k_sol
+		}
+	}
 
 	scope:ci_ministorum_first_head = {
 		hidden_effect = {
