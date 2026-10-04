@@ -1,8 +1,6 @@
 ﻿# Override de grant_cardinal_title_effect (common/scripted_effects/11_dlc_pam_scripted_effects.txt, CK3 1.20.0.3), copia do vanilla.
 # Mudancas marcadas com 'Imperialis' (marco 3, fase 3a): o colegio da fe Imperialis nao usa o pool global de Roma
 # (roma_cardinalates) e da nome unico aos cardinalatos. Regerar a partir do vanilla a cada atualizacao do jogo.
-# O Elf Destiny (carrega depois do Imperialis no playset de teste) sobrescreve outros objetos do mesmo arquivo
-# (pam_seed_cardinals_effect, pam_strip_illegal_cardinalate_effect), nao este.
 
 grant_cardinal_title_effect = {
 	save_scope_as = cardinal_recipient
