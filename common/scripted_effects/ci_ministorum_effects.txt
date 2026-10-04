@@ -26,6 +26,71 @@ ci_found_ministorum_effect = {
 		}
 	}
 
+	# ORDEM: condados, ducado, reino (playtest de 04/10/2026: o k_sol e o d_romagna eram criados e destruidos no mesmo dia, e a decisao
+	# reaparecia). Um titulo de ducado ou mais que nao e landless nao pode ficar com quem nao tem terras: o jogo o destroi na criacao.
+	# So depois de o titular ja ter os condados e que o ducado e o reino nascem; nas maos de quem ja tinha terras, na segunda vez,
+	# sobreviveram.
+	# Terras do Ministorum (marco 3, 3a; decisao do autor, 04/10/2026): o titular recebe o ducado de Romagna e todos os condados dele,
+	# de QUEM OS TIVER (vassalo do fundador, de outro reino ou independente): ninguem fica de fora, e os condes perdem o titulo. As
+	# baronias que tinham vassalos ficam com eles, agora vassalos do titular (sem take_baronies: o governo eclesiastico nao pode ter
+	# cidades como terra direta, e o estado montado por debug no playtest, sem as cidades, funcionou). O titular fica independente:
+	# tornar o k_sol vassalo do imperador, e dar-lhe a Romagna de jure, e a decisao ci_ministorum_vassalage_decision.
+	# 1. Os condados.
+	create_title_and_vassal_change = {
+		type = granted
+		save_scope_as = ci_ministorum_counties_change
+		add_claim_on_loss = no
+	}
+	title:d_romagna = {
+		every_de_jure_county = {
+			limit = {
+				exists = holder
+				NOT = { holder = scope:ci_ministorum_first_head }
+			}
+			change_title_holder = {
+				holder = scope:ci_ministorum_first_head
+				change = scope:ci_ministorum_counties_change
+			}
+		}
+	}
+	resolve_title_and_vassal_change = scope:ci_ministorum_counties_change
+	# 2. O ducado. Ducados so existem depois de criados: se d_romagna ainda nao foi, nasce ja nas maos do titular.
+	if = {
+		limit = { title:d_romagna = { is_title_created = no } }
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = ci_ministorum_duchy_created
+			add_claim_on_loss = no
+		}
+		title:d_romagna = {
+			change_title_holder = {
+				holder = scope:ci_ministorum_first_head
+				change = scope:ci_ministorum_duchy_created
+			}
+		}
+		resolve_title_and_vassal_change = scope:ci_ministorum_duchy_created
+	}
+	else_if = {
+		limit = {
+			title:d_romagna = {
+				exists = holder
+				NOT = { holder = scope:ci_ministorum_first_head }
+			}
+		}
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = ci_ministorum_duchy_change
+			add_claim_on_loss = no
+		}
+		title:d_romagna = {
+			change_title_holder = {
+				holder = scope:ci_ministorum_first_head
+				change = scope:ci_ministorum_duchy_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:ci_ministorum_duchy_change
+	}
+	# 3. O reino.
 	create_title_and_vassal_change = {
 		type = created
 		save_scope_as = ci_ministorum_change
@@ -43,63 +108,6 @@ ci_found_ministorum_effect = {
 	# Isso precisa vir antes das leis de sucessao: theocratic_elective_succession_law so pode ser mantida por quem e religious_head.
 	faith:imperialis = {
 		set_religious_head_title = title:k_sol
-	}
-	# Terras do Ministorum (marco 3, 3a; decisao do autor, 04/10/2026): o titular recebe o ducado de Romagna e todos os condados dele,
-	# de QUEM OS TIVER (vassalo do fundador, de outro reino ou independente): ninguem fica de fora, e os condes perdem o titulo. As
-	# baronias que tinham vassalos ficam com eles, agora vassalos do titular (sem take_baronies: o governo eclesiastico nao pode ter
-	# cidades como terra direta, e o estado montado por debug no playtest, sem as cidades, funcionou). O titular fica independente:
-	# tornar o k_sol vassalo do imperador e a decisao ci_ministorum_vassalage_decision.
-	# Ducados so existem depois de criados: se d_romagna ainda nao foi, nasce ja nas maos do titular.
-	if = {
-		limit = { title:d_romagna = { is_title_created = no } }
-		create_title_and_vassal_change = {
-			type = created
-			save_scope_as = ci_ministorum_romagna_created
-			add_claim_on_loss = no
-		}
-		title:d_romagna = {
-			change_title_holder = {
-				holder = scope:ci_ministorum_first_head
-				change = scope:ci_ministorum_romagna_created
-			}
-		}
-		resolve_title_and_vassal_change = scope:ci_ministorum_romagna_created
-	}
-	create_title_and_vassal_change = {
-		type = granted
-		save_scope_as = ci_ministorum_romagna_change
-		add_claim_on_loss = no
-	}
-	title:d_romagna = {
-		if = {
-			limit = {
-				exists = holder
-				NOT = { holder = scope:ci_ministorum_first_head }
-			}
-			change_title_holder = {
-				holder = scope:ci_ministorum_first_head
-				change = scope:ci_ministorum_romagna_change
-			}
-		}
-		every_de_jure_county = {
-			limit = {
-				exists = holder
-				NOT = { holder = scope:ci_ministorum_first_head }
-			}
-			change_title_holder = {
-				holder = scope:ci_ministorum_first_head
-				change = scope:ci_ministorum_romagna_change
-			}
-		}
-	}
-	resolve_title_and_vassal_change = scope:ci_ministorum_romagna_change
-	# Romagna de jure do k_sol (decisao do autor, 04/10/2026): sem isso o rei do k_romagna e o imperador da Italia ficam com base de jure
-	# sobre o ducado e os condados, e a IA tenta retira-los do Head of Faith. O k_sol nao tem suserano de jure (de_jure_drift_disabled).
-	title:d_romagna = {
-		if = {
-			limit = { NOT = { de_jure_liege ?= title:k_sol } }
-			set_de_jure_liege_title = title:k_sol
-		}
 	}
 
 	scope:ci_ministorum_first_head = {
@@ -129,11 +137,21 @@ ci_found_ministorum_effect = {
 	}
 }
 
-# Torna o titular do k_sol vassalo de quem toma a decisao ci_ministorum_vassalage_decision (o imperador da Italia).
+# Torna o titular do k_sol vassalo de quem toma a decisao ci_ministorum_vassalage_decision (o imperador da Italia) e poe a Romagna de
+# jure do k_sol.
 # Escopo: o imperador. Mesmo padrao da vassalizacao do vanilla (swear_fealty e change_liege no mesmo lote).
 ci_ministorum_vassalize_effect = {
 	save_scope_as = ci_ministorum_liege
 	title:k_sol.holder = { save_scope_as = ci_ministorum_vassal }
+	# Romagna de jure do k_sol (decisao do autor, 04/10/2026): sem isso o rei do k_romagna e o imperador da Italia ficam com base de
+	# jure sobre o ducado e os condados, e a IA tenta retira-los do Head of Faith. O k_sol nao tem suserano de jure (de_jure_drift_disabled).
+	# Fica aqui, e nao na fundacao, a pedido do autor: o k_sol precisa ja existir e ter dono.
+	title:d_romagna = {
+		if = {
+			limit = { NOT = { de_jure_liege ?= title:k_sol } }
+			set_de_jure_liege_title = title:k_sol
+		}
+	}
 	create_title_and_vassal_change = {
 		type = swear_fealty
 		save_scope_as = ci_ministorum_vassal_change

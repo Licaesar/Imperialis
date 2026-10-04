@@ -7,3 +7,4 @@
  ci_ministorum_vassalage_decision_confirm:0 "Make them my vassal"
  ci_ministorum_vassalage_decision_effect_tooltip:0 "The holder of the #V Adeptus Ministorum#! becomes your vassal."
  ci_ministorum_vassalage_not_vassal_tt:0 "The holder of the Adeptus Ministorum is not already your vassal"
+ ci_ministorum_vassalage_romagna_tooltip:0 "The #V Duchy of Romagna#! becomes a de jure part of the Adeptus Ministorum."
