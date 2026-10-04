@@ -1,0 +1,17 @@
+﻿# Triggers do colegio de cardeais da fe Imperialis (marco 3, fase 3a).
+
+# Escopo: personagem. A fe dele e a Imperialis, cujo colegio e proprio (nao usa os cardinalatos de Roma).
+ci_has_own_college_trigger = {
+	faith ?= { religion = religion:imperialis_religion }
+}
+
+# Escopo: titulo de baronia. Uma igreja (church_holding) que ainda nao deu nome a um cardinalato de $FAITH$.
+ci_unused_temple_barony_trigger = {
+	title_province = { has_holding_type = church_holding }
+	save_temporary_scope_as = ci_temple_barony
+	NOT = {
+		$FAITH$ = {
+			any_clerical_elector_title = { var:named_after ?= scope:ci_temple_barony }
+		}
+	}
+}

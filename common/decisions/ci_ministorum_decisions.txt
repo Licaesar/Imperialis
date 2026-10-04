@@ -47,6 +47,7 @@ ci_found_ministorum_decision = {
 
 	effect = {
 		custom_tooltip = ci_found_ministorum_decision_effect_tooltip
+		custom_tooltip = ci_found_ministorum_college_tooltip
 		hidden_effect = {
 			ci_found_ministorum_effect = yes
 		}

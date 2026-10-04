@@ -1,0 +1,11 @@
+﻿# Override de pam_pope_is_head_of_faith_or_rite_trigger (common/scripted_triggers/pam_scripted_triggers.txt, CK3 1.20.0.3).
+# Mudanca marcada com 'Imperialis' (marco 3, fase 3a): o Ministorum (k_sol) faz o papel do papa para o colegio de cardeais.
+# Sem isto, grant_cardinal_title_effect e pam_seed_cardinals_effect nao concedem cardinalatos a fe Imperialis.
+# Escopo: personagem.
+pam_pope_is_head_of_faith_or_rite_trigger = {
+	OR = {
+		rite.head_of_rite ?= { has_title = title:k_papal_state }
+		faith.religious_head ?= { has_title = title:k_papal_state }
+		faith.religious_head ?= { has_title = title:k_sol } # Imperialis: o Ministorum
+	}
+}

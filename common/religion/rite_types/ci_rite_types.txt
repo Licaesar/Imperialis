@@ -20,6 +20,7 @@ imperialis = {
 
 	doctrines = {
 		temple_authority_cult_imperialis_doctrine
+		special_doctrine_has_clerical_electors # colegio de cardeais da fe (marco 3, fase 3a); tambem na fe
 	}
 
 	cultures = { lipherianii_culture imperialis_culture }
@@ -40,6 +41,7 @@ sororitas = {
 
 	doctrines = {
 		temple_authority_cult_sororitas_doctrine
+		special_doctrine_has_clerical_electors # colegio de cardeais da fe (marco 3, fase 3a); tambem na fe
 		doctrine_gender_female_dominated
 		doctrine_pluralism_fundamentalist
 		doctrine_clerical_function_recruitment
@@ -62,6 +64,7 @@ omnissiah = {
 
 	doctrines = {
 		temple_authority_cult_omnissiah_doctrine
+		special_doctrine_has_clerical_electors # colegio de cardeais da fe (marco 3, fase 3a); tambem na fe
 		doctrine_gender_equal
 		doctrine_witchcraft_virtuous
 		doctrine_clerical_function_alms_and_pacification
@@ -83,6 +86,7 @@ homus = {
 
 	doctrines = {
 		temple_authority_cult_homus_doctrine
+		special_doctrine_has_clerical_electors # colegio de cardeais da fe (marco 3, fase 3a); tambem na fe
 		doctrine_pluralism_pluralistic
 		doctrine_polygamy
 		doctrine_divorce_allowed

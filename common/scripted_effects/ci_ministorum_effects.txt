@@ -40,22 +40,32 @@ ci_found_ministorum_effect = {
 	resolve_title_and_vassal_change = scope:ci_ministorum_change
 
 	# O Ministorum passa a ser a chefia da fe (Head of Faith), como o restore_papacy_scripted_effect vanilla faz com k_papal_state.
-	# Isso precisa vir antes da lei de sucessao: same_faith_theocratic_succession_law so pode ser mantida por quem e religious_head.
+	# Isso precisa vir antes das leis de sucessao: theocratic_elective_succession_law so pode ser mantida por quem e religious_head.
 	faith:imperialis = {
 		set_religious_head_title = title:k_sol
 	}
 	scope:ci_ministorum_first_head = {
 		hidden_effect = {
-			# Sucessao padrao dos chefes de fe de religioes sem sucessao propria (mesma lei que o vanilla aplica a um HoF dinamico).
+			# Governo eclesiastico (marco 3, 3a): o mesmo do clero com terras e dos cardeais da fe (theocracy_government_type da religiao).
+			# Vem antes das leis: trocar de governo pode refazer as leis de sucessao.
 			if = {
-				limit = { NOT = { has_realm_law = same_faith_theocratic_succession_law } }
-				add_realm_law_skip_effects = same_faith_theocratic_succession_law
+				limit = { NOT = { government_has_flag = government_is_ecclesiastical } }
+				change_government = ecclesiastical_government
 			}
-			# O Head of Faith recebe o governo teocratico sempre que possivel (comentario de theocracy_government no vanilla).
+			# Sucessao por eleicao do colegio de cardeais (theocratic_elective). Nao aplicar tambem same_faith_theocratic_succession_law
+			# (grupo succession_rel_head, a lei padrao de antes do marco 3): duas leis de ordem de sucessao no mesmo titulo nao tem
+			# precedencia documentada, e o vanilla so a usa para religioes que nao sao cristas e nao tem colegio.
 			if = {
-				limit = { NOT = { government_has_flag = government_is_theocracy } }
-				change_government = theocracy_government
+				limit = { NOT = { has_realm_law = theocratic_elective_succession_law } }
+				add_realm_law_skip_effects = theocratic_elective_succession_law
 			}
 		}
+	}
+
+	# Preenche o colegio (ate 10; o vanilla so chama isto na criacao de uma fe nova e no inicio do jogo, nao ao criar um Head of Faith).
+	# Sem arcebispos para promover, gera os eleitores em Ravena; os cardinalatos dependem dos overrides
+	# zzz_ci_cardinal_overrides.txt (scripted_triggers e scripted_effects).
+	faith:imperialis = {
+		pam_seed_cardinals_effect = yes
 	}
 }

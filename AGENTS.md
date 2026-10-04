@@ -2,7 +2,7 @@
 
 Crusader Kings III mod, prefixo `ci_`. Alvo: 1.20.x (instalado: 1.20.0.3 Crozier), com a DLC By God Alone obrigatória. Pasta do mod: `C:\Users\rique\Documents\Paradox Interactive\Crusader Kings III\mod\Imperialis`. Descritor do launcher: `...\mod\Imperialis.mod`.
 
-**Leia primeiro:** `C:\Users\rique\Documents\Workspace\Meus Mods CK3\docs\ESTADO - Imperialis.md` (estado do código, decisões vigentes, marcos 1 e 2 concluídos, marco 3 a planejar, ferramentas). O checklist do marco 2 (concluído) está em `...\docs\Imperialis - Checklist de playtest marco 2.md`; o do marco 3 ainda não existe. Lore: Bíblia V5 em `...\Referencia\Biblias`. Não leia por padrão `research_notes`, `reports`, `Referencia` (exceto a Bíblia V5) nem `DNA`: use grep.
+**Leia primeiro:** `C:\Users\rique\Documents\Workspace\Meus Mods CK3\docs\ESTADO - Imperialis.md` (estado do código, decisões vigentes, marcos 1 e 2 concluídos, marco 3 em andamento na branch `marco-3`, ferramentas). O checklist do marco 3 (em andamento) está em `...\docs\Imperialis - Checklist de playtest marco 3.md`; o do marco 2 (concluído), em `...\docs\Imperialis - Checklist de playtest marco 2.md`. Lore: Bíblia V5 em `...\Referencia\Biblias`. Não leia por padrão `research_notes`, `reports`, `Referencia` (exceto a Bíblia V5) nem `DNA`: use grep.
 
 Use ck3-modding para script e conteúdo, ck3-gui para interface e ck3-playtest para verificação em jogo. Este arquivo guarda só fatos do projeto.
 
@@ -23,7 +23,7 @@ Use ck3-modding para script e conteúdo, ck3-gui para interface e ck3-playtest p
 - UTF-8 **com BOM** em scripts (`.txt`) e localização (`.yml`); `descriptor.mod` sem BOM.
 - DLC obrigatória, sem fallbacks. Sem compatibilidade com saves antigos; campanha nova a cada teste.
 - O mod é independente do LegioImperialis e nunca roda junto com ele.
-- Git com remoto `origin` (github.com/Licaesar/Imperialis): commit por fase na branch de trabalho, sem push sem o autor pedir. A `main` está na versão 1.5 (marcos 1 e 2); o marco 3 começa numa branch nova a partir dela. Mantenha testes e arquivos de desenvolvimento fora da pasta do mod.
+- Git com remoto `origin` (github.com/Licaesar/Imperialis): commit por fase na branch de trabalho, sem push sem o autor pedir. A `main` está na versão 1.5 (marcos 1 e 2); o marco 3 (sistema clerical e conclave) está na branch `marco-3`, criada a partir dela. O playset de teste inclui o Elf Destiny, que carrega depois e sobrescreve alguns objetos `pam_*` de cardeais (ver o ESTADO): não sobrescreva os mesmos. Mantenha testes e arquivos de desenvolvimento fora da pasta do mod.
 
 ## Validação e playtest
 

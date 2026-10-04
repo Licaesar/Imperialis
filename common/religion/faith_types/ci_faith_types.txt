@@ -2,7 +2,8 @@
 # Os ritos estao em common/religion/rite_types/ci_rite_types.txt e o estado inicial em history/faiths/ci_faith_history.txt.
 #
 # Chefia: ate o Ministorum ser fundado a fe nao tem chefe. A decisao ci_found_ministorum_decision (exige e_italy) cria o k_sol e
-# chama set_religious_head_title: o titular passa a ser o Head of Faith (governo teocratico e lei de sucessao teocratica).
+# chama set_religious_head_title: o titular passa a ser o Head of Faith (governo eclesiastico, lei de sucessao eletiva e colegio de
+# cardeais preenchido; marco 3, fase 3a. Antes do marco 3 era governo teocratico e lei de sucessao teocratica padrao).
 # Testado em jogo em 03/10/2026: com head_of_rite o titular ficou feudal e o jogo oferecia criar um segundo chefe aleatorio
 # (create_hof_decision), por isso a opcao Y (head_of_rite) foi trocada por religious_head dinamico.
 imperialis = {
@@ -30,6 +31,12 @@ imperialis = {
 	}
 
 	# Tenets centrais e doutrinas especificas ficam nos ritos (rite_types). As doutrinas comuns estao na religiao.
+	# Colegio de cardeais (marco 3, fase 3a): a doutrina oculta (visible = no) liga os eleitores clericais, a lei de sucessao
+	# eletiva do Head of Faith e os cardinalatos. Fica desde 867 na fe (nada acontece sem Head of Faith: o colegio so e
+	# preenchido pela fundacao do Ministorum, ci_found_ministorum_effect). Os quatro ritos tambem a listam (rite_types).
+	doctrines = {
+		special_doctrine_has_clerical_electors
+	}
 
 	cultures = { lipherianii_culture imperialis_culture }
 }

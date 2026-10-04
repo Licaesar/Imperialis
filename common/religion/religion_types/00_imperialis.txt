@@ -2,6 +2,12 @@
 	religion_details = {
 		family = rf_pagan
 		graphical_faith = "catholic_gfx"
+		# Governo eclesiastico (marco 3, fase 3a, opcao B do autor, 04/10/2026): o Head of Faith, os cardeais e todo o clero com terras
+		# da fe usam ecclesiastical_government, como o cristianismo (00_christianity.txt). O jogo realinha os governantes teocraticos da
+		# fe para ele todo ano, a cada titulo ganho e a cada troca de governo (pam_align_theocracy_with_faith_government_effect).
+		# O contrato de arrendamento tem de acompanhar: theocracy_lease cria arrendatarios com theocracy_government.
+		theocracy_government_type = ecclesiastical_government
+		theocracy_lease_contract_type = ecclesiastical_lease
 	}
 
 	#pagan_roots = yes #cuidado!
