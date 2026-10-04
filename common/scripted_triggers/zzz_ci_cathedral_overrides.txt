@@ -1,0 +1,14 @@
+﻿# Override de pam_cathedral_project_requirements_trigger (common/scripted_triggers/pam_scripted_triggers.txt, CK3 1.20.0.3), copia do
+# vanilla. Mudanca marcada com 'Imperialis' (marco 3, fase 3b.2): o projeto de catedral (pam_cathedral_01 a 03) e a acao importante de
+# melhorar a catedral so valiam para christian_fulfillment. Escopo: personagem. Gerado por docs/dev/regen_cathedral_overrides.py;
+# regerar a cada atualizacao do jogo.
+
+pam_cathedral_project_requirements_trigger = {
+	has_pam_dlc_trigger = yes
+	highest_held_title_tier >= tier_duchy
+	# Imperialis (marco 3, 3b.2): a catedral tambem vale para a realizacao espiritual propria do Imperialis
+	OR = {
+		has_spiritual_fulfillment_type = christian_fulfillment
+		has_spiritual_fulfillment_type = ci_imperial_fulfillment
+	}
+}
