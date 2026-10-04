@@ -23,7 +23,7 @@ Use ck3-modding para script e conteúdo, ck3-gui para interface e ck3-playtest p
 - UTF-8 **com BOM** em scripts (`.txt`) e localização (`.yml`); `descriptor.mod` sem BOM.
 - DLC obrigatória, sem fallbacks. Sem compatibilidade com saves antigos; campanha nova a cada teste.
 - O mod é independente do LegioImperialis e nunca roda junto com ele.
-- Git local sem remoto: commit por fase na branch de trabalho (hoje `marco-2`), sem push sem o autor pedir. Mantenha testes e arquivos de desenvolvimento fora da pasta do mod.
+- Git com remoto `origin` (github.com/Licaesar/Imperialis): commit por fase na branch de trabalho, sem push sem o autor pedir. A `main` está na versão 1.5 (marcos 1 e 2); o marco 3 começa numa branch nova a partir dela. Mantenha testes e arquivos de desenvolvimento fora da pasta do mod.
 
 ## Validação e playtest
 
