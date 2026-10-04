@@ -1,0 +1,8 @@
+﻿l_english:
+
+ # DECISAO DE TESTE (TEMPORARIA): comentar este arquivo antes de publicar o mod. Textos funcionais.
+ ci_test_scenario_decision:0 "TEST: build the test scenario"
+ ci_test_scenario_decision_desc:0 "Test only. Gives maximum prestige and piety, 50,000 gold and every county of the Empire of Italy. Remove before release."
+ ci_test_scenario_decision_tooltip:0 "Test only: maximum prestige and piety, 50,000 gold and every county of the Empire of Italy"
+ ci_test_scenario_decision_confirm:0 "Build the test scenario"
+ ci_test_scenario_decision_effect_tooltip:0 "You gain #V maximum#! prestige and piety levels and #V 50,000#! gold, and take every county of the Empire of Italy from whoever holds it. If the Empire of Italy does not exist yet, you also create it."
