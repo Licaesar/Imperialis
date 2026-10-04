@@ -94,9 +94,14 @@ ci_ministorum_vassalage_decision = {
 
 	is_valid = {
 		custom_tooltip = {
-			text = ci_ministorum_vassalage_not_vassal_tt
-			title:k_sol.holder ?= {
-				NOT = { liege ?= root }
+			text = ci_ministorum_vassalage_pending_tt
+			OR = {
+				title:k_sol.holder ?= {
+					NOT = { liege ?= root }
+				}
+				NOT = { title:d_romagna.de_jure_liege ?= title:k_sol }
+				NOT = { title:k_sol.de_jure_liege ?= title:e_italy }
+				NOT = { title:d_et_roma.holder ?= title:k_sol.holder }
 			}
 		}
 	}
