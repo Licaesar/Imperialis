@@ -44,6 +44,59 @@ ci_found_ministorum_effect = {
 	faith:imperialis = {
 		set_religious_head_title = title:k_sol
 	}
+	# Vassalo do fundador (marco 3, 3a; pedido do autor, 04/10/2026): um titulo sem terras nao tem suserano no vanilla, entao o
+	# titular do k_sol recebe um condado do fundador e passa a ser seu vassalo. Preferencia: Ravena (capital do k_sol e local santo
+	# eminente); senao um condado com igreja; senao qualquer condado que nao seja a capital do fundador (a decisao exige que haja um).
+	# Quem ja e vassalo direto do fundador fica como esta. Vem antes do governo: ganhar terras pode trocar o governo do titular.
+	if = {
+		limit = {
+			NOT = { scope:ci_ministorum_first_head.liege ?= scope:ci_ministorum_founder }
+		}
+		if = {
+			limit = {
+				title:c_ravenna.holder ?= scope:ci_ministorum_founder
+				title:c_ravenna = { ci_ministorum_grantable_county_trigger = { FOUNDER = scope:ci_ministorum_founder } }
+			}
+			title:c_ravenna = { save_scope_as = ci_ministorum_seat }
+		}
+		else_if = {
+			limit = {
+				any_held_title = {
+					ci_ministorum_grantable_county_trigger = { FOUNDER = scope:ci_ministorum_founder }
+					title_province = { has_holding_type = church_holding }
+				}
+			}
+			random_held_title = {
+				limit = {
+					ci_ministorum_grantable_county_trigger = { FOUNDER = scope:ci_ministorum_founder }
+					title_province = { has_holding_type = church_holding }
+				}
+				save_scope_as = ci_ministorum_seat
+			}
+		}
+		else = {
+			random_held_title = {
+				limit = { ci_ministorum_grantable_county_trigger = { FOUNDER = scope:ci_ministorum_founder } }
+				save_scope_as = ci_ministorum_seat
+			}
+		}
+		if = {
+			limit = { exists = scope:ci_ministorum_seat }
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = ci_ministorum_seat_change
+				add_claim_on_loss = no
+			}
+			scope:ci_ministorum_seat = {
+				change_title_holder = {
+					holder = scope:ci_ministorum_first_head
+					change = scope:ci_ministorum_seat_change
+				}
+			}
+			resolve_title_and_vassal_change = scope:ci_ministorum_seat_change
+		}
+	}
+
 	scope:ci_ministorum_first_head = {
 		hidden_effect = {
 			# Governo eclesiastico (marco 3, 3a): o mesmo do clero com terras e dos cardeais da fe (theocracy_government_type da religiao).

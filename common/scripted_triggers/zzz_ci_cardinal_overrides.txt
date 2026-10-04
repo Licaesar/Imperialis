@@ -1,4 +1,4 @@
-﻿# Override de pam_pope_is_head_of_faith_or_rite_trigger (common/scripted_triggers/pam_scripted_triggers.txt, CK3 1.20.0.3).
+﻿# Overrides de pam_pope_is_head_of_faith_or_rite_trigger e pam_leads_college_of_cardinals_trigger (common/scripted_triggers/pam_scripted_triggers.txt, CK3 1.20.0.3).
 # Mudanca marcada com 'Imperialis' (marco 3, fase 3a): o Ministorum (k_sol) faz o papel do papa para o colegio de cardeais.
 # Sem isto, grant_cardinal_title_effect e pam_seed_cardinals_effect nao concedem cardinalatos a fe Imperialis.
 # Escopo: personagem.
@@ -7,5 +7,21 @@ pam_pope_is_head_of_faith_or_rite_trigger = {
 		rite.head_of_rite ?= { has_title = title:k_papal_state }
 		faith.religious_head ?= { has_title = title:k_papal_state }
 		faith.religious_head ?= { has_title = title:k_sol } # Imperialis: o Ministorum
+	}
+}
+
+# Marco 3, fase 3a.2: quem lidera o colegio de cardeais. As interacoes de nomear, destruir e pedir cardinalato e de dar ordens a
+# cardeais (pam_interactions.txt) e uma acao importante dependem dele. No vanilla so o titular do k_papal_state com a eleicao ativa;
+# aqui tambem o titular do k_sol com a lei eletiva. Escopo: personagem.
+pam_leads_college_of_cardinals_trigger = {
+	OR = {
+		AND = {
+			has_title = title:k_papal_state
+			pam_college_of_cardinals_election_active_trigger = yes
+		}
+		AND = { # Imperialis: o Ministorum
+			has_title = title:k_sol
+			has_realm_law = theocratic_elective_succession_law
+		}
 	}
 }

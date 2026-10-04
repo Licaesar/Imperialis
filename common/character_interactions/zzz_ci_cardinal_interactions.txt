@@ -1,0 +1,283 @@
+﻿# Override de increase_papabile_score_interaction (common/character_interactions/pam_interactions.txt, CK3 1.20.0.3), copia do vanilla.
+# Mudanca marcada com 'Imperialis' (marco 3, fase 3a.2): a interacao exigia o titulo k_papal_state com eleitores; agora aceita o
+# titulo da chefia da fe, que e o k_sol para a fe Imperialis. Regerar a partir do vanilla a cada atualizacao do jogo.
+
+increase_papabile_score_interaction = {
+	category = interaction_category_religion
+	icon = icon_increase_theocratic_heir_candidacy
+	common_interaction = yes
+	interface_priority = 75
+	
+	cooldown_against_recipient = { years = 3 }
+	
+	filter_tags = { papabile }
+
+	desc = increase_papabile_score_interaction_desc
+	filter_tags = { papabile }
+
+	is_available = {
+		faith ?= { has_doctrine_parameter = has_clerical_electors }
+		pam_pope_is_head_of_faith_or_rite_trigger = yes
+		# Imperialis: o titulo da chefia da fe (k_sol), nao so o k_papal_state (como pam_college_election_title_has_electors_trigger)
+		trigger_if = {
+			limit = { exists = faith.religious_head_title }
+			faith.religious_head_title = {
+				any_elector = {}
+				is_title_created = yes
+			}
+		}
+		trigger_else = {
+			title:k_papal_state ?= {
+				any_elector = {}
+				is_title_created = yes
+			}
+		}
+		is_adult = yes
+		NOR = {
+			government_has_flag = government_is_mercenary
+			government_has_flag = government_is_herder
+			government_has_flag = government_is_military_holy_order
+		}
+		has_pam_dlc_trigger = yes
+		trigger_if = {
+			# The incumbent stands in no conclave, so the AI Head of Faith has no candidacy worth buying
+			limit = { is_ai = yes }
+			NOT = { faith.religious_head ?= this }
+		}
+	}
+
+	is_shown = {
+		scope:recipient = {
+			faith ?= scope:actor.faith
+			is_adult = yes
+			exists = clerical_elector_title
+			NOT = { faith.religious_head ?= this }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_imprisoned = no
+			is_at_war = no
+			is_incapable = no
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				scope:recipient = {
+					OR = {
+						is_papabile = yes
+						is_close_or_extended_family_of = scope:actor
+						custom_tooltip = {
+							text = increase_papabile_score_interaction_puppet_tt
+							OR = {
+								scope:actor.puppet:theological_agent_puppet ?= scope:recipient
+								scope:actor.puppet:external_theological_agent_puppet ?= scope:recipient
+							}
+						}
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			is_imprisoned = no
+			is_at_war = no
+			is_incapable = no
+			NOT = { has_trait = excommunicated }
+		}
+	}
+
+	send_option = {
+		flag = pam_papabile_place_first_option
+		localization = increase_papabile_score_place_first_option_desc
+		is_valid = {
+			scope:actor = { is_ai = no }
+			custom_tooltip = {
+				text = increase_papabile_score_already_powerful_tt
+				scope:recipient = {
+					pam_papabile_slot_open_to_trigger = { SLOT = theocratic_elective_powerful }
+				}
+			}
+		}
+	}
+
+	send_option = {
+		flag = pam_papabile_gold_option
+		localization = increase_papabile_score_gold_option_desc
+		is_valid = {
+			scope:actor = { gold >= major_gold_value }
+			custom_tooltip = {
+				text = increase_papabile_score_gold_option_place_first_tt
+				NOT = { scope:pam_papabile_place_first_option = yes }
+			}
+		}
+	}
+	send_options_exclusive = no
+
+	localization_values = {
+		PAM_PAPABILE_PLACE_FIRST = scope:recipient.pam_papabile_place_first_powerful_value
+	}
+
+	cost = {
+		piety = {
+			value = major_piety_value
+			if = {
+				limit = { scope:pam_papabile_place_first_option = yes }
+				add = {
+					value = scope:recipient.pam_papabile_place_first_powerful_value
+					multiply = pam_papabile_place_first_piety_per_point_value
+				}
+			}
+			if = {
+				limit = { scope:actor = { has_perk = court_of_shadows_perk } }
+				multiply = 0.75
+			}
+		}
+		gold = {
+			value = 0
+			if = {
+				limit = {
+					scope:pam_papabile_gold_option = yes
+					NOT = { scope:pam_papabile_place_first_option = yes }
+				}
+				add = scope:actor.major_gold_value
+			}
+		}
+	}
+
+	auto_accept = yes
+
+	on_accept = {
+		scope:actor = {
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = increase_papabile_score_interaction_toast
+				left_icon = scope:actor
+				right_icon = scope:recipient
+				scope:recipient = {
+					if = {
+						limit = { scope:pam_papabile_place_first_option = yes }
+						pam_place_first_as_powerful_effect = { VALUE = pam_papabile_place_first_powerful_value }
+					}
+					else_if = {
+						limit = { scope:pam_papabile_gold_option = yes }
+						pam_increase_papabile_score_effect = { VALUE = pam_papabile_gold_option_score_value }
+					}
+					else = {
+						pam_increase_papabile_score_effect = { VALUE = pam_papabile_base_score_value }
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = {
+					this != scope:actor
+					is_ai = no
+				}
+				hidden_effect = {
+					send_interface_toast = {
+						type = event_toast_effect_good
+						title = increase_papabile_score_interaction_toast
+						left_icon = scope:recipient
+						right_icon = scope:actor
+						show_as_tooltip = {
+							if = {
+								limit = { scope:pam_papabile_place_first_option = yes }
+								pam_place_first_as_powerful_effect = { VALUE = pam_papabile_place_first_powerful_value }
+							}
+							else_if = {
+								limit = { scope:pam_papabile_gold_option = yes }
+								pam_increase_papabile_score_effect = { VALUE = pam_papabile_gold_option_score_value }
+							}
+							else = {
+								pam_increase_papabile_score_effect = { VALUE = pam_papabile_base_score_value }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ai_targets = {
+		ai_recipients = family
+		max = 5
+	}
+
+	ai_targets = {
+		ai_recipients = dynasty
+		max = 5
+	}
+
+	ai_targets = {
+		ai_recipients = self
+		ai_recipients = puppets
+		ai_recipients = spouses
+		ai_recipients = papabile
+	}
+
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 72
+		duchy = 36
+		kingdom = 12
+		empire = 12
+		hegemony = 12
+	}
+
+	ai_will_do = {
+		base = 0
+
+		modifier = {
+			add = 1000
+			scope:recipient = scope:actor
+		}
+
+		modifier = {
+			add = 100
+			OR = {
+				is_close_or_extended_family_of = scope:recipient
+				scope:recipient.puppeteer ?= this
+				has_relation_friend = scope:recipient
+				has_relation_lover = scope:recipient
+			}
+		}
+
+		modifier = {
+			add = 50
+			is_spouse_of = scope:recipient
+		}
+
+		modifier = {
+			add = 25
+			exists = scope:recipient.dynasty
+			scope:actor.dynasty ?= scope:recipient.dynasty
+		}
+
+		modifier = {
+			add = -25
+			scope:actor = { has_trait = cynical }
+		}
+
+		modifier = {
+			add = -25
+			scope:actor = { has_trait = greedy }
+		}
+
+		modifier = { # A candidate of another rite is a rival faction's champion, not ours to elevate
+			add = -60
+			scope:recipient != scope:actor
+			scope:actor = { rite != scope:recipient.rite }
+		}
+		
+		modifier = {
+			factor = 0
+			scope:actor = { has_relation_rival = scope:recipient }
+		}
+	}
+}

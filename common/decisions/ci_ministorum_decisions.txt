@@ -37,6 +37,10 @@ ci_found_ministorum_decision = {
 			text = ci_found_ministorum_holder_exists_tt
 			ci_ministorum_holder_exists_trigger = yes
 		}
+		custom_tooltip = {
+			text = ci_found_ministorum_county_tt
+			any_held_title = { ci_ministorum_grantable_county_trigger = { FOUNDER = root } }
+		}
 	}
 
 	is_valid_showing_failures_only = {
@@ -48,6 +52,7 @@ ci_found_ministorum_decision = {
 	effect = {
 		custom_tooltip = ci_found_ministorum_decision_effect_tooltip
 		custom_tooltip = ci_found_ministorum_college_tooltip
+		custom_tooltip = ci_found_ministorum_vassal_tooltip
 		hidden_effect = {
 			ci_found_ministorum_effect = yes
 		}

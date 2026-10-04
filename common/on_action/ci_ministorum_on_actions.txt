@@ -1,0 +1,27 @@
+﻿##############################################
+# CULTUS IMPERIALIS - ADEPTUS MINISTORUM (marco 3, fase 3a.2)
+# Os realm laws sao do personagem, nao do titulo: o eleito pelo colegio chega ao k_sol sem a lei de sucessao eletiva. O vanilla a
+# aplica sozinho so para o k_papal_state (title_on_actions.txt); aqui o mesmo para o k_sol. Encadeia o on_title_gain do vanilla.
+# Na fundacao o efeito ci_found_ministorum_effect ja aplica a lei (o titulo e ganho antes de a fe ter chefe, e a lei so vale para
+# quem e o religious_head).
+##############################################
+on_title_gain = {
+	on_actions = { ci_ministorum_on_title_gain }
+}
+
+# Escopo: personagem que ganhou o titulo. scope:title = o titulo ganho.
+ci_ministorum_on_title_gain = {
+	trigger = {
+		scope:title = title:k_sol
+		faith ?= {
+			has_doctrine_parameter = has_clerical_electors
+			religious_head ?= prev
+		}
+		NOT = { has_realm_law = theocratic_elective_succession_law }
+	}
+	effect = {
+		hidden_effect = {
+			add_realm_law_skip_effects = theocratic_elective_succession_law
+		}
+	}
+}
