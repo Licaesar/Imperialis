@@ -52,6 +52,11 @@
 	doctrine = doctrine_clerical_gender_either
 	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_temporal_appointment
+
+	#Sacraments (marco 3, 3b.1; playtest de 04/10/2026): toda religiao do vanilla lista uma doutrina do grupo sacraments_group, e o Imperialis
+	# nao tinha nenhuma. Sem doctrine_sacraments_central o parametro excommunication_active fica desligado e a interacao de pedir a
+	# excomunhao nao aparece (o autor quer tudo o que o vanilla liga). Liga tambem a decisao vanilla de extrema-uncao (last_rites_active).
+	doctrine = doctrine_sacraments_central
 	
 
 
