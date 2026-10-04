@@ -7,3 +7,13 @@ doctrine_imperialis_branches = {
 		religion_tag = imperialis_religion
 	}
 }
+
+# Regioes clericais da fe (marco 3, fase 3b.1). Como o is_christian_faith do vanilla (categoria special): a doutrina vai junto para a fe
+# nova criada por divergencia. A doutrina de identidade crista nao serve (traz sincretismo, hostilidade e a situacao da Igreja crista).
+ci_has_clerical_regions = {
+	category = special
+
+	is_available_on_create = {
+		has_doctrine = ci_doctrine_has_clerical_regions
+	}
+}

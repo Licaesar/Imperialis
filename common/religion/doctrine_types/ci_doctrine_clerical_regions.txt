@@ -1,0 +1,13 @@
+﻿# Regioes clericais da fe Imperialis (marco 3, fase 3b.1): expoe o parametro has_clerical_regions que o vanilla so da pela doutrina de
+# identidade crista (special_doctrine_is_christian_faith, que traz tambem sincretismo, hostilidade e a situacao da Igreja crista).
+# Oculta, como special_doctrine_has_clerical_electors. Fica na fe (faith_types) e nos quatro ritos (rite_types).
+ci_doctrine_has_clerical_regions = {
+	doctrine_group_type = ci_has_clerical_regions
+	icon = "special_doctrine_default"
+
+	visible = no
+
+	parameters = {
+		has_clerical_regions
+	}
+}

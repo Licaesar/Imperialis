@@ -1,0 +1,127 @@
+﻿# Override de seis valores de custo de titulos eclesiasticos (common/script_values/pam_values.txt, CK3 1.20.0.3), copias do vanilla.
+# Mudanca (marcada na primeira linha de cada condicao): o vanilla cobra piedade por condado de jure SO da religiao crista; com
+# regioes clericais o Imperialis passaria a pagar 0. Agora contam os condados cristaos e os da religiao Imperialis.
+# Marco 3, fase 3b.1. Regerar a partir do vanilla a cada atualizacao do jogo.
+
+pam_request_ecclesiastical_title_split_cost_value = {
+	value = 0
+
+	# We charge piety per Christian de jure county
+	# A secular duke or above uses their own primary title, otherwise the liege's
+	if = {
+		limit = {
+			scope:puppet_or_actor ?= {
+				NOT = { pam_government_is_religious_playable_trigger = yes }
+				is_landed = yes
+				highest_held_title_tier >= tier_duchy
+			}
+		}
+		add = {
+			scope:puppet_or_actor.primary_title = {
+				every_de_jure_county = {
+					limit = { OR = { faith.religion = religion:christianity_religion faith.religion = religion:imperialis_religion } }
+					add = minor_piety_value
+				}
+			}
+		}
+	}
+	else = {
+		add = {
+			scope:puppet_or_actor.liege.primary_title = {
+				every_de_jure_county = {
+					limit = { OR = { faith.religion = religion:christianity_religion faith.religion = religion:imperialis_religion } }
+					add = minor_piety_value
+				}
+			}
+		}
+	}
+}
+
+pam_new_clerical_region_cost_value = {
+	value = 0
+
+	# create_clerical_region always uses the de jure kingdom of the title you pick, whatever its tier
+	if = {
+		limit = {
+			exists = scope:target
+			exists = scope:target.title_capital_county
+			exists = scope:target.title_capital_county.kingdom
+		}
+		add = {
+			scope:target.title_capital_county.kingdom = {
+				every_de_jure_county = {
+					limit = {
+						OR = { faith.religion = religion:christianity_religion faith.religion = religion:imperialis_religion }
+						NOT = { exists = clerical_region_title }
+					}
+					add = minor_piety_value
+				}
+			}
+		}
+	}
+}
+
+pam_split_ecclesiastical_title_cost_value = {
+	value = 0
+
+	# Piety cost for each Christian de jure county in the chosen secular ruler's primary title
+	add = {
+		scope:secondary_actor.primary_title ?= {
+			every_de_jure_county = {
+				limit = { OR = { faith.religion = religion:christianity_religion faith.religion = religion:imperialis_religion } }
+				add = minor_piety_value
+			}
+		}
+	}
+}
+
+pam_new_ecclesiastical_title_cost_value = {
+	value = 0
+
+	# * piety cost for each Christian county in the title
+	if = {
+		limit = { exists = scope:target }
+		add = {
+			scope:target = {
+				every_de_jure_county = {
+					limit = { OR = { faith.religion = religion:christianity_religion faith.religion = religion:imperialis_religion } }
+					add = minor_piety_value
+				}
+			}
+		}
+	}
+}
+
+pam_request_ecclesiastical_title_merger_cost_value = {
+	value = 0
+
+	# Exact piety cost per Christian county in the selected absorbed clerical region; guarded for when scope:target is not yet set (pre-selection tooltip)
+	if = {
+		limit = { exists = scope:target }
+		add = {
+			scope:target = {
+				every_county_in_clerical_region = {
+					limit = { OR = { faith.religion = religion:christianity_religion faith.religion = religion:imperialis_religion } }
+					add = medium_piety_value
+				}
+			}
+		}
+	}
+}
+
+pam_merge_new_ecclesiastical_title_cost_value = {
+	value = 0
+
+	# Piety cost for each Christian county in the absorbed clerical region
+	if = {
+		limit = { exists = scope:target }
+		add = {
+			scope:target = {
+				every_county_in_clerical_region = {
+					limit = { OR = { faith.religion = religion:christianity_religion faith.religion = religion:imperialis_religion } }
+					add = minor_piety_value
+				}
+			}
+		}
+	}
+}

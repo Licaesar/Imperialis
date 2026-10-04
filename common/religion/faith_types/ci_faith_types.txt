@@ -34,8 +34,10 @@ imperialis = {
 	# Colegio de cardeais (marco 3, fase 3a): a doutrina oculta (visible = no) liga os eleitores clericais, a lei de sucessao
 	# eletiva do Head of Faith e os cardinalatos. Fica desde 867 na fe (nada acontece sem Head of Faith: o colegio so e
 	# preenchido pela fundacao do Ministorum, ci_found_ministorum_effect). Os quatro ritos tambem a listam (rite_types).
+	# Regioes clericais (3b.1): arcebispos, arquidioceses e catedrais; a doutrina e propria do Imperialis (ci_doctrine_has_clerical_regions).
 	doctrines = {
 		special_doctrine_has_clerical_electors
+		ci_doctrine_has_clerical_regions
 	}
 
 	cultures = { lipherianii_culture imperialis_culture }

@@ -4,3 +4,6 @@
  ci_found_ministorum_college_tooltip:0 "The #V College of Cardinals#! is filled with up to 10 electors, and future Heads of Faith are chosen by election. The Head of Faith, the cardinals and the landed clergy of the faith use the #V Ecclesiastical#! government."
  ci_found_ministorum_romagna_tooltip:0 "The Head of Faith receives the #V Duchy of Romagna#! and all its counties from whoever holds them. They stay independent until the Emperor of Italy makes them a vassal."
  clerical_elector_duchy_cardinalate_imperialis:0 "Cardinalate"
+ ci_doctrine_has_clerical_regions_name:0 "Clerical Regions"
+ ci_has_clerical_regions_name:0 "$ci_doctrine_has_clerical_regions_name$"
+ ci_doctrine_has_clerical_regions_desc:0 "The clergy of the faith are organised in clerical regions under archbishops."

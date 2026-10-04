@@ -1,0 +1,12 @@
+﻿# Override de pam_faith_uses_cathedrals_trigger (common/scripted_triggers/pam_saint_triggers.txt, CK3 1.20.0.3), copia do vanilla.
+# Mudanca marcada com 'Imperialis' (marco 3, fase 3b.1): com regioes clericais ligadas o vanilla passa a sepultar os santos em
+# catedrais (o dominio do arcebispo) em vez de locais santos, e quem nao tem arcebispo com catedral no reino nao poderia venerar
+# antepassados. O autor decidiu manter os locais santos para o Imperialis, como no marco 2. Escopo: personagem.
+# Regerar a partir do vanilla a cada atualizacao do jogo.
+
+pam_faith_uses_cathedrals_trigger = {
+	faith ?= { has_doctrine_parameter = has_clerical_regions }
+	NOT = { rite = { rite_has_doctrine = doctrine_theocracy_lay_clergy } }
+	# Imperialis: os antepassados venerados seguem sepultados em locais santos, nao em catedrais (decisao do autor, 04/10/2026)
+	NOT = { faith ?= { religion = religion:imperialis_religion } }
+}
