@@ -10,3 +10,8 @@
  # Titular de regiao clerical: mesmo termo do duque do clero (arcebispo sem terras). O autor pode trocar.
  duke_theocracy_male_imperialis_religion_clerical_region:0 "$duke_theocracy_male_imperialis_religion$"
  duke_theocracy_female_imperialis_religion_clerical_region:0 "$duke_theocracy_female_imperialis_religion$"
+ # Lider de ordem monastica do Imperialis (o vanilla usa "Sage"). Termos do autor.
+ duke_monastic_order_male_imperialis_religion:0 "Maestre"
+ duke_monastic_order_female_imperialis_religion:0 "Maestra"
+ king_monastic_order_male_imperialis_religion:0 "$duke_monastic_order_male_imperialis_religion$"
+ king_monastic_order_female_imperialis_religion:0 "$duke_monastic_order_female_imperialis_religion$"

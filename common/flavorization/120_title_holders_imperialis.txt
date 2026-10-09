@@ -269,3 +269,58 @@ clerical_elector_duchy_cardinalate_imperialis = {
 	}
 	special_title = clerical_elector
 }
+
+# Lider de ordem monastica (pedido do autor, 09/10/2026): no vanilla o lider de ducado e de reino se chama "Sage" para todas as fes
+# (duke_monastic_order_*, king_monastic_order_*, prioridades 26 e 46). Entradas exclusivas do Imperialis, uma acima de cada.
+duke_monastic_order_male_imperialis_religion = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 27
+	governments = { monastic_holy_order_government }
+	religions = { imperialis_religion }
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}
+duke_monastic_order_female_imperialis_religion = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 27
+	governments = { monastic_holy_order_government }
+	religions = { imperialis_religion }
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}
+king_monastic_order_male_imperialis_religion = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { monastic_holy_order_government }
+	religions = { imperialis_religion }
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}
+king_monastic_order_female_imperialis_religion = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { monastic_holy_order_government }
+	religions = { imperialis_religion }
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}
