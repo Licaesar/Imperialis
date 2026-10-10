@@ -23,6 +23,11 @@ ci_founder_saint_on_death = {
 			}
 			ci_founder_canonize_on_death_effect = { PROVINCE = title:b_servia.title_province }
 			ci_founder_death_fervor_effect = { EVENT = ci_founder_saint.0001 DESC = ci_fervor_gain_kensoriel_death }
+			# A Lex Omnissiah tambem venera o Kensoriel (marco 5, fase 5d): fervor, santo da Lex e evento ci_lore.0031
+			if = {
+				limit = { faith = faith:imperialis }
+				ci_lore_kensoriel_lex_veneration_effect = yes
+			}
 		}
 		else_if = {
 			limit = {

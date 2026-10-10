@@ -1,0 +1,69 @@
+﻿l_english:
+ # Eventos de lore (marco 5, fase 5d). Texto criado pelo Claude e contado ao autor.
+
+ ci_lore.0001.t:0 "The Two Paths"
+ ci_lore.0001.desc:0 "On the Temple Mount, in the first days after the Omnissiah descended in a bolt of sunlight, the seventeen gathered around the fire of the camp. They had awaited Him for years; now that He stood among them, they found they did not agree on what they had awaited.\n\nMost knelt before His blood and His bride, and swore to follow wherever His line would lead. But Altaïr Ramashiri rose and spoke of reason, and Vistários Granhiéron of words that must never be twisted, and Miyamoto Musashi and Elessar Telcontar stood beside them. 'He gave us a Law, not an heir,' Altaïr said. 'We will keep the Law.'\n\nThe Omnissiah did not rebuke them. Two paths opened that night, the Veritas Imperialis and the Lex Omnissiah, and both began at His feet."
+ ci_lore.0001.a:0 "The blood is the way."
+ ci_lore.0001.b:0 "The Law is the way."
+
+ ci_lore.0002.t:0 "The Mantle of Undómiel"
+ ci_lore.0002.desc:0 "Some of the sisters of the camp had begun to sing their hymns to Helaena Undómiel herself, and she did not like it. She called Alia Atreides to her side, the youngest of the seventeen and the only one unwed, and placed the young cult in her hands.\n\n'Keep them from making a goddess of me while I live,' Helaena told her, 'and keep them faithful when I am gone.' Alia bowed her head. From that day the house Atreides has kept the Cult Undómiel."
+ ci_lore.0002.a:0 "Per Scientiam, Providentia."
+ ci_keeper_of_undomiel_modifier:0 "Keeper of the Undómiel"
+ ci_keeper_of_undomiel_modifier_desc:0 "Entrusted by Helaena Undómiel herself with the cult that bears her name."
+
+ ci_lore.0010.t:0 "The Adeptus Ministorum"
+ ci_lore.0010.desc:0 "In the templum of Ravenna, before the banners of the Legio and the sealed copies of the Codex Imperialis, [ci_lore_founder.GetTitledFirstName] has laid the foundation of the Adeptus Ministorum: the Church of the Omnissiah upon earth, its College, its clergy and its throne.\n\n[ci_lore_ecclesiarch.GetTitledFirstName] takes that throne first. From Ravenna the Ministorum will speak for the Veritas Imperialis, crown its emperors and keep its faithful, for as long as the blood of the Omnissiah endures."
+ ci_lore.0010.a:0 "Ave, Adeptus Ministorum."
+
+ ci_lore.0011.t:0 "Throne and Altar"
+ ci_lore.0011.desc:0 "Before the court of [ci_lore_liege.GetTitledFirstName], the head of the Adeptus Ministorum, [ci_lore_ecclesiarch.GetTitledFirstName], knelt and swore fealty, and the Romagna was bound to the crown of Italy.\n\nSome whisper that the Church has been put in chains. Others say the crown has been sanctified. In Ravenna and in Rome alike, the priests now pray for the emperor in the same breath as for the Omnissiah."
+ ci_lore.0011.a:0 "Throne and altar are one."
+
+ ci_lore.0020.t:0 "Sede Vacante"
+ ci_lore.0020.desc:0 "[ci_lore_dead_ecclesiarch.GetTitledFirstName] is dead. The bells of Ravenna toll for the shepherd of the Adeptus Ministorum, and the throne of the Church stands empty.\n\nThe College gathers in the templum, and its doors are sealed behind them. They will not open again until a new shepherd has been chosen."
+ ci_lore.0020.a:0 "Pray for the College."
+
+ ci_lore.0021.t:0 "A New Shepherd"
+ ci_lore.0021.desc:0 "The doors of the templum of Ravenna have opened. The College of the Adeptus Ministorum has chosen [ci_lore_new_ecclesiarch.GetTitledFirstName] to succeed [ci_lore_dead_ecclesiarch.GetFirstName] upon the throne of the Church.\n\nFrom the steps the words rang out over the waiting crowd: 'The Omnissiah has given us a shepherd.' The Sede Vacante is over."
+ ci_lore.0021.a:0 "Long may the Ministorum endure."
+
+ ci_lore.0030.t:0 "An Apostle Has Fallen"
+ ci_lore.0030.intro:0 "One of the seventeen who awaited the Omnissiah on the Temple Mount is gone: [ci_lore_dead_apostle.GetTitledFirstName] has died.\n\n"
+ ci_lore.0030.reid_astrea:0 "Reid never left a battle while those beneath his shield were still in danger, and never understood the enemies who struck with poison and lies. His house will carry his words: Lux Aeterna Regnat."
+ ci_lore.0030.ezio_auditore:0 "Ezio fought with whispers before he fought with steel, and counted every life his informants spared as a victory won. His house will carry his words: Per Disciplina, Illuminatio."
+ ci_lore.0030.emhyr_emreis:0 "While the others asked how to take a city, Emhyr asked how to keep it: roads, granaries, laws and governors. Much of the Imperium still stands on his foundations. His house will carry his words: Per Artem, Pax."
+ ci_lore.0030.vistarios_granhieron:0 "Vistários was the first to write down the words of the Omnissiah, so that no generation after him could twist them. The Legists name him the first keeper of the Law. His house will carry his words: Veritas per Sapientiam Divinam."
+ ci_lore.0030.legarde_martyr:0 "Le'garde placed mission and duty above his own life, and asked the same of every man who followed him. His house bears the name he earned. His house will carry his words: Ordo est Pax."
+ ci_lore.0030.hrodric_gyliman:0 "Hrodric saw war and government as a single problem, and taught the Legio to march, to eat and to obey. His house will carry his words: Gladius et Mens Unum."
+ ci_lore.0030.verso_lumere:0 "Verso always struck first and always led from the front line, laughing as he went. His house will carry his words: In Oriente, Lux."
+ ci_lore.0030.altair_ramashiri:0 "Altaïr held that no honest question could break a divine truth, and it was he who first said: 'He gave us a Law, not an heir.' The Legists mourn their first voice. His house will carry his words: Ratio est Via ad Deum."
+ ci_lore.0030.sigvardr_drakenfyr:0 "Sigvardr had little patience for words and none at all for broken oaths. He never broke his own. His house will carry his words: In Mandato, Fides."
+ ci_lore.0030.miyamoto_musashi:0 "Musashi fought without anger, studying every enemy as a scholar studies a text, and no blade among the faithful was finer than his. His house will carry his words: Rex Sapientiae, Servus Luminis."
+ ci_lore.0030.aurelian_solerius:0 "Aurelian thought in campaigns, not battles: fortresses, seasons and harvests were his weapons as much as any sword. His house will carry his words: Virtus est Via."
+ ci_lore.0030.lakan_shaokan:0 "Lakan knew that coin, secrets and favours are only different faces of power, and he spent all three for the Imperium. His house will carry his words: Concordia Regit Imperium."
+ ci_lore.0030.astarinus_viriata:0 "Astarinus taught small bands to bleed great armies among the hills and the forests. His house will carry his words: Libertas Ferro Defenditur."
+ ci_lore.0030.julius_euclius:0 "Julius held that a victory without honour was worth little, and his soldiers loved him for sparing prisoners and peasants alike. His house will carry his words: Fides Ante Gloriam."
+ ci_lore.0030.radahn_varakh:0 "Radahn was strength made into a commander, and he shared every spoil with the men who followed him into the worst of battles. His house will carry his words: Fortitudo Sine Timore."
+ ci_lore.0030.alia_atreides:0 "Alia saw the consequences others missed, and kept the Cult of Undómiel as Helaena had asked of her. Tonight the sisters of Undómiel sing for their keeper. Her house will carry her words: Per Scientiam, Providentia."
+ ci_lore.0030.elessar_telcontar:0 "Elessar won his wars before his enemies knew they had begun, and taught that silence is a weapon like any other. His house will carry his words: Silentium ante Victoriam."
+ ci_lore.0030.generic:0 "The faithful remember a companion of the Omnissiah from the first days in Jerusalem."
+ ci_lore.0030.outro:0 "\n\nOf those who knelt at His feet in Jerusalem, fewer remain with every passing year. The age of the apostles is fading; the age of their houses begins."
+ ci_lore.0030.a:0 "Requiescat in luce."
+
+ ci_lore.0031.t:0 "The Lawgiver Rests"
+ ci_lore.0031.desc:0 "The Omnissiah has left the world of flesh. The Veritas mourns the father of the blood; the Legists mourn the Lawgiver, the only one who was ever divine.\n\nOn Mount Olympus, where He is laid to rest, they gather not to pray to His heirs but to read His Law aloud, from the first word to the last. He is gone, but the Law remains. It was always meant to."
+ ci_lore.0031.a:0 "The Law remains."
+ ci_fervor_gain_kensoriel_death_lex:0 "The Lawgiver has died"
+
+ ci_lore.0040.t:0 "A Child of the Pure Blood"
+ ci_lore.0040.desc:0 "Word has come from the birthing chamber: [ci_lore_newborn.GetFirstName] has been born with the blood of the Omnissiah undiluted, a Sanguinis of the fifth degree, as pure as the first children of Kensoriel and Helaena.\n\nThe priests of the Veritas ring the bells of every templum. Such a birth is counted as a blessing upon the whole Imperium, and as a promise that the blood will not fade."
+ ci_lore.0040.a:0 "Blessed be the blood."
+
+ ci_lore.0050.t:0 "The First Miracle"
+ ci_lore.0050.desc:0 "When [ci_lore_healed.GetFirstName] lay sick, I laid my hands upon the fever and felt the blood of the Omnissiah stir within me, and flow out of me like warmth leaving a hearth. The sickness broke. It fled. And I was left weaker, as the old writings said I would be.\n\nThis is the gift of the Sanguinis, and this is its price. Now I know both."
+ ci_lore.0050.a:0 "Manus Omnissiah."
+
+ ci_lore.0060.t:0 "Gladii Ignis"
+ ci_lore.0060.desc:0 "Under the banner of [ci_lore_gladii_dynast.GetTitledFirstName], the first companies of the Gladii Ignis have taken their oaths: heavy infantry clad in steel and devotion, sworn to the blood of the Omnissiah and to no one else. Where they march, it is said, the night itself burns.\n\nOur dynasty may now raise the Fire Swords."
+ ci_lore.0060.a:0 "Ignis Sanguinis."

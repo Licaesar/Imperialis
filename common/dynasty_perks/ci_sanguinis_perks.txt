@@ -59,5 +59,22 @@ ci_sanguinis_legacy_5 = { # Gladii Ignis
 
 	effect = {
 		custom_description_no_bullet = { text = ci_sanguinis_legacy_5_effect }
+		# Gladii Ignis (marco 5, fase 5d): o efeito da perk roda no desbloqueio, no escopo de quem desbloqueia; evento de lore para os
+		# jogadores da dinastia
+		hidden_effect = {
+			save_scope_as = ci_lore_gladii_dynast
+			dynasty ?= {
+				every_dynasty_member = {
+					limit = {
+						is_ai = no
+						is_alive = yes
+					}
+					trigger_event = {
+						id = ci_lore.0060
+						days = 1
+					}
+				}
+			}
+		}
 	}
 }

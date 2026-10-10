@@ -1,0 +1,8 @@
+﻿# Eventos de lore (marco 5, fase 5d)
+
+# A Helaena confia o Cult Undomiel a Alia Atreides (ci_lore.0002). Permanente.
+ci_keeper_of_undomiel_modifier = {
+	icon = piety_positive
+	monthly_piety_gain_mult = 0.15
+	learning = 1
+}

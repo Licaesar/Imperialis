@@ -1,0 +1,350 @@
+﻿# Eventos de lore (marco 5, fase 5d). Texto criado pelo Claude e contado ao autor. Todos so informam (jogadores); os efeitos que
+# mudam o jogo acontecem antes, nos on_actions e efeitos citados em common/on_action/ci_lore_on_actions.txt.
+# 0001 The Two Paths (867) | 0002 The Mantle of Undomiel (867) | 0010 fundacao do Ministorum | 0011 vassalagem do Ministorum
+# 0020 sede vacante | 0021 eleicao | 0030 morte de um apostolo | 0031 morte do Kensoriel para a Lex | 0040 nascimento de um Sanguinis 5
+# 0050 primeira cura de um Sanguinis | 0060 Gladii Ignis
+
+namespace = ci_lore
+
+ci_lore.0001 = {
+	type = character_event
+	window = big_event_window
+	theme = faith
+	title = ci_lore.0001.t
+	desc = ci_lore.0001.desc
+	override_background = { reference = army_camp }
+
+	trigger = {
+		exists = scope:ci_lore_kensoriel
+		exists = character:ci_altair_ramashiri
+	}
+
+	left_portrait = {
+		character = scope:ci_lore_kensoriel
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = character:ci_altair_ramashiri
+		animation = thinking
+	}
+
+	option = {
+		trigger = { NOT = { faith = faith:ci_lex_omnissiah } }
+		name = ci_lore.0001.a
+	}
+	option = {
+		trigger = { faith = faith:ci_lex_omnissiah }
+		name = ci_lore.0001.b
+	}
+}
+
+ci_lore.0002 = {
+	type = character_event
+	window = big_event_window
+	theme = faith
+	title = ci_lore.0002.t
+	desc = ci_lore.0002.desc
+	override_background = { reference = temple }
+
+	trigger = {
+		exists = scope:ci_lore_helaena
+		exists = scope:ci_lore_alia
+	}
+
+	left_portrait = {
+		character = scope:ci_lore_helaena
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:ci_lore_alia
+		animation = admiration
+	}
+
+	option = {
+		name = ci_lore.0002.a
+		show_as_tooltip = {
+			scope:ci_lore_alia = { add_character_modifier = ci_keeper_of_undomiel_modifier }
+		}
+	}
+}
+
+ci_lore.0010 = {
+	type = character_event
+	window = big_event_window
+	theme = faith
+	title = ci_lore.0010.t
+	desc = ci_lore.0010.desc
+	override_background = { reference = temple }
+
+	trigger = {
+		exists = scope:ci_lore_founder
+		exists = scope:ci_lore_ecclesiarch
+	}
+
+	left_portrait = {
+		character = scope:ci_lore_ecclesiarch
+		animation = ecstasy
+	}
+	right_portrait = {
+		character = scope:ci_lore_founder
+		animation = personality_honorable
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_sacredrite"
+	}
+
+	option = {
+		name = ci_lore.0010.a
+	}
+}
+
+ci_lore.0011 = {
+	type = character_event
+	window = big_event_window
+	theme = faith
+	title = ci_lore.0011.t
+	desc = ci_lore.0011.desc
+	override_background = { reference = throne_room }
+
+	trigger = {
+		exists = scope:ci_lore_liege
+		exists = scope:ci_lore_ecclesiarch
+	}
+
+	left_portrait = {
+		character = scope:ci_lore_liege
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:ci_lore_ecclesiarch
+		animation = throne_room_kneel_1
+	}
+
+	option = {
+		name = ci_lore.0011.a
+	}
+}
+
+ci_lore.0020 = {
+	type = character_event
+	theme = faith
+	title = ci_lore.0020.t
+	desc = ci_lore.0020.desc
+	override_background = { reference = temple }
+
+	trigger = { exists = scope:ci_lore_dead_ecclesiarch }
+
+	left_portrait = {
+		character = scope:ci_lore_dead_ecclesiarch
+		animation = dead
+	}
+
+	option = {
+		name = ci_lore.0020.a
+	}
+}
+
+ci_lore.0021 = {
+	type = character_event
+	theme = faith
+	title = ci_lore.0021.t
+	desc = ci_lore.0021.desc
+	override_background = { reference = temple }
+
+	trigger = {
+		exists = scope:ci_lore_new_ecclesiarch
+		exists = scope:ci_lore_dead_ecclesiarch
+	}
+
+	left_portrait = {
+		character = scope:ci_lore_new_ecclesiarch
+		animation = ecstasy
+	}
+
+	option = {
+		name = ci_lore.0021.a
+	}
+}
+
+ci_lore.0030 = {
+	type = character_event
+	theme = faith
+	title = ci_lore.0030.t
+	desc = {
+		desc = ci_lore.0030.intro
+		first_valid = {
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_reid_astrea }
+					desc = ci_lore.0030.reid_astrea
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_ezio_auditore }
+					desc = ci_lore.0030.ezio_auditore
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_emhyr_emreis }
+					desc = ci_lore.0030.emhyr_emreis
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_vistarios_granhieron }
+					desc = ci_lore.0030.vistarios_granhieron
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_legarde_martyr }
+					desc = ci_lore.0030.legarde_martyr
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_hrodric_gyliman }
+					desc = ci_lore.0030.hrodric_gyliman
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_verso_lumere }
+					desc = ci_lore.0030.verso_lumere
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_altair_ramashiri }
+					desc = ci_lore.0030.altair_ramashiri
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_sigvardr_drakenfyr }
+					desc = ci_lore.0030.sigvardr_drakenfyr
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_miyamoto_musashi }
+					desc = ci_lore.0030.miyamoto_musashi
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_aurelian_solerius }
+					desc = ci_lore.0030.aurelian_solerius
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_lakan_shaokan }
+					desc = ci_lore.0030.lakan_shaokan
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_astarinus_viriata }
+					desc = ci_lore.0030.astarinus_viriata
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_julius_euclius }
+					desc = ci_lore.0030.julius_euclius
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_radahn_varakh }
+					desc = ci_lore.0030.radahn_varakh
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_alia_atreides }
+					desc = ci_lore.0030.alia_atreides
+				}
+				triggered_desc = {
+					trigger = { scope:ci_lore_dead_apostle = character:ci_elessar_telcontar }
+					desc = ci_lore.0030.elessar_telcontar
+				}
+			desc = ci_lore.0030.generic
+		}
+		desc = ci_lore.0030.outro
+	}
+
+	trigger = { exists = scope:ci_lore_dead_apostle }
+
+	left_portrait = {
+		character = scope:ci_lore_dead_apostle
+		animation = dead
+	}
+
+	option = {
+		name = ci_lore.0030.a
+	}
+}
+
+ci_lore.0031 = {
+	type = character_event
+	theme = faith
+	title = ci_lore.0031.t
+	desc = ci_lore.0031.desc
+	override_background = { reference = temple }
+
+	trigger = { exists = scope:ci_founder }
+
+	left_portrait = {
+		character = scope:ci_founder
+		animation = dead
+	}
+
+	option = {
+		name = ci_lore.0031.a
+		show_as_tooltip = {
+			faith:ci_lex_omnissiah = {
+				change_fervor = {
+					value = ci_founder_death_fervor_gain
+					desc = ci_fervor_gain_kensoriel_death_lex
+				}
+			}
+		}
+	}
+}
+
+ci_lore.0040 = {
+	type = character_event
+	theme = faith
+	title = ci_lore.0040.t
+	desc = ci_lore.0040.desc
+	override_background = { reference = bedchamber }
+
+	trigger = { exists = scope:ci_lore_newborn }
+
+	left_portrait = {
+		character = scope:ci_lore_newborn
+		animation = newborn
+	}
+
+	option = {
+		name = ci_lore.0040.a
+	}
+}
+
+ci_lore.0050 = {
+	type = character_event
+	theme = faith
+	title = ci_lore.0050.t
+	desc = ci_lore.0050.desc
+	override_background = { reference = bedchamber }
+
+	trigger = { exists = scope:ci_lore_healed }
+
+	left_portrait = {
+		character = root
+		animation = prayer
+	}
+	right_portrait = {
+		character = scope:ci_lore_healed
+		animation = happiness
+	}
+
+	option = {
+		name = ci_lore.0050.a
+		add_piety = minor_piety_value
+	}
+}
+
+ci_lore.0060 = {
+	type = character_event
+	window = big_event_window
+	theme = martial
+	title = ci_lore.0060.t
+	desc = ci_lore.0060.desc
+	override_background = { reference = armory }
+
+	trigger = { exists = scope:ci_lore_gladii_dynast }
+
+	left_portrait = {
+		character = scope:ci_lore_gladii_dynast
+		animation = war_over_win
+	}
+
+	option = {
+		name = ci_lore.0060.a
+	}
+}

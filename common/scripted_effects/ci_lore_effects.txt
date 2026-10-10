@@ -1,0 +1,72 @@
+﻿# Eventos de lore (marco 5, fase 5d). Avisos aos jogadores: os escopos salvos antes da chamada seguem com o evento.
+# EVENT - id do evento; DAYS - atraso em dias
+
+# Jogadores vivos da Veritas Imperialis
+ci_lore_notify_veritas_players_effect = {
+	every_player = {
+		limit = {
+			is_alive = yes
+			faith = faith:imperialis
+		}
+		trigger_event = {
+			id = $EVENT$
+			days = $DAYS$
+		}
+	}
+}
+
+# Jogadores vivos da Lex Omnissiah
+ci_lore_notify_lex_players_effect = {
+	every_player = {
+		limit = {
+			is_alive = yes
+			faith = faith:ci_lex_omnissiah
+		}
+		trigger_event = {
+			id = $EVENT$
+			days = $DAYS$
+		}
+	}
+}
+
+# Jogadores vivos da religiao Omnissiae (as duas fes e as que nascerem delas)
+ci_lore_notify_religion_players_effect = {
+	every_player = {
+		limit = {
+			is_alive = yes
+			faith.religion = religion:imperialis_religion
+		}
+		trigger_event = {
+			id = $EVENT$
+			days = $DAYS$
+		}
+	}
+}
+
+# Escopo: Kensoriel, no on_death, depois da veneracao pela Veritas (ci_founder_canonize_on_death_effect, que salva scope:ci_founder e,
+# se achou tumulo, scope:consecration_province). A Lex Omnissiah tambem o venera: fervor +100 na Lex, registro como santo da Lex (o
+# add_saint so precisa da provincia na primeira fe; o traco saint ja foi dado) e o evento ci_lore.0031 aos jogadores da Lex.
+ci_lore_kensoriel_lex_veneration_effect = {
+	faith:ci_lex_omnissiah = {
+		change_fervor = {
+			value = ci_founder_death_fervor_gain
+			desc = ci_fervor_gain_kensoriel_death_lex
+		}
+		if = {
+			limit = { exists = scope:consecration_province }
+			hidden_effect = {
+				add_saint = {
+					character = scope:ci_founder
+					burial_province = scope:consecration_province
+				}
+			}
+		}
+	}
+	ci_lore_notify_lex_players_effect = { EVENT = ci_lore.0031 DAYS = 1 }
+}
+
+# Escopo: recem-nascido com sanguini_5 (on_birth_child, depois da heranca).
+ci_lore_sanguinis_birth_effect = {
+	save_scope_as = ci_lore_newborn
+	ci_lore_notify_veritas_players_effect = { EVENT = ci_lore.0040 DAYS = 1 }
+}

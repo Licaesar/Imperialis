@@ -1,0 +1,98 @@
+﻿##############################################
+# CULTUS IMPERIALIS - EVENTOS DE LORE (marco 5, fase 5d). Encadeia os on_actions do vanilla sem substitui-los.
+# Os demais ganchos ficam onde a acao acontece: fundacao e vassalagem do Ministorum (ci_ministorum_decisions.txt), morte do
+# Kensoriel para a Lex (ci_founder_saint_on_actions.txt), nascimento de um Sanguinis 5 (zz_sanguini_on_actions.txt), primeira cura
+# (ci_sanguinis_interactions.txt) e Gladii Ignis (ci_sanguinis_perks.txt).
+##############################################
+
+# 867: "The Two Paths" no terceiro dia; "The Mantle of Undomiel" um mes depois
+on_game_start_after_lobby = {
+	on_actions = {
+		ci_lore_two_paths_on_action
+		delay = { days = 30 }
+		ci_lore_mantle_on_action
+	}
+}
+
+ci_lore_two_paths_on_action = {
+	effect = {
+		character:ci_kensoriel_liphe ?= {
+			if = {
+				limit = { is_alive = yes }
+				save_scope_as = ci_lore_kensoriel
+				ci_lore_notify_religion_players_effect = { EVENT = ci_lore.0001 DAYS = 2 }
+			}
+		}
+	}
+}
+
+# A Alia recebe o modificador mesmo sem jogador na religiao; o evento so informa.
+ci_lore_mantle_on_action = {
+	effect = {
+		if = {
+			limit = {
+				character:ci_helaena_undomiel ?= { is_alive = yes }
+				character:ci_alia_atreides ?= {
+					is_alive = yes
+					faith.religion = religion:imperialis_religion
+					NOT = { has_character_modifier = ci_keeper_of_undomiel_modifier }
+				}
+			}
+			character:ci_helaena_undomiel = { save_scope_as = ci_lore_helaena }
+			character:ci_alia_atreides = {
+				save_scope_as = ci_lore_alia
+				add_character_modifier = ci_keeper_of_undomiel_modifier
+			}
+			ci_lore_notify_religion_players_effect = { EVENT = ci_lore.0002 DAYS = 0 }
+		}
+	}
+}
+
+on_death = {
+	on_actions = { ci_lore_on_death }
+}
+
+# Escopo: quem esta para morrer (ainda detem os titulos).
+ci_lore_on_death = {
+	effect = {
+		# Morte de um dos 17 apostolos: aviso a toda a religiao, com texto proprio de cada um
+		if = {
+			limit = { has_trait = apostolus }
+			save_scope_as = ci_lore_dead_apostle
+			ci_lore_notify_religion_players_effect = { EVENT = ci_lore.0030 DAYS = 1 }
+		}
+		# Sede vacante: morre o titular do k_sol (a morte da Helaena ja tem evento proprio, ci_founder_saint.0002)
+		if = {
+			limit = {
+				exists = title:k_sol.holder
+				title:k_sol.holder = this
+				NOT = { this = character:ci_helaena_undomiel }
+			}
+			save_scope_as = ci_lore_dead_ecclesiarch
+			ci_lore_notify_veritas_players_effect = { EVENT = ci_lore.0020 DAYS = 0 }
+		}
+	}
+}
+
+on_title_gain = {
+	on_actions = { ci_lore_on_title_gain }
+}
+
+# Eleicao: o k_sol passa a um novo titular depois da morte do anterior (na fundacao nao ha titular anterior).
+ci_lore_on_title_gain = {
+	trigger = {
+		scope:title = title:k_sol
+		exists = scope:previous_holder
+		scope:previous_holder = {
+			OR = {
+				is_alive = no
+				has_character_flag = about_to_die_but_not_dead_yet_flag
+			}
+		}
+	}
+	effect = {
+		save_scope_as = ci_lore_new_ecclesiarch
+		scope:previous_holder = { save_scope_as = ci_lore_dead_ecclesiarch }
+		ci_lore_notify_veritas_players_effect = { EVENT = ci_lore.0021 DAYS = 3 }
+	}
+}

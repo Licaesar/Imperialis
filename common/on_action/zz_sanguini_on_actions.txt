@@ -25,5 +25,15 @@ sanguini_on_birth_child = {
             limit = { exists = scope:child_3 }
             scope:child_3 = { sanguini_inheritance_effect = yes }
         }
+
+        # Nascimento de um Sanguinis 5 (marco 5, fase 5d): evento de lore para os jogadores da Veritas, depois da heranca
+        if = {
+            limit = { scope:child ?= { has_trait = sanguini_5 } }
+            scope:child = { ci_lore_sanguinis_birth_effect = yes }
+        }
+        if = {
+            limit = { scope:child_2 ?= { has_trait = sanguini_5 } }
+            scope:child_2 = { ci_lore_sanguinis_birth_effect = yes }
+        }
     }
 }

@@ -49,6 +49,13 @@ ci_sanguinis_healing_interaction = {
 				}
 				ci_sanguinis_add_healing_strain_effect = yes
 			}
+			# Primeira cura deste Sanguinis (marco 5, fase 5d): evento de lore uma vez por personagem (a IA nao cura)
+			if = {
+				limit = { NOT = { has_character_flag = ci_sanguinis_first_cure_done } }
+				add_character_flag = ci_sanguinis_first_cure_done
+				scope:recipient = { save_scope_as = ci_lore_healed }
+				trigger_event = ci_lore.0050
+			}
 		}
 		scope:recipient = {
 			if = {
