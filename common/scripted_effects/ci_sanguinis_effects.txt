@@ -21,15 +21,15 @@ ci_sanguinis_heal_effect = {
 	if = { limit = { has_trait = sickly } remove_trait = sickly }
 }
 
-# Escopo: quem cura. Desgaste "Spent Blood" por 5 anos na primeira vaga livre (o motor nao conta instancias de um modificador, por isso
-# tres vagas). Saude: -0,75 no nivel 4 e -0,5 no nivel 5; com Misericordia Sanguinis (legado 3), 0,25 a menos.
+# Escopo: quem cura. Cada cura soma um "Spent Blood" de 5 anos (modificador acumulavel, stacking = yes; sem limite, pedido do autor).
+# Saude: -0,75 no nivel 4 e -0,5 no nivel 5; com Misericordia Sanguinis (legado 3), 0,25 a menos.
 ci_sanguinis_add_healing_strain_effect = {
 	if = {
 		limit = {
 			has_trait = sanguini_5
 			dynasty ?= { has_dynasty_perk = ci_sanguinis_legacy_3 }
 		}
-		save_scope_value_as = { name = ci_spent_blood_tier value = flag:t025 }
+		add_character_modifier = { modifier = ci_sanguinis_spent_blood_025 years = 5 }
 	}
 	else_if = {
 		limit = {
@@ -38,37 +38,9 @@ ci_sanguinis_add_healing_strain_effect = {
 				dynasty ?= { has_dynasty_perk = ci_sanguinis_legacy_3 }
 			}
 		}
-		save_scope_value_as = { name = ci_spent_blood_tier value = flag:t050 }
+		add_character_modifier = { modifier = ci_sanguinis_spent_blood_050 years = 5 }
 	}
 	else = {
-		save_scope_value_as = { name = ci_spent_blood_tier value = flag:t075 }
-	}
-	if = {
-		limit = { ci_sanguinis_spent_blood_slot_trigger = { SLOT = 1 } }
-		if = {
-			limit = { ci_sanguinis_spent_blood_slot_trigger = { SLOT = 2 } }
-			ci_sanguinis_add_spent_blood_in_slot_effect = { SLOT = 3 }
-		}
-		else = {
-			ci_sanguinis_add_spent_blood_in_slot_effect = { SLOT = 2 }
-		}
-	}
-	else = {
-		ci_sanguinis_add_spent_blood_in_slot_effect = { SLOT = 1 }
-	}
-}
-
-ci_sanguinis_add_spent_blood_in_slot_effect = {
-	if = {
-		limit = { scope:ci_spent_blood_tier = flag:t075 }
-		add_character_modifier = { modifier = ci_sanguinis_spent_blood_$SLOT$_075 years = 5 }
-	}
-	else_if = {
-		limit = { scope:ci_spent_blood_tier = flag:t050 }
-		add_character_modifier = { modifier = ci_sanguinis_spent_blood_$SLOT$_050 years = 5 }
-	}
-	else_if = {
-		limit = { scope:ci_spent_blood_tier = flag:t025 }
-		add_character_modifier = { modifier = ci_sanguinis_spent_blood_$SLOT$_025 years = 5 }
+		add_character_modifier = { modifier = ci_sanguinis_spent_blood_075 years = 5 }
 	}
 }
