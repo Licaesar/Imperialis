@@ -1,5 +1,4 @@
-﻿# DECISAO DE TESTE COMENTADA PARA PUBLICACAO (versao 1.6). Para testar de novo, descomente este arquivo e os outros dois.
-##############################################
+﻿##############################################
 # CULTUS IMPERIALIS - DECISAO DE TESTE (TEMPORARIA)
 # Monta o cenario de teste sem cheat. COMENTAR ESTE ARQUIVO, common/scripted_effects/ci_test_effects.txt e
 # localization/english/ci_test_l_english.yml INTEIROS ANTES DE PUBLICAR O MOD.
@@ -7,35 +6,35 @@
 # O que faz: prestigio e piedade no nivel maximo (5), 50.000 de ouro, todos os condados de jure do e_italy (de quem os tiver) e, se
 # ainda nao existir, o titulo de imperio e_italy (sem ele o Ministorum nao pode ser fundado).
 ##############################################
-#ci_test_scenario_decision = {
-#	picture = {
-#		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
-#	}
-#	desc = ci_test_scenario_decision_desc
-#	selection_tooltip = ci_test_scenario_decision_tooltip
-#	confirm_text = ci_test_scenario_decision_confirm
-#	decision_group_type = major
+ci_test_scenario_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	desc = ci_test_scenario_decision_desc
+	selection_tooltip = ci_test_scenario_decision_tooltip
+	confirm_text = ci_test_scenario_decision_confirm
+	decision_group_type = major
 
-#	ai_check_interval = 0
+	ai_check_interval = 0
 
-#	is_shown = {
-#		is_ai = no
-#		faith ?= faith:imperialis
-#		has_trait = sanguini_5
-#	}
+	is_shown = {
+		is_ai = no
+		faith ?= faith:imperialis
+		has_trait = sanguini_5
+	}
 
-#	effect = {
-#		custom_tooltip = ci_test_scenario_decision_effect_tooltip
-#		hidden_effect = {
-#			ci_test_scenario_effect = yes
-#		}
-#	}
+	effect = {
+		custom_tooltip = ci_test_scenario_decision_effect_tooltip
+		hidden_effect = {
+			ci_test_scenario_effect = yes
+		}
+	}
 
-#	ai_potential = {
-#		always = no
-#	}
+	ai_potential = {
+		always = no
+	}
 
-#	ai_will_do = {
-#		base = 0
-#	}
-#}
+	ai_will_do = {
+		base = 0
+	}
+}
