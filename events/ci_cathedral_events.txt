@@ -7,6 +7,81 @@
 # Trocas no codigo: tema faith, realizacao espiritual ci_imperial_fulfillment, religiao imperialis_religion, a Helaena no lugar
 # da santa vanilla saint_0001 (vitral de Undomiel) e a chave de fervor do sermao. Gerado por docs/dev/regen_cathedral_events.py.
 
+scripted_effect pam_cathedral_save_finished_building_scope_effect = {
+	if = {
+		limit = { exists = scope:great_project }
+		scope:great_project = {
+			save_scope_as = cathedral_building
+		}
+	}
+	else = {
+		random_great_project = {
+			limit = {
+				OR = {
+					great_project_type = pam_cathedral_01
+					great_project_type = pam_cathedral_02
+					great_project_type = pam_cathedral_03
+				}
+				OR = {
+					great_project_founder = root
+					great_project_owner = root
+				}
+			}
+			save_scope_as = great_project
+			save_scope_as = cathedral_building
+		}
+	}
+}
+
+scripted_effect pam_cathedral_save_architect_scope_effect = {
+	if = {
+		limit = {
+			employs_court_position = royal_architect_court_position
+			any_court_position_holder = {
+				type = royal_architect_court_position
+			}
+		}
+		random_court_position_holder = {
+			type = royal_architect_court_position
+			save_scope_as = architect
+		}
+	}
+	else_if = {
+		limit = {
+			exists = cp:councillor_steward
+			cp:councillor_steward = {
+				basic_is_available_ai = yes
+			}
+		}
+		cp:councillor_steward = {
+			save_scope_as = architect
+		}
+	}
+	else_if = {
+		limit = {
+			exists = cp:councillor_court_chaplain
+			cp:councillor_court_chaplain = {
+				basic_is_available_ai = yes
+			}
+		}
+		cp:councillor_court_chaplain = {
+			save_scope_as = architect
+		}
+	}
+	else = {
+		ordered_courtier = {
+			limit = {
+				would_be_valid_for_court_position = {
+					employer = root
+					court_position = royal_architect_court_position
+				}
+			}
+			order_by = aptitude:royal_architect_court_position
+			save_scope_as = architect
+		}
+	}
+}
+
 scripted_trigger pam_cathedral_has_architect_character_trigger = {
 	OR = {
 		AND = {
@@ -31,6 +106,125 @@ scripted_trigger pam_cathedral_has_architect_character_trigger = {
 			would_be_valid_for_court_position = {
 				employer = root
 				court_position = royal_architect_court_position
+			}
+		}
+	}
+}
+
+scripted_effect pam_cathedral_disappear_spare_event_npc_effect = {
+	$CHARACTER$ = {
+		if = {
+			limit = {
+				is_alive = yes
+				is_imprisoned = no
+				NOT = {
+					is_courtier_of = root
+				}
+			}
+			silent_disappearance_effect = yes
+		}
+	}
+}
+
+scripted_effect pam_cathedral_save_owner_scope_effect = {
+	if = {
+		limit = {
+			NOT = {
+				exists = scope:owner
+			}
+		}
+		random_great_project = {
+			limit = {
+				OR = {
+					great_project_type = pam_cathedral_01
+					great_project_type = pam_cathedral_02
+					great_project_type = pam_cathedral_03
+				}
+				great_project_founder = root
+			}
+			great_project_owner = {
+				save_scope_as = owner
+			}
+		}
+	}
+}
+
+scripted_effect pam_cathedral_bell_casting_resolution_effect = {
+	scope:bell_maker_son = {
+		duel = {
+			skill = learning
+			value = high_skill_rating
+			localization = pam_cathedral_bell_casting_duel
+			75 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 0.5
+					min = -74
+					max = 15
+				}
+				custom_tooltip = {
+					text = ci_pam_great_projects_events.0008.duel.success
+					trigger_event = {
+						id = ci_pam_great_projects_events.0009
+						days = { 5 10 }
+					}
+				}
+			}
+			25 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -0.5
+					min = -24
+				}
+				custom_tooltip = {
+					text = ci_pam_great_projects_events.0008.duel.failure
+					trigger_event = {
+						id = ci_pam_great_projects_events.0010
+						days = { 5 10 }
+					}
+				}
+			}
+		}
+	}
+}
+
+scripted_effect pam_cathedral_apply_archdiocese_sermon_effect = {
+	scope:archdiocese ?= {
+		every_county_in_clerical_region = {
+			limit = {
+				faith = scope:owner.faith
+			}
+			add_county_modifier = {
+				modifier = $COUNTY_MODIFIER$
+				years = $DURATION$
+			}
+			holder = {
+				if = {
+					limit = {
+						is_landed = yes
+						faith = scope:owner.faith
+						NOT = {
+							this = scope:owner
+						}
+					}
+					hidden_effect = {
+						add_character_modifier = {
+							modifier = $RULER_MODIFIER$
+							years = $DURATION$
+						}
+						if = {
+							limit = {
+								is_ai = no
+							}
+							send_interface_toast = {
+								type = event_toast_effect_neutral
+								title = pam_cathedral_west_portal_sermon_toast
+								left_icon = scope:owner
+								right_icon = scope:province.barony
+							}
+						}
+					}
+				}
 			}
 		}
 	}
