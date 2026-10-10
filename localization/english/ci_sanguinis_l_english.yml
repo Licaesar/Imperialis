@@ -2,6 +2,9 @@
 
  # Cura dos Sanguinis, Legado Sanguinis e espadas de fogo (marco 4, fase 4e). Texto aprovado pelo autor em 10/10/2026 (docs, Lore para revisao, 4e.4).
 
+ # Nome do grupo de tracos sanguini_1 a sanguini_5 (marco 5, fase 5a; o vanilla usa a chave trait_<grupo>, ex.: trait_beauty_good)
+ trait_sanguini:0 "Sanguinis"
+
  # Interacao
  ci_sanguinis_healing_interaction:0 "Healing of the Blood"
  ci_sanguinis_healing_interaction_desc:0 "The blood of the Omnissiah runs in my veins. Let it burn away the sickness that consumes [recipient.GetShortUIName], though it costs me dearly."

@@ -1,6 +1,6 @@
 ﻿imperialis_culture = {
-	clothing_gfx = { byzantine_clothing_gfx western_clothing_gfx }
-	coa_gfx = { english_coa_gfx }
+	clothing_gfx = { byzantine_clothing_gfx } # como greek (marco 5, 5a: a sequencia precisa ser igual a de uma cultura vanilla)
+	coa_gfx = { english_coa_gfx western_coa_gfx } # como english (marco 5, 5a)
 	building_gfx = { mediterranean_building_gfx }
 	color = trojan
 	ethnicities = {
@@ -25,8 +25,8 @@
 }
 
 lipherianii_culture = {
-	clothing_gfx = { byzantine_clothing_gfx western_clothing_gfx }
-	coa_gfx = { english_coa_gfx }
+	clothing_gfx = { byzantine_clothing_gfx } # como greek (marco 5, 5a: a sequencia precisa ser igual a de uma cultura vanilla)
+	coa_gfx = { english_coa_gfx western_coa_gfx } # como english (marco 5, 5a)
 	building_gfx = { mediterranean_building_gfx }
 	color = bosnian
 	ethnicities = {

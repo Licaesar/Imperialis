@@ -1,0 +1,10 @@
+﻿# Popularidade de tenets para a religiao Omnissiae (marco 5, fase 5a; pedido do autor, item F). No vanilla
+# (common/scripted_triggers/pam_scripted_triggers.txt) este trigger e so "religion = religion:christianity_religion" e liga todo o
+# subsistema: popularidade por fe, decisoes de pregar e perseguir tenets, ordens sagradas, concilio e a janela da fe. O resto do codigo
+# trabalha com a fe generica. Override de um objeto (LIOS); o verificador avisa se o vanilla mudar. Escopo: fe.
+has_tenet_popularity_trigger = {
+	OR = {
+		religion = religion:christianity_religion
+		religion = religion:imperialis_religion # Imperialis
+	}
+}
