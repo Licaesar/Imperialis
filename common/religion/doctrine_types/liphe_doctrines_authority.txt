@@ -1,11 +1,7 @@
-﻿# Doutrinas de identidade de cada rito do Cultus Imperialis (grupo doctrine_imperialis_branches).
-# Cada rito carrega exatamente uma delas. As virtudes de realizacao espiritual (peso 15) estao aqui; sanguini_4/5 estao na religiao. Todas somam:
-#  - same_faith_different_rite_opinion / _county_opinion_add: rivalidade media entre ritos (modificadores lidos como "como os outros te veem", igual a tenet_communal_identity).
-#  - block_from_create_hof_parameter: esconde a decisao vanilla create_hof_decision (Establish a Ecclesia Maximus), que criaria um Head of Faith
-#    aleatorio com prioridade sobre o k_sol. O chefe da fe so nasce pela decisao ci_found_ministorum_decision.
-#  - heresy_threshold = 100: protege os quatro ritos canonicos contra serem tratados como heresia por divergencia
-#    (a divergencia so de doutrinas entre homus e imperialis ja passa de 65). Ritos criados dinamicamente continuam
-#    virando fe nova ao chegar em 100 de divergencia (RITE_CREATION_DIVERGENCE_FAITH_THRESHOLD).
+﻿# Doutrinas de identidade de cada rito do Cultus Imperialis (grupo doctrine_imperialis_branches, "Ordo").
+# Cada rito carrega exatamente uma delas, so com o que o diferencia (marco 4, fase 4c). O que e comum aos quatro (virtudes de
+# peso 15, rivalidade entre ritos, bloqueio do Head of Faith aleatorio, heresy_threshold) esta em Teachings of the Omnissiah
+# (ci_doctrine_teachings_of_the_omnissiah.txt), na religiao. sanguini_4/5 estao na religiao.
 
 temple_authority_cult_imperialis_doctrine = {
 	doctrine_group_type = doctrine_imperialis_branches
@@ -14,31 +10,16 @@ temple_authority_cult_imperialis_doctrine = {
 	piety_cost = {
 		value = faith_tenet_cost_mid
 	}
-	traits = {
-		virtues = {
-			education_learning_3 = { weight = 15 scale = 1 }
-			education_learning_4 = { weight = 15 scale = 1 }
-			education_learning_5 = { weight = 15 scale = 1 }
-			erudite = { weight = 15 scale = 1 }
-			lifestyle_mystic = { weight = 15 scale = 1 }
-		}
-	}
 	character_modifier = {
 		clergy_opinion = 5
 		church_holding_build_gold_cost = -0.1
-		same_faith_different_rite_opinion = -10
-		same_faith_different_rite_county_opinion_add = -5
 	}
 	parameters = {
-		block_from_create_hof_parameter
 		other_culture_conversion_penalty_active
 		invasion_cb_enabled
-		tenet_esotericism_mystic_education
-		take_vows_active
 	}
 	special_parameters = {
 		fervor_per_holy_site = 2
-		heresy_threshold = 100
 	}
 }
 
@@ -49,29 +30,14 @@ temple_authority_cult_omnissiah_doctrine = { # Culto apenas ao Omnissiah
 	piety_cost = {
 		value = faith_tenet_cost_mid
 	}
-	traits = {
-		virtues = {
-			education_learning_3 = { weight = 15 scale = 1 }
-			education_learning_4 = { weight = 15 scale = 1 }
-			education_learning_5 = { weight = 15 scale = 1 }
-			erudite = { weight = 15 scale = 1 }
-			lifestyle_mystic = { weight = 15 scale = 1 }
-		}
-	}
 	character_modifier = {
 		artifact_decay_reduction_mult = -0.1
-		same_faith_different_rite_opinion = -10
-		same_faith_different_rite_county_opinion_add = -5
 	}
 	parameters = {
-		block_from_create_hof_parameter
 		invasion_cb_enabled
-		tenet_esotericism_mystic_education
-		take_vows_active
 	}
 	special_parameters = {
 		fervor_per_holy_site = 2
-		heresy_threshold = 100
 	}
 }
 
@@ -82,30 +48,13 @@ temple_authority_cult_sororitas_doctrine = { # Culto a Undomiel
 	piety_cost = {
 		value = faith_tenet_cost_mid
 	}
-	traits = {
-		virtues = {
-			education_learning_3 = { weight = 15 scale = 1 }
-			education_learning_4 = { weight = 15 scale = 1 }
-			education_learning_5 = { weight = 15 scale = 1 }
-			erudite = { weight = 15 scale = 1 }
-			lifestyle_mystic = { weight = 15 scale = 1 }
-		}
-	}
 	character_modifier = {
 		domain_tax_different_faith_mult = 0.2
 		levy_reinforcement_rate_same_faith = 0.25
 		levy_reinforcement_rate_different_faith = -0.25
-		same_faith_different_rite_opinion = -10
-		same_faith_different_rite_county_opinion_add = -5
 	}
 	parameters = {
-		block_from_create_hof_parameter
 		other_culture_conversion_penalty_active
-		tenet_esotericism_mystic_education
-		take_vows_active
-	}
-	special_parameters = {
-		heresy_threshold = 100
 	}
 }
 
@@ -116,29 +65,10 @@ temple_authority_cult_homus_doctrine = { # Multiculturalismo Liphe
 	piety_cost = {
 		value = faith_tenet_cost_mid
 	}
-	traits = {
-		virtues = {
-			education_learning_3 = { weight = 15 scale = 1 }
-			education_learning_4 = { weight = 15 scale = 1 }
-			education_learning_5 = { weight = 15 scale = 1 }
-			erudite = { weight = 15 scale = 1 }
-			lifestyle_mystic = { weight = 15 scale = 1 }
-		}
-	}
 	character_modifier = {
 		different_faith_opinion = 10
 		same_faith_opinion = 5
 		domain_tax_same_faith_mult = 0.05
 		levy_reinforcement_rate_same_faith = 0.1
-		same_faith_different_rite_opinion = -10
-		same_faith_different_rite_county_opinion_add = -5
-	}
-	parameters = {
-		block_from_create_hof_parameter
-		tenet_esotericism_mystic_education
-		take_vows_active
-	}
-	special_parameters = {
-		heresy_threshold = 100
 	}
 }

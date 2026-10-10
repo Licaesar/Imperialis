@@ -29,3 +29,13 @@ ci_ministorum_blessing_group = {
 		always = no
 	}
 }
+
+# Teachings of the Omnissiah (marco 4, fase 4c): como o grupo vanilla is_christian_faith (Teachings of Jesus), categoria special e
+# visivel. A doutrina fica na religiao (vale para os quatro ritos) e vai junto para a fe nova criada por divergencia, como no vanilla.
+ci_teachings_of_the_omnissiah = {
+	category = special
+
+	is_available_on_create = {
+		has_doctrine = ci_doctrine_teachings_of_the_omnissiah
+	}
+}

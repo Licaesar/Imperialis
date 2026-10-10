@@ -62,6 +62,9 @@
 	# grupo monasticism_group faith_has_monasticism_trigger e falso: a decisao de fundar ordem monastica (create_holy_order_monastic_decision),
 	# os votos monasticos (take_vows_active) e as ordens monasticas genericas do vanilla (sem restricao de religiao) ficam desligados.
 	doctrine = doctrine_monasticism_accepted
+	#Teachings of the Omnissiah (marco 4, fase 4c): o que e comum aos quatro ritos, como o Teachings of Jesus do 00_christianity.txt.
+	# Doutrina da religiao vale para todos os ritos; doutrina da fe so chegaria ao rito principal.
+	doctrine = ci_doctrine_teachings_of_the_omnissiah
 	
 
 

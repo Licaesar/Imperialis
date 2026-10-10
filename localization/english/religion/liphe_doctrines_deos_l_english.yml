@@ -1,7 +1,7 @@
 ﻿l_english:
 
-#Grupo das doutrinas de identidade dos ritos (TODO_LORE: nome definitivo)
- doctrine_imperialis_branches_name:0 "Cultus"
+#Grupo das doutrinas de identidade dos ritos (marco 4, fase 4c; aprovado pelo autor)
+ doctrine_imperialis_branches_name:0 "Ordo"
 
 #Imperator Tenets
  temple_authority_cult_imperialis_doctrine_name:0 "Ordo Imperialis"
@@ -16,3 +16,7 @@
  temple_authority_cult_homus_doctrine_name:0 "Ordo Harmoniae"
  temple_authority_cult_homus_doctrine_desc:0 "Silentium est oratio, pax est lux, Omnissiah est Equilibrium aeternum."
 
+#Teachings of the Omnissiah (marco 4, fase 4c; aprovado pelo autor). O nome do grupo repete o da doutrina, como no vanilla.
+ ci_doctrine_teachings_of_the_omnissiah_name:0 "Teachings of the Omnissiah"
+ ci_teachings_of_the_omnissiah_name:0 "$ci_doctrine_teachings_of_the_omnissiah_name$"
+ ci_doctrine_teachings_of_the_omnissiah_desc:0 "Whatever Cultus they follow, all who walk the Veritas Imperialis hold to the same teachings: that Kensoriel Liphe, the Omnissiah, walked among mortals as god made flesh; that His word endures in the Codex Imperialis; and that His blood still runs in the Sanguinis. Learning and contemplation are the paths that lead to Him, and no [head_of_faith|E] may be raised save the one seated in the Adeptus Ministorum. Yet each Cultus holds its own path to be the truest, and the faithful of one rite look askance upon the observances of another."
