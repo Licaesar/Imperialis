@@ -15,3 +15,10 @@
  duke_monastic_order_female_imperialis_religion:0 "Maestra"
  king_monastic_order_male_imperialis_religion:0 "$duke_monastic_order_male_imperialis_religion$"
  king_monastic_order_female_imperialis_religion:0 "$duke_monastic_order_female_imperialis_religion$"
+ # Lider de ordem militar do Imperialis (o vanilla usa "Katepano" para culturas de heranca bizantina). Termo decidido pelo autor.
+ holy_order_male_imperialis_religion:0 "Preceptor"
+ holy_order_female_imperialis_religion:0 "Preceptrix"
+ # Bencao do Ministorum (marco 4, fase 4a). Texto funcional; a versao de lore esta no documento de revisao.
+ ci_doctrine_ministorum_blessing_name:0 "Blessing of the Ministorum"
+ ci_doctrine_ministorum_blessing_desc:0 "This [rite|E] has received the blessing of the Adeptus Ministorum, which reduces its [rite_divergence|E]."
+ ci_ministorum_blessing_group_name:0 "$ci_doctrine_ministorum_blessing_name$"

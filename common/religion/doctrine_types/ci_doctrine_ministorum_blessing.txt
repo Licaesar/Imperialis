@@ -1,0 +1,12 @@
+﻿# Bencao do Ministorum (marco 4, fase 4a; decisao do autor, 10/10/2026): o equivalente Imperialis da Holy Blessing vanilla
+# (special_doctrine_pope_blessing, 40_doctrines_special.txt): reduz a divergencia do rito em 10. Nos ritos Sororitas, Omnissiah e Homus
+# (o Cultus Imperialis e o rito principal e nao precisa). Icone da Holy Blessing vanilla.
+ci_doctrine_ministorum_blessing = {
+	doctrine_group_type = ci_ministorum_blessing_group
+	icon = "special_doctrine_pope_blessing"
+
+	name = ci_doctrine_ministorum_blessing_name
+	desc = ci_doctrine_ministorum_blessing_desc
+
+	divergence = -10
+}

@@ -324,3 +324,32 @@ king_monastic_order_female_imperialis_religion = {
 		spouse_takes_title = no
 	}
 }
+
+# Lider de ordem militar (marco 4, fase 4a; decisao do autor, 10/10/2026): as culturas do mod tem heranca bizantina, e o vanilla
+# chama o lider de "Katepano" (byzantine_holy_order_*, prioridade 200). Para a fe Imperialis, "Preceptor"; uma prioridade acima.
+holy_order_male_imperialis_religion = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 201
+	governments = { holy_order_government }
+	religions = { imperialis_religion }
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}
+holy_order_female_imperialis_religion = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 201
+	governments = { holy_order_government }
+	religions = { imperialis_religion }
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}

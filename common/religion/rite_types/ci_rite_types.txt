@@ -44,6 +44,7 @@ sororitas = {
 		temple_authority_cult_sororitas_doctrine
 		special_doctrine_has_clerical_electors # colegio de cardeais da fe (marco 3, fase 3a); tambem na fe
 		ci_doctrine_has_clerical_regions # regioes clericais da fe (marco 3, fase 3b.1); tambem na fe
+		ci_doctrine_ministorum_blessing # Bencao do Ministorum (marco 4, fase 4a): divergencia -10, como a Holy Blessing vanilla
 		doctrine_gender_female_dominated
 		doctrine_pluralism_fundamentalist
 		doctrine_clerical_function_recruitment
@@ -68,6 +69,7 @@ omnissiah = {
 		temple_authority_cult_omnissiah_doctrine
 		special_doctrine_has_clerical_electors # colegio de cardeais da fe (marco 3, fase 3a); tambem na fe
 		ci_doctrine_has_clerical_regions # regioes clericais da fe (marco 3, fase 3b.1); tambem na fe
+		ci_doctrine_ministorum_blessing # Bencao do Ministorum (marco 4, fase 4a): divergencia -10, como a Holy Blessing vanilla
 		doctrine_gender_equal
 		doctrine_witchcraft_virtuous
 		doctrine_clerical_function_alms_and_pacification
@@ -91,6 +93,7 @@ homus = {
 		temple_authority_cult_homus_doctrine
 		special_doctrine_has_clerical_electors # colegio de cardeais da fe (marco 3, fase 3a); tambem na fe
 		ci_doctrine_has_clerical_regions # regioes clericais da fe (marco 3, fase 3b.1); tambem na fe
+		ci_doctrine_ministorum_blessing # Bencao do Ministorum (marco 4, fase 4a): divergencia -10, como a Holy Blessing vanilla
 		doctrine_pluralism_pluralistic
 		doctrine_polygamy
 		doctrine_divorce_allowed

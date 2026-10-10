@@ -178,6 +178,10 @@ ci_ministorum_vassalize_effect = {
 		limit = {
 			NOT = { title:d_et_ravenna.holder ?= scope:ci_ministorum_vassal }
 		}
+		# Erro vanilla (marco 4, fase 4a): quando a regiao sai de um cristao, o on_title_lost vanilla usa scope:landed_title, que nao
+		# existe ali (devia ser scope:title). Tentativa sem sobrescrever o vanilla: deixar o escopo salvo; se o log continuar com o erro,
+		# o escopo nao chega ao on_action e fica como esta (decisao do autor).
+		title:d_et_ravenna = { save_scope_as = landed_title }
 		if = {
 			limit = { title:d_et_ravenna = { is_title_created = no } }
 			create_title_and_vassal_change = {

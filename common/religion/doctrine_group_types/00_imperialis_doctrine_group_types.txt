@@ -17,3 +17,15 @@ ci_has_clerical_regions = {
 		has_doctrine = ci_doctrine_has_clerical_regions
 	}
 }
+
+# Bencao do Ministorum (marco 4, fase 4a): como o grupo vanilla pope_blessing (Holy Blessing dos ritos catolicos). Travado no rito e
+# nunca escolhido na criacao de fe; os ritos Sororitas, Omnissiah e Homus o carregam desde o inicio.
+ci_ministorum_blessing_group = {
+	category = special
+
+	doctrine_lock = rite
+
+	is_available_on_create = {
+		always = no
+	}
+}

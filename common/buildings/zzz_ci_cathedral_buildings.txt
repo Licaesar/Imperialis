@@ -76,6 +76,9 @@ great_project_cathedral_01 = {
 		every_province_domicile = {
 			limit = {
 				is_domicile_type = ecclesiastical_domicile
+				# Imperialis (marco 4, 4a): corrige o erro vanilla de construir de novo o mesmo nivel do dominio
+				NOT = { has_domicile_building_or_higher = ecclesiastical_domicile_main_02 }
+				NOT = { has_domicile_construction = ecclesiastical_domicile_main_02 }
 			} 
 			add_animate_domicile_building = ecclesiastical_domicile_main_02
 		}
@@ -162,6 +165,9 @@ great_project_cathedral_02 = {
 		every_province_domicile = {
 			limit = {
 				is_domicile_type = ecclesiastical_domicile
+				# Imperialis (marco 4, 4a): corrige o erro vanilla de construir de novo o mesmo nivel do dominio
+				NOT = { has_domicile_building_or_higher = ecclesiastical_domicile_main_03 }
+				NOT = { has_domicile_construction = ecclesiastical_domicile_main_03 }
 			} 
 			add_animate_domicile_building = ecclesiastical_domicile_main_03
 		}
@@ -248,6 +254,9 @@ great_project_cathedral_03 = {
 		every_province_domicile = {
 			limit = {
 				is_domicile_type = ecclesiastical_domicile
+				# Imperialis (marco 4, 4a): corrige o erro vanilla de construir de novo o mesmo nivel do dominio
+				NOT = { has_domicile_building_or_higher = ecclesiastical_domicile_main_04 }
+				NOT = { has_domicile_construction = ecclesiastical_domicile_main_04 }
 			} 
 			add_animate_domicile_building = ecclesiastical_domicile_main_04
 		}
