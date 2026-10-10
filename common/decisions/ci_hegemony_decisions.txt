@@ -1,0 +1,55 @@
+﻿# Hegemonia Liphe (marco 4, fase 4f; aprovado pelo autor em 10/10/2026). Modelo: o Reino dos Ceus da 1.20 (pam_kingdom_of_heaven_decision,
+# pam_kingdom_of_heaven_declaration_effect, h_kingdom_of_heaven em 07_pam_hegemony_titles.txt).
+# Jogador e IA. Sem custo e sem exigir paz (Q4).
+ci_found_liphe_hegemony_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	}
+	desc = ci_found_liphe_hegemony_decision_desc
+	selection_tooltip = ci_found_liphe_hegemony_decision_tooltip
+	confirm_text = ci_found_liphe_hegemony_decision_confirm
+	decision_group_type = major
+	sort_order = 120
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 24
+		hegemony = 24
+	}
+
+	is_shown = {
+		faith ?= faith:imperialis
+		has_trait = sanguini_5
+		has_title = title:e_italy
+		is_independent_ruler = yes
+		NOT = { has_global_variable = ci_created_h_liphe }
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = ci_found_liphe_hegemony_empires_tt
+			ci_liphe_hegemony_empires_trigger = yes
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+	}
+
+	effect = {
+		ci_found_liphe_hegemony_effect = yes
+		trigger_event = ci_hegemony.0001
+	}
+
+	ai_potential = {
+		ci_liphe_hegemony_empires_trigger = yes
+	}
+
+	ai_will_do = {
+		base = 100 # faz sempre que puder
+	}
+}

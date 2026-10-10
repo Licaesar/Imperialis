@@ -1,0 +1,19 @@
+﻿l_english:
+
+ # Hegemonia Liphe (marco 4, fase 4f). Texto aprovado pelo autor em 10/10/2026 (docs, Lore para revisao, 4f.2).
+ h_liphe_article:0 "the "
+ h_liphe:0 "Hegemonia Liphe"
+ h_liphe_adj:0 "Lipherian"
+
+ ci_found_liphe_hegemony_decision:0 "Proclaim the Hegemonia Liphe"
+ ci_found_liphe_hegemony_decision_desc:0 "Rome is ours, and the crowns of the old empires bow before the blood of the Omnissiah. Let them be gathered under a single banner, as He gathered the seventeen beneath His light, so that from Italy to the farthest shore one Hegemony shall stand: the Hegemonia Liphe."
+ ci_found_liphe_hegemony_decision_tooltip:0 "Unite the empires you hold under the Hegemonia Liphe"
+ ci_found_liphe_hegemony_decision_confirm:0 "Let the empires kneel as one!"
+ ci_found_liphe_hegemony_empires_tt:0 "Hold at least 4 of these empires: [GetTitleByKey('e_hre').GetName], [GetTitleByKey('e_britannia').GetName], [GetTitleByKey('e_france').GetName], [GetTitleByKey('e_spain').GetName], [GetTitleByKey('e_byzantium').GetName], [GetTitleByKey('e_anatolia').GetName], [GetTitleByKey('e_aegyptus').GetName] and [GetTitleByKey('e_africa').GetName]"
+
+ ci_hegemony.0001.t:0 "The Hegemonia Liphe"
+ ci_hegemony.0001.desc:0 "Beneath the dome of the templum of Rome, the crowns of the empires were laid one by one at my feet. The archi-confessoris sang the words of the Codex Imperialis, and the people outside cried out the name of the Omnissiah until the very stones seemed to answer.\n\nWhat the Omnissiah began in Jerusalem, His blood has completed in Rome. The Hegemonia Liphe stands, and its light shall not fade while one of the Sanguinis draws breath."
+ ci_hegemony.0001.a:0 "Imperator vivit, Imperator regnat."
+
+ ci_liphe_hegemony_news_title:0 "The Hegemonia Liphe Is Proclaimed"
+ ci_liphe_hegemony_news_tt:0 "[ci_liphe_hegemon.GetTitledFirstName] has united the empires under the Hegemonia Liphe."

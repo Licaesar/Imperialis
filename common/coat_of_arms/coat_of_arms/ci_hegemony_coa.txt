@@ -1,0 +1,20 @@
+﻿# Brasao da Hegemonia Liphe (marco 4, fase 4f; aprovado pelo autor): so texturas vanilla, aguia de duas cabecas coroada, dourada sobre
+# roxo, no estilo do brasao do k_sol (01_landed_titles_liphe.txt).
+h_liphe = {
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_eagle_double.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { position = { 0.5 0.55 } scale = { 0.9 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_crown_small.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { position = { 0.5 0.13 } scale = { 0.3 0.3 } }
+	}
+}

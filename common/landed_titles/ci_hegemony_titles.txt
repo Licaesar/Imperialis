@@ -1,0 +1,22 @@
+﻿# Hegemonia Liphe (marco 4, fase 4f; aprovado pelo autor em 10/10/2026). Modelo: o Reino dos Ceus da 1.20 (pam_kingdom_of_heaven_decision,
+# pam_kingdom_of_heaven_declaration_effect, h_kingdom_of_heaven em 07_pam_hegemony_titles.txt).
+# So pode ser criada depois da decisao ci_found_liphe_hegemony_decision (variavel global ci_created_h_liphe), como o h_kingdom_of_heaven.
+# Os imperios entram de jure pelo efeito da decisao (set_de_jure_liege_title). Cor do rito Cultus Imperialis.
+h_liphe = {
+	color = { 92 51 89 }
+
+	capital = c_roma
+	definite_form = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+		has_global_variable = ci_created_h_liphe
+	}
+	can_destroy = {
+	}
+}

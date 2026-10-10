@@ -1,0 +1,31 @@
+﻿# Hegemonia Liphe (marco 4, fase 4f; aprovado pelo autor em 10/10/2026). Modelo: o Reino dos Ceus da 1.20 (pam_kingdom_of_heaven_decision,
+# pam_kingdom_of_heaven_declaration_effect, h_kingdom_of_heaven em 07_pam_hegemony_titles.txt).
+
+# O personagem detem pelo menos 4 dos 8 imperios da lista (rodada 3 do marco 4).
+ci_liphe_hegemony_empires_trigger = {
+	calc_true_if = {
+		amount >= 4
+		has_title = title:e_hre
+		has_title = title:e_britannia
+		has_title = title:e_france
+		has_title = title:e_spain
+		has_title = title:e_byzantium
+		has_title = title:e_anatolia
+		has_title = title:e_aegyptus
+		has_title = title:e_africa
+	}
+}
+
+# Um titulo da lista de imperios (escopo: titulo).
+ci_liphe_hegemony_listed_empire_trigger = {
+	OR = {
+		this = title:e_hre
+		this = title:e_britannia
+		this = title:e_france
+		this = title:e_spain
+		this = title:e_byzantium
+		this = title:e_anatolia
+		this = title:e_aegyptus
+		this = title:e_africa
+	}
+}

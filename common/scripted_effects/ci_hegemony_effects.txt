@@ -1,0 +1,35 @@
+﻿# Hegemonia Liphe (marco 4, fase 4f; aprovado pelo autor em 10/10/2026). Modelo: o Reino dos Ceus da 1.20 (pam_kingdom_of_heaven_decision,
+# pam_kingdom_of_heaven_declaration_effect, h_kingdom_of_heaven em 07_pam_hegemony_titles.txt).
+
+# Escopo: o fundador. Uma vez por campanha (variavel global). O e_italy e os imperios da lista que o fundador detem passam a ser de jure
+# da hegemonia e continuam existindo (Q1 e Q2); sem mudar a capital do reino (Q5); +10.000 de prestigio de dinastia e +2.000 pessoal,
+# sem modificador (Q3).
+ci_found_liphe_hegemony_effect = {
+	save_scope_as = ci_liphe_hegemon
+	set_global_variable = {
+		name = ci_created_h_liphe
+		value = yes
+	}
+	get_title = title:h_liphe
+	set_primary_title_to = title:h_liphe
+	title:e_italy = { set_de_jure_liege_title = title:h_liphe }
+	every_held_title = {
+		limit = { ci_liphe_hegemony_listed_empire_trigger = yes }
+		set_de_jure_liege_title = title:h_liphe
+	}
+	dynasty ?= { add_dynasty_prestige = 10000 }
+	add_prestige = 2000
+	# Aviso aos outros jogadores da fe Imperialis (Q6)
+	every_player = {
+		limit = {
+			this != scope:ci_liphe_hegemon
+			faith = scope:ci_liphe_hegemon.faith
+		}
+		send_interface_toast = {
+			title = ci_liphe_hegemony_news_title
+			custom_tooltip = ci_liphe_hegemony_news_tt
+			left_icon = scope:ci_liphe_hegemon
+			right_icon = title:h_liphe
+		}
+	}
+}
