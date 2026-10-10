@@ -22,5 +22,6 @@
  ci_doctrine_ministorum_blessing_name:0 "Blessing of the Ministorum"
  ci_doctrine_ministorum_blessing_desc:0 "By the seal of the Adeptus Ministorum, this [rite|E] is held to be a true path within the Veritas Imperialis. Its observances are no longer counted as straying from the Cultus Imperialis, but as another facet of the Omnissiah's truth, and its [rite_divergence|E] is lessened accordingly."
  ci_ministorum_blessing_group_name:0 "$ci_doctrine_ministorum_blessing_name$"
+ doctrine_parameter_ci_ministorum_blessing_divergence:0 "$doctrine_parameter_special_doctrine_pope_blessing_divergence$"
  # Titulo do Head of Faith quando e mulher (marco 4, fase 4b; aprovado pelo autor). O masculino continua Ecclesia Maximus.
  sol_religious_head_title_female:0 "Ecclesia Maxima"

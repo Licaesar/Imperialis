@@ -42,10 +42,10 @@
  ci_sanguinis_legacy_1_name:0 "Vigor Sanguinis"
  ci_sanguinis_legacy_2_name:0 "Dona Omnissiae"
  ci_sanguinis_legacy_3_name:0 "Misericordia Sanguinis"
- ci_sanguinis_legacy_3_effect:0 "#V $ci_sanguinis_healing_interaction$#! wears less on the healer: #N -0.5#! [health|E] at Sanguinis level 4 and #N -0.25#! at level 5, instead of -0.75 and -0.5"
+ ci_sanguinis_legacy_3_effect_desc:0 "#V $ci_sanguinis_healing_interaction$#! wears less on the healer: #N -0.5#! [health|E] at Sanguinis level 4 and #N -0.25#! at level 5, instead of -0.75 and -0.5"
  ci_sanguinis_legacy_4_name:0 "Stirps Divina"
  ci_sanguinis_legacy_5_name:0 "Gladii Ignis"
- ci_sanguinis_legacy_5_effect:0 "Can recruit the #V $ci_sanguinis_fire_swords$#! [men_at_arms|E]"
+ ci_sanguinis_legacy_5_effect_desc:0 "Can recruit the #V $ci_sanguinis_fire_swords$#! [men_at_arms|E]"
 
  # Espadas de fogo
  ci_sanguinis_fire_swords:0 "Fire Swords"

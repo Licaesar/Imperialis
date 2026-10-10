@@ -9,4 +9,10 @@ ci_doctrine_ministorum_blessing = {
 	desc = ci_doctrine_ministorum_blessing_desc
 
 	divergence = -10
+
+	# So para localizacao (playtest de 10/10/2026): mostra a linha de -10 de divergencia no tooltip, como o parametro
+	# special_doctrine_pope_blessing_divergence da Holy Blessing vanilla. Nenhum script le o parametro.
+	parameters = {
+		ci_ministorum_blessing_divergence
+	}
 }

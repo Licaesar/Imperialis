@@ -1,0 +1,13 @@
+﻿# Textos dos niveis 3 e 5 do Legado Sanguinis (marco 4, fase 4e; playtest de 10/10/2026: sem estas entradas o nivel nao mostrava o
+# efeito). Mesmo formato do vanilla (common/effect_localization/00_perk_effects.txt, warfare_legacy_5_unlock_effect).
+ci_sanguinis_legacy_3_effect = {
+	global = ci_sanguinis_legacy_3_effect_desc
+	first = ci_sanguinis_legacy_3_effect_desc
+	third = ci_sanguinis_legacy_3_effect_desc
+}
+
+ci_sanguinis_legacy_5_effect = {
+	global = ci_sanguinis_legacy_5_effect_desc
+	first = ci_sanguinis_legacy_5_effect_desc
+	third = ci_sanguinis_legacy_5_effect_desc
+}
