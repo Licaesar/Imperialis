@@ -233,6 +233,37 @@ duke_theocracy_female_imperialis_religion_clerical_region = {
 		spouse_takes_title = no
 	}
 }
+# Cardeal do Imperialis (marco 5, fase 5e; nome criado pelo Claude): "Cardinalis"/"Cardinalissa", no latim do clero do mod. O vanilla
+# so tem a entrada de cardeal para cristaos e dualistas (duke_theocracy_*_christianity_religion_cardinal, flag cardinal_flag, que
+# title_on_actions.txt da a todo cardeal). Prioridade acima do titular de regiao clerical (31).
+duke_theocracy_male_imperialis_religion_cardinal = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 32
+	governments = { theocracy_government ecclesiastical_government }
+	religions = { imperialis_religion }
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+	flag = cardinal_flag
+}
+duke_theocracy_female_imperialis_religion_cardinal = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 32
+	governments = { theocracy_government ecclesiastical_government }
+	religions = { imperialis_religion }
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+	flag = cardinal_flag
+}
 # Imperialis Solis Holders
 solis_man = {
 	type = character

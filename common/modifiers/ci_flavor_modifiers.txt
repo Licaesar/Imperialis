@@ -1,0 +1,40 @@
+﻿# Decisoes de flavor (marco 5, fase 5e). Ver common/decisions/ci_flavor_decisions.txt.
+
+# Vigil at the Tomb of the Omnissiah: 5 anos
+ci_vigil_of_the_law_modifier = {
+	icon = learning_positive
+	learning = 2
+	monthly_piety_gain_mult = 0.1
+}
+
+# Muster the Legio: 10 anos
+ci_legio_mustered_modifier = {
+	icon = martial_positive
+	levy_size = 0.2
+	heavy_infantry_damage_mult = 0.1
+	heavy_infantry_toughness_mult = 0.1
+	knight_effectiveness_mult = 0.15
+}
+
+# Raise the Signa Imperialis: permanente
+ci_signa_imperialis_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	same_faith_opinion = 10
+	advantage = 5
+}
+
+# Register the Blood: permanente, para cada Sanguinis vivo da dinastia
+ci_liber_sanguinis_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 0.5
+	dynasty_opinion = 5
+}
+
+# Found a Scholam: condado, permanente
+ci_scholam_legis_modifier = {
+	icon = learning_positive
+	development_growth_factor = 0.2
+	county_opinion_add = 5
+	monthly_county_control_growth_factor = 0.05
+}

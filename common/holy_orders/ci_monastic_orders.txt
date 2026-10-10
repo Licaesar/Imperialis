@@ -1,0 +1,215 @@
+﻿# Ordens monasticas da religiao Omnissiae (marco 5, fase 5e; nomes criados pelo Claude e contados ao autor). Modelo: os tipos
+# genericos do vanilla (00_generic_holy_orders.txt), que dao a qualquer fe nomes como "X Order". Um tipo por fe e genero, com o nome
+# do lugar (provincia arrendada); a ordem feminina segue a sucessao feminina das freiras do vanilla. A fundacao de inicio de jogo
+# (monastic_game_start_founder) fica com os tipos do vanilla.
+
+ho_ci_sorores_undomiel = {
+
+	trigger = {
+		trigger_if = {
+			limit = {
+				scope:founder = {
+					has_variable = {
+						name = monastic_game_start_founder
+					}
+				}
+			}
+			always = no
+		}
+		trigger_else = {
+			exists = scope:province
+			scope:leader = { is_female = yes }
+			scope:founder = { faith = faith:imperialis }
+			NOT = {
+				scope:founder.faith = {
+					any_faith_holy_order = {
+						title = {
+							has_variable = ho_ci_sorores_undomiel_place
+							var:ho_ci_sorores_undomiel_place = scope:province
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Peso alto: os nomes proprios ganham dos genericos do vanilla (peso 1 a 3)
+	weight = {
+		value = 20
+	}
+
+	effect = {
+		set_variable = {
+			name = ho_ci_sorores_undomiel_place
+			value = scope:province
+		}
+		scope:title = {
+			set_variable = {
+				name = female_order
+			}
+		}
+		scope:leader = {
+			if = {
+				limit = {
+					NOT = {
+						has_realm_law = female_monastic_holy_order_succession_law
+					}
+				}
+				add_realm_law = female_monastic_holy_order_succession_law
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_realm_law = female_monastic_holy_order_succession_law
+					}
+				}
+				add_realm_law = female_only_law
+			}
+		}
+	}
+
+	name = holy_order_ci_sorores_undomiel
+	government = monastic_holy_order_government
+	type = monastic
+}
+
+ho_ci_fratres_codicis = {
+
+	trigger = {
+		trigger_if = {
+			limit = {
+				scope:founder = {
+					has_variable = {
+						name = monastic_game_start_founder
+					}
+				}
+			}
+			always = no
+		}
+		trigger_else = {
+			exists = scope:province
+			scope:leader = { is_male = yes }
+			scope:founder = { faith = faith:imperialis }
+			NOT = {
+				scope:founder.faith = {
+					any_faith_holy_order = {
+						title = {
+							has_variable = ho_ci_fratres_codicis_place
+							var:ho_ci_fratres_codicis_place = scope:province
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Peso alto: os nomes proprios ganham dos genericos do vanilla (peso 1 a 3)
+	weight = {
+		value = 20
+	}
+
+	effect = {
+		set_variable = {
+			name = ho_ci_fratres_codicis_place
+			value = scope:province
+		}
+	}
+
+	name = holy_order_ci_fratres_codicis
+	government = monastic_holy_order_government
+	type = monastic
+}
+
+ho_ci_schola_legis = {
+
+	trigger = {
+		trigger_if = {
+			limit = {
+				scope:founder = {
+					has_variable = {
+						name = monastic_game_start_founder
+					}
+				}
+			}
+			always = no
+		}
+		trigger_else = {
+			exists = scope:province
+			scope:leader = { always = yes }
+			scope:founder = { faith = faith:ci_lex_omnissiah rite = rite:omnissiah }
+			NOT = {
+				scope:founder.faith = {
+					any_faith_holy_order = {
+						title = {
+							has_variable = ho_ci_schola_legis_place
+							var:ho_ci_schola_legis_place = scope:province
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Peso alto: os nomes proprios ganham dos genericos do vanilla (peso 1 a 3)
+	weight = {
+		value = 20
+	}
+
+	effect = {
+		set_variable = {
+			name = ho_ci_schola_legis_place
+			value = scope:province
+		}
+	}
+
+	name = holy_order_ci_schola_legis
+	government = monastic_holy_order_government
+	type = monastic
+}
+
+ho_ci_ascetae_harmoniae = {
+
+	trigger = {
+		trigger_if = {
+			limit = {
+				scope:founder = {
+					has_variable = {
+						name = monastic_game_start_founder
+					}
+				}
+			}
+			always = no
+		}
+		trigger_else = {
+			exists = scope:province
+			scope:leader = { always = yes }
+			scope:founder = { faith = faith:ci_lex_omnissiah NOT = { rite = rite:omnissiah } }
+			NOT = {
+				scope:founder.faith = {
+					any_faith_holy_order = {
+						title = {
+							has_variable = ho_ci_ascetae_harmoniae_place
+							var:ho_ci_ascetae_harmoniae_place = scope:province
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Peso alto: os nomes proprios ganham dos genericos do vanilla (peso 1 a 3)
+	weight = {
+		value = 20
+	}
+
+	effect = {
+		set_variable = {
+			name = ho_ci_ascetae_harmoniae_place
+			value = scope:province
+		}
+	}
+
+	name = holy_order_ci_ascetae_harmoniae
+	government = monastic_holy_order_government
+	type = monastic
+}

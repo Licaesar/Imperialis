@@ -1,0 +1,310 @@
+﻿# Decisoes de flavor da religiao Omnissiae (marco 5, fase 5e; aceitas pelo autor na rodada 3, 10/10/2026). Mecanica e texto criados pelo
+# Claude e contados ao autor. Modificadores em common/modifiers/ci_flavor_modifiers.txt; loc em ci_flavor_l_english.yml.
+# Jogador e IA em todas.
+
+### Vigil at the Tomb of the Omnissiah (Lex Omnissiah): depois da morte do Kensoriel, vigilia no Monte Olimpo
+ci_vigil_tomb_omnissiah_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+	desc = ci_vigil_tomb_omnissiah_decision_desc
+	selection_tooltip = ci_vigil_tomb_omnissiah_decision_tooltip
+	confirm_text = ci_vigil_tomb_omnissiah_decision_confirm
+	sort_order = 60
+
+	cooldown = { years = 10 }
+
+	is_shown = {
+		faith ?= faith:ci_lex_omnissiah
+		character:ci_kensoriel_liphe ?= { is_alive = no }
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = 50
+	}
+
+	effect = {
+		add_piety = medium_piety_value
+		add_stress = -40
+		add_character_modifier = {
+			modifier = ci_vigil_of_the_law_modifier
+			years = 5
+		}
+	}
+
+	ai_check_interval = 60
+
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = 40
+			stress_level >= 1
+		}
+	}
+}
+
+### Muster the Legio (Veritas Imperialis, imperador): convoca a Legio por 10 anos
+ci_muster_the_legio_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	desc = ci_muster_the_legio_decision_desc
+	selection_tooltip = ci_muster_the_legio_decision_tooltip
+	confirm_text = ci_muster_the_legio_decision_confirm
+	sort_order = 70
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		faith ?= faith:imperialis
+		highest_held_title_tier >= tier_empire
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = 300
+		prestige = 500
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = ci_legio_mustered_modifier
+			years = 10
+		}
+	}
+
+	ai_check_interval = 12
+
+	ai_potential = {
+		is_at_war = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+### Commission a Codex (as duas fes): um codice proprio, como artefato pessoal
+ci_commission_codex_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+	desc = ci_commission_codex_decision_desc
+	selection_tooltip = ci_commission_codex_decision_tooltip
+	confirm_text = ci_commission_codex_decision_confirm
+	sort_order = 60
+
+	cooldown = { years = 10 }
+
+	is_shown = {
+		faith.religion = religion:imperialis_religion
+		is_landed = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = 150
+	}
+
+	effect = {
+		add_piety = minor_piety_value
+		custom_tooltip = ci_commission_codex_decision_effect_tt
+		hidden_effect = {
+			save_scope_as = ci_codex_owner
+			if = {
+				limit = { faith = faith:ci_lex_omnissiah }
+				create_artifact = {
+					name = ci_codex_legis_artifact_name
+					description = ci_codex_legis_artifact_desc
+					creator = root
+					visuals = book
+					type = journal
+					modifier = artifact_learning_2_modifier
+					save_scope_as = ci_new_codex
+					wealth = 50
+					quality = 50
+				}
+			}
+			else = {
+				create_artifact = {
+					name = ci_codex_imperialis_artifact_name
+					description = ci_codex_imperialis_artifact_desc
+					creator = root
+					visuals = book
+					type = journal
+					modifier = artifact_monthly_piety_2_modifier
+					save_scope_as = ci_new_codex
+					wealth = 50
+					quality = 50
+				}
+			}
+		}
+	}
+
+	ai_check_interval = 60
+
+	ai_will_do = {
+		base = 10
+	}
+}
+
+### Raise the Signa Imperialis (Sanguinis 5 governante da Veritas): uma vez na vida
+ci_raise_signa_imperialis_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	desc = ci_raise_signa_imperialis_decision_desc
+	selection_tooltip = ci_raise_signa_imperialis_decision_tooltip
+	confirm_text = ci_raise_signa_imperialis_decision_confirm
+	decision_group_type = major
+	sort_order = 110
+
+	is_shown = {
+		faith ?= faith:imperialis
+		has_trait = sanguini_5
+		highest_held_title_tier >= tier_kingdom
+		NOT = { has_character_flag = ci_raised_signa_imperialis }
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		prestige = 500
+		piety = 250
+	}
+
+	effect = {
+		add_character_flag = ci_raised_signa_imperialis
+		add_character_modifier = ci_signa_imperialis_modifier
+	}
+
+	ai_check_interval = 24
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+### Register the Blood (dinasta de dinastia com Sanguinis vivo): o Liber Sanguinis, a cada 25 anos por dinastia
+ci_register_blood_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	}
+	desc = ci_register_blood_decision_desc
+	selection_tooltip = ci_register_blood_decision_tooltip
+	confirm_text = ci_register_blood_decision_confirm
+	sort_order = 65
+
+	is_shown = {
+		has_dynasty = yes
+		this = dynasty.dynast
+		dynasty = {
+			any_dynasty_member = {
+				is_alive = yes
+				OR = { has_trait = sanguini_1 has_trait = sanguini_2 has_trait = sanguini_3 has_trait = sanguini_4 has_trait = sanguini_5 }
+			}
+		}
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = ci_register_blood_recent_tt
+			dynasty = { NOT = { has_variable = ci_blood_registered } }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = 200
+	}
+
+	effect = {
+		dynasty = {
+			add_dynasty_prestige = 500
+			set_variable = {
+				name = ci_blood_registered
+				years = 25
+			}
+		}
+		custom_tooltip = ci_register_blood_members_tt
+		hidden_effect = {
+			dynasty = {
+				every_dynasty_member = {
+					limit = {
+						is_alive = yes
+						OR = { has_trait = sanguini_1 has_trait = sanguini_2 has_trait = sanguini_3 has_trait = sanguini_4 has_trait = sanguini_5 }
+						NOT = { has_character_modifier = ci_liber_sanguinis_modifier }
+					}
+					add_character_modifier = ci_liber_sanguinis_modifier
+				}
+			}
+		}
+	}
+
+	ai_check_interval = 60
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+### Found a Scholam (Lex Omnissiah): escola da Lei no condado da capital
+ci_found_scholam_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	desc = ci_found_scholam_decision_desc
+	selection_tooltip = ci_found_scholam_decision_tooltip
+	confirm_text = ci_found_scholam_decision_confirm
+	sort_order = 65
+
+	cooldown = { years = 5 }
+
+	is_shown = {
+		faith ?= faith:ci_lex_omnissiah
+		is_landed = yes
+		exists = capital_county
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = ci_found_scholam_exists_tt
+			capital_county = { NOT = { has_county_modifier = ci_scholam_legis_modifier } }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = 250
+	}
+
+	effect = {
+		capital_county = {
+			add_county_modifier = ci_scholam_legis_modifier
+		}
+	}
+
+	ai_check_interval = 60
+
+	ai_will_do = {
+		base = 25
+	}
+}
