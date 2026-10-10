@@ -4,7 +4,7 @@
 # MORTE DOS FUNDADORES (marco 2, fase c). Disparados por ci_founder_death_fervor_effect, chamado de
 # common/on_action/ci_founder_saint_on_actions.txt quando Kensoriel ou Helaena morrem (de qualquer causa).
 # O fervor da fe (+ci_founder_death_fervor_gain) ja foi aplicado uma vez pelo on_action; o evento so informa, com uma unica opcao.
-# Os dois eventos tem texto proprio e o mesmo resultado. TODO_LORE: textos provisorios ate o autor escrever.
+# Os dois eventos tem texto proprio (do autor) e o mesmo resultado.
 # scope:ci_founder - o fundador que morreu
 # 0001 - Morte do Kensoriel
 # 0002 - Morte da Helaena

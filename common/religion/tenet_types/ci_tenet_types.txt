@@ -1,8 +1,8 @@
 ﻿##############################################
 # CULTUS IMPERIALIS - TENETS ci_ (marco 2, fase b)
 #
-# Dois tenets-base que o autor vai reescrever para virarem tenets unicos da fe Imperialis. Hoje cada um ainda clona o tenet
-# cristao da By God Alone (mesmos parametros, modificadores e virtudes/pecados); o script do jogo le os PARAMETROS
+# Dois tenets da fe Imperialis com base nos tenets cristaos da By God Alone (mesmos parametros, modificadores e virtudes/pecados)
+# e, desde o marco 4 (fase 4b, aprovado pelo autor em 10/10/2026), um traco exclusivo cada (marcado 'Imperialis'). O script do jogo le os PARAMETROS
 # (has_doctrine_parameter / has_personal_tenet_flag), por isso funcionam sem codigo extra. O que o jogo liga a CHAVE do tenet
 # vanilla (eventos de concilio, de peticao ao Head of Faith, evangelizacao) nao e herdado.
 #
@@ -15,13 +15,10 @@
 # central. O Head of Faith (decisoes vanilla pam_permit_tenet_decision e pam_prohibit_tenet_decision) pode permitir ou proibir
 # tenets da fe: no teste de 899, dois dos antigos ci_ ficaram proibidos nos quatro ritos.
 #
-# A linha "# clone:" e lida por docs/dev/check_imperialis_religion.py, que AVISA (nao falha) quando um tenet passa a diferir
-# do original; apague a linha de um tenet quando ele virar totalmente proprio.
-#
-# Nomes provisorios (TODO_LORE): ver localization/english/ci_tenets_l_english.yml.
+# Nomes e descricoes: localization/english/ci_tenets_l_english.yml.
 ##############################################
 
-# clone: tenet_miles_christi
+# base: tenet_miles_christi
 tenet_ci_militarum = {
 	icon = tenet_miles_christi
 
@@ -62,6 +59,9 @@ tenet_ci_militarum = {
 		accolade_glory_gain_mult = 0.2
 		monthly_piety_gain_per_knight_mult = 0.01
 		holy_order_hire_cost_mult = -0.15
+		# Imperialis (marco 4, 4b): a infantaria pesada da Legio; as espadas de fogo dos Sanguinis (4e) sao infantaria pesada
+		heavy_infantry_damage_mult = 0.1
+		heavy_infantry_toughness_mult = 0.1
 	}
 
 	personal_tenet_modifier = {
@@ -85,7 +85,7 @@ tenet_ci_militarum = {
 	}
 }
 
-# clone: tenet_scholasticism
+# base: tenet_scholasticism
 tenet_ci_codex_liturgy = {
 	icon = tenet_scholasticism
 
@@ -126,10 +126,13 @@ tenet_ci_codex_liturgy = {
 		cultural_head_fascination_mult = 0.1
 		learning_scheme_phase_duration = -15
 		learning_scheme_resistance = 10
+		# Imperialis (marco 4, 4b): o estudo do Codex como devocao, o espelho erudito da proeza do Militarum
+		learning_per_piety_level = 1
 	}
 
 	personal_tenet_modifier = {
 		monthly_lifestyle_xp_gain_mult = 0.1
+		clergy_opinion = 10 # Imperialis (marco 4, 4b)
 	}
 
 	personal_tenet_parameters = {

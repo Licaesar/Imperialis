@@ -1,0 +1,104 @@
+﻿# Override dos tres efeitos vanilla que disparam os eventos das obras de catedral (common/scripted_effects/pam_effects.txt,
+# CK3 1.20.0.3), copias do vanilla. Mudanca marcada com "Imperialis" (marco 4, fase 4b): cada trigger_event passa por
+# ci_cathedral_route_event_effect, que manda a fe Imperialis para a copia ci_ do evento (events/ci_cathedral_events.txt).
+# Gerado por docs/dev/regen_cathedral_events.py; regerar a cada atualizacao do jogo.
+
+# Dispara a copia ci_ do evento para a fe Imperialis e o evento vanilla para as outras. Escopo: o personagem.
+ci_cathedral_route_event_effect = {
+	if = {
+		limit = { faith.religion = religion:imperialis_religion }
+		trigger_event = ci_$EVENT$
+	}
+	else = {
+		trigger_event = $EVENT$
+	}
+}
+
+pam_cathedral_art_contribution_subject_event_effect = {
+	save_scope_as = contributor
+	scope:contributor = {
+		# Imperialis (marco 4, 4b): a fe Imperialis recebe a copia ci_ do evento
+		if = {
+			limit = { faith.religion = religion:imperialis_religion }
+			trigger_event = {
+				id = ci_$EVENT$
+				days = { 5 20 }
+			}
+		}
+		else = {
+			trigger_event = {
+				id = $EVENT$
+				days = { 5 20 }
+			}
+		}
+	}
+}
+
+cathedral_great_project_funded_started_event_sender_effect = {
+	scope:founder = {
+		ci_cathedral_route_event_effect = { EVENT = pam_great_projects_events.0005 } # Imperialis (marco 4, 4b)
+	}
+	scope:owner = {
+		if = {
+			limit = {
+				this != scope:founder
+			}
+			ci_cathedral_route_event_effect = { EVENT = pam_great_projects_events.0005 } # Imperialis (marco 4, 4b)
+		}
+	}
+	every_contribution = {
+		limit = {
+			contribution_is_funded = yes
+		}
+		contributor ?= {
+			if = {
+				limit = {
+					this != scope:owner
+					this != scope:founder
+				}
+				save_scope_as = contributor
+				ci_cathedral_route_event_effect = { EVENT = pam_great_projects_events.0005 } # Imperialis (marco 4, 4b)
+			}
+		}
+	}
+}
+
+cathedral_great_project_completed_event_sender_effect = {
+	scope:founder = {
+		ci_cathedral_route_event_effect = { EVENT = pam_great_projects_events.0020 } # Imperialis (marco 4, 4b)
+	}
+	scope:owner = {
+		if = {
+			limit = {
+				this != scope:founder
+			}
+			ci_cathedral_route_event_effect = { EVENT = pam_great_projects_events.0020 } # Imperialis (marco 4, 4b)
+		}
+	}
+	scope:founder_heir ?= {
+		if = {
+			limit = {
+				is_alive = yes
+				this != scope:founder
+				this != scope:owner
+			}
+			ci_cathedral_route_event_effect = { EVENT = pam_great_projects_events.0020 } # Imperialis (marco 4, 4b)
+		}
+	}
+	every_contribution = {
+		limit = {
+			contribution_is_funded = yes
+		}
+		contributor ?= {
+			if = {
+				limit = {
+					this != scope:owner
+					this != scope:founder
+					NOT = { this ?= scope:founder_heir }
+				}
+				save_scope_as = contributor
+				ci_cathedral_route_event_effect = { EVENT = pam_great_projects_events.0020 } # Imperialis (marco 4, 4b)
+			}
+		}
+	}
+}

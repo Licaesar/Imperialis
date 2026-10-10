@@ -210,7 +210,7 @@
 		ReligiousSymbol = sol_religious_symbol
 		ReligiousText = sol_religious_text
 		ReligiousHeadName = sol_religious_head_title
-		ReligiousHeadNameFemale = sol_religious_head_title # mesma chave, como a fe maitreya do vanilla; TODO_LORE: forma feminina
+		ReligiousHeadNameFemale = sol_religious_head_title_female # Ecclesia Maxima (marco 4, fase 4b; aprovado pelo autor)
 		ReligiousHeadTitleName = sol_religious_head_title_name
 		DevoteeMale = imperialis_religion_devotee_male
 		DevoteeMalePlural = imperialis_religion_devotee_male_plural

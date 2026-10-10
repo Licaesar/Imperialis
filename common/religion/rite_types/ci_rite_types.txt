@@ -1,6 +1,6 @@
 ﻿# Ritos da fe imperialis. Cada rito tem tres tenets centrais e as doutrinas que o diferenciam das doutrinas comuns da religiao
 # (religion_types/00_imperialis.txt). A doutrina de identidade (temple_authority_cult_*) define o culto.
-# Os nomes de exibicao sao os da localizacao (chaves iguais as dos ritos). Texto novo usa TODO_LORE ate o autor elaborar.
+# Os nomes de exibicao sao os da localizacao (chaves iguais as dos ritos).
 #
 # Tenets trocados em 03/10/2026 por decisao do autor: household_gods -> pentarchy (household_gods exige politeismo e a religiao agora
 # e monoteista) e aniconism -> esotericism (aniconism exige abrahamic_hostility_doctrine).

@@ -4,7 +4,7 @@
 # ASCENSAO (marco 2, fase c). Disparado so por ci_ascension_decision (common/decisions/ci_ascension_decisions.txt).
 # 0001 - Confirmacao do jogador. Opcao a: ascende. Opcao b: adia (nada acontece).
 # 0002 - Aviso informativo da Ascensao (uma unica opcao): o fervor da fe ja subiu ci_ascension_fervor_gain (25) no 0001.
-#        TODO_LORE: texto provisorio ate o autor escrever. scope:ci_ascendant - quem ascendeu.
+#        Texto do autor. scope:ci_ascendant - quem ascendeu.
 ##############################################
 
 ci_ascension.0001 = {

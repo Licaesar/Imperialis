@@ -5,7 +5,7 @@
 # Flags: somente as que funcionam para qualquer fe. Ficam de fora: flagelacao, suicidio, humilhacao cerimonial, assassinato sem perda,
 # ato de devocao, mentor, dizimo/legado (dependem de christian_fulfillment ou da situacao da Igreja Crista) e as opcoes de puppet.
 # default_sf_personal_tenet_change_no_stress: largar um tenet pessoal nao causa estresse nos niveis negativos (como no tipo reserva).
-# Nomes dos niveis: localization/english/ci_spiritual_fulfillment_l_english.yml (TODO_LORE).
+# Nomes dos niveis (do autor): localization/english/ci_spiritual_fulfillment_l_english.yml.
 
 ci_imperial_fulfillment = {
 	religions = { imperialis_religion }

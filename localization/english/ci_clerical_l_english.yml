@@ -18,7 +18,9 @@
  # Lider de ordem militar do Imperialis (o vanilla usa "Katepano" para culturas de heranca bizantina). Termo decidido pelo autor.
  holy_order_male_imperialis_religion:0 "Preceptor"
  holy_order_female_imperialis_religion:0 "Preceptrix"
- # Bencao do Ministorum (marco 4, fase 4a). Texto funcional; a versao de lore esta no documento de revisao.
+ # Bencao do Ministorum (marco 4, fase 4a). Descricao de lore aprovada pelo autor (4b).
  ci_doctrine_ministorum_blessing_name:0 "Blessing of the Ministorum"
- ci_doctrine_ministorum_blessing_desc:0 "This [rite|E] has received the blessing of the Adeptus Ministorum, which reduces its [rite_divergence|E]."
+ ci_doctrine_ministorum_blessing_desc:0 "By the seal of the Adeptus Ministorum, this [rite|E] is held to be a true path within the Veritas Imperialis. Its observances are no longer counted as straying from the Cultus Imperialis, but as another facet of the Omnissiah's truth, and its [rite_divergence|E] is lessened accordingly."
  ci_ministorum_blessing_group_name:0 "$ci_doctrine_ministorum_blessing_name$"
+ # Titulo do Head of Faith quando e mulher (marco 4, fase 4b; aprovado pelo autor). O masculino continua Ecclesia Maximus.
+ sol_religious_head_title_female:0 "Ecclesia Maxima"

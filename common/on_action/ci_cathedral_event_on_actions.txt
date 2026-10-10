@@ -1,0 +1,28 @@
+﻿# Eventos anuais das obras de catedral em versao do Imperialis (marco 4, fase 4b). O jogo soma on_actions de mesmo nome: os
+# vanilla continuam com seus random_events (que recusam a fe Imperialis pelo trigger dos eventos) e ganham uma on_action ci_
+# so para a fe Imperialis. Gerado por docs/dev/regen_cathedral_events.py.
+
+pam_cathedral_great_project_yearly_founder_events_on_action = {
+	on_actions = { ci_pam_cathedral_great_project_yearly_founder_events_on_action }
+}
+
+ci_pam_cathedral_great_project_yearly_founder_events_on_action = {
+	trigger = { faith.religion = religion:imperialis_religion }
+	random_events = {
+		1 = ci_pam_great_projects_events.0007
+		1 = ci_pam_great_projects_events.0008
+		1 = ci_pam_great_projects_events.0011
+		1 = ci_pam_great_projects_events.0013
+	}
+}
+
+pam_cathedral_great_project_yearly_owner_events_on_action = {
+	on_actions = { ci_pam_cathedral_great_project_yearly_owner_events_on_action }
+}
+
+ci_pam_cathedral_great_project_yearly_owner_events_on_action = {
+	trigger = { faith.religion = religion:imperialis_religion }
+	random_events = {
+		1 = ci_pam_great_projects_events.0012
+	}
+}

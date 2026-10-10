@@ -1,5 +1,5 @@
 ﻿l_english:
 
- # Titulo no nome dos venerados da fe Imperialis, como "Divus Diocletian" no Helenismo. TODO_LORE: a forma feminina (Divina) e derivada da masculina; o autor so definiu "Divinus".
+ # Titulo no nome dos venerados da fe Imperialis, como "Divus Diocletian" no Helenismo. A forma feminina Divina foi confirmada pelo autor (marco 4, fase 4b).
  imperialis_saint:0 "Divinus"
  imperialis_female_saint:0 "Divina"

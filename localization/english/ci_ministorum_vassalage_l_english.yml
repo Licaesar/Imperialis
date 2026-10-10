@@ -1,8 +1,8 @@
 ﻿l_english:
 
- # Decisao de tornar o Ministorum vassalo (marco 3). Textos funcionais; o texto de lore e do autor.
+ # Decisao de tornar o Ministorum vassalo (marco 3). A descricao e lore aprovada pelo autor (marco 4, fase 4b); o resto e funcional.
  ci_ministorum_vassalage_decision:0 "Make the Ministorum your vassal"
- ci_ministorum_vassalage_decision_desc:0 "TODO_LORE"
+ ci_ministorum_vassalage_decision_desc:0 "The Adeptus Ministorum keeps the faith, but faith alone does not hold a frontier. Let the seat of the Ecclesia Maximus stand beneath the protection of the Imperial throne, its lands bound to the Empire of Italy and its Abbatissa or Patriarcha sworn to the Emperor's peace, so that no lord may raise a hand against the house of the Omnissiah without raising it against the Empire itself."
  ci_ministorum_vassalage_decision_tooltip:0 "Make the holder of the Adeptus Ministorum your vassal"
  ci_ministorum_vassalage_decision_confirm:0 "Make them my vassal"
  ci_ministorum_vassalage_decision_effect_tooltip:0 "The holder of the #V Adeptus Ministorum#! becomes your vassal, if they are not already."
