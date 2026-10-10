@@ -1,0 +1,18 @@
+﻿l_english:
+ # Anathema Legis (marco 5, fase 5c). Texto criado pelo Claude e contado ao autor.
+ ci_declare_omnissiae_schism_decision:0 "Pronounce the Anathema Legis"
+ ci_declare_omnissiae_schism_decision_desc:0 "For generations the Legists have been suffered as wayward brothers, honouring the Omnissiah while spurning His blood and His Church. No longer. With the Adeptus Ministorum kneeling at my side and the crown of the Hegemony upon my brow, I shall name their Law a lie and their path a heresy, and the Concordia Omnissiae shall be broken forever."
+ ci_declare_omnissiae_schism_decision_tooltip:0 "Break the Concordia Omnissiae and declare the Lex Omnissiah a heresy"
+ ci_declare_omnissiae_schism_decision_confirm:0 "Let the Law be anathema!"
+ ci_omnissiae_schism_ministorum_vassal_tt:0 "The holder of the [GetTitleByKey('k_sol').GetName] is your vassal"
+ ci_omnissiae_schism_decision_effect_tt:0 "The Concordia Omnissiae is broken for the rest of the campaign: the Veritas Imperialis and the Lex Omnissiah become Hostile to each other, and holy wars between them become possible. This can never be undone."
+
+ ci_schism.0001.t:0 "The Anathema Legis"
+ ci_schism.0001.desc:0 "In the templum of Ravenna, before the assembled College and the banners of the Legio, the words were read aloud from the steps of the altar: the Lex Omnissiah is no road to the Omnissiah, but a road away from Him. Its Legists deny the blood He left among us, scorn the Church His bride raised up, and set their cold Law above His living heirs.\n\nThe Concordia Omnissiae is ended. What was once a wayward brother is now an enemy of the faith, and the faithful are called to bring the Legists back into the light, or into the dark."
+ ci_schism.0001.a:0 "Una Fides, Unus Sanguis."
+
+ ci_schism.0002.t:0 "The Anathema Legis"
+ ci_schism.0002.desc:0 "[ci_schism_declarer.GetTitledFirstName] has pronounced the Anathema Legis. The Concordia Omnissiae is broken: the Lex Omnissiah is now held to be a heresy, and its Legists are enemies of the Veritas Imperialis."
+ ci_schism.0002.desc_lex:0 "[ci_schism_declarer.GetTitledFirstName] has pronounced the Anathema Legis against us. The Veritas Imperialis names our Law a heresy and breaks the Concordia Omnissiae. Those who worship the blood are now our enemies, and the Law must be defended."
+ ci_schism.0002.a:0 "The blood has spoken."
+ ci_schism.0002.b:0 "The Law endures."

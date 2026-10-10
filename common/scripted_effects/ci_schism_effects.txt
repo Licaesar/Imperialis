@@ -1,0 +1,32 @@
+﻿# Anathema Legis (marco 5, fase 5c). Escopo: quem declara o cisma (root do evento ci_schism.0001).
+# Tira a Concordia Omnissiae (5b) de todos os ritos das duas fes e da propria fe, se estiver la. O override de hostilidade da
+# concordia so vale para quem tambem a tem; sem ela, as fes voltam ao heresy_hostility_doctrine da religiao (same_religion = hostile),
+# dos dois lados. Ritos dinamicos criados dentro das fes tambem perdem a doutrina (every_faith_rite).
+# Avisa com ci_schism.0002 os jogadores da religiao (das duas fes), 1 dia depois.
+ci_declare_omnissiae_schism_effect = {
+	save_scope_as = ci_schism_declarer
+	faith:imperialis = { ci_remove_omnissiae_concord_effect = yes }
+	faith:ci_lex_omnissiah = { ci_remove_omnissiae_concord_effect = yes }
+	every_player = {
+		limit = {
+			this != scope:ci_schism_declarer
+			faith.religion = religion:imperialis_religion
+		}
+		trigger_event = {
+			id = ci_schism.0002
+			days = 1
+		}
+	}
+}
+
+# Escopo: fe.
+ci_remove_omnissiae_concord_effect = {
+	every_faith_rite = {
+		limit = { rite_has_doctrine = ci_doctrine_omnissiae_concord }
+		remove_rite_doctrine = ci_doctrine_omnissiae_concord
+	}
+	if = {
+		limit = { has_doctrine = ci_doctrine_omnissiae_concord }
+		remove_doctrine = ci_doctrine_omnissiae_concord
+	}
+}

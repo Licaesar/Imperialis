@@ -1,0 +1,73 @@
+﻿# Anathema Legis: a decisao de cisma da religiao Omnissiae (marco 5, fase 5c; desenho do autor nas rodadas 3 e 4, 10/10/2026).
+# As duas fes comecam astray (Concordia Omnissiae, 5b). Esta decisao dispara o evento ci_schism.0001, que tira a concordia das duas
+# fes: Veritas Imperialis e Lex Omnissiah voltam ao hostil padrao da religiao (heresy_hostility_doctrine), dos dois lados.
+# Uma vez por campanha (global ci_omnissiae_schism_declared), permanente, jogador e IA, sem custo alem dos requisitos.
+# Requisitos: Veritas Imperialis, vivo, adulto e livre, sanguini_5, piedade e prestigio no nivel maximo, Ambitious e Zealous, o
+# titular do k_sol como vassalo (em qualquer nivel) e hegemon do h_roman_empire ou do h_liphe.
+ci_declare_omnissiae_schism_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	desc = ci_declare_omnissiae_schism_decision_desc
+	selection_tooltip = ci_declare_omnissiae_schism_decision_tooltip
+	confirm_text = ci_declare_omnissiae_schism_decision_confirm
+	decision_group_type = major
+	sort_order = 115
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 12
+	}
+
+	is_shown = {
+		faith ?= faith:imperialis
+		has_trait = sanguini_5
+		OR = {
+			has_title = title:h_roman_empire
+			has_title = title:h_liphe
+		}
+		NOT = { has_global_variable = ci_omnissiae_schism_declared }
+	}
+
+	is_valid = {
+		piety_level >= max_piety_level
+		prestige_level >= 5
+		has_trait = ambitious
+		has_trait = zealous
+		custom_tooltip = {
+			text = ci_omnissiae_schism_ministorum_vassal_tt
+			title:k_sol.holder ?= {
+				target_is_liege_or_above = root
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_imprisoned = no
+	}
+
+	effect = {
+		set_global_variable = {
+			name = ci_omnissiae_schism_declared
+			value = yes
+		}
+		custom_tooltip = ci_omnissiae_schism_decision_effect_tt
+		trigger_event = ci_schism.0001
+	}
+
+	ai_potential = {
+		piety_level >= max_piety_level
+		prestige_level >= 5
+		has_trait = ambitious
+		has_trait = zealous
+	}
+
+	ai_will_do = {
+		base = 100 # ambicioso e zeloso: proclama sempre que puder
+	}
+}
