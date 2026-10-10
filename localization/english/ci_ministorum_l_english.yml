@@ -1,9 +1,9 @@
 ﻿l_english:
 
- # Decisao que funda o Adeptus Ministorum (k_sol). Textos provisorios: TODO_LORE ate o autor elaborar.
+ # Decisao que funda o Adeptus Ministorum (k_sol). Texto do autor.
  ci_found_ministorum_decision:0 "Found the Adeptus Ministorum"
- ci_found_ministorum_decision_desc:0 "TODO_LORE: the Empire of Italy stands, and the faith of the Sanguinis can now give itself a church."
- ci_found_ministorum_decision_tooltip:0 "Found the Adeptus Ministorum"
+ ci_found_ministorum_decision_desc:0 "With Italy under the Imperialis banner, the faith may establish a lasting seat of spiritual authority. Let the Adeptus Ministorum guard the sacred rites and teachings of the Imperium, and let Helaena Undómiel serve as its first head."
+ ci_found_ministorum_decision_tooltip:0 "Establish the spiritual head of the Imperialis faith"
  ci_found_ministorum_decision_confirm:0 "Found the Ministorum"
- ci_found_ministorum_decision_effect_tooltip:0 "The #V Adeptus Ministorum#! title is created. Its first holder is Helaena Undómiel, or, if she cannot serve, the adult follower of the faith with the highest learning and piety level among your court and your direct vassals. The holder leads their own rite."
- ci_found_ministorum_holder_exists_tt:0 "Helaena Undómiel, or an adult follower of the faith in your court or among your direct vassals, can hold the title"
+ ci_found_ministorum_decision_effect_tooltip:0 "The #V Adeptus Ministorum#! title is created and its holder becomes Head of Faith. Helaena Undómiel will hold the title if she is alive, an adult, and of the faith; otherwise, it passes to the eligible adult follower in your court or among your direct vassals with the highest combined Learning and piety level. The Head of Faith leads the Cultus Imperialis rite."
+ ci_found_ministorum_holder_exists_tt:0 "Helaena Undómiel, or an eligible adult follower of the faith in your court or among your direct vassals, can hold the title"

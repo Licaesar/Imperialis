@@ -4,7 +4,7 @@
  imperialis_religion_adj:0 "Omnissiae"
  imperialis_religion_adherent:0 "Omnissiae"
  imperialis_religion_adherent_plural:0 "Omnissiaes"
- imperialis_religion_desc:0 "TODO_LORE: Omnissiae religion description."
+ imperialis_religion_desc:0 "The Omnissiae faith venerates Kensoriel Liphe, the Omnissiah: a god incarnate whose revelation gave rise to the Imperium and its sacred order. United in faith yet expressed through distinct rites, its followers seek wisdom, discipline, and purpose in the divine design."
  
  sororitas_religion:0 "Cult Undomiel"
  sororitas_religion_adj:0 "Sororita"
@@ -112,9 +112,6 @@
  sol_religious_head_title:0 "Ecclesia Maximus"
  sol_religious_head_title_name:0 "Imperialis Ecclesiar"
  
-  #Imperator Tenets
- tenet_lipheric_name:0 "Ordo Lipherium"
- tenet_lipheric_desc:0 "When the people forget their duty they are no longer Human and become something less than beasts. They have no place in the bosom of Humanity nor in the heart of the Omnissiah. Let them die and be forever forgotten."
  
  
 #DEVOTOS

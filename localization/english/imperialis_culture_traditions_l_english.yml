@@ -1,9 +1,12 @@
 ﻿l_english:
  constitutio_imperialis_name:0 "Constitutio Imperialis"
- constitutio_imperialis_desc:0 "Constitutio Imperialis descricao"
+ constitutio_imperialis_desc:0 "The Imperialis hold that an empire endures through more than conquest. Its laws, customs, and inherited duties bind distant peoples to a common order, preserving the culture through generations of change."
+
  custodia_imperialis_name:0 "Custodia Imperialis"
- custodia_imperialis_desc:0 "Custodia Imperialis descricao"
+ custodia_imperialis_desc:0 "To defend the Imperium is a sacred calling. The faithful train in arms alongside the warriors of the realm, mastering horse and blade so that martial strength may serve both the Emperor and the divine."
+
  administratum_name:0 "Administratum Imperialis"
- administratum_desc:0 "Administratum descriacao tenho que escrever depois"
+ administratum_desc:0 "An empire must be governed as carefully as it is won. Its courtiers and stewards seek distinction through service, competing for influence while keeping the far-reaching affairs of the realm in order."
+
  mysterium_divinitas_name:0 "Mysterium Divinitas"
- mysterium_divinitas_desc:0 "Mysterium Divinitas"
+ mysterium_divinitas_desc:0 "The divine is not known through faith alone, but approached through study, contemplation, and the wisdom of mystics. Imperialis scholars seek hidden truths, believing that spiritual insight can illuminate both the soul and the world."

@@ -1,17 +1,18 @@
 ﻿l_english:
 
- # Mensagem da veneracao automatica de Kensoriel e Helaena ao morrer. Texto funcional, sem lore novo.
+ # Automatic veneration of Kensoriel and Helaena upon their deaths
  ci_founder_canonized_t:0 "A Founder Is Venerated"
  ci_founder_canonized_desc:0 "[ci_founder.GetTitledFirstName] is now venerated by the faith and has been laid to rest at [consecration_province.GetName]."
 
- # Eventos da morte dos fundadores (events/ci_founder_saint_events.txt). TODO_LORE: textos provisorios; cada evento tem texto proprio.
- ci_founder_saint.0001.t:0 "TODO_LORE: The death of Kensoriel"
- ci_founder_saint.0001.desc:0 "TODO_LORE: event text for the death of Kensoriel. The fervor of the faith rises to its peak."
- ci_founder_saint.0001.a:0 "Continue"
- ci_founder_saint.0002.t:0 "TODO_LORE: The death of Helaena"
- ci_founder_saint.0002.desc:0 "TODO_LORE: event text for the death of Helaena. The fervor of the faith rises to its peak."
- ci_founder_saint.0002.a:0 "Continue"
+ # The founders' deaths
+ ci_founder_saint.0001.t:0 "The Ascension of the Omnissiah"
+ ci_founder_saint.0001.desc:0 "The heavens tear open, and the world trembles beneath a sky aflame with ruin. For one terrible moment, all seems lost to the storm. Then a single ray breaks through the darkness. Its light falls upon Kensoriel, and the tempest stills. Before the gathered faithful, he rises from the earth and ascends toward the heavens. The light bears him to the summit of Mount Olympus, where it blazes upward like a pillar reaching beyond the clouds. The storm is ended; the mountain is made sacred. Kensoriel has ascended, and the faithful behold the place where heaven received the Omnissiah."
+ ci_founder_saint.0001.a:0 "The heavens have claimed the Omnissiah!"
 
- # Registro de fervor da fe (funcional)
- ci_fervor_gain_kensoriel_death:0 "The death of Kensoriel"
- ci_fervor_gain_helaena_death:0 "The death of Helaena"
+ ci_founder_saint.0002.t:0 "The Passing of Undómiel"
+ ci_founder_saint.0002.desc:0 "A deep darkness falls upon the world, and grief stills every voice. Then light stirs within Undómiel's body, growing until the shadows retreat before it. Celestial trumpets sound across the heavens. As their call rings out, her soul rises into the light and passes beyond the mortal sky. Her body is laid to rest at Ravenna, while the faithful look upward, certain that darkness has not overcome her."
+ ci_founder_saint.0002.a:0 "Undómiel's light shall never fade."
+
+ # Faith fervor gained upon each founder's death
+ ci_fervor_gain_kensoriel_death:0 "The Ascension of the Omnissiah"
+ ci_fervor_gain_helaena_death:0 "The Passing of Undómiel"

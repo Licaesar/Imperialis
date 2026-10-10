@@ -1,11 +1,11 @@
 ﻿l_english:
 
- # Tenets ci_ (marco 2, fase b): dois tenets-base que o autor vai reescrever. TODO_LORE: nomes e descricoes provisorios.
+ # Tenets ci_ (marco 2, fase b; traco exclusivo no marco 4, fase 4b). Texto do autor.
 
  # base: miles_christi: Legio and Sororitas
  tenet_ci_militarum_name: "Militarum"
- tenet_ci_militarum_desc: "TODO_LORE: description of Militarum."
+ tenet_ci_militarum_desc: "The Legio and the Sororitas uphold the defense of the faithful as a sacred duty. By courage, discipline, and steadfast service, their warriors protect the Imperium and honor the divine order revealed by the Omnissiah. Behind the shield wall of the Legio, the line does not break."
 
  # base: scholasticism: learning, university, study of scripture
  tenet_ci_codex_liturgy_name: "Liturgy of the Codex"
- tenet_ci_codex_liturgy_desc: "TODO_LORE: description of Liturgy of the Codex."
+ tenet_ci_codex_liturgy_desc: "The Codex Imperialis preserves the sacred teachings revealed by the Omnissiah. Through study, reflection, and observance of its rites, the faithful seek wisdom to guide both the soul and the ordering of their lives. To read the Codex is to pray; to understand it is to draw nearer to Him."
