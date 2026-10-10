@@ -1,0 +1,594 @@
+﻿# Gerado por docs/dev/regen_sacrament_decisions.py (marco 4, fase 4d) a partir do vanilla; nao editar a mao, regerar.
+# Sacramentos do Imperialis: copias das seis decisoes cristas da By God Alone, mesma mecanica, texto proprio
+# (localization/english/ci_sacrament_l_english.yml). Disparam os eventos events/ci_sacrament_events.txt.
+
+ci_pam_decision_confession = {
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment < 0
+				}
+				desc = ci_pam_decision_confession_name_low
+			}
+			desc = ci_pam_decision_confession_name
+		}
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/pam_decision_confession.dds"
+	}
+	decision_group_type = religious
+	
+	desc = ci_pam_decision_confession_desc
+	selection_tooltip = ci_pam_decision_confession_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 120
+		duchy = 60
+		kingdom = 60
+		empire = 60
+		hegemony = 60
+	}
+
+	sort_order = 110
+	
+	is_shown = {
+		has_spiritual_fulfillment_type = ci_imperial_fulfillment # Imperialis
+		# Imperialis (4d, decisao do autor): sem o tenet Confession, que nenhum rito do Imperialis tem
+		has_pam_dlc_trigger = yes
+	}
+
+	is_valid = {
+		NOT = { has_trait = excommunicated }
+		custom_tooltip = {
+			text = ci_pam_decision_confession_sp_court_chaplain
+			exists = cp:councillor_court_chaplain
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		is_alive = yes
+		is_in_activity = no
+		is_imprisoned = no
+		cp:councillor_court_chaplain ?= {
+			is_available = yes
+		}
+	}
+
+	cooldown = { years = 5 }
+
+	effect = {
+		if = {
+			limit = { spiritual_fulfillment < 0 }
+			custom_tooltip = ci_pam_decision_confession_tooltip_sp_effect
+		}
+		custom_tooltip = ci_pam_decision_confession_tooltip_stress_effect
+		custom_tooltip = ci_pam_decision_events.0001.a.confession_random_outcome
+		trigger_event = ci_pam_decision_events.0001
+	}
+
+	ai_potential = {
+		stress_level >= 1
+	}
+
+	ai_will_do = {
+		base = 35
+		modifier = {
+			stress_level >= 2
+			add = 30
+		}
+		modifier = {
+			stress_level >= 3
+			add = 30
+		}
+		modifier = {
+			has_trait = humble
+			add = 20
+		}
+		modifier = {
+			has_trait = zealous
+			add = 20
+		}
+		modifier = {
+			has_trait = cynical
+			add = -40
+		}
+	}
+}
+
+ci_pam_decision_act_of_devotion = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/pam_decision_act_of_devotion.dds"
+	}
+	decision_group_type = religious
+	
+	desc = ci_pam_decision_act_of_devotion_desc
+	selection_tooltip = ci_pam_decision_act_of_devotion_desc_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 60
+		duchy = 60
+		kingdom = 48
+		empire = 48
+		hegemony = 24
+	}
+
+	sort_order = 80
+	
+	is_shown = {
+		has_spiritual_fulfillment_type = ci_imperial_fulfillment # Imperialis
+		has_pam_dlc_trigger = yes
+	}
+
+	is_valid = {
+		is_at_war = no
+		custom_tooltip = {
+			text = ci_pam_decision_act_of_devotion_sp_tooltip
+			has_fulfillment_parameter = sp_act_of_devotion_decision
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_quick = {
+			alive = yes
+			adult = yes
+			at_war = no
+			imprisoned = no
+			activity = no
+		}
+	}
+
+	cooldown = { years = 10 }
+	
+	cost = {
+		piety = major_piety_value
+	}
+
+	effect = {
+		custom_tooltip = ci_pam_decision_act_of_devotion_tooltip_effect
+		trigger_event = ci_pam_decision_events.0002
+		# Imperialis (4d): sem o gatilho da situacao The Christian Church
+	}
+
+	ai_potential = {
+		piety >= major_piety_value
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			prestige < major_prestige_value
+			add = 5
+		}
+		modifier = {
+			prestige < medium_prestige_value
+			add = 10
+		}
+		modifier = {
+			prestige < minor_prestige_value
+			add = 10
+		}
+		modifier = {
+			has_trait = arrogant
+			add = 20
+		}
+	}
+}
+
+ci_pam_mentor_sp_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/pam_decision_mentor_sp.dds"
+	}
+	decision_group_type = religious
+	
+	desc = ci_pam_mentor_sp_decision_desc
+	selection_tooltip = ci_pam_mentor_sp_decision_desc_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 24
+		duchy = 24
+		kingdom = 12
+		empire = 12
+		hegemony = 12
+	}
+
+	sort_order = 80
+	
+	is_shown = {
+		has_spiritual_fulfillment_type = ci_imperial_fulfillment # Imperialis
+		has_pam_dlc_trigger = yes
+	}
+
+	is_valid = {
+		is_at_war = no
+		custom_tooltip = {
+			text = ci_pam_mentor_sp_decision_sp_tooltip
+			has_fulfillment_parameter = sp_mentor_in_sp
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_quick = {
+			adult = yes
+			at_war = no
+			imprisoned = no
+			activity = no
+			incapable = no
+		}
+		custom_tooltip = {
+			text = ci_pam_mentor_sp_decision_valid_child_tt
+			any_child = {
+				age >= 16
+				faith = root.faith
+				NOT = { has_variable = pam_mentor_sp_taken_var }
+				OR = {
+					root.primary_heir ?= this
+					has_relation_favorite_child = root
+				}
+				spiritual_fulfillment < 75
+			}
+		}
+	}
+
+	cooldown = { years = 15 }
+	
+	cost = {
+		piety = major_piety_value
+	}
+	
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "SELECT_ACTION"
+		show_from_start = yes
+
+		item = { # Primary Heir
+			value = primary_heir
+			is_valid = {
+				custom_tooltip = {
+					text = ci_pam_mentor_sp_decision_primary_heir_tt
+					any_child = {
+						is_primary_heir_of = root
+						age >= 16
+						faith = root.faith
+						NOT = { has_variable = pam_mentor_sp_taken_var }
+						spiritual_fulfillment < 75
+					}
+				}
+			}
+			localization = ci_pam_mentor_sp_decision_primary_heir_name
+			icon = "gfx/interface/icons/message_feed/heir.dds"
+			ai_chance = {
+				value = 100
+			}
+		}
+		item = { # Favorite Child
+			value = favorite_child
+			is_valid = {
+				custom_tooltip = { 
+					text = ci_pam_mentor_sp_decision_primary_favorite_child_tt
+					any_relation = {
+						type = favorite_child
+						age >= 16
+						faith = root.faith
+						NOT = { has_variable = pam_mentor_sp_taken_var }
+						spiritual_fulfillment < 75
+					}
+				}
+			}
+			localization = ci_pam_mentor_sp_decision_primary_favorite_child_name
+			icon = "gfx/interface/icons/character_interactions/designate_favorite.dds"
+			ai_chance = {
+				value = 0
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = ci_pam_mentor_sp_decision_tooltip_effect
+		trigger_event = ci_pam_decision_events.0003
+	}
+
+	ai_potential = {
+		piety >= major_piety_value
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			has_trait = theologian
+			add = 20
+		}
+		modifier = {
+			has_trait = lifestyle_mystic
+			add = 20
+		}
+	}
+}
+
+ci_pam_decision_last_rites = {
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment < 0
+				}
+				desc = ci_pam_decision_last_rites_name_low
+			}
+			desc = ci_pam_decision_last_rites_name
+		}
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/pam_decision_last_rites.dds"
+	}
+	decision_group_type = major
+	desc = ci_pam_decision_last_rites_desc
+	selection_tooltip = ci_pam_decision_last_rites_tooltip
+	cooldown = { years = 15 }
+	sort_order = 70
+	ai_check_interval = 0
+	is_shown = {
+		is_ai = no
+		has_pam_dlc_trigger = yes
+		has_spiritual_fulfillment_type = ci_imperial_fulfillment # Imperialis
+		OR = {
+			health <= death_chance_dying_health
+			has_character_flag = about_to_die_but_not_dead_yet_flag
+		} 	
+	}
+
+	is_valid = {
+		NOT = { has_trait = excommunicated }
+		custom_tooltip = {
+			text = ci_pam_decision_last_rites_doctrine_tt
+			rite = {
+				rite_has_parameter = last_rites_active
+			}
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		is_alive = yes
+		is_adult = yes
+	}
+
+	effect = {
+		custom_tooltip = ci_pam_decision_events.0005.no_last_rites_warning
+		custom_tooltip = ci_pam_decision_events.0005.secret_reveal
+		custom_tooltip = ci_pam_decision_last_rites_tooltip_sp_effect
+		custom_tooltip = ci_pam_decision_events.0005.details
+		add_character_flag = did_last_rites_flag
+		trigger_event = ci_pam_decision_events.0005
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+ci_pam_promulgate_word_of_pious_deeds_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/pam_decision_papal_petition.dds"
+	}
+	decision_group_type = religious
+
+	desc = ci_pam_promulgate_word_of_pious_deeds_decision_desc
+	selection_tooltip = ci_pam_promulgate_word_of_pious_deeds_decision_desc_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 24
+		duchy = 24
+		kingdom = 12
+		empire = 12
+		hegemony = 12
+	}
+
+	sort_order = 110
+
+	is_shown = {
+		pam_can_hold_cardinalate_trigger = yes
+		is_clergy = yes
+		has_spiritual_fulfillment_type = ci_imperial_fulfillment # Imperialis
+		exists = faith.religious_head
+		has_pam_dlc_trigger = yes
+		NOT = { has_character_flag = pam_promulgate_word_of_pious_deeds_used }
+	}
+
+	is_valid = {
+		NOT = {
+			custom_description = {
+				text = character_is_religious_head_of_faith
+				faith.religious_head = this
+			}
+		}
+		custom_tooltip = {
+			text = cardinal_unlocks_pam_promulgate_word_of_pious_deeds_decision_tooltip
+			exists = clerical_elector_title
+		}
+		custom_tooltip = {
+			text = domicile_unlocks_pam_promulgate_word_of_pious_deeds_decision_tooltip
+			domicile ?= { has_domicile_parameter = unlocks_pam_promulgate_word_of_pious_deeds_decision }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_quick = {
+			incapable = no
+			alive = yes
+			adult = yes
+			at_war = no
+			imprisoned = no
+			activity = no
+		}
+	}
+
+	cost = {
+		piety = massive_piety_value
+	}
+
+	effect = {
+		add_character_flag = pam_promulgate_word_of_pious_deeds_used
+		if = {
+			limit = {
+				exists = superior.primary_title
+			}
+			superior.primary_title = {
+				save_scope_as = praise_worthy_priest_superior_title
+			}
+		}
+		else_if = {
+			limit = {
+				exists = faith.religious_head_title
+			}
+			faith.religious_head_title = {
+				save_scope_as = praise_worthy_priest_superior_title
+			}
+		}
+		else = {
+			primary_title ?= {
+				save_scope_as = praise_worthy_priest_superior_title
+			}
+		}
+		save_scope_as = praise_worthy_priest
+		custom_tooltip = ci_pam_promulgate_word_of_pious_deeds_decision_tooltip_effect
+		trigger_event = ci_pam_decision_events.0015
+	}
+
+	ai_potential = {
+		piety >= major_piety_value
+	}
+
+	ai_will_do = {
+		base = 35
+		modifier = {
+			prestige < major_prestige_value
+			add = 30
+		}
+		modifier = {
+			prestige < medium_prestige_value
+			add = 30
+		}
+		modifier = {
+			prestige < minor_prestige_value
+			add = 30
+		}
+		modifier = {
+			has_trait = arrogant
+			add = 50
+		}
+	}
+}
+
+ci_pam_cardinal_endow_masses_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/pam_decision_papal_petition.dds"
+	}
+	decision_group_type = religious
+
+	desc = ci_pam_cardinal_endow_masses_decision_desc
+	selection_tooltip = ci_pam_cardinal_endow_masses_decision_tooltip
+	confirm_text = ci_pam_cardinal_endow_masses_decision_confirm
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 24
+		duchy = 24
+		kingdom = 24
+		empire = 24
+		hegemony = 24
+	}
+
+	sort_order = 105
+
+	is_shown = {
+		is_clergy = yes
+		has_spiritual_fulfillment_type = ci_imperial_fulfillment # Imperialis
+		has_pam_dlc_trigger = yes
+	}
+
+	is_valid = {
+		#Check if they are a Cardinal
+		custom_tooltip = {
+			text = cardinal_unlocks_pam_cardinal_endow_masses_decision_tooltip
+			exists = root.clerical_elector_title
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_quick = {
+			incapable = no
+			alive = yes
+			adult = yes
+			imprisoned = no
+			activity = no
+		}
+	}
+
+	cooldown = { years = 5 }
+
+	cost = {
+		treasury_or_gold = medium_treasury_or_gold_value
+	}
+
+	effect = {
+		send_interface_toast = {
+			title = ci_pam_cardinal_endow_masses_decision_toast
+			left_icon = root
+			add_piety = major_piety_gain
+			# Simony holds the exchange of wealth for sacred benefit to be the faith working as intended
+			if = {
+				limit = {
+					OR = {
+						rite = { rite_has_tenet = tenet_simony }
+						has_personal_tenet = tenet_simony
+					}
+				}
+				change_spiritual_fulfillment = medium_spiritual_fulfillment_value
+			}
+			custom_tooltip = {
+				text = ci_pam_cardinal_endow_masses_decision_subordinates_tt
+				every_subordinate = {
+					add_piety = minor_piety_gain
+					add_opinion = {
+						target = root
+						modifier = ci_pam_cardinal_endowed_masses_opinion
+					}
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		exists = root.clerical_elector_title
+		# A cardinal holding anything beyond the cardinalate has better uses for the treasury
+		NOT = {
+			any_held_title = {
+				this != root.clerical_elector_title
+			}
+		}
+		trigger_if = {
+			limit = { has_treasury = yes }
+			short_term_treasury >= medium_treasury_or_gold_value
+		}
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			has_trait = zealous
+			add = 25
+		}
+		modifier = {
+			piety_level < 3
+			add = 20
+		}
+	}
+}

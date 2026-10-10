@@ -1,0 +1,1839 @@
+﻿# Gerado por docs/dev/regen_sacrament_decisions.py (marco 4, fase 4d) a partir do vanilla; nao editar a mao, regerar.
+# Eventos dos sacramentos do Imperialis (copias de events/dlc/pam/pam_decision_events.txt, tema faith).
+
+namespace = ci_pam_decision_events
+
+ci_pam_decision_events.0001 = {
+	type = character_event
+	title = ci_pam_decision_events.0001.t
+	desc = {
+		desc = ci_pam_decision_events.0001.desc.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment <= -50
+				}
+				desc = ci_pam_decision_events.0001.desc.bad
+			}
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment >= 50
+				}
+				desc = ci_pam_decision_events.0001.desc.good
+			}
+			desc = ci_pam_decision_events.0001.desc.neutral
+		}
+		triggered_desc = {
+			trigger = { num_sinful_traits > 0 }
+			desc = ci_pam_decision_events.0001.desc.sin.preamble
+		}
+		desc = {
+			first_valid = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lustful
+						rite = { trait_is_sin_rite = lustful }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.lustful
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = chaste
+						rite = { trait_is_sin_rite = chaste }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.chaste
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = gluttonous
+						rite = { trait_is_sin_rite = gluttonous }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.gluttonous
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = temperate
+						rite = { trait_is_sin_rite = temperate }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.temperate
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = greedy
+						rite = { trait_is_sin_rite = greedy }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.greedy
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = generous
+						rite = { trait_is_sin_rite = generous }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.generous
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = lazy
+						rite = { trait_is_sin_rite = lazy }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.lazy
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = diligent
+						rite = { trait_is_sin_rite = diligent }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.diligent
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = wrathful
+						rite = { trait_is_sin_rite = wrathful }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.wrathful
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = calm
+						rite = { trait_is_sin_rite = calm }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.calm
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = patient
+						rite = { trait_is_sin_rite = patient }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.patient
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = impatient
+						rite = { trait_is_sin_rite = impatient }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.impatient
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = arrogant
+						rite = { trait_is_sin_rite = arrogant }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.arrogant
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = humble
+						rite = { trait_is_sin_rite = humble }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.humble
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = deceitful
+						rite = { trait_is_sin_rite = deceitful }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.deceitful
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = honest
+						rite = { trait_is_sin_rite = honest }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.honest
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = craven
+						rite = { trait_is_sin_rite = craven }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.craven
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = brave
+						rite = { trait_is_sin_rite = brave }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.brave
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = shy
+						rite = { trait_is_sin_rite = shy }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.shy
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = gregarious
+						rite = { trait_is_sin_rite = gregarious }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.gregarious
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = ambitious
+						rite = { trait_is_sin_rite = ambitious }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.ambitious
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = content
+						rite = { trait_is_sin_rite = content }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.content
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = arbitrary
+						rite = { trait_is_sin_rite = arbitrary }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.arbitrary
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = just
+						rite = { trait_is_sin_rite = just }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.just
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = cynical
+						rite = { trait_is_sin_rite = cynical }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.cynical
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = zealous
+						rite = { trait_is_sin_rite = zealous }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.zealous
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = paranoid
+						rite = { trait_is_sin_rite = paranoid }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.paranoid
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = trusting
+						rite = { trait_is_sin_rite = trusting }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.trusting
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = compassionate
+						rite = { trait_is_sin_rite = compassionate }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.compassionate
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = callous
+						rite = { trait_is_sin_rite = callous }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.callous
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = stubborn
+						rite = { trait_is_sin_rite = stubborn }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.stubborn
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = fickle
+						rite = { trait_is_sin_rite = fickle }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.fickle
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = eccentric
+						rite = { trait_is_sin_rite = eccentric }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.eccentric
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = vengeful
+						rite = { trait_is_sin_rite = vengeful }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.vengeful
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = forgiving
+						rite = { trait_is_sin_rite = forgiving }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.forgiving
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = sadistic
+						rite = { trait_is_sin_rite = sadistic }
+					}
+					desc = ci_pam_decision_events.0001.desc.sin.sadistic
+				}
+			}
+		}
+		desc = ci_pam_decision_events.0001.desc.outro
+	}
+	theme = faith
+	left_portrait = { 
+		character = root
+		animation = prayer_standing
+	}
+
+	right_portrait = { 
+		character = scope:chaplain
+		animation = personality_zealous
+	}
+
+	immediate = {
+		cp:councillor_court_chaplain = { save_scope_as = chaplain }
+		random_secret = {
+			limit = {
+				NOT = { is_known_by = scope:chaplain }
+			}
+			save_scope_as = my_secret
+		}
+	}
+	
+	option = { # Amen
+		name = ci_pam_decision_events.0001.a
+		if = {
+			limit = {
+				spiritual_fulfillment < 0
+			}
+			change_spiritual_fulfillment = medium_spiritual_fulfillment_value
+			stress_and_fulfillment_impact = {
+				base = minor_stress_impact_loss
+				zealous = medium_stress_impact_loss
+				humble = medium_stress_impact_loss
+			}
+		}
+		else = {
+			stress_and_fulfillment_impact = {
+				base = medium_stress_impact_loss
+				zealous = medium_stress_impact_loss
+				humble = medium_stress_impact_loss
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:my_secret
+			}
+			random = {
+				chance = 50
+				scope:my_secret = { reveal_to = scope:chaplain }
+			}
+		}
+		custom_tooltip = ci_pam_decision_events.0001.a.confession_random_outcome
+		hidden_effect = {
+			random_list = {
+				40 = { # Nothing happens
+					send_interface_toast = {
+						title = ci_pam_decision_events.0001.a.piety
+						left_icon = root
+						if = {
+							limit = {
+								has_personal_tenet_flag = tenet_confession_decision_bonus
+							}
+							add_piety = medium_piety_gain
+						}
+						else = {
+							add_piety = minor_piety_gain
+						}
+					}
+				}
+				5 = { # Priest gets hook
+					trigger = {
+						scope:chaplain = {
+							can_add_hook = {
+								target = root
+								type = weak_blackmail_hook_no_secret
+							}
+						}
+					}
+					modifier = {
+						has_personal_tenet_flag = tenet_confession_decision_bonus
+						factor = 0
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0001.a.hook
+						left_icon = root
+						right_icon = scope:chaplain
+						scope:chaplain = {
+							add_hook = {
+								target = root
+								type = weak_blackmail_hook_no_secret
+							}
+						}
+					}
+				}
+				5 = { # Priest loses opinion
+					trigger = {
+						scope:chaplain = {
+							NOT = { has_trait = cynical }
+						}
+						num_sinful_traits > 0
+					}
+					modifier = {
+						has_personal_tenet_flag = tenet_confession_decision_bonus
+						factor = 0
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0001.a.opinion_malus
+						left_icon = root
+						right_icon = scope:chaplain
+						scope:chaplain = {
+							add_opinion = {
+								target = root
+								opinion = -25
+								modifier = impious_opinion
+							}
+						}
+					}
+				}
+				10 = { # You learn of a courtier's secret
+					trigger = {
+						any_courtier_or_guest = {
+							any_secret = {
+								NOT = { is_known_by = root }
+							}
+						}
+					}
+					modifier = {
+						has_personal_tenet_flag = tenet_confession_decision_bonus
+						add = 50
+					}
+					random_courtier_or_guest = {
+						limit = {
+							any_secret = {
+								NOT = { is_known_by = root }
+							}
+						}
+						save_scope_as = my_courtier
+						random_secret = {
+							limit = {
+								NOT = { is_known_by = root }
+							}
+							save_scope_as = courtier_secret
+						}
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0001.a.courtier_secret
+						left_icon = root
+						right_icon = scope:my_courtier
+						scope:courtier_secret = { reveal_to = root }
+					}
+				}
+				5 = { # You hear someone else confessing
+					modifier = {
+						has_lifestyle = intrigue_lifestyle
+						add = 5
+					}
+					modifier = {
+						has_personal_tenet_flag = tenet_confession_decision_bonus
+						add = 30
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0001.a.random_confession
+						left_icon = root
+						add_intrigue_lifestyle_xp = medium_lifestyle_xp
+					}
+				}
+				10 = { # Chaplain asks you to go on pilgrimage
+					trigger = {
+						NOT = { has_character_modifier = pam_confession_penalty_modifier }
+						rite = {
+							NOT = { rite_has_doctrine = doctrine_pilgrimage_forbidden }
+						}
+					}
+					modifier = {
+						NOT = { has_trait = pilgrim }
+						add = 5
+					}
+					modifier = {
+						num_sinful_traits > 0
+						add = 5
+					}
+					modifier = {
+						has_personal_tenet_flag = tenet_confession_decision_bonus
+						factor = 0
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0001.a.pilgrimage
+						left_icon = root
+						right_icon = scope:chaplain
+						add_character_modifier = { # Removed when you do the thing
+							modifier = pam_confession_penalty_modifier
+						}
+						set_variable = { # To check what they asked you to do
+							name = pam_confession_penalty_var
+							value = flag:pilgrimage
+						}
+					}
+				}
+				5 = { # Chaplain asks you to employ a High Almoner
+					trigger = {
+						can_employ_court_position_type = high_almoner_court_position
+						NOT = { employs_court_position = high_almoner_court_position }
+					}
+					modifier = {
+						has_personal_tenet_flag = tenet_confession_decision_bonus
+						factor = 0
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0001.a.high_almoner
+						left_icon = root
+						right_icon = scope:chaplain
+						add_character_modifier = { # Removed when you do the thing
+							modifier = pam_confession_penalty_modifier
+						}
+						set_variable = { # To check what they asked you to do
+							name = pam_confession_penalty_var
+							value = flag:high_almoner
+						}
+					}
+				}
+				15 = { # Chaplain asks you to convert astray family member
+					trigger = {
+						OR = {
+							any_spouse = { faith != root.faith }
+							any_child = { faith != root.faith }
+						}
+					}
+					modifier = {
+						has_personal_tenet_flag = tenet_confession_decision_bonus
+						add = -10
+					}
+					random_spouse = {
+					   limit = { faith != root.faith }
+					   save_scope_as = target
+					}
+					if = {
+						limit = {
+							NOT = { exists = scope:target }
+						}
+						random_child = {
+							limit = { faith != root.faith }
+							save_scope_as = target
+						}
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0001.a.conversion
+						left_icon = root
+						right_icon = scope:target
+						add_character_modifier = { # Removed when you do the thing
+							modifier = pam_confession_penalty_modifier
+						}
+						set_variable = { # To check what they asked you to do
+							name = pam_confession_penalty_var
+							value = scope:target
+						}
+					}
+				}
+				5 = { # Chaplain asks you to not go to war for 5y
+					modifier = {
+						rite = {
+							OR = {
+								rite_has_tenet = tenet_pacifism
+								rite_has_tenet = tenet_peace_of_god
+							}
+						}
+						add = 10
+					}
+					modifier = {
+						has_personal_tenet_flag = tenet_confession_decision_bonus
+						factor = 0
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0001.a.no_war
+						left_icon = root
+						right_icon = scope:chaplain
+						add_character_modifier = {
+							modifier = pam_confession_penalty_modifier
+							years = 5 # It'll go away on its own for this one
+						}
+						set_variable = { # To check what they asked you to do
+							name = pam_confession_penalty_var
+							value = flag:no_war
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+ci_pam_decision_events.0002 = {
+	type = character_event
+	title = ci_pam_decision_events.0002.t
+	desc = {
+		desc = ci_pam_decision_events.0002.desc.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						has_realm_law = crowned_king
+						has_realm_law = crowned_emperor
+					}
+				}
+				desc = ci_pam_decision_events.0002.desc.crowned
+			}
+			desc = ci_pam_decision_events.0002.desc.uncrowned
+		}
+		desc = ci_pam_decision_events.0002.desc.mid
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment <= -50
+				}
+				desc = ci_pam_decision_events.0002.desc.bad
+			}
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment >= 50
+				}
+				desc = ci_pam_decision_events.0002.desc.good
+			}
+			desc = ci_pam_decision_events.0002.desc.neutral
+		}
+		desc = ci_pam_decision_events.0002.desc.outro
+	}
+	theme = faith
+	left_portrait = { 
+		character = root
+		animation = personality_zealous
+	}
+	right_portrait = { 
+		character = scope:my_chaplain
+		animation = preaching_no_book
+		camera = camera_event_center_close_to_right
+	}
+	override_effect_2d = {
+		reference = legend_glow
+	}
+	
+	immediate = {
+		save_scope_as = devotional_guy
+		if = {
+			limit = { exists = cp:councillor_court_chaplain }
+			cp:councillor_court_chaplain = { save_scope_as = my_chaplain }
+		}
+		else_if = {
+			limit = {
+				any_vassal = {
+					government_has_flag = government_is_theocracy
+				}
+			}
+			ordered_vassal = {
+				order_by = primary_title.tier
+				limit = { government_has_flag = government_is_theocracy }
+				save_scope_as = my_chaplain
+			}
+		}
+		else = {
+			create_character = {
+				template = priest_character_template
+				location = root.location
+				save_scope_as = my_chaplain
+			}
+		}
+	}
+	
+	option = { # Push harder
+		show_as_unavailable = { always = yes }
+		name = ci_pam_decision_events.0002.a
+		trigger = {
+			custom_tooltip = {
+				text = ci_pam_decision_act_of_devotion_fame_tooltip
+				prestige_level < 3
+			}
+		}
+		add_piety_level = -1
+		add_prestige_level = 1
+		add_prestige = medium_prestige_gain
+
+		ai_chance = {
+			base = 0
+		}
+	}
+	
+	option = { # Collect your prestige
+		name = ci_pam_decision_events.0002.b
+		add_prestige = major_prestige_gain
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+ci_pam_decision_events.0003 = {
+	type = character_event
+	title = ci_pam_decision_events.0003.t
+	desc = {
+		desc = ci_pam_decision_events.0003.desc.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:target_child.spiritual_fulfillment <= -50
+				}
+				desc = ci_pam_decision_events.0003.desc.bad
+			}
+			triggered_desc = {
+				trigger = {
+					scope:target_child.spiritual_fulfillment >= 50
+				}
+				desc = ci_pam_decision_events.0003.desc.good
+			}
+			desc = ci_pam_decision_events.0003.desc.neutral
+		}
+	}
+	theme = faith
+	left_portrait = { 
+		character = root
+		animation = prayer_standing
+	}
+	right_portrait = { 
+		character = scope:target_child
+		triggered_animation = {
+			trigger = {
+				has_trait = cynical
+			}
+			animation = boredom
+		}
+		triggered_animation = {
+			trigger = {
+				has_personality_submissive_trigger = yes
+			}
+			animation = worry
+		}
+		triggered_animation = {
+			trigger = {
+				OR = {
+					learning >= high_skill_rating
+					has_trait = theologian
+					has_trait = zealous
+					has_lifestyle = learning_lifestyle
+				}
+			}
+			animation = interested
+		}
+		animation = prayer_standing
+	}
+	override_background = { reference = bedchamber } # Intentional, we talk about the private chapel
+	
+	immediate = {
+		if = {
+			limit = { scope:primary_heir = yes }
+			primary_heir = { save_scope_as = target_child }
+		}
+		else = {
+			random_relation = {
+				type = favorite_child
+				save_scope_as = target_child
+			}
+		}
+		scope:target_child = { set_variable = pam_mentor_sp_taken_var }
+	}
+	
+	option = { # Push them _more_
+		name = ci_pam_decision_events.0003.a
+		if = {
+			limit = {
+				NOT = { has_relation_grudge = scope:target_child }
+			}
+			scope:target_child = {
+				set_relation_grudge = {
+					target = root
+					reason = grudge_pressured_me_sp
+				}
+			}
+		}
+		scope:target_child = {
+			if = {
+				limit = {
+					is_available_quick = {
+						advanced_ruler = yes
+					}
+				}
+				change_spiritual_fulfillment = 50
+			}
+		}
+
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_trait = callous
+				add = 25
+			}
+		}
+	}
+	
+	option = { # Listen, child
+		name = ci_pam_decision_events.0003.b
+		scope:target_child = {
+			if = {
+				limit = {
+					is_available_quick = {
+						advanced_ruler = yes
+					}
+				}
+				change_spiritual_fulfillment = 25
+			}
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	after = {
+		custom_tooltip = ci_pam_decision_events.0003.after_tt
+		hidden_effect = {
+			random_list = {
+				5 = {
+					trigger = {
+						scope:target_child = {
+							any_secret = {
+								NOT = { is_known_by = root }
+							}
+						}
+					}
+					modifier = {
+						scope:target_child = { has_any_good_relationship_with_root_trigger = yes }
+						add = 5
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0003.secret
+						right_icon = scope:target_child
+						scope:target_child = {
+							random_secret = {
+								limit = {
+									NOT = { is_known_by = root }
+								}
+								reveal_to = root
+							}
+						}
+					}
+				}
+				1 = {
+					trigger = {
+						scope:target_child = {
+							NOT = { has_trait = lifestyle_mystic }
+						}
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0003.mystic
+						right_icon = scope:target_child
+						scope:target_child = { add_trait = lifestyle_mystic }
+					}
+				}
+				2 = {
+					modifier = {
+						scope:target_child = { has_lifestyle = learning_lifestyle }
+						add = 2
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0003.learning
+						right_icon = scope:target_child
+						scope:target_child = { add_learning_skill = 1 }
+					}
+				}
+				3 = {
+					send_interface_toast = {
+						title = ci_pam_decision_events.0003.education
+						right_icon = scope:target_child
+						scope:target_child = { gain_appropriate_lifestyle_medium_xp_effect = yes }
+					}
+				}
+				3 = {
+					modifier = {
+						scope:target_child = { has_personality_emotional_trigger = yes }
+						add = 2
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0003.stress
+						right_icon = scope:target_child
+						scope:target_child = { add_stress = medium_stress_gain }
+					}
+				}
+				5 = {
+					trigger = {
+						scope:target_child = { num_of_relation_lover > 0 }
+					}
+					modifier = {
+						scope:target_child = {
+							any_relation = {
+								type = lover
+								num_sinful_traits > 0
+							}
+						}
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0003.lover
+						right_icon = scope:target_child
+						scope:target_child = {
+							random_relation = {
+								type = lover
+								save_scope_as = lover_scope
+							}
+							remove_relation_lover = scope:lover_scope
+						}
+					}
+				}
+				2 = {
+					trigger = {
+						num_sinful_traits > 0
+					}
+					send_interface_toast = {
+						title = ci_pam_decision_events.0003.trait
+						right_icon = scope:target_child
+						scope:target_child = { flip_sinful_trait_effect = yes }
+					}
+				}
+			}
+		}
+	}
+}
+
+ci_pam_decision_events.0005 = {
+	type = character_event
+	title = ci_pam_decision_events.0005.t
+	window = big_event_window
+	theme = faith
+	override_background = {
+		trigger = {
+            is_travelling = no
+        }
+        reference = bedchamber
+	}
+	override_background = {
+        trigger = {
+            is_travelling = yes
+        }
+        reference = ep3_relaxing_tent
+    }
+	desc = {
+		triggered_desc = {
+			trigger = {
+				exists = scope:death_trait
+			}
+			desc = ci_pam_decision_events.0005.desc.healthtrait
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment <= -50
+				}
+				desc = ci_pam_decision_events.0005.desc.bad
+			}
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment >= 50
+				}
+				desc = ci_pam_decision_events.0005.desc.good
+			}
+			desc = ci_pam_decision_events.0005.desc.neutral
+		}
+		
+		triggered_desc = {
+			trigger = {
+				exists = scope:fam_or_friend_1
+			}
+			desc = ci_pam_decision_events.0005.desc.notalone
+		}
+		triggered_desc = {
+			trigger = {
+				NOT = {
+					exists = scope:fam_or_friend_1
+				}
+			}
+			desc = ci_pam_decision_events.0005.desc.alone
+		}
+		desc = ci_pam_decision_events.0005.desc.outro
+	}
+
+	left_portrait = { 
+		character = scope:fam_or_friend_1
+		animation = crying
+	}
+	center_portrait = {
+		character = scope:soon_dead
+		triggered_animation = {
+			trigger = {
+				spiritual_fulfillment <= -50
+			}
+			animation = poison
+		}
+		triggered_animation = {
+			trigger = {
+				spiritual_fulfillment <= -25
+			}
+			animation = paranoia
+		}		
+		animation = prayer
+	}
+	right_portrait = { 
+		character = scope:confessor
+		animation = divine_gesture_3
+	}
+
+	#gathered loved ones
+	lower_left_portrait = {
+		character = scope:player_heir
+	}
+	lower_center_portrait = {
+		character = scope:fam_or_friend_2
+	}
+	lower_right_portrait = {
+		character = scope:fam_or_friend_3
+	}
+
+	immediate = {
+		#Root
+		root = { save_scope_as = soon_dead }
+		#Find a priest
+		if = {
+			limit = {
+				cp:councillor_court_chaplain ?= {
+					basic_is_available_ai = yes
+				}
+			}
+			cp:councillor_court_chaplain ?= { save_scope_as = confessor }
+		}
+		#Find a different clergy member in the area
+		else_if = {
+			limit = {
+				NOT = {
+					exists = scope:confessor
+				}
+			}
+			random_pool_character = {
+				province = root.location
+				limit = {
+					faith = root.faith
+					is_clergy = yes
+					basic_is_available_ai = yes
+				}
+				save_scope_as = confessor
+			}
+		}
+		else = {
+			#make a priest
+			create_character = {
+				template = virtuous_priest_character_template
+				dynasty = none
+				location = root.location
+				culture = root.location.culture
+				faith = root.faith
+				rite = root.rite
+				save_scope_as = confessor
+			}
+			add_character_flag = {
+				flag = fake_confessor
+				days = 10
+			}
+		}
+		#Find Player Heir
+		scope:soon_dead.player_heir ?= { save_scope_as = player_heir}
+		#Find Friends & Family
+		ordered_courtier = {
+			limit = {
+				NOT =  {
+					this = scope:soon_dead.player_heir
+				}
+				OR = {
+					has_any_moderate_good_relationship_with_character_trigger = { CHARACTER = scope:soon_dead }
+					is_close_family_of = scope:soon_dead
+					is_spouse_of = scope:soon_dead
+				}	
+			}
+	
+			#Order by how much they like you, but still prioritize spouse
+			order_by = {
+				value = "opinion(root)"
+				if = {
+					limit = {
+						is_spouse_of = root
+					}
+					add = 100
+				} 
+			}
+			max = 3
+			#always put this when there is a max or it will be unhappy who knows why
+			check_range_bounds = no
+			if = {
+				limit = { exists = scope:fam_or_friend_2 }
+				save_scope_as = fam_or_friend_3
+			}
+			else_if = {
+				limit = { exists = scope:fam_or_friend_1 }
+				save_scope_as = fam_or_friend_2
+			}
+			else = { save_scope_as = fam_or_friend_1 }
+		}
+		#Find a secret
+		random_secret = {
+			limit = {
+				NOT = { is_known_by = scope:confessor }
+			}
+			save_scope_as = my_secret
+		}
+		#Find a reason for your death
+		random_character_trait = {
+			limit = {
+				has_trait_category = health
+				has_trait_flag = lowers_health
+			}
+			save_scope_as = death_trait
+		} 
+
+	}
+	
+	option = { # Time for penance 
+		name = ci_pam_decision_events.0005.a
+		change_spiritual_fulfillment = major_spiritual_fulfillment_value
+		stress_and_fulfillment_impact = {
+			base = minor_stress_impact_loss
+			zealous = medium_stress_impact_loss
+			humble = medium_stress_impact_loss
+		}
+		
+		trigger_event = {
+			id = ci_pam_decision_events.0006
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { # No confession for me
+		trigger = {
+			OR = {
+				has_trait = cynical
+				any_secret = { type = secret_non_believer }
+				spiritual_fulfillment < -20
+			} 
+		}
+		name = ci_pam_decision_events.0005.b
+		change_spiritual_fulfillment = medium_spiritual_fulfillment_loss
+		stress_and_fulfillment_impact = {
+			cynical = major_stress_impact_loss
+			paranoid = major_stress_impact_loss
+		}
+		trigger_event = {
+			id = ci_pam_decision_events.0006
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+ci_pam_decision_events.0006 = {
+	type = character_event
+	title = ci_pam_decision_events.0006.t
+	window = big_event_window
+	theme = faith
+	override_background = {
+		trigger = {
+            is_travelling = no
+        }
+        reference = bedchamber
+	}
+	override_background = {
+        trigger = {
+            is_travelling = yes
+        }
+        reference = ep3_relaxing_tent
+    }
+	desc = {
+		desc = ci_pam_decision_events.0006.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment <= -50
+				}
+				desc = ci_pam_decision_events.0006.desc.bad
+			}
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment >= 50
+				}
+				desc = ci_pam_decision_events.0006.desc.good
+			}
+			desc = ci_pam_decision_events.0006.desc.neutral
+		}
+		#Sin based on a sinful trait
+		triggered_desc = {
+			trigger = {
+				exists = scope:my_sinful_trait
+			}
+			desc = ci_pam_decision_events.0006.desc.my_sinful_trait_sin
+		}
+		#Sin based on a sinful secret
+		triggered_desc = {
+			trigger = {
+				exists = scope:my_secret
+			}
+			desc = ci_pam_decision_events.0006.desc.secret_sin
+		}
+		#Sin based on a criminal trait
+		triggered_desc = {
+			trigger = {
+				exists = scope:my_criminal_trait
+			}
+			desc = ci_pam_decision_events.0006.desc.my_criminal_trait_sin
+		}
+		#Sin desc if you have neither of the above
+		triggered_desc = {
+			trigger = {
+				NOR = {
+					exists = scope:my_secret
+					exists = scope:my_sinful_trait
+				}
+				spiritual_fulfillment < 50
+			}
+			desc = ci_pam_decision_events.0006.desc.sin_default
+		}
+		#Sin desc if you have neither of the above
+		triggered_desc = {
+			trigger = {
+				NOR = {
+					exists = scope:my_secret
+					exists = scope:my_sinful_trait
+				}
+				spiritual_fulfillment >= 50
+			}
+			desc = ci_pam_decision_events.0006.desc.sin_default_good_sp
+		}		
+		desc = ci_pam_decision_events.0006.desc.outro
+	}
+
+	left_portrait = { 
+		character = scope:soon_dead
+		animation = beg
+		camera = camera_council
+	}
+	right_portrait = { 
+		character = scope:confessor
+		animation = personality_zealous
+		camera = camera_body_left
+	}
+
+	immediate = {
+		#Find HoR
+		scope:soon_dead.faith.religious_head = { save_scope_as = religious_head }
+		#Find a secret
+		random_secret = {
+			limit = {
+				NOT = { is_known_by = scope:confessor }
+			}
+			save_scope_as = my_secret
+		}
+		#Find a sinful trait
+		random_character_trait = {
+			limit = {
+				save_temporary_scope_as = temp_trait
+				root.rite = {		
+					trait_is_sin_rite = scope:temp_trait
+				}
+			}
+			save_scope_as = my_sinful_trait
+		}	
+		#Find Criminal trait
+		random_character_trait = {
+			limit = {
+				save_temporary_scope_as = temp_trait
+				root = {	
+					trait_is_criminal_in_rite_trigger = { 
+						TRAIT = scope:temp_trait 
+						RITE = rite 
+						GENDER_CHARACTER = root 
+					}
+				}
+			}
+			save_scope_as = my_criminal_trait
+		}
+	}
+
+	option = { # Confess 
+		name = ci_pam_decision_events.0006.a
+		change_spiritual_fulfillment = medium_spiritual_fulfillment_value
+		stress_and_fulfillment_impact = {
+			base = minor_stress_impact_loss
+			zealous = medium_stress_impact_loss
+			humble = medium_stress_impact_loss
+		} 
+		if = {
+			limit = {
+				exists = scope:my_secret
+			}
+			random = {
+				chance = 50
+				scope:my_secret = { reveal_to = scope:confessor }
+			}
+			random = {
+				chance = 10
+				scope:my_secret = { expose_secret = scope:soon_dead }
+			}
+		}
+		trigger_event = {
+			id = ci_pam_decision_events.0007
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { # No need to share everything!
+		trigger = {
+			exists = scope:my_secret
+		}
+		name = ci_pam_decision_events.0006.b
+		flavor = ci_pam_decision_events.0006.b.flavor
+		
+		change_spiritual_fulfillment = major_spiritual_fulfillment_loss
+		stress_and_fulfillment_impact = {
+			base = minor_stress_impact_loss
+			zealous = major_stress_impact_gain
+			honest = major_stress_impact_gain
+			loyal = minor_stress_impact_loss
+		}
+		
+		trigger_event = {
+			id = ci_pam_decision_events.0007
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+ci_pam_decision_events.0007 = {
+	type = character_event
+	title = ci_pam_decision_events.0007.t
+	window = big_event_window
+	theme = faith
+	override_background = {
+		trigger = {
+            is_travelling = no
+        }
+        reference = bedchamber
+	}
+	override_background = {
+        trigger = {
+            is_travelling = yes
+        }
+        reference = ep3_relaxing_tent
+    }
+    override_effect_2d = {
+		trigger = {
+			spiritual_fulfillment >= 50
+		}
+		reference = legend_glow
+	}
+	desc = {
+		desc = ci_pam_decision_events.0007.intro
+		#Eucharist based on SP
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment <= -50
+				}
+				desc = ci_pam_decision_events.0007.desc.bad
+			}
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment >= 50
+				}
+				desc = ci_pam_decision_events.0007.desc.good
+			}
+			desc = ci_pam_decision_events.0007.desc.neutral
+		}
+		#Extreme Unction based on SP
+		desc = ci_pam_decision_events.0007.desc.oil.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment <= -50
+				}
+				desc = ci_pam_decision_events.0007.desc.oil.bad
+			}
+			triggered_desc = {
+				trigger = {
+					spiritual_fulfillment >= 50
+				}
+				desc = ci_pam_decision_events.0007.desc.oil.good
+			}
+			desc = ci_pam_decision_events.0007.desc.oil.neutral
+		}
+			
+		desc = ci_pam_decision_events.0007.desc.outro
+	}
+
+	left_portrait = {
+		character = scope:soon_dead
+		
+		triggered_animation = {
+			trigger = {
+				spiritual_fulfillment >= 50
+			}
+			animation = divine_ecstasy
+		}
+		triggered_animation = {
+			trigger = {
+				spiritual_fulfillment <= -30
+			}
+			animation = worry
+		}		
+		animation = prayer
+		camera = camera_event_center_close_to_right
+	}
+	right_portrait = { 
+		character = scope:confessor
+		animation = prayer_crossing
+	}
+
+	immediate = {
+		#Find HoR
+		scope:soon_dead.faith.religious_head = { save_scope_as = religious_head }
+		#Find holding to give to Monastic order
+		ordered_held_title = {
+			order_by = {
+				value = county.development_level
+				if = {
+					limit = {
+						title_province = {
+							is_county_capital = no
+						}
+					}
+					add = 100
+				}
+				multiply = -1
+			}
+			title_tier = barony
+			limit = {
+				barony_is_valid_for_holy_order_lease_trigger = { CHARACTER = root }
+			}
+			save_scope_as = military_title_to_give
+		}
+		ordered_held_title = {
+			order_by = {
+				value = county.development_level
+				if = {
+					limit = {
+						title_province = {
+							is_county_capital = no
+						}
+					}
+					add = 100
+				}
+				multiply = -1
+			}
+			title_tier = barony
+			limit = {
+				barony_is_valid_for_monastic_order_lease_trigger = { CHARACTER = root }
+			}
+			save_scope_as = monastic_title_to_give
+		}
+		#Find a monastic order to donate to
+		#Ideally one that you patronize
+		faith = {
+			random_faith_holy_order = {
+			    limit = { 
+			    	holy_order_patron = root
+			    	leader = { government_has_flag = government_is_monastic_holy_order } 
+			    }
+				save_scope_as = monastic_order
+			}
+		}
+		#If not, find one that would realistically make sense to support
+		if = {
+		    limit = {
+		        NOT = {
+		            exists = scope:monastic_order
+		        }
+		    }
+		    faith = {
+		        random_faith_holy_order = {
+		            limit = {
+		                holy_order_range_trigger = { CHARACTER = root }
+		                leader = { government_has_flag = government_is_monastic_holy_order }
+		            }
+		            save_scope_as = monastic_order
+		        }
+		    }
+		}
+		#Find a military order to donate to
+		#Ideally one that you patronize...or should it only be one that you patronize?
+		faith = {
+			random_faith_holy_order = {
+			    limit = { 
+			    	holy_order_patron = root
+			    	leader = { government_has_flag = government_is_military_holy_order } 
+			    }
+				save_scope_as = military_order
+			}
+		}
+		#If not, find one that would realistically make sense to support
+		if = {
+		    limit = {
+		        NOT = {
+		            exists = scope:military_order
+		        }
+		    }
+		    faith = {
+		        random_faith_holy_order = {
+		            limit = {
+		                holy_order_range_trigger = { CHARACTER = root }
+		                leader = { government_has_flag = government_is_military_holy_order }
+		            }
+		            save_scope_as = military_order
+		        }
+		    }
+		}
+	}
+
+	option = { #Option A) GIVE TO A MONASTIC ORDER
+		trigger = {
+			exists = scope:monastic_order
+		}
+		name = ci_pam_decision_events.0007.a
+		change_spiritual_fulfillment = medium_spiritual_fulfillment_value
+		if = {
+			limit = {
+				exists = scope:monastic_title_to_give 
+			}
+			scope:monastic_title_to_give = {
+				lease_out_to_holy_order = scope:monastic_order
+			}
+			scope:player_heir ?= {
+				add_character_modifier = {
+					modifier = pam_last_rites_monastic_order_donation_modifier
+					years = 10
+				}
+			}
+			
+		}
+		else = {
+			scope:monastic_order.leader = {
+				save_scope_as = recipient
+			}
+			save_scope_as = actor
+			donate_to_monastic_order_effect = yes
+			scope:player_heir = {
+				add_character_modifier = {
+					modifier = pam_last_rites_monastic_order_donation_modifier
+					years = 5
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = { #Option B) GIVE TO A MILITARY ORDER
+		trigger = {
+			exists = scope:military_order
+		}
+		name = ci_pam_decision_events.0007.b
+		change_spiritual_fulfillment = medium_spiritual_fulfillment_value
+		if = {
+			limit = {
+				exists = scope:military_title_to_give 
+			}
+			scope:military_title_to_give = {
+				lease_out_to_holy_order = scope:military_order
+			}
+			scope:player_heir ?= {
+				add_character_modifier = {
+					modifier = pam_last_rites_military_order_donation_modifier
+					years = 10
+				}
+			}	
+		}
+		else = {
+			scope:military_order.leader = {
+				save_scope_as = recipient
+			}
+			save_scope_as = actor
+			donate_to_monastic_order_effect = yes
+			scope:player_heir = {
+				add_character_modifier = {
+					modifier = pam_last_rites_military_order_donation_modifier
+					years = 5
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = { #Option C) GIVE TO CHURCH
+		trigger = {
+			exists = scope:religious_head
+			scope:religious_head != root
+		}
+		name = ci_pam_decision_events.0007.c
+		change_spiritual_fulfillment = major_spiritual_fulfillment_value
+		scope:player_heir ?= {
+			add_character_modifier = {
+				modifier = ci_pam_last_rites_church_donation_modifier
+				years = 5
+			}
+		}
+		pay_short_term_gold = {
+			gold = major_gold_value
+			target = scope:religious_head 
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Option D) Opt out
+		name = ci_pam_decision_events.0007.d
+		change_spiritual_fulfillment = minor_spiritual_fulfillment_value
+		ai_chance = {
+			base = 100
+		}
+	}
+	after = {
+		scope:confessor ?= {
+			if = {
+				limit = {
+					has_character_flag = fake_confessor
+					root = {
+						is_ai = yes
+					}
+				}
+				silent_disappearance_effect = yes
+			}
+		}
+	}	
+}
+
+ci_pam_decision_events.0015 = {
+	type = character_event
+	title = ci_pam_decision_events.0015.t
+	
+	 desc = {
+		 first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:my_praiser
+				}
+				desc = ci_pam_decision_events.0015.desc.intro.praiser
+			}
+			desc = ci_pam_decision_events.0015.desc.intro.no_praiser
+		}
+		desc = ci_pam_decision_events.0015.desc.intro
+		triggered_desc = {
+			trigger = {
+				exists = scope:my_virtuous_trait
+			}
+			desc = ci_pam_decision_events.0015.desc.virtuoustrait
+		}
+		desc = ci_pam_decision_events.0015.desc.mid
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:my_virtuous_tenet
+				}
+				desc = ci_pam_decision_events.0015.desc.virtuoustenet
+			}
+			desc = ci_pam_decision_events.0015.desc.novirtuoustenet
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:praise_worthy_priest.spiritual_fulfillment <= -50
+				}
+				desc = ci_pam_decision_events.0015.desc.bad
+			}
+			triggered_desc = {
+				trigger = {
+					scope:praise_worthy_priest.spiritual_fulfillment >= 50
+				}
+				desc = ci_pam_decision_events.0015.desc.good
+			}
+			desc = ci_pam_decision_events.0015.desc.neutral
+		}
+		desc = ci_pam_decision_events.0015.desc.outro
+	}
+	
+	theme = faith
+	override_background = {
+		reference = pam_romanesque_church_exterior
+	}
+	left_portrait = { 
+		character = scope:praise_worthy_priest
+		animation = prayer_standing_eyes
+		camera = camera_event_center_pointing_forward
+	}
+	right_portrait = {
+		trigger = { exists = scope:my_praiser }
+		character = scope:my_praiser
+		triggered_animation = {
+			trigger = {
+				is_clergy = yes
+			}
+			animation = preaching
+			camera = camera_event_center_close_to_right
+		}
+		animation = admiration
+		camera = camera_event_center_moved_left
+	}
+	override_effect_2d = {
+		reference = legend_glow
+	}
+	
+	immediate = {
+		save_scope_as = praise_worthy_priest
+		save_scope_as = actor
+		save_scope_as = recipient
+		random_character_trait = {
+			limit = {
+				save_temporary_scope_as = temp_trait
+				root.rite = {
+					trait_is_virtue_rite = scope:temp_trait
+				}
+			}
+			save_scope_as = my_virtuous_trait
+		}
+		random_personal_tenet = {
+			limit = {
+				save_temporary_scope_as = temp_tenet
+				scope:praise_worthy_priest.rite = {
+					has_at_least_tenet_status = {
+						tenet = scope:temp_tenet
+						status = permitted
+					}
+				}
+			}
+			save_scope_as = my_virtuous_tenet
+		}
+		faith = {
+			ordered_faith_ruler = {
+				limit = {
+					has_any_moderate_good_relationship_with_character_trigger = { CHARACTER = scope:praise_worthy_priest }
+					highest_held_title_tier >= tier_duchy
+					rite = root.rite
+					this != scope:praise_worthy_priest
+					is_adult = yes
+					is_available = yes
+				}
+				order_by = {
+					value = primary_title.tier
+					multiply = piety_level
+					add = "opinion(root)"
+					if = {
+						limit = {
+							is_close_family_of = scope:praise_worthy_priest
+						}
+						multiply = 1.5
+					}
+				}
+				save_scope_as = my_praiser
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = scope:my_praiser }
+				exists = cp:councillor_court_chaplain
+				cp:councillor_court_chaplain = {
+					is_available = yes
+					this != root
+				}
+			}
+			cp:councillor_court_chaplain = { save_scope_as = my_praiser }
+		}
+		if = {
+			limit = {
+				NOT = { exists = scope:my_praiser }
+			}
+			ordered_vassal = {
+				order_by = primary_title.tier
+				limit = {
+					government_has_flag = government_is_ecclesiastical
+					rite = root.rite
+					this != scope:praise_worthy_priest
+					is_adult = yes
+					is_available = yes
+				}
+				save_scope_as = my_praiser
+			}
+		}
+	}
+
+	option = { #C) Papacy
+		name = ci_pam_decision_events.0015.c
+		flavor = ci_pam_decision_events.0015.c.flavor
+		custom_tooltip = ci_pam_decision_events.0015.c.tt
+		add_prestige = medium_prestige_gain
+		set_variable = {
+			name = pam_propagate_word_of_my_piety
+			value = 30
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { #D) Papacy, pressed hard enough to top the shortlist
+		name = ci_pam_decision_events.0015.d
+		flavor = ci_pam_decision_events.0015.d.flavor
+		trigger = {
+			pam_papabile_slot_open_to_trigger = { SLOT = theocratic_elective_populist }
+			piety >= pam_place_first_as_populist_piety_cost_value
+		}
+		show_as_unavailable = {
+			pam_papabile_slot_open_to_trigger = { SLOT = theocratic_elective_populist }
+			piety < pam_place_first_as_populist_piety_cost_value
+		}
+		custom_tooltip = ci_pam_decision_events.0015.d.tt
+		add_piety = {
+			value = pam_place_first_as_populist_piety_cost_value
+			multiply = -1
+		}
+		pam_place_first_as_populist_effect = { VALUE = pam_papabile_place_first_populist_value }
+		stress_and_fulfillment_impact = {
+			humble = minor_stress_impact_gain
+			content = minor_stress_impact_gain
+			ambitious = minor_stress_impact_loss
+			arrogant = minor_stress_impact_loss
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = { #B) Sainthood
+		name = ci_pam_decision_events.0015.b
+		flavor = ci_pam_decision_events.0015.b.flavor
+		custom_tooltip = ci_pam_decision_events.0015.b.tt
+		set_variable = {
+			name = pam_propagate_word_of_my_sainthood
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}

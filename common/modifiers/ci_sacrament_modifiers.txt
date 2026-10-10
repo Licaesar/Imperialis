@@ -1,0 +1,13 @@
+﻿# Gerado por docs/dev/regen_sacrament_decisions.py (marco 4, fase 4d) a partir do vanilla; nao editar a mao, regerar.
+# Modificador da doacao na extrema-uncao do Imperialis: mesmos numeros do vanilla, nome proprio.
+
+ci_pam_last_rites_church_donation_modifier = {
+	icon = piety_positive
+	clergy_opinion = 10
+	legitimacy_gain_mult = 0.01
+	owned_legend_spread_mult = 0.2
+	monthly_piety_gain_mult = 0.1
+	monthly_dynasty_prestige_mult = 0.01
+	zealot_same_faith_opinion = 5
+	zealot_levy_contribution_mult = 0.01
+}

@@ -1,0 +1,8 @@
+﻿# Gerado por docs/dev/regen_sacrament_decisions.py (marco 4, fase 4d) a partir do vanilla; nao editar a mao, regerar.
+# Opiniao da doacao de liturgias (Endow Liturgies): mesmos numeros do vanilla, nome proprio.
+
+ci_pam_cardinal_endowed_masses_opinion = {
+	opinion = 15
+	years = 5
+	decaying = yes
+}
