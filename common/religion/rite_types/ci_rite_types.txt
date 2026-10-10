@@ -1,4 +1,6 @@
-﻿# Ritos da fe imperialis. Cada rito tem tres tenets centrais e as doutrinas que o diferenciam das doutrinas comuns da religiao
+﻿# Ritos da religiao Omnissiae (marco 5, fase 5b): imperialis e sororitas na fe Veritas Imperialis (imperialis), omnissiah e homus na
+# fe Lex Omnissiah (ci_lex_omnissiah). Os quatro listam a Concordia Omnissiae (ci_doctrine_omnissiae_concord: as duas fes se veem
+# astray ate a decisao de cisma). Cada rito tem tres tenets centrais e as doutrinas que o diferenciam das doutrinas comuns da religiao
 # (religion_types/00_imperialis.txt). A doutrina de identidade (temple_authority_cult_*) define o culto.
 # Os nomes de exibicao sao os da localizacao (chaves iguais as dos ritos).
 #
@@ -20,6 +22,7 @@ imperialis = {
 
 	doctrines = {
 		temple_authority_cult_imperialis_doctrine
+		ci_doctrine_omnissiae_concord # Concordia Omnissiae (marco 5, 5b): ve a outra fe da religiao como astray
 		special_doctrine_has_clerical_electors # colegio de cardeais da fe (marco 3, fase 3a); tambem na fe
 		ci_doctrine_has_clerical_regions # regioes clericais da fe (marco 3, fase 3b.1); tambem na fe
 	}
@@ -42,6 +45,7 @@ sororitas = {
 
 	doctrines = {
 		temple_authority_cult_sororitas_doctrine
+		ci_doctrine_omnissiae_concord # Concordia Omnissiae (marco 5, 5b): ve a outra fe da religiao como astray
 		special_doctrine_has_clerical_electors # colegio de cardeais da fe (marco 3, fase 3a); tambem na fe
 		ci_doctrine_has_clerical_regions # regioes clericais da fe (marco 3, fase 3b.1); tambem na fe
 		ci_doctrine_ministorum_blessing # Bencao do Ministorum (marco 4, fase 4a): divergencia -10, como a Holy Blessing vanilla
@@ -54,7 +58,7 @@ sororitas = {
 
 # Cultus Omnissiah
 omnissiah = {
-	faith = imperialis
+	faith = ci_lex_omnissiah # Lex Omnissiah (marco 5, fase 5b); antes imperialis
 
 	color = { 0.85 0.75 0.25 }
 	icon = omnissiah
@@ -67,9 +71,8 @@ omnissiah = {
 
 	doctrines = {
 		temple_authority_cult_omnissiah_doctrine
-		special_doctrine_has_clerical_electors # colegio de cardeais da fe (marco 3, fase 3a); tambem na fe
-		ci_doctrine_has_clerical_regions # regioes clericais da fe (marco 3, fase 3b.1); tambem na fe
-		ci_doctrine_ministorum_blessing # Bencao do Ministorum (marco 4, fase 4a): divergencia -10, como a Holy Blessing vanilla
+		doctrine_no_head # sem Head of Faith (marco 5, 5b); tambem na fe
+		ci_doctrine_omnissiae_concord # Concordia Omnissiae (marco 5, 5b): ve a outra fe da religiao como astray
 		doctrine_gender_equal
 		doctrine_witchcraft_virtuous
 		doctrine_clerical_function_alms_and_pacification
@@ -78,7 +81,7 @@ omnissiah = {
 
 # Cultus Harmoniae (antiga fe homus)
 homus = {
-	faith = imperialis
+	faith = ci_lex_omnissiah # Lex Omnissiah (marco 5, fase 5b); antes imperialis
 
 	color = { 0.25 0.55 0.85 }
 	icon = homus
@@ -91,9 +94,8 @@ homus = {
 
 	doctrines = {
 		temple_authority_cult_homus_doctrine
-		special_doctrine_has_clerical_electors # colegio de cardeais da fe (marco 3, fase 3a); tambem na fe
-		ci_doctrine_has_clerical_regions # regioes clericais da fe (marco 3, fase 3b.1); tambem na fe
-		ci_doctrine_ministorum_blessing # Bencao do Ministorum (marco 4, fase 4a): divergencia -10, como a Holy Blessing vanilla
+		doctrine_no_head # sem Head of Faith (marco 5, 5b); tambem na fe
+		ci_doctrine_omnissiae_concord # Concordia Omnissiae (marco 5, 5b): ve a outra fe da religiao como astray
 		doctrine_pluralism_pluralistic
 		doctrine_polygamy
 		doctrine_divorce_allowed

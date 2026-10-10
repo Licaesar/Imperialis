@@ -74,6 +74,13 @@
  imperialis_adherent_plural:0 "Imperiales"
  imperialis_desc:0 "There can only be one Divinus, one Imperator, one Savior. His holy bloodline is our only light in the dark; without the Sanguinis, our souls are but fodder for the ever-thirsty evils of the Daemon Princeps and his Falsi Prophetae. When mortals abandon their duty, they strip themselves of humanity, degenerating into something less than beasts. They have no place in the bosom of the Imperium, nor in the heart of the Omnissiah. Let the unworthy perish and be forever forgotten."
  
+ # Lex Omnissiah: a segunda fe da religiao Omnissiae (marco 5, fase 5b; texto criado pelo Claude e contado ao autor)
+ ci_lex_omnissiah:0 "Lex Omnissiah"
+ ci_lex_omnissiah_adj:0 "Legist"
+ ci_lex_omnissiah_adherent:0 "Legist"
+ ci_lex_omnissiah_adherent_plural:0 "Legists"
+ ci_lex_omnissiah_desc:0 "The Omnissiah left no heir to His divinity, only His Law. Written into the order of creation and set down in the Codex, that Law binds emperor and priest alike, and no bloodline, however sacred, and no council of clerics, however learned, may stand between the faithful and its reading. The Legists honour the Holy City where He descended and the Mount where He lies, and seek Him in reason, study and discipline rather than in the veins of the Sanguinis. They bow to no living head: the Law itself is their shepherd."
+ 
  # Rito principal da fe imperialis (name = imperialis_rite em rite_types/ci_rite_types.txt)
  imperialis_rite:0 "Cultus Imperialis"
  imperialis_rite_adj:0 "Imperialis"

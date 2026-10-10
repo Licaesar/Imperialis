@@ -1,7 +1,9 @@
 ﻿# Doutrinas de identidade de cada rito do Cultus Imperialis (grupo doctrine_imperialis_branches, "Ordo").
 # Cada rito carrega exatamente uma delas, so com o que o diferencia (marco 4, fase 4c). O que e comum aos quatro (virtudes de
 # peso 15, rivalidade entre ritos, bloqueio do Head of Faith aleatorio, heresy_threshold) esta em Teachings of the Omnissiah
-# (ci_doctrine_teachings_of_the_omnissiah.txt), na religiao. sanguini_4/5 estao na religiao.
+# (ci_doctrine_teachings_of_the_omnissiah.txt), na religiao. Marco 5, fase 5b: os pesos de sanguini_4/5 sairam da religiao e
+# ficam so nos dois Ordo da Veritas Imperialis (a Lex Omnissiah nao venera os Sanguinis); os dois Ordo da Lex pesam as virtudes da
+# razao (theologian e lifestyle_scholar) com os mesmos pesos.
 
 temple_authority_cult_imperialis_doctrine = {
 	doctrine_group_type = doctrine_imperialis_branches
@@ -9,6 +11,13 @@ temple_authority_cult_imperialis_doctrine = {
 	icon = "temple_authority_cult_imperialis_doctrine" # Culto aos Liphes
 	piety_cost = {
 		value = faith_tenet_cost_mid
+	}
+	# Veneracao dos Sanguinis (marco 5, 5b): so na Veritas Imperialis
+	traits = {
+		virtues = {
+			sanguini_4 = { weight = 10 scale = 1 }
+			sanguini_5 = { weight = 15 scale = 1 }
+		}
 	}
 	character_modifier = {
 		clergy_opinion = 5
@@ -30,6 +39,13 @@ temple_authority_cult_omnissiah_doctrine = { # Culto apenas ao Omnissiah
 	piety_cost = {
 		value = faith_tenet_cost_mid
 	}
+	# Virtudes da razao no lugar dos Sanguinis (marco 5, 5b): Lex Omnissiah
+	traits = {
+		virtues = {
+			theologian = { weight = 15 scale = 1 }
+			lifestyle_scholar = { weight = 10 scale = 1 }
+		}
+	}
 	character_modifier = {
 		artifact_decay_reduction_mult = -0.1
 	}
@@ -48,6 +64,13 @@ temple_authority_cult_sororitas_doctrine = { # Culto a Undomiel
 	piety_cost = {
 		value = faith_tenet_cost_mid
 	}
+	# Veneracao dos Sanguinis (marco 5, 5b): so na Veritas Imperialis
+	traits = {
+		virtues = {
+			sanguini_4 = { weight = 10 scale = 1 }
+			sanguini_5 = { weight = 15 scale = 1 }
+		}
+	}
 	character_modifier = {
 		domain_tax_different_faith_mult = 0.2
 		levy_reinforcement_rate_same_faith = 0.25
@@ -64,6 +87,13 @@ temple_authority_cult_homus_doctrine = { # Multiculturalismo Liphe
 	icon = "temple_authority_cult_homus_doctrine"
 	piety_cost = {
 		value = faith_tenet_cost_mid
+	}
+	# Virtudes da razao no lugar dos Sanguinis (marco 5, 5b): Lex Omnissiah
+	traits = {
+		virtues = {
+			theologian = { weight = 15 scale = 1 }
+			lifestyle_scholar = { weight = 10 scale = 1 }
+		}
 	}
 	character_modifier = {
 		different_faith_opinion = 10

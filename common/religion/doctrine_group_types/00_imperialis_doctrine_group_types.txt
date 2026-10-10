@@ -39,3 +39,15 @@ ci_teachings_of_the_omnissiah = {
 		has_doctrine = ci_doctrine_teachings_of_the_omnissiah
 	}
 }
+
+# Concordia Omnissiae (marco 5, fase 5b): categoria special e visivel. Travado na fe: um rito que diverge ate virar fe nova perde a
+# doutrina e fica hostil as duas fes da religiao. Ritos novos dentro da mesma fe a mantem.
+ci_omnissiae_concord = {
+	category = special
+
+	doctrine_lock = faith
+
+	is_available_on_create = {
+		has_doctrine = ci_doctrine_omnissiae_concord
+	}
+}

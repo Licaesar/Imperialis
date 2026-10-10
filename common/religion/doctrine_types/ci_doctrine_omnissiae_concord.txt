@@ -1,0 +1,16 @@
+﻿# Concordia Omnissiae (marco 5, fase 5b; decisao do autor, 10/10/2026): as duas fes da religiao Omnissiae, Veritas Imperialis e Lex
+# Omnissiah, comecam astray entre si. Sem ela valeria o heresy_hostility_doctrine da religiao (same_religion = hostile, guerra santa).
+# O override vale para a fe-alvo que tambem tem a doutrina (como as doutrinas de sucessao do islamismo, 20_doctrines_islam.txt), entao
+# basta tira-la dos ritos de uma das fes para as duas voltarem ao hostil: e o que a decisao de cisma (5c) fara (remove_rite_doctrine).
+# Fica nos quatro ritos (doutrina da fe so chegaria ao rito principal) e nas duas fes. Uma fe nova criada por divergencia a perde
+# (grupo travado na fe) e continua hostil a de origem. Icone da doutrina ecumenica crista do vanilla.
+ci_doctrine_omnissiae_concord = {
+	doctrine_group_type = ci_omnissiae_concord
+	icon = "special_doctrine_ecumenical_christian"
+
+	special_parameters = {
+		hostility_level_override = {
+			ci_doctrine_omnissiae_concord = astray
+		}
+	}
+}

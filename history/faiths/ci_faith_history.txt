@@ -1,4 +1,4 @@
-﻿# Estado inicial da fe imperialis em 867.
+﻿# Estado inicial das fes da religiao Omnissiae em 867 (marco 5, fase 5b: Veritas Imperialis e Lex Omnissiah).
 # Os tenets centrais do rito principal ja sao permitidos aos demais ritos. Como o rito principal pode mudar
 # (sem religious_head o jogo recalcula o principal por condados e locais santos), listamos os tenets de todos os ritos
 # como permitidos: o historico ignora os que ja sao centrais do rito principal.
@@ -8,8 +8,6 @@ imperialis = {
 
 		rites = {
 			sororitas = {}
-			omnissiah = {}
-			homus = {}
 		}
 
 		permitted = {
@@ -19,10 +17,31 @@ imperialis = {
 			tenet_unrelenting_faith
 			tenet_legalism
 			tenet_mendicant_preachers
+
+			# marco 2, fase b: tenets proprios da fe (common/religion/tenet_types/ci_tenet_types.txt)
+			tenet_ci_militarum
+			tenet_ci_codex_liturgy
+		}
+	}
+}
+
+# Lex Omnissiah (marco 5, fase 5b): ritos Cult Omnissiah (principal, no faith_types) e Cult Harmoniae. Os ritos so saem de uma fe
+# quando entram em outra; o rite_types ja aponta omnissiah e homus para ci_lex_omnissiah. Tenets centrais dos dois ritos e os dois
+# tenets proprios da religiao (Militarum e Liturgy of the Codex) como permitidos.
+ci_lex_omnissiah = {
+	867.1.1 = {
+		created = yes
+
+		rites = {
+			homus = {}
+		}
+
+		permitted = {
+			tenet_mendicant_preachers
+			tenet_legalism
 			tenet_esotericism
 			tenet_asceticism
 
-			# marco 2, fase b: tenets proprios da fe (common/religion/tenet_types/ci_tenet_types.txt)
 			tenet_ci_militarum
 			tenet_ci_codex_liturgy
 		}

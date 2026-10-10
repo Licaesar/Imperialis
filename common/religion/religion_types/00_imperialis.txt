@@ -75,14 +75,13 @@
 	doctrine = doctrine_imperial_anointment
 
 	# Pesos da realizacao espiritual (marco 2, fase a): scale 1 em tudo, porque a escala tambem mexe em opiniao e piedade.
-	# sanguini_4/5 ficam aqui (nao nas doutrinas de identidade) para valer igual nos quatro ritos.
+	# sanguini_4/5 sairam daqui no marco 5 (fase 5b): ficam nas doutrinas de identidade da Veritas Imperialis (a Lex Omnissiah nao
+	# venera os Sanguinis).
 	traits = {
 		virtues = {
 			just = { weight = 40 scale = 1 }
 			temperate = { weight = 25 scale = 1 }
 			generous = { weight = 25 scale = 1 }
-			sanguini_4 = { weight = 10 scale = 1 }
-			sanguini_5 = { weight = 15 scale = 1 }
 		}
 		sins = {
 			arbitrary = { weight = 40 scale = 1 }
@@ -273,7 +272,7 @@
 	}
 
 	# As fes e ritos deste culto foram migrados para a 1.20:
-	#   common/religion/faith_types/ci_faith_types.txt  (fe unica: imperialis)
+	#   common/religion/faith_types/ci_faith_types.txt  (fes: imperialis e ci_lex_omnissiah, marco 5)
 	#   common/religion/rite_types/ci_rite_types.txt    (ritos: imperialis, sororitas, omnissiah, homus)
 	#   history/faiths/ci_faith_history.txt             (estado inicial e tenets permitidos)
 }

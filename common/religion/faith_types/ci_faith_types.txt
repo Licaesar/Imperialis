@@ -1,4 +1,6 @@
-﻿# Fe unica do Cultus Imperialis (decisao 03/10/2026: uma fe, quatro ritos).
+﻿# Fes da religiao Omnissiae. Ate o marco 4 era uma fe com quatro ritos (decisao de 03/10/2026). Marco 5, fase 5b (decisao do autor,
+# 10/10/2026): duas fes, Veritas Imperialis (imperialis: ritos Cultus Imperialis e Cult Undomiel) e Lex Omnissiah (ci_lex_omnissiah:
+# ritos Cult Omnissiah e Cult Harmoniae).
 # Os ritos estao em common/religion/rite_types/ci_rite_types.txt e o estado inicial em history/faiths/ci_faith_history.txt.
 #
 # Chefia: ate o Ministorum ser fundado a fe nao tem chefe. A decisao ci_found_ministorum_decision (exige e_italy) cria o k_sol e
@@ -33,12 +35,52 @@ imperialis = {
 	# Tenets centrais e doutrinas especificas ficam nos ritos (rite_types). As doutrinas comuns estao na religiao.
 	# Colegio de cardeais (marco 3, fase 3a): a doutrina oculta (visible = no) liga os eleitores clericais, a lei de sucessao
 	# eletiva do Head of Faith e os cardinalatos. Fica desde 867 na fe (nada acontece sem Head of Faith: o colegio so e
-	# preenchido pela fundacao do Ministorum, ci_found_ministorum_effect). Os quatro ritos tambem a listam (rite_types).
+	# preenchido pela fundacao do Ministorum, ci_found_ministorum_effect). Os dois ritos da fe tambem a listam (rite_types).
 	# Regioes clericais (3b.1): arcebispos, arquidioceses e catedrais; a doutrina e propria do Imperialis (ci_doctrine_has_clerical_regions).
+	# Concordia Omnissiae (marco 5, 5b): ve a Lex Omnissiah como astray; tambem nos dois ritos (doutrina da fe so chega ao rito principal).
 	doctrines = {
 		special_doctrine_has_clerical_electors
 		ci_doctrine_has_clerical_regions
+		ci_doctrine_omnissiae_concord
 	}
 
 	cultures = { lipherianii_culture imperialis_culture }
+}
+
+# Lex Omnissiah (marco 5, fase 5b): a segunda fe da religiao. Le o Omnissiah na sua Lei, nao no sangue nem no clero:
+# - sem Head of Faith (doctrine_no_head, tambem nos dois ritos; a Teachings of the Omnissiah da religiao bloqueia a decisao vanilla
+#   de criar um chefe aleatorio), sem colegio de cardeais, sem regioes clericais e sem a Bencao do Ministorum;
+# - nao venera os Sanguinis: os pesos de sanguini_4/5 ficam nas doutrinas de identidade da Veritas, e as da Lex pesam theologian e
+#   lifestyle_scholar (liphe_doctrines_authority.txt);
+# - Concordia Omnissiae (ci_doctrine_omnissiae_concord, nos quatro ritos) faz as duas fes se verem astray. A decisao de cisma (5c) a
+#   remove e as fes voltam ao hostil padrao da religiao (heresy_hostility_doctrine), dos dois lados.
+# Seguidores em 867 (history/characters/ci_founders.txt): Ramashiri e Granhieron com as esposas (Cult Omnissiah) e Telcontar e Musashi
+# com as esposas (Cult Harmoniae). Sem condados no inicio.
+ci_lex_omnissiah = {
+	main_rite = omnissiah
+
+	faith_details = {
+		religion = imperialis_religion
+		color = { 0.85 0.75 0.25 }
+		icon = omnissiah
+	}
+
+	# Eminentes: Jerusalem (onde o Omnissiah desceu) e o Monte Olimpo (onde e sepultado). Roma e Ravena, sedes do Ministorum, ficam so
+	# com a Veritas.
+	eminent_holy_sites = {
+		jerusalem
+		olympus
+	}
+
+	holy_sites = {
+		athens
+		alexandria
+		baghdad
+		constantinople
+	}
+
+	doctrines = {
+		doctrine_no_head
+		ci_doctrine_omnissiae_concord
+	}
 }
