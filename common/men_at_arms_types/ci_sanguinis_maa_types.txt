@@ -40,5 +40,4 @@ ci_sanguinis_fire_swords = {
 	illustration = {
 		reference = heavy_infantry
 	}
-	icon = heavy_infantry
 }

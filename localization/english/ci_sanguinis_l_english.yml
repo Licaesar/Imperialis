@@ -9,6 +9,7 @@
  ci_sanguinis_healing_interaction_recipient_toast:0 "Healed by the Blood"
  ci_sanguinis_healing_interaction_recipient_toast_desc:0 "[actor.GetTitledFirstName] laid hands upon me, and the sickness fled before the light of the divine blood."
  ci_sanguinis_healing_spent_tt:0 "My blood is spent. I must recover before I can heal again."
+ ci_sanguinis_healing_no_illness_tt:0 "[recipient.GetShortUIName] has no sickness to heal"
 
  # Desgaste de quem cura (tres vagas x tres intensidades, mesmo texto)
  ci_sanguinis_spent_blood:0 "Spent Blood"

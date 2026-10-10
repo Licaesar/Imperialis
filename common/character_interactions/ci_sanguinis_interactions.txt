@@ -22,10 +22,16 @@ ci_sanguinis_healing_interaction = {
 				has_trait = sanguini_5
 			}
 		}
-		scope:recipient = { has_trait_with_flag = illness }
 	}
 
+	# Playtest de 10/10/2026: a cura aparece para qualquer personagem (categoria Personal); sem doenca, fica bloqueada com aviso.
 	is_valid_showing_failures_only = {
+		scope:recipient = {
+			custom_tooltip = {
+				text = ci_sanguinis_healing_no_illness_tt
+				has_trait_with_flag = illness
+			}
+		}
 		scope:actor = {
 			is_available_adult = yes
 			custom_tooltip = {
@@ -66,6 +72,5 @@ ci_sanguinis_healing_interaction = {
 		}
 	}
 
-	# A IA nao usa a cura (decisao do autor, 10/10/2026): frequencia 0 = a IA nunca considera a interacao
-	ai_frequency = 0
+	# A IA nao usa a cura (decisao do autor, 10/10/2026): sem ai_frequency nem ai_targets, a IA nunca considera a interacao
 }
