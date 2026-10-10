@@ -1,0 +1,44 @@
+﻿# Espadas de fogo dos Sanguinis (marco 4, fase 4e; aprovado pelo autor em 10/10/2026). Base: armored_footmen do vanilla
+# (00_maa_types.txt, 32/22, custo heavy_infantry_*), com +30% de dano, +20% de resistencia e custo x1,3; mesmo visual; sem limite de
+# regimentos. Exclusivas das dinastias com o nivel 5 do Legado Sanguinis. Ajustar no playtest.
+@ci_provisions_cost_infantry_moderate = 7 # igual a @provisions_cost_infantry_moderate do vanilla (constante local do arquivo dele)
+
+ci_sanguinis_fire_swords = {
+	type = heavy_infantry
+
+	damage = 42
+	toughness = 26
+	pursuit = 0
+	screen = 0
+
+	counters = {
+		pikemen = 1
+		peasant_militia = 2
+	}
+
+	can_recruit = {
+		dynasty ?= { has_dynasty_perk = ci_sanguinis_legacy_5 }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = 117 }			# 90 x 1,3
+	low_maintenance_cost = { gold = 0.52 }	# 0,4 x 1,3
+	high_maintenance_cost = { gold = 1.56 }	# 1,2 x 1,3
+	provision_cost = @ci_provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = 100 }
+
+	illustration = {
+		trigger = {
+			should_use_asian_maa_graphics = yes
+		}
+		reference = heavy_infantry_asia
+	}
+	illustration = {
+		reference = heavy_infantry
+	}
+	icon = heavy_infantry
+}

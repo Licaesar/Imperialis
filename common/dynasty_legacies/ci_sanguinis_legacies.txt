@@ -1,0 +1,16 @@
+﻿# Legado Sanguinis (marco 4, fase 4e; aprovado pelo autor em 10/10/2026). So aparece para dinastias com um Sanguinis vivo, ou que
+# ja compraram o primeiro nivel. Aqui nao valem scripted triggers (regra do _dynasty_legacies.info). Arte copiada do legado dos
+# dragonriders do mod A Game of Thrones (2962333032), a pedido do autor.
+ci_sanguinis_legacy_track = {
+	is_shown = {
+		dynasty ?= {
+			OR = {
+				has_dynasty_perk = ci_sanguinis_legacy_1
+				any_dynasty_member = {
+					is_alive = yes
+					OR = { has_trait = sanguini_1 has_trait = sanguini_2 has_trait = sanguini_3 has_trait = sanguini_4 has_trait = sanguini_5 }
+				}
+			}
+		}
+	}
+}

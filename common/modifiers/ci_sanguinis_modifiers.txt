@@ -1,0 +1,47 @@
+﻿# Desgaste "Spent Blood" de quem cura (marco 4, fase 4e): vaga 1 a 3 x intensidade (075 = nivel 4, 050 = nivel 5 ou nivel 4 com o
+# legado 3, 025 = nivel 5 com o legado 3). Aplicado por 5 anos em ci_sanguinis_add_healing_strain_effect.
+
+ci_sanguinis_spent_blood_1_075 = {
+	icon = health_negative
+	health = -0.75
+}
+
+ci_sanguinis_spent_blood_1_050 = {
+	icon = health_negative
+	health = -0.5
+}
+
+ci_sanguinis_spent_blood_1_025 = {
+	icon = health_negative
+	health = -0.25
+}
+
+ci_sanguinis_spent_blood_2_075 = {
+	icon = health_negative
+	health = -0.75
+}
+
+ci_sanguinis_spent_blood_2_050 = {
+	icon = health_negative
+	health = -0.5
+}
+
+ci_sanguinis_spent_blood_2_025 = {
+	icon = health_negative
+	health = -0.25
+}
+
+ci_sanguinis_spent_blood_3_075 = {
+	icon = health_negative
+	health = -0.75
+}
+
+ci_sanguinis_spent_blood_3_050 = {
+	icon = health_negative
+	health = -0.5
+}
+
+ci_sanguinis_spent_blood_3_025 = {
+	icon = health_negative
+	health = -0.25
+}

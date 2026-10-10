@@ -1,0 +1,6 @@
+﻿# Gratidao de quem foi curado pelos Sanguinis (marco 4, fase 4e; aprovado pelo autor).
+ci_sanguinis_healed_opinion = {
+	opinion = 25
+	years = 10
+	decaying = yes
+}

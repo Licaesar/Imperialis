@@ -1,0 +1,74 @@
+﻿# Cura dos Sanguinis (marco 4, fase 4e). Ver common/character_interactions/ci_sanguinis_interactions.txt.
+
+# Escopo: quem e curado. Cura todos os traços com a marca illness (os 16 do vanilla), como o "King's Touch" da By God Alone
+# (pam_secular_faith_events, 0022): recover_from_disease_effect avisa a familia e remove o traço; great_pox cobre early_great_pox.
+# sickly nao e doenca contagiosa e sai direto.
+ci_sanguinis_heal_effect = {
+	if = { limit = { has_trait = ill } recover_from_disease_effect = { DISEASE = ill } }
+	if = { limit = { has_trait = pneumonic } recover_from_disease_effect = { DISEASE = pneumonic } }
+	if = { limit = { has_trait = gout_ridden } recover_from_disease_effect = { DISEASE = gout_ridden } }
+	if = { limit = { has_trait = typhus } recover_from_disease_effect = { DISEASE = typhus } }
+	if = { limit = { has_trait = consumption } recover_from_disease_effect = { DISEASE = consumption } }
+	if = { limit = { has_trait = cancer } recover_from_disease_effect = { DISEASE = cancer } }
+	if = { limit = { has_trait = lovers_pox } recover_from_disease_effect = { DISEASE = lovers_pox } }
+	if = { limit = { has_trait = smallpox } recover_from_disease_effect = { DISEASE = smallpox } }
+	if = { limit = { has_trait = bubonic_plague } recover_from_disease_effect = { DISEASE = bubonic_plague } }
+	if = { limit = { has_trait = measles } recover_from_disease_effect = { DISEASE = measles } }
+	if = { limit = { has_trait = dysentery } recover_from_disease_effect = { DISEASE = dysentery } }
+	if = { limit = { has_trait = ergotism } recover_from_disease_effect = { DISEASE = ergotism } }
+	if = { limit = { has_trait = leper } recover_from_disease_effect = { DISEASE = leper } }
+	if = { limit = { OR = { has_trait = great_pox has_trait = early_great_pox } } recover_from_disease_effect = { DISEASE = great_pox } }
+	if = { limit = { has_trait = sickly } remove_trait = sickly }
+}
+
+# Escopo: quem cura. Desgaste "Spent Blood" por 5 anos na primeira vaga livre (o motor nao conta instancias de um modificador, por isso
+# tres vagas). Saude: -0,75 no nivel 4 e -0,5 no nivel 5; com Misericordia Sanguinis (legado 3), 0,25 a menos.
+ci_sanguinis_add_healing_strain_effect = {
+	if = {
+		limit = {
+			has_trait = sanguini_5
+			dynasty ?= { has_dynasty_perk = ci_sanguinis_legacy_3 }
+		}
+		save_scope_value_as = { name = ci_spent_blood_tier value = flag:t025 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_trait = sanguini_5
+				dynasty ?= { has_dynasty_perk = ci_sanguinis_legacy_3 }
+			}
+		}
+		save_scope_value_as = { name = ci_spent_blood_tier value = flag:t050 }
+	}
+	else = {
+		save_scope_value_as = { name = ci_spent_blood_tier value = flag:t075 }
+	}
+	if = {
+		limit = { ci_sanguinis_spent_blood_slot_trigger = { SLOT = 1 } }
+		if = {
+			limit = { ci_sanguinis_spent_blood_slot_trigger = { SLOT = 2 } }
+			ci_sanguinis_add_spent_blood_in_slot_effect = { SLOT = 3 }
+		}
+		else = {
+			ci_sanguinis_add_spent_blood_in_slot_effect = { SLOT = 2 }
+		}
+	}
+	else = {
+		ci_sanguinis_add_spent_blood_in_slot_effect = { SLOT = 1 }
+	}
+}
+
+ci_sanguinis_add_spent_blood_in_slot_effect = {
+	if = {
+		limit = { scope:ci_spent_blood_tier = flag:t075 }
+		add_character_modifier = { modifier = ci_sanguinis_spent_blood_$SLOT$_075 years = 5 }
+	}
+	else_if = {
+		limit = { scope:ci_spent_blood_tier = flag:t050 }
+		add_character_modifier = { modifier = ci_sanguinis_spent_blood_$SLOT$_050 years = 5 }
+	}
+	else_if = {
+		limit = { scope:ci_spent_blood_tier = flag:t025 }
+		add_character_modifier = { modifier = ci_sanguinis_spent_blood_$SLOT$_025 years = 5 }
+	}
+}

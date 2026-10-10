@@ -1,0 +1,63 @@
+﻿# Niveis do Legado Sanguinis (marco 4, fase 4e; aprovado pelo autor). Os modificadores valem para todos os membros da dinastia, como
+# no vanilla (decisao do autor: o motor nao limita por traço). O nivel 3 e lido pela cura (ci_sanguinis_add_healing_strain_effect) e o
+# nivel 5 pelas espadas de fogo (common/men_at_arms_types/ci_sanguinis_maa_types.txt).
+
+ci_sanguinis_legacy_1 = { # Vigor Sanguinis
+	legacy = ci_sanguinis_legacy_track
+
+	can_be_picked = {
+		dynasty ?= {
+			any_dynasty_member = {
+				is_alive = yes
+				OR = { has_trait = sanguini_1 has_trait = sanguini_2 has_trait = sanguini_3 has_trait = sanguini_4 has_trait = sanguini_5 }
+			}
+		}
+	}
+
+	character_modifier = {
+		health = 0.25
+		fertility = 0.15
+	}
+
+	ai_chance = {
+		value = 100
+		if = {
+			limit = { can_start_new_legacy_track_trigger = no }
+			multiply = 0
+		}
+	}
+}
+
+ci_sanguinis_legacy_2 = { # Dona Omnissiae
+	legacy = ci_sanguinis_legacy_track
+
+	character_modifier = {
+		prowess = 3
+		learning = 2
+	}
+}
+
+ci_sanguinis_legacy_3 = { # Misericordia Sanguinis
+	legacy = ci_sanguinis_legacy_track
+
+	effect = {
+		custom_description_no_bullet = { text = ci_sanguinis_legacy_3_effect }
+	}
+}
+
+ci_sanguinis_legacy_4 = { # Stirps Divina
+	legacy = ci_sanguinis_legacy_track
+
+	character_modifier = {
+		monthly_prestige_gain_mult = 0.1
+		same_faith_opinion = 5
+	}
+}
+
+ci_sanguinis_legacy_5 = { # Gladii Ignis
+	legacy = ci_sanguinis_legacy_track
+
+	effect = {
+		custom_description_no_bullet = { text = ci_sanguinis_legacy_5_effect }
+	}
+}

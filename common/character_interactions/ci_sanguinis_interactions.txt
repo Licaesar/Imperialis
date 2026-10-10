@@ -1,0 +1,71 @@
+﻿# Cura dos Sanguinis (marco 4, fase 4e; aprovado pelo autor em 10/10/2026). Um Sanguinis nivel 4 ou 5 cura todas as doencas (traços
+# com a marca illness) de outro personagem, de qualquer fe. Quem cura fica com "Spent Blood" (desgaste de saude por 5 anos, ate 3 ao
+# mesmo tempo; com 3 ativos a interacao fica bloqueada). Recarga de 1 ano. A IA nao usa (decisao do autor).
+# Efeitos em common/scripted_effects/ci_sanguinis_effects.txt; vagas do desgaste em common/scripted_triggers/ci_sanguinis_triggers.txt.
+ci_sanguinis_healing_interaction = {
+	category = interaction_category_friendly
+	icon = plague
+	interface_priority = 30
+
+	use_diplomatic_range = yes
+	desc = ci_sanguinis_healing_interaction_desc
+	greeting = positive
+	auto_accept = yes
+
+	cooldown = { years = 1 }
+
+	is_shown = {
+		scope:actor != scope:recipient
+		scope:actor = {
+			OR = {
+				has_trait = sanguini_4
+				has_trait = sanguini_5
+			}
+		}
+		scope:recipient = { has_trait_with_flag = illness }
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_available_adult = yes
+			custom_tooltip = {
+				text = ci_sanguinis_healing_spent_tt
+				ci_sanguinis_healing_strain_full_trigger = no
+			}
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = ci_sanguinis_healing_interaction_actor_toast
+				left_icon = scope:actor
+				right_icon = scope:recipient
+				scope:recipient = {
+					ci_sanguinis_heal_effect = yes
+					add_opinion = {
+						target = scope:actor
+						modifier = ci_sanguinis_healed_opinion
+					}
+				}
+				ci_sanguinis_add_healing_strain_effect = yes
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = { is_ai = no }
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title = ci_sanguinis_healing_interaction_recipient_toast
+					desc = ci_sanguinis_healing_interaction_recipient_toast_desc
+					left_icon = scope:recipient
+					right_icon = scope:actor
+				}
+			}
+		}
+	}
+
+	# A IA nao usa a cura (decisao do autor, 10/10/2026): frequencia 0 = a IA nunca considera a interacao
+	ai_frequency = 0
+}
