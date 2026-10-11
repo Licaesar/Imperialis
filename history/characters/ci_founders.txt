@@ -16,6 +16,13 @@ ci_kensoriel_liphe = {
 	culture = lipherianii_culture
 	sexuality = heterosexual
 	disallow_random_traits = yes
+	# Habilidades-base 25 (pedido do autor, 11/10/2026); tracos, educacao e modificadores somam por cima
+	diplomacy = 25
+	martial = 25
+	stewardship = 25
+	intrigue = 25
+	learning = 25
+	prowess = 25
 
 	trait = sanguini_5
 
@@ -71,6 +78,13 @@ ci_helaena_undomiel = {
 	culture = lipherianii_culture
 	sexuality = heterosexual
 	disallow_random_traits = yes
+	# Habilidades-base 25 (pedido do autor, 11/10/2026); tracos, educacao e modificadores somam por cima
+	diplomacy = 25
+	martial = 25
+	stewardship = 25
+	intrigue = 25
+	learning = 25
+	prowess = 25
 
 	trait = sanguini_5
 
