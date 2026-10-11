@@ -112,8 +112,8 @@ ci_kensoriel_liphe_dna = {
  		eye_accessory={ "normal_eyes" 65 "normal_eyes" 65 }
  		teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
  		eyelashes_accessory={ "normal_eyelashes" 119 "normal_eyelashes" 119 }
- 		beards={ "fp2_beards_straight" 106 "no_beard" 0 }
- 		hairstyles={ "scripted_character_hairstyles_05" 40 "all_hairstyles" 0 }
+ 		beards={ "ep3_beards_curly" 224 "no_beard" 0 }
+ 		hairstyles={ "fp3_hairstyles_iranian_straight" 64 "all_hairstyles" 0 }
  		clothes={ "western_bedchamber" 79 "most_clothes" 0 }
  		}
 	}
@@ -226,7 +226,7 @@ ci_helaena_undomiel_dna = {
  		eye_accessory={ "normal_eyes" 186 "normal_eyes" 186 }
  		teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
  		eyelashes_accessory={ "normal_eyelashes" 52 "normal_eyelashes" 52 }
- 		hairstyles={ "scripted_character_hairstyles_03" 234 "all_hairstyles" 0 }
+ 		hairstyles={ "tgp_japanese_hairstyles" 192 "all_hairstyles" 0 }
  		clothes={ "western_bedchamber" 79 "most_clothes" 0 }
  		}
 	}
