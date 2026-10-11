@@ -1,0 +1,27 @@
+﻿# Pregacao do Kensoriel (marco 6, fase 6b). Texto criado pelo Claude e contado ao autor.
+
+namespace = ci_kensoriel
+
+# 0001 - O milagre (disparado pela decisao ci_kensoriel_miracle_decision para os jogadores da religiao)
+ci_kensoriel.0001 = {
+	type = character_event
+	window = big_event_window
+	theme = faith
+	title = ci_kensoriel.0001.t
+	desc = ci_kensoriel.0001.desc
+	override_background = { reference = terrain }
+
+	trigger = {
+		exists = scope:ci_lore_kensoriel
+		exists = scope:ci_miracle_county
+	}
+
+	left_portrait = {
+		character = scope:ci_lore_kensoriel
+		animation = ecstasy
+	}
+
+	option = {
+		name = ci_kensoriel.0001.a
+	}
+}

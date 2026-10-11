@@ -1,0 +1,15 @@
+﻿# Pregacao do Kensoriel (marco 6, fase 6b). Ver common/decisions/ci_kensoriel_decisions.txt.
+
+# Preach the Word: condado onde ele pregou, 10 anos
+ci_words_of_the_omnissiah_modifier = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 15
+	monthly_county_control_growth_factor = 0.1
+}
+
+# The Miracle: o condado do milagre e os vizinhos, 20 anos
+ci_witnessed_the_miracle_modifier = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 10
+	development_growth_factor = 0.1
+}

@@ -1,0 +1,182 @@
+﻿# Pregacao do Kensoriel (marco 6, fase 6b; desenho aprovado pelo autor em 11/10/2026). Decisoes exclusivas do Kensoriel, jogador ou IA.
+# Modificadores em common/modifiers/ci_kensoriel_modifiers.txt; evento do milagre em events/ci_kensoriel_events.txt.
+
+### Preach the Word: converte na hora a Veritas o condado onde ele esta (sem mudar a cultura)
+ci_kensoriel_preach_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+	desc = ci_kensoriel_preach_decision_desc
+	selection_tooltip = ci_kensoriel_preach_decision_tooltip
+	confirm_text = ci_kensoriel_preach_decision_confirm
+	decision_group_type = major
+	sort_order = 130
+
+	cooldown = { years = 1 }
+
+	is_shown = {
+		this = character:ci_kensoriel_liphe
+		faith ?= faith:imperialis
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = ci_kensoriel_preach_already_faithful_tt
+			location.county ?= { NOT = { faith = faith:imperialis } }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		piety = 100
+	}
+
+	effect = {
+		location.county ?= {
+			save_scope_as = ci_preached_county
+			set_county_faith = faith:imperialis
+			add_county_modifier = {
+				modifier = ci_words_of_the_omnissiah_modifier
+				years = 10
+			}
+		}
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = ci_kensoriel_preach_toast
+			left_icon = root
+			right_icon = scope:ci_preached_county
+		}
+	}
+
+	ai_check_interval = 6
+
+	ai_potential = {
+		location.county ?= { NOT = { faith = faith:imperialis } }
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+### The Miracle: uma vez na vida, quando ele quiser
+ci_kensoriel_miracle_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	desc = ci_kensoriel_miracle_decision_desc
+	selection_tooltip = ci_kensoriel_miracle_decision_tooltip
+	confirm_text = ci_kensoriel_miracle_decision_confirm
+	decision_group_type = major
+	sort_order = 129
+
+	is_shown = {
+		this = character:ci_kensoriel_liphe
+		faith ?= faith:imperialis
+		NOT = { has_character_flag = ci_kensoriel_miracle_done }
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		add_character_flag = ci_kensoriel_miracle_done
+		add_prestige = 500
+		faith:imperialis = {
+			change_fervor = {
+				value = 20
+				desc = ci_fervor_gain_kensoriel_miracle
+			}
+		}
+		custom_tooltip = ci_kensoriel_miracle_counties_tt
+		hidden_effect = {
+			save_scope_as = ci_lore_kensoriel
+			location.county ?= {
+				save_scope_as = ci_miracle_county
+				add_county_modifier = {
+					modifier = ci_witnessed_the_miracle_modifier
+					years = 20
+				}
+				every_neighboring_county = {
+					add_county_modifier = {
+						modifier = ci_witnessed_the_miracle_modifier
+						years = 20
+					}
+				}
+			}
+			ci_lore_notify_religion_players_effect = { EVENT = ci_kensoriel.0001 DAYS = 0 }
+		}
+	}
+
+	ai_check_interval = 12
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+### Call the Faithful: um exercito de fieis, preso a uma guerra (o jogo nao tem efeito para dissolver um exercito depois de um prazo;
+### as tropas temporarias do vanilla se dissolvem no fim da guerra)
+ci_kensoriel_call_faithful_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	desc = ci_kensoriel_call_faithful_decision_desc
+	selection_tooltip = ci_kensoriel_call_faithful_decision_tooltip
+	confirm_text = ci_kensoriel_call_faithful_decision_confirm
+	decision_group_type = major
+	sort_order = 128
+
+	cooldown = { years = 5 }
+
+	is_shown = {
+		this = character:ci_kensoriel_liphe
+		faith ?= faith:imperialis
+	}
+
+	is_valid = {
+		is_at_war = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		piety = 150
+	}
+
+	effect = {
+		custom_tooltip = ci_kensoriel_call_faithful_effect_tt
+		hidden_effect = {
+			random_character_war = {
+				save_scope_as = ci_faithful_war
+			}
+			spawn_army = {
+				name = ci_kensoriel_faithful_army_name
+				levies = 1000
+				men_at_arms = {
+					type = praetorian
+					stacks = 2
+				}
+				location = root.location
+				war = scope:ci_faithful_war
+				inheritable = no
+			}
+		}
+	}
+
+	ai_check_interval = 6
+
+	ai_potential = {
+		is_at_war = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

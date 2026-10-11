@@ -1,0 +1,30 @@
+﻿l_english:
+ # Pregacao do Kensoriel (marco 6, fase 6b). Texto criado pelo Claude e contado ao autor.
+
+ ci_kensoriel_preach_decision:0 "Preach the Word"
+ ci_kensoriel_preach_decision_desc:0 "From the steps of the templa and the edges of the markets, I will speak, and those who hear the Word of the Omnissiah from His own lips will not need a priest to explain it."
+ ci_kensoriel_preach_decision_tooltip:0 "Preach in the county where you stand, bringing it to the Veritas Imperialis"
+ ci_kensoriel_preach_decision_confirm:0 "Let them hear."
+ ci_kensoriel_preach_already_faithful_tt:0 "The county where you stand does not already follow the Veritas Imperialis"
+ ci_kensoriel_preach_toast:0 "The Word Is Heard"
+ ci_words_of_the_omnissiah_modifier:0 "Words of the Omnissiah"
+ ci_words_of_the_omnissiah_modifier_desc:0 "The Omnissiah Himself preached here, and the people still repeat His words."
+
+ ci_kensoriel_miracle_decision:0 "The Miracle"
+ ci_kensoriel_miracle_decision_desc:0 "Once, and only once, the Omnissiah may set aside the veil and show the world what He is. Such a sign is not given lightly: the faithful will speak of it for a thousand years."
+ ci_kensoriel_miracle_decision_tooltip:0 "Reveal your divinity to the world, once in your lifetime"
+ ci_kensoriel_miracle_decision_confirm:0 "Let them see."
+ ci_kensoriel_miracle_counties_tt:0 "The county where you stand and its neighbors gain #V Witnessed the Miracle#! for 20 years"
+ ci_fervor_gain_kensoriel_miracle:0 "The Omnissiah worked a miracle"
+ ci_witnessed_the_miracle_modifier:0 "Witnessed the Miracle"
+ ci_witnessed_the_miracle_modifier_desc:0 "The people of this land saw the Omnissiah reveal His divinity with their own eyes."
+ ci_kensoriel.0001.t:0 "The Miracle"
+ ci_kensoriel.0001.desc:0 "In [ci_miracle_county.GetNameNoTier], before a crowd that had come only to hear Him speak, [ci_lore_kensoriel.GetFirstName] raised His hand. The sky split as it had on the Temple Mount, and a bolt of sunlight fell upon Him without burning a single hair. The lame walked out of the crowd on their own feet; the fevered rose from their litters; a blind beggar wept at the sight of the sun.\n\nNo one who stood there that day would ever doubt again. Within a week the story had crossed three borders, and it grew in the telling at every one."
+ ci_kensoriel.0001.a:0 "The Omnissiah walks among us."
+
+ ci_kensoriel_call_faithful_decision:0 "Call the Faithful"
+ ci_kensoriel_call_faithful_decision_desc:0 "Farmers leave their ploughs and scholars their books when the Omnissiah calls. They are no Legio, but they will stand where He tells them to stand."
+ ci_kensoriel_call_faithful_decision_tooltip:0 "Raise an army of the faithful for your current war"
+ ci_kensoriel_call_faithful_decision_confirm:0 "To me, faithful!"
+ ci_kensoriel_call_faithful_effect_tt:0 "An army of the faithful (#V 1,000#! levies and #V 2#! regiments of Praetorians) rises where you stand. It fights for one of your current wars and disbands when that war ends."
+ ci_kensoriel_faithful_army_name:0 "The Faithful of the Omnissiah"
