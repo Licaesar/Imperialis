@@ -20,8 +20,8 @@ ci_kensoriel_liphe = {
 	diplomacy = 25
 	martial = 25
 	stewardship = 25
-	intrigue = 25
-	learning = 25
+	intrigue = 50
+	learning = 100
 	prowess = 25
 
 	trait = sanguini_5
@@ -83,13 +83,13 @@ ci_helaena_undomiel = {
 	martial = 25
 	stewardship = 25
 	intrigue = 25
-	learning = 25
+	learning = 100
 	prowess = 25
 
 	trait = sanguini_5
 
 	trait = education_diplomacy_5
-	trait = compassionate
+	trait = zealous
 	trait = patient
 	trait = diligent
 	trait = calm
