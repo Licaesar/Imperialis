@@ -1,0 +1,12 @@
+﻿l_english:
+ # Constitutio Imperialis (marco 6, fase 6e). Texto criado pelo Claude e contado ao autor.
+ ci_constitutio_imperialis_decision:0 "Proclaim the Constitutio Imperialis"
+ ci_constitutio_imperialis_decision_desc:0 "The Lipherianii were born on the march: a vanguard of soldiers, preachers and apostles who followed the Omnissiah out of Jerusalem. But a vanguard cannot govern an empire. The time has come to set down the laws, offices and manners of an Imperial court, and to become what we have conquered."
+ ci_constitutio_imperialis_decision_tooltip:0 "You and your court adopt the Imperialis culture"
+ ci_constitutio_imperialis_decision_confirm:0 "Let the Imperium be ordered."
+ ci_constitutio_imperialis_court_tt:0 "Your #V Lipherianii#! courtiers adopt the #V Imperialis#! culture. Your counties keep their culture."
+ ci_constitutio_imperialis_modifier:0 "Constitutio Imperialis"
+ ci_constitutio_imperialis_modifier_desc:0 "This ruler proclaimed the Constitutio Imperialis, ordering the Imperium with laws, offices and a court."
+ ci_constitutio.0001.t:0 "The Constitutio Imperialis"
+ ci_constitutio.0001.desc:0 "Before the assembled court, [ci_constitutio_emperor.GetTitledFirstName] has proclaimed the Constitutio Imperialis: the charter of offices, ranks and laws by which the Imperium will be governed from this day.\n\nThe old companions of the march grumble that the camp has become a palace. Their grandchildren will not remember the camp at all. The Lipherianii conquered the Imperium; the Imperiales will rule it."
+ ci_constitutio.0001.a:0 "Ordo et Imperium."

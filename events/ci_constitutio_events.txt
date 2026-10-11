@@ -1,0 +1,24 @@
+﻿# Constitutio Imperialis (marco 6, fase 6e). Texto criado pelo Claude e contado ao autor.
+
+namespace = ci_constitutio
+
+# 0001 - A proclamacao (para os jogadores da religiao)
+ci_constitutio.0001 = {
+	type = character_event
+	window = big_event_window
+	theme = realm
+	title = ci_constitutio.0001.t
+	desc = ci_constitutio.0001.desc
+	override_background = { reference = throne_room }
+
+	trigger = { exists = scope:ci_constitutio_emperor }
+
+	left_portrait = {
+		character = scope:ci_constitutio_emperor
+		animation = personality_honorable
+	}
+
+	option = {
+		name = ci_constitutio.0001.a
+	}
+}

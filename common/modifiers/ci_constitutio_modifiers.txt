@@ -1,0 +1,7 @@
+﻿# Constitutio Imperialis (marco 6, fase 6e): 20 anos, no imperador que a proclama.
+ci_constitutio_imperialis_modifier = {
+	icon = stewardship_positive
+	vassal_opinion = 10
+	stewardship = 2
+	monthly_prestige = 1
+}

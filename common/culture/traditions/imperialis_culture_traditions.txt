@@ -17,8 +17,12 @@
 		culture_clergy_can_fight = yes
 		monastery_prowess_martial_bonus = yes
 	}
+	# Marco 6, fase 6e: infantaria pesada e cavaleiros (a Legio e a Sororitas)
 	character_modifier = {
 		prowess_per_piety_level = 1
+		heavy_infantry_damage_mult = 0.1
+		heavy_infantry_toughness_mult = 0.1
+		knight_effectiveness_mult = 0.1
 	}
 	cost = {
 		prestige = 2000
@@ -35,6 +39,11 @@ constitutio_imperialis = {
 	}
 	parameters = {
 		less_likely_to_culture_convert = yes
+	}
+	# Marco 6, fase 6e: vassalos e legitimidade (a constituicao do Imperium)
+	character_modifier = {
+		vassal_opinion = 5
+		legitimacy_gain_mult = 0.15
 	}
 	cost = {
 		prestige = 2000
@@ -56,6 +65,11 @@ administratum = {
 		number_of_consorts_emperor = 5
 		ambitious_trait_more_common = yes
 	}
+	# Marco 6, fase 6e: dominio e impostos (a burocracia imperial)
+	character_modifier = {
+		domain_limit = 1
+		domain_tax_mult = 0.05
+	}
 	cost = {
 		prestige = 2000
 	}
@@ -75,6 +89,11 @@ mysterium_divinitas = {
 		mystic_trait_from_education = yes
 		mystic_trait_gives_bonuses = yes
 		mendicant_mystics_may_appear = yes
+	}
+	# Marco 6, fase 6e: aprendizado e piedade (os misterios da divindade)
+	character_modifier = {
+		monthly_piety_gain_mult = 0.1
+		monthly_learning_lifestyle_xp_gain_mult = 0.1
 	}
 	cost = {
 		prestige = 2000

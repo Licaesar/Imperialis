@@ -1,0 +1,59 @@
+﻿# Constitutio Imperialis (marco 6, fase 6e; desenho aprovado pelo autor em 11/10/2026): o imperio consolidado troca a vanguarda pela
+# corte. O imperador da Italia (ou um hegemon) da Veritas e de cultura Lipherianii passa, com a corte dele, a cultura Imperialis. Os
+# condados nao mudam. Uma vez por campanha (global ci_constitutio_imperialis_done). Jogador e IA.
+ci_constitutio_imperialis_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	desc = ci_constitutio_imperialis_decision_desc
+	selection_tooltip = ci_constitutio_imperialis_decision_tooltip
+	confirm_text = ci_constitutio_imperialis_decision_confirm
+	decision_group_type = major
+	sort_order = 118
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 24
+		hegemony = 24
+	}
+
+	is_shown = {
+		faith ?= faith:imperialis
+		culture = culture:lipherianii_culture
+		OR = {
+			has_title = title:e_italy
+			highest_held_title_tier >= tier_hegemony
+		}
+		NOT = { has_global_variable = ci_constitutio_imperialis_done }
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		set_global_variable = ci_constitutio_imperialis_done
+		set_culture = culture:imperialis_culture
+		add_prestige = 1000
+		add_character_modifier = {
+			modifier = ci_constitutio_imperialis_modifier
+			years = 20
+		}
+		custom_tooltip = ci_constitutio_imperialis_court_tt
+		hidden_effect = {
+			every_courtier = {
+				limit = { culture = culture:lipherianii_culture }
+				set_culture = culture:imperialis_culture
+			}
+			save_scope_as = ci_constitutio_emperor
+			ci_lore_notify_religion_players_effect = { EVENT = ci_constitutio.0001 DAYS = 0 }
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
