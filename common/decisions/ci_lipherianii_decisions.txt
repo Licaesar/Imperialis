@@ -1,0 +1,35 @@
+﻿# Juntar-se a vanguarda (pedido do autor, 11/10/2026): o caminho inverso da Constitutio Imperialis. Um aventureiro sem terras de
+# cultura Imperialis pode adotar a cultura Lipherianii. So o proprio personagem muda. Jogador e IA (a IA raramente).
+ci_join_lipherianii_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
+	desc = ci_join_lipherianii_decision_desc
+	selection_tooltip = ci_join_lipherianii_decision_tooltip
+	confirm_text = ci_join_lipherianii_decision_confirm
+	decision_group_type = adventurer_minor
+	sort_order = 20
+
+	ai_check_interval = 60
+
+	is_shown = {
+		is_landless_adventurer = yes
+		culture = culture:imperialis_culture
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		prestige = 250
+	}
+
+	effect = {
+		set_culture = culture:lipherianii_culture
+	}
+
+	ai_will_do = {
+		base = 5
+	}
+}
