@@ -6,12 +6,12 @@
 
 ## Imperialis: mesmas roupas dos catolicos (decisao 03/10/2026). A DLC By God Alone e obrigatoria, entao usamos os modelos PAM. ##
 
-	religious_imperialis_head_clothes = { # k_sol: a veste do papa (a tiara e headgear e saiu em 11/10/2026; ver 120_headgear)
+	religious_imperialis_head_clothes = { # k_sol: veste do patriarca ortodoxo com a mitra catolica (autor, 11/10/2026; mitra em 120_headgear)
 		dna_modifiers = {
 			accessory = {
 				mode = add
 				gene = clothes
-				template = religious_catholic_head_clothes
+				template = religious_orthodox_head_clothes
 				range = { 0 1 }
 			}
 		}
