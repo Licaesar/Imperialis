@@ -1,0 +1,15 @@
+﻿##############################################
+# CULTUS IMPERIALIS - TUMULO DO OMNISSIAH (marco 6, fase 6f)
+# Todo 1o de janeiro, as fes do Imperialis que controlam o local santo com o parametro ci_tomb_of_the_omnissiah (ci_olympus) ganham
+# fervor. Fervor nao e modificador de personagem, por isso vem por script.
+##############################################
+yearly_global_pulse = {
+	on_actions = { ci_omnissiah_tomb_yearly }
+}
+
+ci_omnissiah_tomb_yearly = {
+	effect = {
+		faith:imperialis = { ci_omnissiah_tomb_fervor_effect = yes }
+		faith:ci_lex_omnissiah = { ci_omnissiah_tomb_fervor_effect = yes }
+	}
+}

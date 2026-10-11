@@ -1,0 +1,5 @@
+﻿l_english:
+ # Locais santos (marco 6, fase 6f). Texto criado pelo Claude e contado ao autor.
+ holy_site_ci_olympus_name:0 "Tomb of the Omnissiah"
+ holy_site_parameter_ci_tomb_of_the_omnissiah:0 "Each year, a faith that holds the Tomb of the Omnissiah gains #V 3#! [fervor|E]"
+ ci_fervor_gain_omnissiah_tomb:0 "Keeps the Tomb of the Omnissiah"

@@ -28,7 +28,7 @@ imperialis = {
 	holy_sites = {
 		athens
 		constantinople
-		olympus
+		ci_olympus # Tumulo do Omnissiah (marco 6, 6f; antes o olympus vanilla)
 		baghdad
 	}
 
@@ -69,7 +69,7 @@ ci_lex_omnissiah = {
 	# com a Veritas.
 	eminent_holy_sites = {
 		jerusalem
-		olympus
+		ci_olympus # Tumulo do Omnissiah (marco 6, 6f; antes o olympus vanilla)
 	}
 
 	holy_sites = {

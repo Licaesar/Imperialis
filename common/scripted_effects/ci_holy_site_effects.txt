@@ -1,0 +1,10 @@
+﻿# Tumulo do Omnissiah (marco 6, fase 6f). Escopo: fe.
+ci_omnissiah_tomb_fervor_effect = {
+	if = {
+		limit = { controls_holy_site_with_parameter = ci_tomb_of_the_omnissiah }
+		change_fervor = {
+			value = 3
+			desc = ci_fervor_gain_omnissiah_tomb
+		}
+	}
+}
