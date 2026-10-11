@@ -1,5 +1,5 @@
 ﻿imperialis_culture = {
-	clothing_gfx = { byzantine_clothing_gfx } # como greek (marco 5, 5a: a sequencia precisa ser igual a de uma cultura vanilla)
+	clothing_gfx = { dde_hre_clothing_gfx french_clothing_gfx western_clothing_gfx byzantine_clothing_gfx } # escolha do autor (11/10/2026); fora das sequencias vanilla gera aviso de sequencia grafica no log (marco 5, 5a)
 	coa_gfx = { english_coa_gfx western_coa_gfx } # como english (marco 5, 5a)
 	building_gfx = { mediterranean_building_gfx }
 	color = trojan
@@ -20,7 +20,7 @@
 	house_coa_mask_offset = { 0.0 0.055 }
 	house_coa_mask_scale = { 0.9 0.9 }
 	traditions = {
-		constitutio_imperialis
+		matrimonium_imperiale # antes constitutio_imperialis (renomeada em 11/10/2026)
 		custodia_imperialis
 		administratum
 		mysterium_divinitas
@@ -28,7 +28,7 @@
 }
 
 lipherianii_culture = {
-	clothing_gfx = { byzantine_clothing_gfx } # como greek (marco 5, 5a: a sequencia precisa ser igual a de uma cultura vanilla)
+	clothing_gfx = { dde_hre_clothing_gfx french_clothing_gfx western_clothing_gfx } # escolha do autor (11/10/2026); fora das sequencias vanilla gera aviso de sequencia grafica no log (marco 5, 5a)
 	coa_gfx = { english_coa_gfx western_coa_gfx } # como english (marco 5, 5a)
 	building_gfx = { mediterranean_building_gfx }
 	color = bosnian
@@ -53,6 +53,6 @@ lipherianii_culture = {
 		mysterium_divinitas
 		connubium_sanguinis
 		tradition_only_the_strong
-		tradition_warriors_by_merit
+		tradition_by_the_sword
 	}
 }

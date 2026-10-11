@@ -29,22 +29,31 @@
 	}
 }
 
-constitutio_imperialis = {
+# Matrimonium Imperiale (11/10/2026): era a constitutio_imperialis; o autor moveu a parte de governo para o administratum e fez dela uma
+# tradicao de casamento (um conjuge, muitas consortes para imperadores e hegemons, casamentos dentro da cultura e do reino). Nome e
+# descricao pelo Claude.
+matrimonium_imperiale = {
 	layers = {
 		0 = default5.dds
 		1 = mediterranean
 		2 = "rec5 copy 2.dds"
 		3 = 4.dds
-		4 = quill.dds
+		4 = instrument.dds
+	}
+	partners = {
+		number_of_spouses = 1
+		number_of_consorts_by_tier = {
+			hegemony = 20
+			empire = 10
+		}
 	}
 	parameters = {
+		reduced_marriage_acceptance_outside_culture = yes
+		reduced_marriage_acceptance_distant_realms = yes
 		less_likely_to_culture_convert = yes
+		other_cultures_more_likely_to_hybridize = yes
 	}
-	# Marco 6, fase 6e: vassalos e legitimidade (a constituicao do Imperium)
-	character_modifier = {
-		vassal_opinion = 5
-		legitimacy_gain_mult = 0.15
-	}
+
 	cost = {
 		prestige = 2000
 	}
@@ -60,13 +69,22 @@ administratum = {
 		3 = 2.dds
 		4 = palace_politics.dds
 	}
+	
 	parameters = {
 		ambitious_trait_more_common = yes
+		unlock_co_emperors = yes
+		unlock_junior_emperors = yes
+		just_trait_more_common = yes
+		just_trait_gives_bonuses = yes
+		legalistic_administrator_bonuses = yes
 	}
 	# Marco 6, fase 6e: dominio e impostos (a burocracia imperial)
 	character_modifier = {
 		domain_limit = 1
-		domain_tax_mult = 0.05
+		diplomatic_range_mult = 0.2
+		legitimacy_gain_mult = 0.15
+		title_creation_cost_mult = -0.3
+		vassal_limit = 50
 	}
 	cost = {
 		prestige = 2000
@@ -87,6 +105,8 @@ mysterium_divinitas = {
 		mystic_trait_from_education = yes
 		mystic_trait_gives_bonuses = yes
 		mendicant_mystics_may_appear = yes
+		better_ward_education = yes
+		can_appoint_court_scholar = yes
 	}
 	# Marco 6, fase 6e: aprendizado e piedade (os misterios da divindade)
 	character_modifier = {
