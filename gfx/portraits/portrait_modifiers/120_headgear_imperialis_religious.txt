@@ -4,7 +4,8 @@
 	selection_behavior = weighted_random
 	priority = 3
 
-## Imperialis: mesmos chapeus dos catolicos (decisao 03/10/2026) ##
+## Imperialis: mesmos chapeus dos catolicos (decisao 03/10/2026), menos a tiara papal (11/10/2026, pedido do autor): o chefe da fe ##
+## usa a mitra de arcebispo, como os bispos ##
 
 	religious_imperialis_head = { # k_sol
 		outfit_tags = { rank_headgear }
@@ -12,7 +13,7 @@
 			accessory = {
 				mode = add
 				gene = headgear
-				template = catholic_head
+				template = catholic_archbishop_mitre
 				range = { 0 1 }
 			}
 			accessory = {
