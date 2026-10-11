@@ -23,5 +23,11 @@ ci_hegemony.0001 = {
 
 	option = {
 		name = ci_hegemony.0001.a
+		show_as_tooltip = {
+			get_title = title:h_liphe
+			add_prestige = 2000
+			dynasty ?= { add_dynasty_prestige = 10000 }
+		}
+		custom_tooltip = ci_hegemony.0001.tt
 	}
 }

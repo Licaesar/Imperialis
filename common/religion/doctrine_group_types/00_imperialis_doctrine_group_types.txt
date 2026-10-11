@@ -1,12 +1,5 @@
-﻿# Grupo das doutrinas de identidade dos ritos (liphe_doctrines_authority.txt).
-# Na 1.20 a doutrina aponta para o grupo com doctrine_group_type; o grupo nao lista mais as doutrinas.
-doctrine_imperialis_branches = {
-	category = "main_group"
-
-	is_available_on_create = {
-		religion_tag = imperialis_religion
-	}
-}
+﻿# Na 1.20 a doutrina aponta para o grupo com doctrine_group_type; o grupo nao lista mais as doutrinas.
+# O grupo dos Ordo (doctrine_imperialis_branches) saiu em 11/10/2026, junto com as doutrinas de identidade dos ritos (decisao do autor).
 
 # Regioes clericais da fe (marco 3, fase 3b.1). Como o is_christian_faith do vanilla (categoria special): a doutrina vai junto para a fe
 # nova criada por divergencia. A doutrina de identidade crista nao serve (traz sincretismo, hostilidade e a situacao da Igreja crista).
@@ -49,5 +42,15 @@ ci_omnissiae_concord = {
 
 	is_available_on_create = {
 		has_doctrine = ci_doctrine_omnissiae_concord
+	}
+}
+
+# Veneratio Sanguinis (11/10/2026): categoria special e visivel, como a Teachings of the Omnissiah. Vai junto para a fe nova criada por
+# divergencia de um rito da Veritas.
+ci_veneratio_sanguinis = {
+	category = special
+
+	is_available_on_create = {
+		has_doctrine = ci_doctrine_veneratio_sanguinis
 	}
 }

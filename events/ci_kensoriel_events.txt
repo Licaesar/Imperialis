@@ -23,5 +23,21 @@ ci_kensoriel.0001 = {
 
 	option = {
 		name = ci_kensoriel.0001.a
+		show_as_tooltip = {
+			scope:ci_lore_kensoriel = { add_prestige = 500 }
+			faith:imperialis = {
+				change_fervor = {
+					value = 20
+					desc = ci_fervor_gain_kensoriel_miracle
+				}
+			}
+			scope:ci_miracle_county = {
+				add_county_modifier = {
+					modifier = ci_witnessed_the_miracle_modifier
+					years = 20
+				}
+			}
+		}
+		custom_tooltip = ci_kensoriel.0001.tt
 	}
 }

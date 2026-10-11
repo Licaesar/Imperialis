@@ -1,7 +1,8 @@
 ﻿# Ritos da religiao Omnissiae (marco 5, fase 5b): imperialis e sororitas na fe Veritas Imperialis (imperialis), omnissiah e homus na
 # fe Lex Omnissiah (ci_lex_omnissiah). Os quatro listam a Concordia Omnissiae (ci_doctrine_omnissiae_concord: as duas fes se veem
 # astray ate a decisao de cisma). Cada rito tem tres tenets centrais e as doutrinas que o diferenciam das doutrinas comuns da religiao
-# (religion_types/00_imperialis.txt). A doutrina de identidade (temple_authority_cult_*) define o culto.
+# (religion_types/00_imperialis.txt). As doutrinas de identidade dos ritos (temple_authority_cult_*, os Ordo) sairam em 11/10/2026
+# (decisao do autor); os dois ritos da Veritas levam a Veneratio Sanguinis (sanguini_4/5 como virtudes).
 # Os nomes de exibicao sao os da localizacao (chaves iguais as dos ritos).
 #
 # Tenets trocados em 03/10/2026 por decisao do autor: household_gods -> pentarchy (household_gods exige politeismo e a religiao agora
@@ -21,8 +22,8 @@ imperialis = {
 	}
 
 	doctrines = {
-		temple_authority_cult_imperialis_doctrine
 		ci_doctrine_omnissiae_concord # Concordia Omnissiae (marco 5, 5b): ve a outra fe da religiao como astray
+		ci_doctrine_veneratio_sanguinis # Veneratio Sanguinis (11/10/2026): sanguini_4/5 como virtudes; tambem na fe
 		special_doctrine_has_clerical_electors # colegio de cardeais da fe (marco 3, fase 3a); tambem na fe
 		ci_doctrine_has_clerical_regions # regioes clericais da fe (marco 3, fase 3b.1); tambem na fe
 	}
@@ -44,8 +45,8 @@ sororitas = {
 	}
 
 	doctrines = {
-		temple_authority_cult_sororitas_doctrine
 		ci_doctrine_omnissiae_concord # Concordia Omnissiae (marco 5, 5b): ve a outra fe da religiao como astray
+		ci_doctrine_veneratio_sanguinis # Veneratio Sanguinis (11/10/2026): sanguini_4/5 como virtudes; tambem na fe
 		special_doctrine_has_clerical_electors # colegio de cardeais da fe (marco 3, fase 3a); tambem na fe
 		ci_doctrine_has_clerical_regions # regioes clericais da fe (marco 3, fase 3b.1); tambem na fe
 		ci_doctrine_ministorum_blessing # Bencao do Ministorum (marco 4, fase 4a): divergencia -10, como a Holy Blessing vanilla
@@ -70,7 +71,6 @@ omnissiah = {
 	}
 
 	doctrines = {
-		temple_authority_cult_omnissiah_doctrine
 		doctrine_no_head # sem Head of Faith (marco 5, 5b); tambem na fe
 		ci_doctrine_omnissiae_concord # Concordia Omnissiae (marco 5, 5b): ve a outra fe da religiao como astray
 		doctrine_gender_equal
@@ -89,11 +89,10 @@ homus = {
 	tenets = {
 		tenet_mendicant_preachers
 		tenet_esotericism
-		tenet_asceticism
+		tenet_eastern_syncretism
 	}
 
 	doctrines = {
-		temple_authority_cult_homus_doctrine
 		doctrine_no_head # sem Head of Faith (marco 5, 5b); tambem na fe
 		ci_doctrine_omnissiae_concord # Concordia Omnissiae (marco 5, 5b): ve a outra fe da religiao como astray
 		doctrine_pluralism_pluralistic

@@ -20,5 +20,16 @@ ci_constitutio.0001 = {
 
 	option = {
 		name = ci_constitutio.0001.a
+		show_as_tooltip = {
+			scope:ci_constitutio_emperor = {
+				set_culture = culture:imperialis_culture
+				add_prestige = 1000
+				add_character_modifier = {
+					modifier = ci_constitutio_imperialis_modifier
+					years = 20
+				}
+			}
+		}
+		custom_tooltip = ci_constitutio.0001.tt
 	}
 }

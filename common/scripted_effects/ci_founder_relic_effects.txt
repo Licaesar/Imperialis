@@ -4,7 +4,6 @@
 # Escopo: o dono. KEY - chave curta (nome ci_relic_<KEY>_name, descricao ci_relic_<KEY>_desc, modificador ci_relic_<KEY>_modifier)
 ci_create_founder_relic_effect = {
 	save_scope_as = ci_relic_owner
-	house ?= { save_scope_as = ci_relic_house_scope }
 	create_artifact = {
 		name = ci_relic_$KEY$_name
 		description = ci_relic_$KEY$_desc
@@ -17,16 +16,6 @@ ci_create_founder_relic_effect = {
 		decaying = no
 		history = {
 			type = created_before_history
-		}
-		save_scope_as = ci_new_relic
-	}
-	if = {
-		limit = { exists = scope:ci_relic_house_scope }
-		scope:ci_new_relic = {
-			set_variable = {
-				name = ci_relic_house
-				value = scope:ci_relic_house_scope
-			}
 		}
 	}
 }

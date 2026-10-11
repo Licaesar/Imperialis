@@ -4,3 +4,6 @@
  ci_doctrine_omnissiae_concord_name:0 "Concordia Omnissiae"
  ci_doctrine_omnissiae_concord_desc:0 "The Veritas Imperialis and the Lex Omnissiah walk different roads, yet both kneel before the same Omnissiah. Until one of them names the other heretical, each holds the other to be Astray rather than Hostile, and no holy war may be called between them."
  ci_omnissiae_concord_name:0 "Concordia"
+ ci_doctrine_veneratio_sanguinis_name:0 "Veneratio Sanguinis"
+ ci_doctrine_veneratio_sanguinis_desc:0 "The blood of the Omnissiah did not end with Him. It flows still in the Sanguinis, and the faithful of the Veritas Imperialis honor those in whom it runs strongest as living proof that the divine walks among them."
+ ci_veneratio_sanguinis_name:0 "Veneratio"

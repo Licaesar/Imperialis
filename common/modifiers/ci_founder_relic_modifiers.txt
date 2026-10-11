@@ -1,4 +1,4 @@
-﻿# Artefatos unicos dos fundadores (marco 6, fase 6c). Um modificador por artefato; o bonus so vale para a casa do dono original
+﻿# Artefatos unicos dos fundadores (marco 6, fase 6c). Um modificador por artefato; vale para qualquer dono desde 11/10/2026
 # (common/artifacts/templates/ci_founder_relic_templates.txt). Ver common/scripted_effects/ci_founder_relic_effects.txt.
 
 ci_relic_lux_omnissiae_modifier = {

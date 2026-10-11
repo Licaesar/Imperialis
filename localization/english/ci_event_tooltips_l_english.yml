@@ -1,0 +1,12 @@
+﻿l_english:
+ # "Will Happen" das opcoes dos eventos do Claude (pedido do autor, 11/10/2026). Texto criado pelo Claude.
+ ci_lore.0001.tt:0 "The #V Veritas Imperialis#! and the #V Lex Omnissiah#! are bound by the #V Concordia Omnissiae#!: each holds the other to be Astray rather than Hostile, for as long as the Concordia lasts"
+ ci_lore.0010.tt:0 "[ci_lore_ecclesiarch.GetTitledFirstName] becomes Head of Faith of the #V Adeptus Ministorum#!"
+ ci_lore.0011.tt:0 "The holder of the #V Adeptus Ministorum#! becomes a vassal of [ci_lore_liege.GetTitledFirstName]"
+ ci_lore.0020.tt:0 "The #V College of Cardinals#! will elect the next Head of Faith of the Adeptus Ministorum"
+ ci_lore.0030.tt:0 "[ci_lore_dead_apostle.GetFirstName] is counted among the Seventeen who have returned to the Omnissiah. [ci_lore_dead_apostle.GetHerHis|U] possessions, relics included, pass to [ci_lore_dead_apostle.GetHerHis] heirs"
+ ci_lore.0060.tt:0 "Members of [ci_lore_gladii_dynast.GetFirstNamePossessive] dynasty can recruit the #V $ci_sanguinis_fire_swords$#! [men_at_arms|E]"
+ ci_kensoriel.0001.tt:0 "The neighboring counties also gain #V Witnessed the Miracle#! for 20 years"
+ ci_constitutio.0001.tt:0 "The #V Lipherianii#! courtiers of [ci_constitutio_emperor.GetTitledFirstName] adopt the #V Imperialis#! culture. The counties keep their culture"
+ ci_hegemony.0001.tt:0 "The #V Empire of Italy#! and the empires you hold become de jure part of the #V Hegemonia Liphe#!"
+ ci_ascension.0001.b.tt:0 "Nothing changes for now. You may take the decision again whenever you are ready"

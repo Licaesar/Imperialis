@@ -23,6 +23,7 @@ ci_schism.0001 = {
 
 	option = {
 		name = ci_schism.0001.a
+		custom_tooltip = ci_omnissiae_schism_decision_effect_tt
 	}
 }
 
@@ -51,10 +52,12 @@ ci_schism.0002 = {
 	option = {
 		trigger = { NOT = { faith = faith:ci_lex_omnissiah } }
 		name = ci_schism.0002.a
+		custom_tooltip = ci_omnissiae_schism_decision_effect_tt
 	}
 
 	option = {
 		trigger = { faith = faith:ci_lex_omnissiah }
 		name = ci_schism.0002.b
+		custom_tooltip = ci_omnissiae_schism_decision_effect_tt
 	}
 }

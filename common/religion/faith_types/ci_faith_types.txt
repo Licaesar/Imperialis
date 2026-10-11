@@ -38,10 +38,12 @@ imperialis = {
 	# preenchido pela fundacao do Ministorum, ci_found_ministorum_effect). Os dois ritos da fe tambem a listam (rite_types).
 	# Regioes clericais (3b.1): arcebispos, arquidioceses e catedrais; a doutrina e propria do Imperialis (ci_doctrine_has_clerical_regions).
 	# Concordia Omnissiae (marco 5, 5b): ve a Lex Omnissiah como astray; tambem nos dois ritos (doutrina da fe so chega ao rito principal).
+	# Veneratio Sanguinis (11/10/2026): sanguini_4/5 como virtudes; tambem nos dois ritos.
 	doctrines = {
 		special_doctrine_has_clerical_electors
 		ci_doctrine_has_clerical_regions
 		ci_doctrine_omnissiae_concord
+		ci_doctrine_veneratio_sanguinis
 	}
 
 	cultures = { lipherianii_culture imperialis_culture }
@@ -50,8 +52,7 @@ imperialis = {
 # Lex Omnissiah (marco 5, fase 5b): a segunda fe da religiao. Le o Omnissiah na sua Lei, nao no sangue nem no clero:
 # - sem Head of Faith (doctrine_no_head, tambem nos dois ritos; a Teachings of the Omnissiah da religiao bloqueia a decisao vanilla
 #   de criar um chefe aleatorio), sem colegio de cardeais, sem regioes clericais e sem a Bencao do Ministorum;
-# - nao venera os Sanguinis: os pesos de sanguini_4/5 ficam nas doutrinas de identidade da Veritas, e as da Lex pesam theologian e
-#   lifestyle_scholar (liphe_doctrines_authority.txt);
+# - nao venera os Sanguinis: as virtudes sanguini_4/5 ficam na Veneratio Sanguinis, so da Veritas (ci_doctrine_veneratio_sanguinis.txt);
 # - Concordia Omnissiae (ci_doctrine_omnissiae_concord, nos quatro ritos) faz as duas fes se verem astray. A decisao de cisma (5c) a
 #   remove e as fes voltam ao hostil padrao da religiao (heresy_hostility_doctrine), dos dois lados.
 # Seguidores em 867 (history/characters/ci_founders.txt): Ramashiri e Granhieron com as esposas (Cult Omnissiah) e Telcontar e Musashi

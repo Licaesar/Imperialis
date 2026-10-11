@@ -1,7 +1,6 @@
 ﻿# Teachings of the Omnissiah (marco 4, fase 4c; aprovado pelo autor). Modelo: special_doctrine_is_christian_faith (Teachings of Jesus),
-# que o vanilla lista na religiao. Aqui fica o que era comum as quatro doutrinas de identidade dos ritos (temple_authority_cult_*,
-# liphe_doctrines_authority.txt), que agora so levam o que diferencia cada rito. A soma por personagem nao mudou, salvo take_vows_active,
-# que ja vem de doctrine_monasticism_accepted (marco 3).
+# que o vanilla lista na religiao. Nasceu com o que era comum as quatro doutrinas de identidade dos ritos (temple_authority_cult_*), que
+# sairam em 11/10/2026 por decisao do autor; nessa data o autor tirou tambem as virtudes de aprendizado e o parametro de educacao mistica.
 #  - same_faith_different_rite_opinion / _county_opinion_add: rivalidade media entre ritos (como tenet_communal_identity).
 #  - block_from_create_hof_parameter: esconde a decisao vanilla create_hof_decision (Establish a Ecclesia Maximus), que criaria um Head
 #    of Faith aleatorio com prioridade sobre o k_sol. O chefe da fe so nasce pela decisao ci_found_ministorum_decision.
@@ -12,22 +11,12 @@ ci_doctrine_teachings_of_the_omnissiah = {
 	doctrine_group_type = ci_teachings_of_the_omnissiah
 	icon = "special_doctrine_default" # provisorio, ate o autor fazer um icone proprio
 
-	traits = {
-		virtues = {
-			education_learning_3 = { weight = 15 scale = 1 }
-			education_learning_4 = { weight = 15 scale = 1 }
-			education_learning_5 = { weight = 15 scale = 1 }
-			erudite = { weight = 15 scale = 1 }
-			lifestyle_mystic = { weight = 15 scale = 1 }
-		}
-	}
 	character_modifier = {
 		same_faith_different_rite_opinion = -10
 		same_faith_different_rite_county_opinion_add = -5
 	}
 	parameters = {
 		block_from_create_hof_parameter
-		tenet_esotericism_mystic_education
 	}
 	special_parameters = {
 		heresy_threshold = 100

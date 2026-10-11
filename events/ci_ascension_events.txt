@@ -46,6 +46,7 @@ ci_ascension.0001 = {
 
 	option = {
 		name = ci_ascension.0001.b
+		custom_tooltip = ci_ascension.0001.b.tt
 	}
 }
 

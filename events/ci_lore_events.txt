@@ -1,5 +1,7 @@
 ﻿# Eventos de lore (marco 5, fase 5d). Texto criado pelo Claude e contado ao autor. Todos so informam (jogadores); os efeitos que
-# mudam o jogo acontecem antes, nos on_actions e efeitos citados em common/on_action/ci_lore_on_actions.txt.
+# mudam o jogo acontecem antes, nos on_actions e efeitos citados em common/on_action/ci_lore_on_actions.txt. Toda opcao mostra o que
+# aconteceu ("Will Happen", pedido do autor em 11/10/2026): show_as_tooltip com o efeito real, ou custom_tooltip quando o efeito e
+# grande demais para o tooltip.
 # 0001 The Two Paths (867) | 0002 The Mantle of Undomiel (867) | 0010 fundacao do Ministorum | 0011 vassalagem do Ministorum
 # 0020 sede vacante | 0021 eleicao | 0030 morte de um apostolo | 0031 morte do Kensoriel para a Lex | 0040 nascimento de um Sanguinis 5
 # 0050 primeira cura de um Sanguinis | 0060 Gladii Ignis
@@ -31,10 +33,12 @@ ci_lore.0001 = {
 	option = {
 		trigger = { NOT = { faith = faith:ci_lex_omnissiah } }
 		name = ci_lore.0001.a
+		custom_tooltip = ci_lore.0001.tt
 	}
 	option = {
 		trigger = { faith = faith:ci_lex_omnissiah }
 		name = ci_lore.0001.b
+		custom_tooltip = ci_lore.0001.tt
 	}
 }
 
@@ -92,6 +96,9 @@ ci_lore.0010 = {
 
 	option = {
 		name = ci_lore.0010.a
+		custom_tooltip = ci_lore.0010.tt
+		custom_tooltip = ci_found_ministorum_college_tooltip
+		custom_tooltip = ci_found_ministorum_romagna_tooltip
 	}
 }
 
@@ -119,6 +126,10 @@ ci_lore.0011 = {
 
 	option = {
 		name = ci_lore.0011.a
+		custom_tooltip = ci_lore.0011.tt
+		custom_tooltip = ci_ministorum_vassalage_romagna_tooltip
+		custom_tooltip = ci_ministorum_vassalage_empire_tooltip
+		custom_tooltip = ci_ministorum_vassalage_region_tooltip
 	}
 }
 
@@ -138,6 +149,7 @@ ci_lore.0020 = {
 
 	option = {
 		name = ci_lore.0020.a
+		custom_tooltip = ci_lore.0020.tt
 	}
 }
 
@@ -160,6 +172,9 @@ ci_lore.0021 = {
 
 	option = {
 		name = ci_lore.0021.a
+		show_as_tooltip = {
+			scope:ci_lore_new_ecclesiarch = { get_title = title:k_sol }
+		}
 	}
 }
 
@@ -252,6 +267,7 @@ ci_lore.0030 = {
 
 	option = {
 		name = ci_lore.0030.a
+		custom_tooltip = ci_lore.0030.tt
 	}
 }
 
@@ -298,6 +314,9 @@ ci_lore.0040 = {
 
 	option = {
 		name = ci_lore.0040.a
+		show_as_tooltip = {
+			scope:ci_lore_newborn = { add_trait = sanguini_5 }
+		}
 	}
 }
 
@@ -342,5 +361,6 @@ ci_lore.0060 = {
 
 	option = {
 		name = ci_lore.0060.a
+		custom_tooltip = ci_lore.0060.tt
 	}
 }

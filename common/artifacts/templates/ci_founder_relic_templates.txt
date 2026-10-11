@@ -1,19 +1,8 @@
-﻿# Artefatos unicos dos fundadores (marco 6, fase 6c; desenho aprovado pelo autor em 11/10/2026): qualquer um pode toma-los, mas o
-# bonus inteiro so vale para quem e da casa do dono original (variavel ci_relic_house no artefato, gravada na criacao). Os demais
-# recebem o fallback, como os artefatos historicos do vanilla (tizona_template).
+﻿# Artefatos unicos dos fundadores (marco 6, fase 6c). Desde 11/10/2026 (pedido do autor) qualquer dono recebe o bonus inteiro: sem
+# can_benefit nem fallback (o padrao do jogo e sempre beneficiar). O template so os deixa unicos e sem reforja nem reparo.
 ci_founder_relic_template = {
 	can_equip = {
 		always = yes
-	}
-
-	can_benefit = {
-		exists = house
-		scope:artifact = { has_variable = ci_relic_house }
-		house = scope:artifact.var:ci_relic_house
-	}
-
-	fallback = {
-		monthly_prestige = 0.3
 	}
 
 	can_reforge = {
