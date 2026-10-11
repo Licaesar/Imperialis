@@ -1,5 +1,5 @@
 ﻿# Juntar-se a vanguarda (pedido do autor, 11/10/2026): o caminho inverso da Constitutio Imperialis. Um aventureiro sem terras de
-# cultura Imperialis pode adotar a cultura Lipherianii. So o proprio personagem muda. Jogador e IA (a IA raramente).
+# cultura Imperialis pode adotar a cultura Lipherianii, e a gente Imperialis do acampamento o acompanha. Jogador e IA (a IA raramente).
 ci_join_lipherianii_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
@@ -27,6 +27,15 @@ ci_join_lipherianii_decision = {
 
 	effect = {
 		set_culture = culture:lipherianii_culture
+		# A gente do acampamento acompanha (pedido do autor, 11/10/2026), como a corte do imperador na Constitutio Imperialis; o acampamento
+		# do aventureiro e a corte dele (every_courtier)
+		custom_tooltip = ci_join_lipherianii_camp_tt
+		hidden_effect = {
+			every_courtier = {
+				limit = { culture = culture:imperialis_culture }
+				set_culture = culture:lipherianii_culture
+			}
+		}
 	}
 
 	ai_will_do = {
