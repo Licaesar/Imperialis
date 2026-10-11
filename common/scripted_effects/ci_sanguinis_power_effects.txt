@@ -1,0 +1,13 @@
+﻿# Sanguinis (marco 6, fase 6d).
+
+# Escopo: um Sanguinis da familia de quem emprega o Custos Sanguinis. Renova "Guarded Blood" por um ano.
+ci_guard_blood_effect = {
+	if = {
+		limit = { has_character_modifier = ci_guarded_blood_modifier }
+		remove_character_modifier = ci_guarded_blood_modifier
+	}
+	add_character_modifier = {
+		modifier = ci_guarded_blood_modifier
+		years = 1
+	}
+}

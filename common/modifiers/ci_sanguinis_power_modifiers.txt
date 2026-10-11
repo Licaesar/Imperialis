@@ -1,0 +1,23 @@
+﻿# Sanguinis (marco 6, fase 6d).
+
+# Bencao do Sangue: 10 anos
+ci_blood_blessing_modifier = {
+	icon = health_positive
+	health = 0.3
+	learning = 2
+}
+
+# Presenca Divina: 6 meses, no Sanguinis que comanda o exercito
+ci_divine_presence_modifier = {
+	icon = martial_positive
+	advantage = 10
+	army_damage_mult = 0.1
+	army_toughness_mult = 0.1
+}
+
+# Custos Sanguinis: 1 ano, renovado, nos Sanguinis da familia de quem emprega o cargo
+ci_guarded_blood_modifier = {
+	icon = health_positive
+	health = 0.2
+	fertility = 0.1
+}

@@ -1,0 +1,6 @@
+﻿# Bencao do Sangue (marco 6, fase 6d): quem foi abencoado por um Sanguinis.
+ci_sanguinis_blessed_opinion = {
+	opinion = 20
+	years = 10
+	decaying = yes
+}

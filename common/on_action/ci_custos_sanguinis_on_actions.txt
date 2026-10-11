@@ -1,0 +1,27 @@
+﻿##############################################
+# CULTUS IMPERIALIS - CUSTOS SANGUINIS (marco 6, fase 6d)
+# Uma vez por ano, para cada governante que emprega o Custos Sanguinis: ele e os Sanguinis vivos da familia proxima recebem "Guarded
+# Blood" por um ano (renovado enquanto o cargo estiver ocupado).
+##############################################
+on_yearly_playable = {
+	on_actions = { ci_custos_sanguinis_yearly }
+}
+
+ci_custos_sanguinis_yearly = {
+	trigger = {
+		employs_court_position = ci_custos_sanguinis_court_position
+	}
+	effect = {
+		if = {
+			limit = { ci_is_sanguinis_trigger = yes }
+			ci_guard_blood_effect = yes
+		}
+		every_close_family_member = {
+			limit = {
+				is_alive = yes
+				ci_is_sanguinis_trigger = yes
+			}
+			ci_guard_blood_effect = yes
+		}
+	}
+}

@@ -1,0 +1,31 @@
+﻿l_english:
+ # Sanguinis (marco 6, fase 6d). Texto criado pelo Claude e contado ao autor.
+
+ ci_custos_sanguinis_court_position:0 "Custos Sanguinis"
+ ci_custos_sanguinis_court_position_desc:0 "The Custos Sanguinis keeps the divine blood: watching over the health of the Sanguinis of the family, the births of their children and the purity of the line."
+ ci_custos_sanguinis_court_position_job:0 "Keeping the divine blood"
+ ci_custos_sanguinis_employer_custom_effect_description:0 "Every year, you and the living Sanguinis of your close family gain #V Guarded Blood#! (+0.2 [health|E], +10% fertility) while the position is filled"
+ ci_custos_sanguinis_needs_sanguinis_tt:0 "You or someone of your close family carries the divine blood (Sanguinis)"
+ ci_custos_sanguinis_aptitude_sanguinis:0 "Carries the divine blood"
+ ci_custos_sanguinis_aptitude_zealous:0 "Zealous"
+ ci_custos_sanguinis_aptitude_theologian:0 "Theologian"
+ ci_guarded_blood_modifier:0 "Guarded Blood"
+ ci_guarded_blood_modifier_desc:0 "A Custos Sanguinis watches over this child of the divine blood."
+
+ ci_sanguinis_blessing_interaction:0 "Blessing of the Blood"
+ ci_sanguinis_blessing_interaction_desc:0 "I will lay my hands upon [recipient.GetShortUIName] and let a little of the blood of the Omnissiah strengthen [recipient.GetHerHim]. It will cost me, as every gift of the blood does."
+ ci_sanguinis_blessing_interaction_actor_toast:0 "Blessing of the Blood"
+ ci_sanguinis_blessing_interaction_recipient_toast:0 "Blessed by the Blood"
+ ci_sanguinis_blessing_wrong_faith_tt:0 "[recipient.GetShortUIName] follows the Veritas Imperialis"
+ ci_sanguinis_blessing_already_tt:0 "[recipient.GetShortUIName] is not already blessed by the blood"
+ ci_blood_blessing_modifier:0 "Blessed by the Blood"
+ ci_blood_blessing_modifier_desc:0 "A Sanguinis laid hands upon this character and shared the strength of the divine blood."
+ ci_sanguinis_blessed_opinion:0 "Blessed me with the Blood"
+
+ ci_divine_presence_decision:0 "Divine Presence"
+ ci_divine_presence_decision_desc:0 "Let the soldiers see what marches with them. For a season, I will let the blood of the Omnissiah shine through, and no army of mortal men will stand easily before it, though it will cost me."
+ ci_divine_presence_decision_tooltip:0 "Reveal the divine blood before your army for six months"
+ ci_divine_presence_decision_confirm:0 "Behold the blood of the Omnissiah!"
+ ci_divine_presence_active_tt:0 "Your Divine Presence is not already shining"
+ ci_divine_presence_modifier:0 "Divine Presence"
+ ci_divine_presence_modifier_desc:0 "The blood of the Omnissiah shines through this Sanguinis before the army."

@@ -1,0 +1,49 @@
+﻿# Presenca Divina (marco 6, fase 6d; desenho aprovado pelo autor em 11/10/2026): um Sanguinis nivel 4 ou 5 que comanda um exercito revela
+# o sangue divino diante das tropas: vantagem e dano do exercito por 6 meses. Soma um "Spent Blood", como a cura. Jogador e IA.
+ci_divine_presence_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	desc = ci_divine_presence_decision_desc
+	selection_tooltip = ci_divine_presence_decision_tooltip
+	confirm_text = ci_divine_presence_decision_confirm
+	sort_order = 90
+
+	is_shown = {
+		OR = {
+			has_trait = sanguini_4
+			has_trait = sanguini_5
+		}
+	}
+
+	is_valid = {
+		is_commanding_army = yes
+		custom_tooltip = {
+			text = ci_divine_presence_active_tt
+			NOT = { has_character_modifier = ci_divine_presence_modifier }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = ci_divine_presence_modifier
+			months = 6
+		}
+		ci_sanguinis_add_healing_strain_effect = yes
+	}
+
+	ai_check_interval = 3
+
+	ai_potential = {
+		is_commanding_army = yes
+		is_at_war = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}

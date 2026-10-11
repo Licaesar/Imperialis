@@ -1,0 +1,17 @@
+﻿# Sanguinis (marco 6, fase 6d).
+
+# Escopo: personagem. Tem o sangue divino (qualquer nivel).
+ci_is_sanguinis_trigger = {
+	OR = { has_trait = sanguini_1 has_trait = sanguini_2 has_trait = sanguini_3 has_trait = sanguini_4 has_trait = sanguini_5 }
+}
+
+# Escopo: personagem (governante). Ele mesmo ou alguem da familia proxima, vivo, e Sanguinis.
+ci_has_sanguinis_family_trigger = {
+	OR = {
+		ci_is_sanguinis_trigger = yes
+		any_close_family_member = {
+			is_alive = yes
+			ci_is_sanguinis_trigger = yes
+		}
+	}
+}

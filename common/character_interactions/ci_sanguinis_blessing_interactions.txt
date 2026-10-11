@@ -1,0 +1,70 @@
+﻿# Bencao do Sangue (marco 6, fase 6d; desenho aprovado pelo autor em 11/10/2026). Um Sanguinis nivel 4 ou 5 abencoa uma crianca ou um
+# adulto da Veritas Imperialis: saude e aprendizado por 10 anos. Como a cura, soma ao Sanguinis um "Spent Blood" (desgaste acumulavel de
+# 5 anos, ci_sanguinis_add_healing_strain_effect). A IA nao usa, como a cura (decisao do autor para a cura).
+ci_sanguinis_blessing_interaction = {
+	category = interaction_category_friendly
+	icon = religious
+	interface_priority = 29
+
+	use_diplomatic_range = yes
+	desc = ci_sanguinis_blessing_interaction_desc
+	greeting = positive
+	auto_accept = yes
+
+	is_shown = {
+		scope:actor != scope:recipient
+		scope:actor = {
+			OR = {
+				has_trait = sanguini_4
+				has_trait = sanguini_5
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = {
+			custom_tooltip = {
+				text = ci_sanguinis_blessing_wrong_faith_tt
+				faith = faith:imperialis
+			}
+			custom_tooltip = {
+				text = ci_sanguinis_blessing_already_tt
+				NOT = { has_character_modifier = ci_blood_blessing_modifier }
+			}
+		}
+		scope:actor = { is_available_adult = yes }
+	}
+
+	on_accept = {
+		scope:actor = {
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = ci_sanguinis_blessing_interaction_actor_toast
+				left_icon = scope:actor
+				right_icon = scope:recipient
+				scope:recipient = {
+					add_character_modifier = {
+						modifier = ci_blood_blessing_modifier
+						years = 10
+					}
+					add_opinion = {
+						target = scope:actor
+						modifier = ci_sanguinis_blessed_opinion
+					}
+				}
+				ci_sanguinis_add_healing_strain_effect = yes
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = { is_ai = no }
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title = ci_sanguinis_blessing_interaction_recipient_toast
+					left_icon = scope:recipient
+					right_icon = scope:actor
+				}
+			}
+		}
+	}
+}

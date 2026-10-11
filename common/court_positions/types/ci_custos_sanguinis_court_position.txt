@@ -1,0 +1,140 @@
+﻿# Custos Sanguinis (marco 6, fase 6d; desenho aprovado pelo autor em 11/10/2026): o guardiao da linhagem divina. So em cortes da
+# Veritas Imperialis cuja familia tenha um Sanguinis; qualquer cortesao adulto da fe pode ocupar. Para o governante: saude, fertilidade e
+# opiniao da dinastia, crescendo com a aptidao. Para os Sanguinis da familia proxima: "Guarded Blood" renovado todo ano enquanto o cargo
+# estiver ocupado (common/on_action/ci_custos_sanguinis_on_actions.txt), porque os modificadores do cargo so valem para o empregador e
+# para a corte inteira.
+ci_custos_sanguinis_court_position = {
+	sort_order = 280
+	max_available_positions = 1
+	skill = learning
+
+	court_position_asset = {
+		animation = prayer
+		background = "gfx/interface/illustrations/event_scenes/temple.dds"
+	}
+
+	opinion = {
+		value = regular_court_position_opinion
+	}
+
+	aptitude_level_breakpoints = { 20 40 60 80 }
+
+	aptitude = {
+		value = 20
+		add = {
+			value = learning
+			multiply = 2
+			max = 40
+			desc = court_position_skill_learning
+		}
+		if = {
+			limit = { ci_is_sanguinis_trigger = yes }
+			add = {
+				value = 20
+				desc = ci_custos_sanguinis_aptitude_sanguinis
+			}
+		}
+		if = {
+			limit = { has_trait = zealous }
+			add = {
+				value = 10
+				desc = ci_custos_sanguinis_aptitude_zealous
+			}
+		}
+		if = {
+			limit = { has_trait = theologian }
+			add = {
+				value = 10
+				desc = ci_custos_sanguinis_aptitude_theologian
+			}
+		}
+		add = general_aptitude_bonus
+	}
+
+	is_shown = {
+		faith ?= faith:imperialis
+		is_landed = yes
+	}
+
+	valid_position = {
+		custom_tooltip = {
+			text = ci_custos_sanguinis_needs_sanguinis_tt
+			ci_has_sanguinis_family_trigger = yes
+		}
+	}
+
+	is_shown_character = {
+		scope:employee = {
+			court_position_employee_shown_trigger = yes
+		}
+	}
+
+	valid_character = {
+		scope:employee = {
+			is_adult = yes
+			faith = faith:imperialis
+		}
+	}
+
+	revoke_cost = {
+		prestige = {
+			value = minor_court_position_prestige_revoke_cost
+		}
+	}
+
+	salary = {
+		gold = {
+			value = minor_court_position_salary
+		}
+		round = no
+	}
+
+	scaling_employer_modifiers = {
+		terrible = {
+			health = 0.05
+			dynasty_opinion = 2
+		}
+		poor = {
+			health = 0.1
+			fertility = 0.03
+			dynasty_opinion = 4
+		}
+		average = {
+			health = 0.15
+			fertility = 0.05
+			dynasty_opinion = 6
+		}
+		good = {
+			health = 0.2
+			fertility = 0.08
+			dynasty_opinion = 8
+		}
+		excellent = {
+			health = 0.25
+			fertility = 0.1
+			dynasty_opinion = 10
+		}
+	}
+
+	custom_employer_modifier_description = ci_custos_sanguinis_employer_custom_effect_description
+
+	modifier = {
+		monthly_piety = 0.5
+		learning = 1
+	}
+
+	ai_position_score = {
+		value = 0
+		if = {
+			limit = { scope:liege = { ci_has_sanguinis_family_trigger = yes } }
+			add = 150
+		}
+	}
+
+	ai_candidate_score = {
+		value = 50
+		add = scope:base_value
+		add = court_position_candidate_score_base_value
+		add = court_position_candidate_aptitude_value
+	}
+}
