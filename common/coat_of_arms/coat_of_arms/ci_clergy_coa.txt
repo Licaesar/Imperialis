@@ -1,0 +1,27 @@
+﻿# Brasoes do clero das fes da religiao Omnissiae (marco 6, fase 6a; pedido do autor, 11/10/2026). Aplicados a organizacao de cada fe
+# ("Imperialis Clergy", objeto organization da 1.20) por common/on_action/ci_clergy_coa_on_actions.txt. Sem isso a organizacao recebe em
+# 867 um brasao aleatorio (no save de 927, fundo branco com ce_moon_sun, que lembrava os Tengri).
+
+# Veritas Imperialis: o brasao do clero Aeluran do mod Elf Destiny (3114064450, titulo d_high_matriarch), com a textura copiada para
+# gfx/coat_of_arms/textured_emblems/ci_veritas_clergy.dds (no original, aeluran_matriarch_2.dds).
+ci_veritas_clergy_coa = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "black"
+	textured_emblem = {
+		texture = "ci_veritas_clergy.dds"
+	}
+}
+
+# Lex Omnissiah: a balanca da Lei em preto sobre ouro (emblemas do vanilla).
+ci_lex_clergy_coa = {
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "yellow"
+	colored_emblem = {
+		texture = "ce_scales.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 0.8 0.8 } }
+	}
+}

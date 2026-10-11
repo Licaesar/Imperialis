@@ -1,0 +1,19 @@
+﻿##############################################
+# CULTUS IMPERIALIS - BRASOES DO CLERO (marco 6, fase 6a)
+# A organizacao da fe guarda o brasao proprio (o save de 927 mostrou que ele nao muda com a fundacao do Ministorum), entao basta
+# aplica-lo uma vez depois do lobby. Brasoes em common/coat_of_arms/coat_of_arms/ci_clergy_coa.txt.
+##############################################
+on_game_start_after_lobby = {
+	on_actions = { ci_clergy_coa_on_game_start }
+}
+
+ci_clergy_coa_on_game_start = {
+	effect = {
+		faith:imperialis = {
+			organization ?= { set_coa = ci_veritas_clergy_coa }
+		}
+		faith:ci_lex_omnissiah = {
+			organization ?= { set_coa = ci_lex_clergy_coa }
+		}
+	}
+}
