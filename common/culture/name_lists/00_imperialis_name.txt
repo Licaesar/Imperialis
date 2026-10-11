@@ -173,6 +173,12 @@
 
 		# Nomes mantidos por afinidade com High Gothic / 40k
 		Agatone Argel Artellus Azrael Calas Corax Corswain Corvus Cygnis Cypher Danark Dante Dominus Draigo Eckhart Eidolon Endryd Erebus Eros Fafnir Falk Ferrus Gabriel Galladon Garro Garviel Gendor Gideon Grimaldus Haemotalion Helbrecht Helvetius Hrodric Ibram Iktinos Ilys Iskandar Jago Jubal Kaelen Karstodes Kastor Kensoriel Kharn Korso Kyril Learchus Leman Lexell Lion Logan Loken Lorghar Luciel Lysander Macharius Malakor Malcador Marneus Medon Mephiston Mikal Namaan Nathaniel Nykona Orion Ortan Pasanius Phael Phosis Qruze Rafen Raldoron Rogal Rylanor Sanguinius Sarpedon Saul Sejanus Sevrin Shiban Sigismund Silas Sindermann Solomon Stern Strabo Sulla Tarik Tarvitz Telemachon Thalassian Toradon Torgaddon Tycho Tylos Typhon Uriel Valdor Ventris Vitek Vulkan Xaphen Yarrick Zael Zardu Zephon
+
+		# Alto-elficos (lista do autor, 11/10/2026)
+		Aelor Aelrond Alderon Alarion Arandor Arandur Arannis Arathorn Caelion Caladon Calenor Calenorin Eolendil Eraelas
+		Erendil Erendor Erevan Erevandil Eldrion Elendir Elensar Elendar Elorian Faelion Faelmir Felorian Finreth Galador
+		Galadrim Galandil Galindor Haldiran Haldirion Halion Lirandir Maelandir Maelith Naelion Orophin Thaldir Thaldirin Thalion
+		Thalionel Thalorin Valendor Vaelan
 	}
 
 	female_names = {
@@ -188,6 +194,11 @@
 
 		# Nomes ja presentes e mantidos por afinidade de estilo
 		Alizabeth Alivia Amberley Amendera Aria Belladonna Bequin Berenice Cassilda Celandine Cressida Cyntia Cyrene Dalia Danica Electra Eleonore Elivia Ephrael Eralia Erda Erina Euphrati Eurydice Evangeline Fenella Florence Galatea Gemma Genevieve Gwendolin Helaena Hestia Ignatia Ilya Iona Isabella Isadora Isolde Jenetia Jocasta Judith Julika Klementina Lachesis Laetitia Leontia Leticia Lotara Lumina Macharia Magdalena Marguerite Mathilda Medea Melita Mersadie Minerva Miranda Miriael Morgana Moriana Morvenn Nadia Natalia Nefertari Nera Niobe Novia Olton Olympia Ophelia Oriana Orianthi Orla Pandora Parthenia Penelope Petra Petronella Philomena Pia Portia Primetta Regina Renata Rhea Rosalia Rosalind Rowena Roxana Sabbat Salome Sanguinia Sappho Selena Serena Sibylla Silvana Silvia Solange Stella Sylvia Tacia Tali Talitha Tariel Tatiana Teodora Theresa Titiana Undomiel Urania Ursula Veda Velia Venetia Verena Veronica Vestia Vicoria Viorica Vittoria Xenia Yvraine Zanthia Zita
+
+		# Alto-elficos (lista do autor, 11/10/2026)
+		Aeliana Alandria Aradia Aranelle Aravenna Arista Arwenelle Arwenia Calanthe Calindra Calitha Celestine Elandra Elara
+		Elenna Elysara Elysia Elowyn Elowynn Erendra Evania Evandriel Evanya Galadria Galanoriel Galenia Galanwen Isilwen
+		Liraelle Lyria Melantha Meliantha Miriel Nariel Nivara Seraphina Thalassa Thalora Valoria
 	}
 
 	dynasty_of_location_prefix = "dynnp_of"
