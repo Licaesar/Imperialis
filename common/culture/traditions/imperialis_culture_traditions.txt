@@ -61,8 +61,6 @@ administratum = {
 		4 = palace_politics.dds
 	}
 	parameters = {
-		number_of_consorts_hegemony = 20
-		number_of_consorts_emperor = 5
 		ambitious_trait_more_common = yes
 	}
 	# Marco 6, fase 6e: dominio e impostos (a burocracia imperial)
@@ -94,6 +92,30 @@ mysterium_divinitas = {
 	character_modifier = {
 		monthly_piety_gain_mult = 0.1
 		monthly_learning_lifestyle_xp_gain_mult = 0.1
+	}
+	cost = {
+		prestige = 2000
+	}
+}
+
+# Connubium Sanguinis: muitos conjuges e heranca igual entre filhos e filhas, para espalhar o sangue Sanguinis (criada pelo autor em
+# 11/10/2026 como tradition_imperialis; nome e descricao pelo Claude). So na cultura Lipherianii. O bloco partners substitui o
+# numero de conjuges da fe (doctrine_polygamy, 4).
+connubium_sanguinis = {
+	category = societal
+	layers = {
+		0 = intrigue
+		1 = mediterranean
+		2 = "rec1 copy 2.dds"
+		3 = 1.dds
+		4 = greeting.dds
+	}
+	partners = {
+		number_of_spouses = 10
+	}
+
+	parameters = {
+		gender_equal_inheritance = yes
 	}
 	cost = {
 		prestige = 2000

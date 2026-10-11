@@ -47,5 +47,6 @@ lipherianii_culture = {
 		mysterium_divinitas
 		tradition_only_the_strong
 		tradition_warriors_by_merit
+		connubium_sanguinis
 	}
 }
