@@ -15,8 +15,8 @@ temple_authority_cult_imperialis_doctrine = {
 	# Veneracao dos Sanguinis (marco 5, 5b): so na Veritas Imperialis
 	traits = {
 		virtues = {
-			sanguini_4 = { weight = 10 scale = 1 }
-			sanguini_5 = { weight = 15 scale = 1 }
+			sanguini_4 = { weight = 20 scale = 1 }
+			sanguini_5 = { weight = 30 scale = 1 }
 		}
 	}
 	character_modifier = {
@@ -67,8 +67,8 @@ temple_authority_cult_sororitas_doctrine = { # Culto a Undomiel
 	# Veneracao dos Sanguinis (marco 5, 5b): so na Veritas Imperialis
 	traits = {
 		virtues = {
-			sanguini_4 = { weight = 10 scale = 1 }
-			sanguini_5 = { weight = 15 scale = 1 }
+			sanguini_4 = { weight = 20 scale = 1 }
+			sanguini_5 = { weight = 30 scale = 1 }
 		}
 	}
 	character_modifier = {
