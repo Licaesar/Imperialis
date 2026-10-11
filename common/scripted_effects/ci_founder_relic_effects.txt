@@ -4,6 +4,12 @@
 # Escopo: o dono. KEY - chave curta (nome ci_relic_<KEY>_name, descricao ci_relic_<KEY>_desc, modificador ci_relic_<KEY>_modifier)
 ci_create_founder_relic_effect = {
 	save_scope_as = ci_relic_owner
+	# Os pesos dos tracos de arco do vanilla (00_features.txt, bow_string_*) leem scope:bow_type, que o create_artifact_bow_effect do
+	# vanilla define antes de criar o arco. Sem ele, o Arcus Viriati gera erro no log (playtest do marco 6). Inofensivo nos outros tipos.
+	save_temporary_scope_value_as = {
+		name = bow_type
+		value = flag:artifact_bow_type_bow
+	}
 	create_artifact = {
 		name = ci_relic_$KEY$_name
 		description = ci_relic_$KEY$_desc

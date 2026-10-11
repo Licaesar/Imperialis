@@ -228,7 +228,7 @@ ci_emhyr_emreis = {
 
 # 04
 ci_vistarios_granhieron = {
-	name = "Vistários"
+	name = "ci_name_vistarios" # Vistarios (loc em ci_dynasties_l_english.yml: acento nao cabe em chave)
 	dna = ci_vistarios_granhieron_dna
 	dynasty = ci_granhieron
 	rite = omnissiah # marco 5, fase 5b: Lex Omnissiah, Cult Omnissiah
@@ -266,7 +266,7 @@ ci_vistarios_granhieron = {
 
 # 05
 ci_legarde_martyr = {
-	name = "Le'garde"
+	name = "ci_name_legarde" # Le garde (loc em ci_dynasties_l_english.yml: apostrofo nao cabe em chave)
 	dna = ci_legarde_martyr_dna
 	dynasty = ci_martyr
 	rite = imperialis
@@ -383,7 +383,7 @@ ci_verso_lumere = {
 
 # 08
 ci_altair_ramashiri = {
-	name = "Altaïr"
+	name = "ci_name_altair" # Altair (loc em ci_dynasties_l_english.yml: trema nao cabe em chave)
 	dna = ci_altair_ramashiri_dna
 	dynasty = ci_ramashiri
 	rite = omnissiah # marco 5, fase 5b: Lex Omnissiah, Cult Omnissiah

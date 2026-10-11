@@ -1,5 +1,5 @@
 ﻿# Veneratio Sanguinis (pedido do autor, 11/10/2026, depois de ele tirar as doutrinas de identidade dos ritos, os Ordo): os tracos
-# sanguini_4 e sanguini_5 sao virtudes da Veritas Imperialis, com os pesos que o autor deu aos Ordo da Veritas (20 e 30). A Lex
+# sanguini_4 e sanguini_5 sao virtudes da Veritas Imperialis, com pesos 40 e 50 (o autor subiu os 20 e 30 dos Ordo no playtest do marco 6). A Lex
 # Omnissiah nao venera os Sanguinis e nao a tem.
 # Fica na fe e nos dois ritos da Veritas (imperialis e sororitas), porque doutrina da fe so chega ao rito principal. Uma fe nova
 # criada por divergencia de um rito da Veritas pode mante-la (grupo disponivel na criacao para quem ja a tem, como o is_christian_faith).
@@ -9,8 +9,8 @@ ci_doctrine_veneratio_sanguinis = {
 
 	traits = {
 		virtues = {
-			sanguini_4 = { weight = 20 scale = 1 }
-			sanguini_5 = { weight = 30 scale = 1 }
+			sanguini_4 = { weight = 40 scale = 1 }
+			sanguini_5 = { weight = 50 scale = 1 }
 		}
 	}
 }
