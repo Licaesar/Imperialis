@@ -33,9 +33,10 @@ ho_ci_sorores_undomiel = {
 		}
 	}
 
-	# Peso alto: os nomes proprios ganham dos genericos do vanilla (peso 1 a 3)
+	# Peso alto (playtest de 11/10/2026): os ~80 tipos monasticos genericos do vanilla valem para qualquer fe e somam ~240 (1 a 3
+	# cada); com peso 20 a Helaena fundou uma "Order of ...ists" generica. Com 10000 o nome proprio sai em ~98% das vezes.
 	weight = {
-		value = 20
+		value = 10000
 	}
 
 	effect = {
@@ -103,9 +104,10 @@ ho_ci_fratres_codicis = {
 		}
 	}
 
-	# Peso alto: os nomes proprios ganham dos genericos do vanilla (peso 1 a 3)
+	# Peso alto (playtest de 11/10/2026): os ~80 tipos monasticos genericos do vanilla valem para qualquer fe e somam ~240 (1 a 3
+	# cada); com peso 20 a Helaena fundou uma "Order of ...ists" generica. Com 10000 o nome proprio sai em ~98% das vezes.
 	weight = {
-		value = 20
+		value = 10000
 	}
 
 	effect = {
@@ -150,9 +152,10 @@ ho_ci_schola_legis = {
 		}
 	}
 
-	# Peso alto: os nomes proprios ganham dos genericos do vanilla (peso 1 a 3)
+	# Peso alto (playtest de 11/10/2026): os ~80 tipos monasticos genericos do vanilla valem para qualquer fe e somam ~240 (1 a 3
+	# cada); com peso 20 a Helaena fundou uma "Order of ...ists" generica. Com 10000 o nome proprio sai em ~98% das vezes.
 	weight = {
-		value = 20
+		value = 10000
 	}
 
 	effect = {
@@ -197,9 +200,10 @@ ho_ci_ascetae_harmoniae = {
 		}
 	}
 
-	# Peso alto: os nomes proprios ganham dos genericos do vanilla (peso 1 a 3)
+	# Peso alto (playtest de 11/10/2026): os ~80 tipos monasticos genericos do vanilla valem para qualquer fe e somam ~240 (1 a 3
+	# cada); com peso 20 a Helaena fundou uma "Order of ...ists" generica. Com 10000 o nome proprio sai em ~98% das vezes.
 	weight = {
-		value = 20
+		value = 10000
 	}
 
 	effect = {

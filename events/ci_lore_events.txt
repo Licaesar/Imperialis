@@ -90,10 +90,6 @@ ci_lore.0010 = {
 		animation = personality_honorable
 	}
 
-	immediate = {
-		play_music_cue = "mx_cue_sacredrite"
-	}
-
 	option = {
 		name = ci_lore.0010.a
 	}

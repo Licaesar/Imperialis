@@ -1,0 +1,293 @@
+﻿# Ordens militares da religiao Omnissiae (playtest do marco 5, 11/10/2026). Os nomes sao os que o autor definiu em
+# religion_types/00_imperialis.txt (holy_order_names, loc em religion/liphe_deos_l_english.yml). O jogo so usa holy_order_names quando
+# nenhum tipo de ordem vale; desde que o vanilla tem tipos militares genericos para qualquer fe, os nomes nunca apareciam (no save de
+# 927 as tres ordens da Veritas tinham nomes genericos). Um tipo por nome, uma vez por fe, com peso que ganha dos genericos (~90 no
+# total). Veritas: Malleus, Sanguis Angelorum, Angeli Tenebrosi, Legio Imperialis; no Cult Undomiel tambem Adepta Sororitas e
+# Undomiel. Lex: Ordo Omnissiah. Esgotados os nomes, valem os genericos.
+
+ho_ci_ordo_malleus = {
+
+	trigger = {
+		trigger_if = {
+			limit = {
+				scope:founder = {
+					has_variable = {
+						name = military_order_game_start_founder
+					}
+				}
+			}
+			always = no
+		}
+		trigger_else = {
+			scope:founder = { faith = faith:imperialis }
+			# Cada nome uma vez por fe
+			NOT = {
+				scope:founder.faith = {
+					any_faith_holy_order = {
+						title = { has_variable = ho_ci_ordo_malleus }
+					}
+				}
+			}
+		}
+	}
+
+	weight = {
+		value = 10000
+	}
+
+	effect = {
+		set_variable = {
+			name = ho_ci_ordo_malleus
+		}
+	}
+
+	name = holy_order_shields_of_sol
+	government = holy_order_government
+	type = military
+}
+
+ho_ci_ordo_sanguis_angelorum = {
+
+	trigger = {
+		trigger_if = {
+			limit = {
+				scope:founder = {
+					has_variable = {
+						name = military_order_game_start_founder
+					}
+				}
+			}
+			always = no
+		}
+		trigger_else = {
+			scope:founder = { faith = faith:imperialis }
+			# Cada nome uma vez por fe
+			NOT = {
+				scope:founder.faith = {
+					any_faith_holy_order = {
+						title = { has_variable = ho_ci_ordo_sanguis_angelorum }
+					}
+				}
+			}
+		}
+	}
+
+	weight = {
+		value = 10000
+	}
+
+	effect = {
+		set_variable = {
+			name = ho_ci_ordo_sanguis_angelorum
+		}
+	}
+
+	name = holy_order_knights_of_caesar
+	government = holy_order_government
+	type = military
+}
+
+ho_ci_ordo_angeli_tenebrosi = {
+
+	trigger = {
+		trigger_if = {
+			limit = {
+				scope:founder = {
+					has_variable = {
+						name = military_order_game_start_founder
+					}
+				}
+			}
+			always = no
+		}
+		trigger_else = {
+			scope:founder = { faith = faith:imperialis }
+			# Cada nome uma vez por fe
+			NOT = {
+				scope:founder.faith = {
+					any_faith_holy_order = {
+						title = { has_variable = ho_ci_ordo_angeli_tenebrosi }
+					}
+				}
+			}
+		}
+	}
+
+	weight = {
+		value = 10000
+	}
+
+	effect = {
+		set_variable = {
+			name = ho_ci_ordo_angeli_tenebrosi
+		}
+	}
+
+	name = holy_order_knights_of_lux
+	government = holy_order_government
+	type = military
+}
+
+ho_ci_ordo_legio_imperialis = {
+
+	trigger = {
+		trigger_if = {
+			limit = {
+				scope:founder = {
+					has_variable = {
+						name = military_order_game_start_founder
+					}
+				}
+			}
+			always = no
+		}
+		trigger_else = {
+			scope:founder = { faith = faith:imperialis }
+			# Cada nome uma vez por fe
+			NOT = {
+				scope:founder.faith = {
+					any_faith_holy_order = {
+						title = { has_variable = ho_ci_ordo_legio_imperialis }
+					}
+				}
+			}
+		}
+	}
+
+	weight = {
+		value = 10000
+	}
+
+	effect = {
+		set_variable = {
+			name = ho_ci_ordo_legio_imperialis
+		}
+	}
+
+	name = holy_order_knights_of_imperialis
+	government = holy_order_government
+	type = military
+}
+
+ho_ci_ordo_adepta_sororitas = {
+
+	trigger = {
+		trigger_if = {
+			limit = {
+				scope:founder = {
+					has_variable = {
+						name = military_order_game_start_founder
+					}
+				}
+			}
+			always = no
+		}
+		trigger_else = {
+			scope:founder = { faith = faith:imperialis rite = rite:sororitas }
+			# Cada nome uma vez por fe
+			NOT = {
+				scope:founder.faith = {
+					any_faith_holy_order = {
+						title = { has_variable = ho_ci_ordo_adepta_sororitas }
+					}
+				}
+			}
+		}
+	}
+
+	weight = {
+		value = 10000
+	}
+
+	effect = {
+		set_variable = {
+			name = ho_ci_ordo_adepta_sororitas
+		}
+	}
+
+	name = holy_order_knights_of_sororita
+	government = holy_order_government
+	type = military
+}
+
+ho_ci_ordo_undomiel = {
+
+	trigger = {
+		trigger_if = {
+			limit = {
+				scope:founder = {
+					has_variable = {
+						name = military_order_game_start_founder
+					}
+				}
+			}
+			always = no
+		}
+		trigger_else = {
+			scope:founder = { faith = faith:imperialis rite = rite:sororitas }
+			# Cada nome uma vez por fe
+			NOT = {
+				scope:founder.faith = {
+					any_faith_holy_order = {
+						title = { has_variable = ho_ci_ordo_undomiel }
+					}
+				}
+			}
+		}
+	}
+
+	weight = {
+		value = 10000
+	}
+
+	effect = {
+		set_variable = {
+			name = ho_ci_ordo_undomiel
+		}
+	}
+
+	name = holy_order_knights_of_undomiel
+	government = holy_order_government
+	type = military
+}
+
+ho_ci_ordo_omnissiah = {
+
+	trigger = {
+		trigger_if = {
+			limit = {
+				scope:founder = {
+					has_variable = {
+						name = military_order_game_start_founder
+					}
+				}
+			}
+			always = no
+		}
+		trigger_else = {
+			scope:founder = { faith = faith:ci_lex_omnissiah }
+			# Cada nome uma vez por fe
+			NOT = {
+				scope:founder.faith = {
+					any_faith_holy_order = {
+						title = { has_variable = ho_ci_ordo_omnissiah }
+					}
+				}
+			}
+		}
+	}
+
+	weight = {
+		value = 10000
+	}
+
+	effect = {
+		set_variable = {
+			name = ho_ci_ordo_omnissiah
+		}
+	}
+
+	name = holy_order_knights_of_omnissiah
+	government = holy_order_government
+	type = military
+}
