@@ -19,7 +19,7 @@ ci_kensoriel_liphe = {
 
 	trait = sanguini_5
 
-	trait = education_martial_4
+	trait = education_martial_5
 	trait = just
 	trait = diligent
 	trait = honest
@@ -119,7 +119,7 @@ ci_reid_astrea = {
 	trait = fecund
 	trait = pure_blooded
 
-	trait = education_martial_4
+	trait = education_martial_5
 	trait = brave
 	trait = just
 	trait = honest
@@ -357,7 +357,7 @@ ci_verso_lumere = {
 	trait = fecund
 	trait = pure_blooded
 
-	trait = education_martial_4
+	trait = education_martial_5
 	trait = brave
 	trait = gregarious
 	trait = ambitious
@@ -434,7 +434,7 @@ ci_sigvardr_drakenfyr = {
 	trait = fecund
 	trait = pure_blooded
 
-	trait = education_martial_4
+	trait = education_martial_5
 	trait = brave
 	trait = wrathful
 	trait = stubborn
@@ -479,7 +479,7 @@ ci_miyamoto_musashi = {
 	trait = fecund
 	trait = pure_blooded
 
-	trait = education_martial_4
+	trait = education_martial_5
 	trait = brave
 	trait = patient
 	trait = callous
@@ -742,7 +742,7 @@ ci_alia_atreides = {
 	trait = education_learning_5
 	trait = patient
 	trait = ambitious
-	trait = cynical
+	trait = zealous
 	trait = erudite
 	trait = schemer
 	trait = beauty_good_3
