@@ -11,7 +11,7 @@
 			accessory = {
 				mode = add
 				gene = clothes
-				template = religious_catholic_head_clothes
+				template = religious_orthodox_head_clothes
 				range = { 0 1 }
 			}
 		}
