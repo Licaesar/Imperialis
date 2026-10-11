@@ -1,0 +1,17 @@
+﻿##############################################
+# CULTUS IMPERIALIS - ARTEFATOS UNICOS DOS FUNDADORES (marco 6, fase 6c)
+# Uma vez por campanha (global ci_founder_relics_created), depois do lobby.
+##############################################
+on_game_start_after_lobby = {
+	on_actions = { ci_founder_relics_on_game_start }
+}
+
+ci_founder_relics_on_game_start = {
+	trigger = {
+		NOT = { has_global_variable = ci_founder_relics_created }
+	}
+	effect = {
+		set_global_variable = ci_founder_relics_created
+		ci_create_all_founder_relics_effect = yes
+	}
+}

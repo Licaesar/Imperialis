@@ -1,0 +1,149 @@
+﻿# Artefatos unicos dos fundadores (marco 6, fase 6c). Criados uma vez, depois do lobby de 867 (common/on_action/ci_founder_relic_on_actions.txt).
+# Lendarios (qualidade e riqueza 100, como set_artifact_rarity_illustrious do vanilla), sem desgaste, modelos 3D do vanilla.
+
+# Escopo: o dono. KEY - chave curta (nome ci_relic_<KEY>_name, descricao ci_relic_<KEY>_desc, modificador ci_relic_<KEY>_modifier)
+ci_create_founder_relic_effect = {
+	save_scope_as = ci_relic_owner
+	house ?= { save_scope_as = ci_relic_house_scope }
+	create_artifact = {
+		name = ci_relic_$KEY$_name
+		description = ci_relic_$KEY$_desc
+		type = $TYPE$
+		visuals = $VISUALS$
+		modifier = ci_relic_$KEY$_modifier
+		template = ci_founder_relic_template
+		wealth = 100
+		quality = 100
+		decaying = no
+		history = {
+			type = created_before_history
+		}
+		save_scope_as = ci_new_relic
+	}
+	if = {
+		limit = { exists = scope:ci_relic_house_scope }
+		scope:ci_new_relic = {
+			set_variable = {
+				name = ci_relic_house
+				value = scope:ci_relic_house_scope
+			}
+		}
+	}
+}
+
+ci_create_all_founder_relics_effect = {
+	character:ci_kensoriel_liphe ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = lux_omnissiae TYPE = sword VISUALS = longsword }
+		}
+	}
+	character:ci_helaena_undomiel ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = baculum_undomiel TYPE = regalia VISUALS = regalia }
+		}
+	}
+	character:ci_reid_astrea ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = aeterna TYPE = sword VISUALS = sword }
+		}
+	}
+	character:ci_ezio_auditore ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = lamina_occulta TYPE = dagger VISUALS = dagger }
+		}
+	}
+	character:ci_emhyr_emreis ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = sigillum_emreis TYPE = regalia VISUALS = regalia }
+		}
+	}
+	character:ci_vistarios_granhieron ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = primus_codex TYPE = journal VISUALS = book }
+		}
+	}
+	character:ci_legarde_martyr ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = lorica_martyris TYPE = armor_plate VISUALS = armor }
+		}
+	}
+	character:ci_hrodric_gyliman ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = gladius_ultramar TYPE = sword VISUALS = sword }
+		}
+	}
+	character:ci_verso_lumere ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = hasta_orientis TYPE = spear VISUALS = spear }
+		}
+	}
+	character:ci_altair_ramashiri ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = pomum_rationis TYPE = miscellaneous VISUALS = pocket_fancy_case }
+		}
+	}
+	character:ci_sigvardr_drakenfyr ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = drakenfyr TYPE = axe VISUALS = axe }
+		}
+	}
+	character:ci_miyamoto_musashi ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = niten TYPE = sword VISUALS = japanese_sword }
+		}
+	}
+	character:ci_aurelian_solerius ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = galea_solis TYPE = helmet VISUALS = crown }
+		}
+	}
+	character:ci_lakan_shaokan ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = anulus_concordiae TYPE = ring VISUALS = ring }
+		}
+	}
+	character:ci_astarinus_viriata ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = arcus_viriati TYPE = bow VISUALS = bow }
+		}
+	}
+	character:ci_julius_euclius ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = lorica_fidei TYPE = armor_mail VISUALS = armor }
+		}
+	}
+	character:ci_radahn_varakh ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = flagellum_stellarum TYPE = hammer VISUALS = hammer }
+		}
+	}
+	character:ci_alia_atreides ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = pugio_deserti TYPE = dagger VISUALS = dagger_kris }
+		}
+	}
+	character:ci_elessar_telcontar ?= {
+		if = {
+			limit = { is_alive = yes }
+			ci_create_founder_relic_effect = { KEY = flamma_occidentis TYPE = sword VISUALS = longsword }
+		}
+	}
+}

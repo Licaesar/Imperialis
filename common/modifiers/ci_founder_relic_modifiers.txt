@@ -1,0 +1,115 @@
+﻿# Artefatos unicos dos fundadores (marco 6, fase 6c). Um modificador por artefato; o bonus so vale para a casa do dono original
+# (common/artifacts/templates/ci_founder_relic_templates.txt). Ver common/scripted_effects/ci_founder_relic_effects.txt.
+
+ci_relic_lux_omnissiae_modifier = {
+	prowess = 12
+	monthly_piety = 1.5
+	dread_baseline_add = 15
+}
+
+ci_relic_baculum_undomiel_modifier = {
+	learning = 4
+	monthly_piety = 1
+	fertility = 0.15
+}
+
+ci_relic_aeterna_modifier = {
+	prowess = 8
+	knight_effectiveness_mult = 0.15
+	monthly_prestige = 0.5
+}
+
+ci_relic_lamina_occulta_modifier = {
+	intrigue = 4
+	prowess = 4
+	owned_hostile_scheme_success_chance_add = 10
+}
+
+ci_relic_sigillum_emreis_modifier = {
+	stewardship = 4
+	domain_limit = 1
+	monthly_income_mult = 0.05
+}
+
+ci_relic_primus_codex_modifier = {
+	learning = 4
+	monthly_piety = 1
+	monthly_learning_lifestyle_xp_gain_mult = 0.15
+}
+
+ci_relic_lorica_martyris_modifier = {
+	prowess = 6
+	knight_effectiveness_mult = 0.1
+	health = 0.2
+}
+
+ci_relic_gladius_ultramar_modifier = {
+	martial = 4
+	prowess = 6
+	army_maintenance_mult = -0.1
+}
+
+ci_relic_hasta_orientis_modifier = {
+	prowess = 8
+	advantage = 4
+	monthly_prestige = 0.3
+}
+
+ci_relic_pomum_rationis_modifier = {
+	learning = 3
+	intrigue = 3
+	stress_loss_mult = 0.1
+}
+
+ci_relic_drakenfyr_modifier = {
+	prowess = 10
+	dread_baseline_add = 10
+	monthly_prestige = 0.3
+}
+
+ci_relic_niten_modifier = {
+	prowess = 12
+	martial = 2
+	knight_effectiveness_mult = 0.1
+}
+
+ci_relic_galea_solis_modifier = {
+	martial = 3
+	prowess = 4
+	siege_phase_time = -0.15
+}
+
+ci_relic_anulus_concordiae_modifier = {
+	diplomacy = 3
+	stewardship = 3
+	vassal_opinion = 5
+}
+
+ci_relic_arcus_viriati_modifier = {
+	prowess = 6
+	hills_advantage = 4
+	forest_advantage = 4
+}
+
+ci_relic_lorica_fidei_modifier = {
+	prowess = 4
+	general_opinion = 5
+	heavy_infantry_toughness_mult = 0.1
+}
+
+ci_relic_flagellum_stellarum_modifier = {
+	prowess = 12
+	dread_baseline_add = 15
+}
+
+ci_relic_pugio_deserti_modifier = {
+	intrigue = 4
+	learning = 3
+	prowess = 2
+}
+
+ci_relic_flamma_occidentis_modifier = {
+	martial = 4
+	prowess = 8
+	monthly_prestige = 0.3
+}
