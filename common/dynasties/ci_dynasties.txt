@@ -1,6 +1,5 @@
 ﻿# Cultus Imperialis - Casas Fundadoras e casas das esposas (867)
-# Sem coat of arms definido: o jogo gera um brasao aleatorio.
-# Para fixar o brasao, crie em common/coat_of_arms/coat_of_arms uma entrada com a mesma chave (ex.: ci_liphe = { ... }).
+# Brasoes em common/coat_of_arms/coat_of_arms/ci_dynasties_coa.txt e ci_apostoli_coa.txt, com a mesma chave da dinastia.
 
 ############################
 # Nucleo Fundador

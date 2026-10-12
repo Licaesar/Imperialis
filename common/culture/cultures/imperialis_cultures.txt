@@ -1,5 +1,5 @@
 ﻿imperialis_culture = {
-	clothing_gfx = { dde_hre_clothing_gfx french_clothing_gfx western_clothing_gfx } # escolha do autor (11/10/2026); fora das sequencias vanilla gera aviso de sequencia grafica no log (marco 5, 5a)
+	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx } # como saxon: sequencia vanilla, sem aviso no log (Q7 do autor, 12/10/2026)
 	coa_gfx = { english_coa_gfx western_coa_gfx } # como english (marco 5, 5a)
 	building_gfx = { mediterranean_building_gfx }
 	color = trojan
@@ -28,7 +28,7 @@
 }
 
 lipherianii_culture = {
-	clothing_gfx = { dde_hre_clothing_gfx french_clothing_gfx western_clothing_gfx } # escolha do autor (11/10/2026); fora das sequencias vanilla gera aviso de sequencia grafica no log (marco 5, 5a)
+	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx } # como saxon: sequencia vanilla, sem aviso no log (Q7 do autor, 12/10/2026)
 	coa_gfx = { english_coa_gfx western_coa_gfx } # como english (marco 5, 5a)
 	building_gfx = { mediterranean_building_gfx }
 	color = bosnian
