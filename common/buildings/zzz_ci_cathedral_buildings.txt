@@ -80,13 +80,13 @@ great_project_cathedral_01 = {
 				NOT = { has_domicile_building_or_higher = ecclesiastical_domicile_main_02 }
 				NOT = { has_domicile_construction = ecclesiastical_domicile_main_02 }
 			} 
-			# Imperialis (pos-1.10): com outra obra em andamento a versao animada falha; entao sobe o nivel direto
+			# Imperialis (pos-1.10): com outra obra em andamento a subida falha; fica pendente ate a obra acabar
 			if = {
 				limit = { has_ongoing_domicile_construction = no }
 				add_animate_domicile_building = ecclesiastical_domicile_main_02
 			}
 			else = {
-				add_domicile_building = ecclesiastical_domicile_main_02
+				owner ?= { set_variable = { name = ci_pending_cathedral_upgrade value = flag:ecclesiastical_domicile_main_02 } }
 			}
 		}
 	}
@@ -176,13 +176,13 @@ great_project_cathedral_02 = {
 				NOT = { has_domicile_building_or_higher = ecclesiastical_domicile_main_03 }
 				NOT = { has_domicile_construction = ecclesiastical_domicile_main_03 }
 			} 
-			# Imperialis (pos-1.10): com outra obra em andamento a versao animada falha; entao sobe o nivel direto
+			# Imperialis (pos-1.10): com outra obra em andamento a subida falha; fica pendente ate a obra acabar
 			if = {
 				limit = { has_ongoing_domicile_construction = no }
 				add_animate_domicile_building = ecclesiastical_domicile_main_03
 			}
 			else = {
-				add_domicile_building = ecclesiastical_domicile_main_03
+				owner ?= { set_variable = { name = ci_pending_cathedral_upgrade value = flag:ecclesiastical_domicile_main_03 } }
 			}
 		}
 	}
@@ -272,13 +272,13 @@ great_project_cathedral_03 = {
 				NOT = { has_domicile_building_or_higher = ecclesiastical_domicile_main_04 }
 				NOT = { has_domicile_construction = ecclesiastical_domicile_main_04 }
 			} 
-			# Imperialis (pos-1.10): com outra obra em andamento a versao animada falha; entao sobe o nivel direto
+			# Imperialis (pos-1.10): com outra obra em andamento a subida falha; fica pendente ate a obra acabar
 			if = {
 				limit = { has_ongoing_domicile_construction = no }
 				add_animate_domicile_building = ecclesiastical_domicile_main_04
 			}
 			else = {
-				add_domicile_building = ecclesiastical_domicile_main_04
+				owner ?= { set_variable = { name = ci_pending_cathedral_upgrade value = flag:ecclesiastical_domicile_main_04 } }
 			}
 		}
 	}

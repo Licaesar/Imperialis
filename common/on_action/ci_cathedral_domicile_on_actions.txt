@@ -1,0 +1,63 @@
+﻿##############################################
+# CULTUS IMPERIALIS - SUBIDA PENDENTE DO DOMINIO ECLESIASTICO (pos-1.10, playtests de 13/10/2026)
+# Quando uma obra de catedral termina (great_project_cathedral_01 a 03, common/buildings/zzz_ci_cathedral_buildings.txt) e o dominio
+# eclesiastico ja tem outra obra em andamento, o jogo nao aceita a subida de nivel (nem animada nem direta). O on_complete guarda o
+# nivel em ci_pending_cathedral_upgrade no dono do dominio; aqui ele e aplicado quando a obra em andamento acaba ou e cancelada.
+# Escopo dos dois on_actions vanilla: root = o dominio, scope:owner = o dono. Um dia de espera para a obra sair da fila.
+##############################################
+on_domicile_building_completed = {
+	on_actions = { ci_cathedral_pending_upgrade_delay_on_action }
+}
+
+on_domicile_building_cancelled = {
+	on_actions = { ci_cathedral_pending_upgrade_delay_on_action }
+}
+
+ci_cathedral_pending_upgrade_delay_on_action = {
+	trigger = {
+		scope:owner ?= { has_variable = ci_pending_cathedral_upgrade }
+		is_domicile_type = ecclesiastical_domicile
+	}
+	on_actions = {
+		delay = { days = 1 }
+		ci_cathedral_pending_upgrade_on_action
+	}
+}
+
+ci_cathedral_pending_upgrade_on_action = {
+	trigger = {
+		scope:owner ?= { has_variable = ci_pending_cathedral_upgrade }
+		is_domicile_type = ecclesiastical_domicile
+		has_ongoing_domicile_construction = no
+	}
+	effect = {
+		if = {
+			limit = { scope:owner.var:ci_pending_cathedral_upgrade = flag:ecclesiastical_domicile_main_02 }
+			if = {
+				limit = {
+					NOT = { has_domicile_building_or_higher = ecclesiastical_domicile_main_02 }
+				}
+				add_animate_domicile_building = ecclesiastical_domicile_main_02
+			}
+		}
+		else_if = {
+			limit = { scope:owner.var:ci_pending_cathedral_upgrade = flag:ecclesiastical_domicile_main_03 }
+			if = {
+				limit = {
+					NOT = { has_domicile_building_or_higher = ecclesiastical_domicile_main_03 }
+				}
+				add_animate_domicile_building = ecclesiastical_domicile_main_03
+			}
+		}
+		else_if = {
+			limit = { scope:owner.var:ci_pending_cathedral_upgrade = flag:ecclesiastical_domicile_main_04 }
+			if = {
+				limit = {
+					NOT = { has_domicile_building_or_higher = ecclesiastical_domicile_main_04 }
+				}
+				add_animate_domicile_building = ecclesiastical_domicile_main_04
+			}
+		}
+		scope:owner = { remove_variable = ci_pending_cathedral_upgrade }
+	}
+}
