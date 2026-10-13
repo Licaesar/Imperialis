@@ -1,4 +1,5 @@
-﻿# Override de grant_cardinal_title_effect (common/scripted_effects/11_dlc_pam_scripted_effects.txt, CK3 1.20.0.3), copia do vanilla.
+﻿# Override de grant_cardinal_title_effect (common/scripted_effects/11_dlc_pam_scripted_effects.txt, CK3 1.20.1), copia do vanilla.
+# 1.20.1: entrou o divorcio do novo cardeal quando o rito proibe casamento clerical (igual ao vanilla).
 # Mudancas marcadas com 'Imperialis' (marco 3, fase 3a): o colegio da fe Imperialis nao usa o pool global de Roma
 # (roma_cardinalates) e da nome unico aos cardinalatos. Regerar a partir do vanilla a cada atualizacao do jogo.
 
@@ -273,6 +274,29 @@ grant_cardinal_title_effect = {
 		scope:cardinal_recipient ?= {
 			change_government = ecclesiastical_government
 			add_character_flag = cardinal_flag
+			if = {
+				limit = { rite = { rite_has_doctrine = doctrine_clerical_marriage_disallowed } }
+				hidden_effect = {
+					if = {
+						limit = {
+							is_married = yes
+							is_ai = yes
+						}
+						every_spouse = {
+							limit = { is_ai = yes }
+							save_temporary_scope_as = cardinal_divorcee
+							less_verbose_divorce_effect = {
+								DIVORCER = prev
+								DIVORCEE = scope:cardinal_divorcee
+							}
+						}
+					}
+					if = {
+						limit = { exists = betrothed }
+						break_betrothal = betrothed
+					}
+				}
+			}
 			if = {
 				limit = {
 					any_held_title = {

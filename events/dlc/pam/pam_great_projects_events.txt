@@ -1,4 +1,4 @@
-﻿# Override do arquivo vanilla events/dlc/pam/pam_great_projects_events.txt (CK3 1.20.0.3), copia inteira que so acrescenta.
+﻿# Override do arquivo vanilla events/dlc/pam/pam_great_projects_events.txt (CK3 1.20.1), copia inteira que so acrescenta.
 # Mudanca marcada com "Imperialis": os eventos de texto das obras de catedral recusam a fe Imperialis, que recebe as copias
 # ci_pam_great_projects_events. Gerado por docs/dev/regen_cathedral_events.py; regerar a cada atualizacao do jogo.
 namespace = pam_great_projects_events

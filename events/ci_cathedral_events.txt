@@ -1,7 +1,7 @@
 ﻿namespace = ci_pam_great_projects_events
 
 # Eventos das obras de catedral em versao do Imperialis (marco 4, fase 4b): copias dos eventos de texto de
-# events/dlc/pam/pam_great_projects_events.txt (CK3 1.20.0.3), com a mesma mecanica e o texto aprovado pelo autor em 10/10/2026
+# events/dlc/pam/pam_great_projects_events.txt (CK3 1.20.1), com a mesma mecanica e o texto aprovado pelo autor em 10/10/2026
 # (localization/english/ci_cathedral_events_l_english.yml). Disparados pelos desvios de
 # common/scripted_effects/zzz_ci_cathedral_event_routing.txt e common/on_action/ci_cathedral_event_on_actions.txt.
 # Trocas no codigo: tema faith, realizacao espiritual ci_imperial_fulfillment, religiao imperialis_religion, a Helaena no lugar

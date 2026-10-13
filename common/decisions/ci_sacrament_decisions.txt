@@ -120,6 +120,7 @@ ci_pam_decision_act_of_devotion = {
 	is_shown = {
 		has_spiritual_fulfillment_type = ci_imperial_fulfillment # Imperialis
 		has_pam_dlc_trigger = yes
+		is_landless_adventurer = no
 	}
 
 	is_valid = {

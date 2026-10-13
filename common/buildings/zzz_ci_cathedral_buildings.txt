@@ -1,4 +1,4 @@
-﻿# Override de great_project_cathedral_01, _02 e _03 (common/buildings/pam_buildings.txt, CK3 1.20.0.3), copias do vanilla. Mudanca
+﻿# Override de great_project_cathedral_01, _02 e _03 (common/buildings/pam_buildings.txt, CK3 1.20.1), copias do vanilla. Mudanca
 # marcada com 'Imperialis' (marco 3, fase 3b.2): so o is_enabled aceita tambem ci_imperial_fulfillment; sem isso a catedral pronta
 # ficaria desligada (sem os modificadores de piedade, opiniao e desenvolvimento) para o titular Imperialis. As constantes @illustration_*
 # sao locais do arquivo vanilla e vao junto. Gerado por docs/dev/regen_cathedral_overrides.py; regerar a cada atualizacao do jogo.

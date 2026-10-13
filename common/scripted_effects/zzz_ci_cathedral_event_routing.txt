@@ -1,5 +1,5 @@
 ﻿# Override dos tres efeitos vanilla que disparam os eventos das obras de catedral (common/scripted_effects/pam_effects.txt,
-# CK3 1.20.0.3), copias do vanilla. Mudanca marcada com "Imperialis" (marco 4, fase 4b): cada trigger_event passa por
+# CK3 1.20.1), copias do vanilla. Mudanca marcada com "Imperialis" (marco 4, fase 4b): cada trigger_event passa por
 # ci_cathedral_route_event_effect, que manda a fe Imperialis para a copia ci_ do evento (events/ci_cathedral_events.txt).
 # Gerado por docs/dev/regen_cathedral_events.py; regerar a cada atualizacao do jogo.
 
@@ -55,7 +55,9 @@ cathedral_great_project_funded_started_event_sender_effect = {
 				limit = {
 					this != scope:owner
 					this != scope:founder
+					NOT = { is_in_list = cathedral_started_event_contributors }
 				}
+				add_to_list = cathedral_started_event_contributors
 				save_scope_as = contributor
 				ci_cathedral_route_event_effect = { EVENT = pam_great_projects_events.0005 } # Imperialis (marco 4, 4b)
 			}
@@ -95,7 +97,9 @@ cathedral_great_project_completed_event_sender_effect = {
 					this != scope:owner
 					this != scope:founder
 					NOT = { this ?= scope:founder_heir }
+					NOT = { is_in_list = cathedral_completed_event_contributors }
 				}
+				add_to_list = cathedral_completed_event_contributors
 				save_scope_as = contributor
 				ci_cathedral_route_event_effect = { EVENT = pam_great_projects_events.0020 } # Imperialis (marco 4, 4b)
 			}
