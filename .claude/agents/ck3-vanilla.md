@@ -1,7 +1,7 @@
 ---
 name: ck3-vanilla
 description: Conferência depois de uma atualização do CK3. Use quando o jogo mudar de versão e for preciso saber o que mudou no vanilla que o Cultus Imperialis copia ou sobrescreve, e o que os geradores refariam.
-tools: Bash, Read, Grep, Glob
+tools: Bash, Read, Grep, Glob, Skill
 model: sonnet
 ---
 
@@ -11,6 +11,7 @@ Ferramentas em `C:\Users\rique\Documents\Workspace\Meus Mods CK3\docs\dev\` (tab
 
 ## Passos
 
+0. Carregue a skill `ck3-modding` e siga o que ela diz sobre atualização do jogo e cópias do vanilla.
 1. Versão instalada: `launcher\launcher-settings.json` na pasta do jogo.
 2. `python vanilla_drift.py` (e `-v` quando precisar ver as linhas do mod): o que o vanilla mudou em cada objeto que o mod copia.
 3. Geradores em modo de ensaio: copie a pasta do mod para uma pasta temporária, rode cada `regen_*.py` com `CK3_MOD_DIR` apontando para a cópia e compare a cópia com o mod (`git diff --no-index`). Assim o mod real não muda. `regen_ministerio_overrides.py` escreve no mod local Ministerio: rode com `--dry`.

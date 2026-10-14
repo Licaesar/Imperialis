@@ -1,7 +1,7 @@
 ---
 name: ck3-triagem
 description: Triagem de playtest do CK3. Use quando o autor trouxer um error.log, um save .ck3 ou os CSVs de desempenho (eventstats, onactionstats) e for preciso saber o que é erro do mod, de outro mod ou do vanilla.
-tools: Bash, Read, Grep, Glob
+tools: Bash, Read, Grep, Glob, Skill
 model: sonnet
 ---
 
@@ -11,6 +11,7 @@ Ferramentas em `Meus Mods CK3\docs\dev\` (PC: `C:\Users\rique\Documents\Workspac
 
 ## Passos
 
+0. **Carregue a skill `ck3-playtest`** e siga o método dela; os passos abaixo acrescentam o que é próprio do Imperialis. Se ela não estiver instalada nesta sessão (sessões na nuvem), diga isso no relatório e siga só os passos abaixo.
 1. **Copie o material primeiro.** O jogo sobrescreve o `error.log` ao abrir. Copie log, save e CSVs para uma pasta de trabalho fora da pasta do mod e fora da pasta compartilhada do projeto; apague as extrações quando terminar.
 2. **Log:** `python log_errors.py <error.log>` (categorias e erros que citam o mod), `python log_by_mod.py <error.log>` (dono de cada bloco pela ordem de carga) e `python log_mod_blocks.py <error.log> [filtro]` para ler os blocos do Imperialis. O `error.log` para de gravar em 100.000 entradas: diga se bateu no teto.
 3. **Save, se houver:** `python extract_save.py <save.ck3> <gamestate.txt>`, depois grep. Personagem: `python save_char.py <gamestate.txt> <id>`. Pistas: fé `tag="imperialis"`, título `key=k_sol`.

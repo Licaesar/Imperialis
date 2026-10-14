@@ -4,7 +4,16 @@ Mod de Crusader Kings III, prefixo `ci_`, alvo 1.20.x com a DLC By God Alone obr
 
 **Leia primeiro:** `Meus Mods CK3\docs\ESTADO - Imperialis.md`, a fonte do estado atual (versão, branch em andamento, checklist ativo, Bíblia vigente). Este arquivo guarda só o que não muda de semana para semana. Material de consulta (`Referencia`, `reports`, `DNA`, bíblias antigas) se lê com grep, por trecho.
 
-Use ck3-modding para script e conteúdo, ck3-gui para interface e ck3-playtest para verificação em jogo.
+## Skills e Tiger em todo trabalho de mod
+
+| Trabalho | Obrigatório |
+|---|---|
+| Script, eventos, decisões, localização, histórico | skill `ck3-modding` |
+| Interface (`gui/`, `.gui`, `gfx/interface/`) | skill `ck3-gui` |
+| Playtest, logs, saves, verificação em jogo | skill `ck3-playtest` |
+| Qualquer mudança no mod, antes do commit | Tiger com patch 1.20 + `tiger_diff.py` contra o relatório-base do `ESTADO`, e `check_imperialis_religion.py` |
+
+As três skills estão instaladas no PC do autor. Numa sessão em que uma delas ou a pasta do jogo não estiver disponível (sessões na nuvem), diga isso ao autor e escreva no PR "Tiger e verificador pendentes no PC"; o resultado só vale como validado depois dessa rodada.
 
 ## Agentes e skills do repositório
 
