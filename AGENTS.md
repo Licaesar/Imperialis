@@ -58,7 +58,7 @@ Skill `ck3-publicacao` (`.claude/skills/`): fechar uma versão e preparar o PR p
 | Logs, saves e dumps | `C:\Users\rique\Documents\Paradox Interactive\Crusader Kings III\logs` (e `save games`) |
 | Workshop (somente leitura) | `H:\SteamLibrary\steamapps\workshop\content\1158310` |
 | Tiger com patch 1.20 | `C:\Tools\tiger-src\target\release\ck3-tiger.exe` |
-| Docs, bíblias, ferramentas | `C:\Users\rique\Documents\Workspace\Meus Mods CK3` (scripts em `docs\dev`); nas sessões na nuvem, `/mnt/project-files/Meus Mods CK3` |
+| Docs, bíblias, ferramentas | `C:\Users\rique\Documents\Workspace\Meus Mods CK3` (scripts em `docs\dev`); repositório privado `Licaesar/Meus-Mods-CK3`, clonado também nas sessões na nuvem |
 
 ## Convenções
 

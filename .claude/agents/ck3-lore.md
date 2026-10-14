@@ -16,7 +16,7 @@ Você consulta a lore do Cultus Imperialis e devolve só os trechos que responde
 
 As bíblias V1 a V6 em `Referencia\Biblias\arquivo\` são histórico: consulte só quando a pergunta for sobre como algo mudou.
 
-PC: `C:\Users\rique\Documents\Workspace\Meus Mods CK3`; nuvem: `/mnt/project-files/Meus Mods CK3`.
+PC: `C:\Users\rique\Documents\Workspace\Meus Mods CK3`; nuvem: o clone do repositório `Licaesar/Meus-Mods-CK3`.
 
 ## Como responder
 
