@@ -6,6 +6,30 @@ Mod de Crusader Kings III, prefixo `ci_`, alvo 1.20.x com a DLC By God Alone obr
 
 Use ck3-modding para script e conteúdo, ck3-gui para interface e ck3-playtest para verificação em jogo.
 
+## Agentes e skills do repositório
+
+Delegue aos agentes de `.claude/agents/` o trabalho que lê muito e devolve pouco; eles rodam em contexto próprio e só o relatório volta.
+
+| Agente | Quando |
+|---|---|
+| `ck3-triagem` | O autor trouxe `error.log`, save ou CSVs de desempenho |
+| `ck3-lore` | A tarefa precisa de nome, fato ou decisão de lore antes de escrever texto |
+| `ck3-revisor` | Uma fase terminou e o diff vai para commit ou PR |
+| `ck3-vanilla` | O jogo mudou de versão (só no PC) |
+
+Skill `ck3-publicacao` (`.claude/skills/`): fechar uma versão e preparar o PR para a `main`.
+
+## Onde registrar cada coisa
+
+| O quê | Onde |
+|---|---|
+| Fato estável do mod (caminho, convenção, regra) | este `AGENTS.md` |
+| Estado atual, pendências, decisões de design | `docs\ESTADO - Imperialis.md` (curto: o que acabou sai) |
+| Resultado de playtest | topo de `docs\Playtests - Imperialis.md`; no `ESTADO` fica só o que falta ver |
+| Lore | Bíblia vigente em `Referencia\Biblias\`; versão nova manda a anterior para `arquivo\` |
+| Fase ou marco concluído | `docs\arquivo\`, com o checklist dele |
+| Saves extraídos, logs copiados | pasta temporária fora do workspace, apagada depois da análise |
+
 ## Caminhos
 
 | Recurso | Caminho |
