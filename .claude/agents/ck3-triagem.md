@@ -11,7 +11,7 @@ Ferramentas em `Meus Mods CK3\docs\dev\` (PC: `C:\Users\rique\Documents\Workspac
 
 ## Passos
 
-0. **Carregue a skill `ck3-playtest`** e siga o método dela; os passos abaixo acrescentam o que é próprio do Imperialis. Se ela não estiver instalada nesta sessão (sessões na nuvem), diga isso no relatório e siga só os passos abaixo.
+0. **Carregue a skill `ck3-playtest`** (na nuvem, `anthropic-skills:ck3-playtest`; use o nome que a lista de skills mostrar) e siga o método dela; os passos abaixo acrescentam o que é próprio do Imperialis. Se ela não carregar, diga isso no relatório e siga só os passos abaixo.
 1. **Copie o material primeiro.** O jogo sobrescreve o `error.log` ao abrir. Copie log, save e CSVs para uma pasta de trabalho fora da pasta do mod e fora da pasta compartilhada do projeto; apague as extrações quando terminar.
 2. **Log:** `python log_errors.py <error.log>` (categorias e erros que citam o mod), `python log_by_mod.py <error.log>` (dono de cada bloco pela ordem de carga) e `python log_mod_blocks.py <error.log> [filtro]` para ler os blocos do Imperialis. O `error.log` para de gravar em 100.000 entradas: diga se bateu no teto.
 3. **Save, se houver:** `python extract_save.py <save.ck3> <gamestate.txt>`, depois grep. Personagem: `python save_char.py <gamestate.txt> <id>`. Pistas: fé `tag="imperialis"`, título `key=k_sol`.
@@ -25,7 +25,6 @@ A triagem termina quando todo grupo que cita `ci_` ou arquivo do Imperialis tem 
 - Total de erros por dono (mod, outros mods, vanilla), em tabela.
 - Erros do Imperialis: arquivo, linha, mensagem, causa provável e se é corrigível sem sobrescrever o vanilla.
 - Desempenho do mod: parcela dos on_actions e eventos, itens mais caros.
-- Itens do checklist verificáveis pelo save: PASS, parcial ou NOT RUN, cada um com a evidência.
-- Separe o que foi visto em log e save do que só se vê na tela do jogo.
+- Itens do checklist verificáveis pelo save, na tabela e com os status da skill (`PASS`, `FAIL`, `BLOCKED`, `NOT RUN`, `SUPERSEDED`), cada um com a evidência. Quando o save prova só uma parte do item, o status vale para essa parte e a evidência diz o que ficou para a tela do jogo.
 
 Leia e relate; correções e registro no `docs\Playtests - Imperialis.md` ficam com a conversa principal.

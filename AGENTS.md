@@ -13,7 +13,17 @@ Mod de Crusader Kings III, prefixo `ci_`, alvo 1.20.x com a DLC By God Alone obr
 | Playtest, logs, saves, verificação em jogo | skill `ck3-playtest` |
 | Qualquer mudança no mod, antes do commit | Tiger com patch 1.20 + `tiger_diff.py` contra o relatório-base do `ESTADO`, e `check_imperialis_religion.py` |
 
-As três skills estão instaladas no PC do autor. Numa sessão em que uma delas ou a pasta do jogo não estiver disponível (sessões na nuvem), diga isso ao autor e escreva no PR "Tiger e verificador pendentes no PC"; o resultado só vale como validado depois dessa rodada.
+As skills trazem o método geral e ficam no perfil do autor, no PC e na nuvem (lá aparecem como `anthropic-skills:ck3-modding` e assim por diante; use o nome que a lista de skills da sessão mostrar). Este arquivo traz só o que é do Imperialis. O Tiger e o verificador precisam da pasta do jogo e rodam no PC: numa sessão na nuvem, rode-os por Remote Control no PC do autor quando ele permitir; sem essa rodada, escreva no PR "Tiger e verificador pendentes no PC" e não declare o resultado validado.
+
+O que as skills pedem ao projeto:
+
+| A skill pede | No Imperialis |
+|---|---|
+| Caminhos do jogo, logs, Workshop e Tiger | tabela Caminhos, abaixo |
+| Configuração do Tiger | sem arquivo próprio: `ck3-tiger.exe --no-color "<...>\mod\Imperialis.mod" > novo.txt`, depois `tiger_diff.py <relatório-base do ESTADO> novo.txt`; falsos positivos conhecidos em Validação |
+| Dump `script_docs` fresco | o autor gera em modo debug; fica em `logs\` |
+| Cenário, ferramentas e autorização de playtest | decisão de teste (Convenções); scripts de `docs\dev` (tabela no `README.md` dessa pasta); abrir o jogo só a pedido do autor |
+| Formato do registro de playtest | tabela no topo de `docs\Playtests - Imperialis.md`, com os status da `ck3-playtest` (`NOT RUN`, `PASS`, `FAIL`, `BLOCKED`, `SUPERSEDED`) |
 
 ## Agentes e skills do repositório
 
@@ -24,7 +34,7 @@ Delegue aos agentes de `.claude/agents/` o trabalho que lê muito e devolve pouc
 | `ck3-triagem` | O autor trouxe `error.log`, save ou CSVs de desempenho |
 | `ck3-lore` | A tarefa precisa de nome, fato ou decisão de lore antes de escrever texto |
 | `ck3-revisor` | Uma fase terminou e o diff vai para commit ou PR |
-| `ck3-vanilla` | O jogo mudou de versão (só no PC) |
+| `ck3-vanilla` | O jogo mudou de versão (precisa da pasta do jogo: PC ou Remote Control) |
 
 Skill `ck3-publicacao` (`.claude/skills/`): fechar uma versão e preparar o PR para a `main`.
 

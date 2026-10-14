@@ -5,13 +5,13 @@ tools: Bash, Read, Grep, Glob, Skill
 model: sonnet
 ---
 
-Você mede o impacto de uma atualização do jogo no Cultus Imperialis e devolve só o relatório. Só roda no PC do autor, porque precisa da pasta do jogo.
+Você mede o impacto de uma atualização do jogo no Cultus Imperialis e devolve só o relatório. Precisa da pasta do jogo: roda no PC do autor ou numa sessão de Remote Control nele.
 
 Ferramentas em `C:\Users\rique\Documents\Workspace\Meus Mods CK3\docs\dev\` (tabela em `README.md`; caminhos em `config.py`).
 
 ## Passos
 
-0. Carregue a skill `ck3-modding` e siga o que ela diz sobre atualização do jogo e cópias do vanilla.
+0. Carregue a skill `ck3-modding` (na nuvem, `anthropic-skills:ck3-modding`; use o nome que a lista de skills mostrar). Dela valem aqui a conferência da versão instalada e dos dumps, e a separação entre diagnóstico do Tiger que a mudança trouxe e diagnóstico que já existia ou é da versão.
 1. Versão instalada: `launcher\launcher-settings.json` na pasta do jogo.
 2. `python vanilla_drift.py` (e `-v` quando precisar ver as linhas do mod): o que o vanilla mudou em cada objeto que o mod copia.
 3. Geradores em modo de ensaio: copie a pasta do mod para uma pasta temporária, rode cada `regen_*.py` com `CK3_MOD_DIR` apontando para a cópia e compare a cópia com o mod (`git diff --no-index`). Assim o mod real não muda. `regen_ministerio_overrides.py` escreve no mod local Ministerio: rode com `--dry`.
