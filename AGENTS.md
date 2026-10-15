@@ -25,6 +25,20 @@ O que as skills pedem ao projeto:
 | Cenário, ferramentas e autorização de playtest | decisão de teste (Convenções); scripts de `docs\dev` (tabela no `README.md` dessa pasta); abrir o jogo só a pedido do autor |
 | Formato do registro de playtest | tabela no topo de `docs\Playtests - Imperialis.md`, com os status da `ck3-playtest` (`NOT RUN`, `PASS`, `FAIL`, `BLOCKED`, `SUPERSEDED`) |
 
+## Onde roda cada tarefa
+
+Decisão do autor (15/10/2026): **PC primeiro**.
+
+| Onde | Para quê |
+|---|---|
+| Thread do projeto rodando no PC (Remote Control) | Padrão para tarefa de mod: tudo que precisa do jogo, do Tiger, do verificador, de logs, saves ou dumps |
+| Thread do projeto na nuvem | Lore, revisão de texto, documentação, planejamento, ou script com o PC desligado. PR feito na nuvem leva "Tiger e verificador pendentes no PC" até uma rodada no PC |
+| Claude Code direto no PC | Playtest ao vivo, com o autor jogando |
+
+A memória de cada mod fica no git (este arquivo e o `ESTADO` no `Meus-Mods-CK3`); PC e nuvem leem os mesmos arquivos depois de `git pull`.
+
+**Validação automática:** o hook de `.claude/settings.json` roda `.claude/hooks/validar_commit.py` antes de cada `git commit` do Claude que mexa em arquivo do mod. Sempre roda o `check_mod.py`; no PC, também o verificador e o Tiger com `tiger_diff.py` (relatório-base em `CK3_TIGER_BASE`, padrão `reports\tiger_imperialis_patch120_2026-10-13.txt`; troque a variável ou o padrão quando o `ESTADO` indicar outro). Falha bloqueia o commit. Na nuvem, sem a pasta do jogo, o hook só avisa que a validação ficou pendente.
+
 ## Agentes e skills do repositório
 
 Delegue aos agentes de `.claude/agents/` o trabalho que lê muito e devolve pouco; eles rodam em contexto próprio e só o relatório volta.
