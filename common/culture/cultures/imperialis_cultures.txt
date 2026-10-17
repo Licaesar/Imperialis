@@ -1,5 +1,5 @@
 ﻿imperialis_culture = {
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx } # como saxon: sequencia vanilla, sem aviso no log (Q7 do autor, 12/10/2026)
+	clothing_gfx = { ci_imperialis_clothing_gfx byzantine_clothing_gfx } # roupas bizantinas; cabelo e barba ocidentais vêm de gfx/portraits/portrait_modifiers/121_* (autor, 17/10/2026)
 	coa_gfx = { english_coa_gfx western_coa_gfx } # como english (marco 5, 5a)
 	building_gfx = { mediterranean_building_gfx }
 	color = trojan
@@ -28,7 +28,7 @@
 }
 
 lipherianii_culture = {
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx } # como saxon: sequencia vanilla, sem aviso no log (Q7 do autor, 12/10/2026)
+	clothing_gfx = { ci_imperialis_clothing_gfx byzantine_clothing_gfx } # roupas bizantinas; cabelo e barba ocidentais vêm de gfx/portraits/portrait_modifiers/121_* (autor, 17/10/2026)
 	coa_gfx = { english_coa_gfx western_coa_gfx } # como english (marco 5, 5a)
 	building_gfx = { mediterranean_building_gfx }
 	color = bosnian
@@ -51,7 +51,6 @@ lipherianii_culture = {
 	traditions = {
 		custodia_imperialis
 		mysterium_divinitas
-		connubium_sanguinis
 		tradition_only_the_strong
 		tradition_by_the_sword
 	}

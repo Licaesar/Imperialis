@@ -1,3 +1,18 @@
 ﻿portrait_religious_imperialis_trigger = {
 	religion = religion:imperialis_religion
 }
+
+# Cultura com ci_imperialis_clothing_gfx: cabelo e barba ocidentais (gfx/portraits/portrait_modifiers/121_*), com roupas bizantinas.
+# Mesma estrutura dos portrait_*_clothing_trigger do vanilla, que respeitam o estilo cultural adotado (adopted_cultural_style).
+ci_portrait_imperialis_look_trigger = {
+	portrait_shared_clothing_contents_trigger = {
+		CULTURE_SCOPE = scope:culture
+		CULTURE_FLAG = ci_imperialis
+	}
+}
+
+# Como portrait_sp2_western_clothing_trigger: exige a DLC Elegance of the Empire
+ci_portrait_imperialis_sp2_look_trigger = {
+	has_dlc_feature = elegance_of_the_empire
+	ci_portrait_imperialis_look_trigger = yes
+}

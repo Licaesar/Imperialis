@@ -1,0 +1,444 @@
+﻿@baby_hair_age = 5
+@african_clothing_no_hair_chance = 6.5
+
+# Imperialis e Lipherianii (decisao do autor, 17/10/2026): roupas bizantinas, cabelo e barba ocidentais, como as culturas europeias com
+# clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }. Estes modificadores copiam os de western (01_hairstyles_base.txt) com o
+# gatilho da cultura trocado por ci_portrait_imperialis_look_trigger (ci_imperialis_clothing_gfx) e CULTURE_INPUT western -> byzantine
+# (as roupas daqui sao bizantinas). baby_hair e no_hair vao junto porque este grupo, com priority 1, substitui o resultado do grupo
+# hairstyles do vanilla. Roda antes do clero (hair_religious, 3) e do cabelo situacional (10): tonsura e cabeca raspada continuam.
+# Gerado por docs\dev\gen_western_groups.py do Workspace a partir do vanilla instalado.
+ci_hairstyles_imperialis = {
+
+	usage = game
+	selection_behavior = weighted_random
+	priority = 1
+
+	ci_baby_hair = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = western_baby_hairstyles
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		# outfit_tags = { no_clothes }
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				scope:age < @baby_hair_age
+				NOT = { portrait_african_clothing_trigger = yes } # Should be replaced with a has_gene trigger when we get that
+			}
+		}
+	}
+
+	ci_no_hair = { # This is to give a random chance of a clean shaven look
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = no_hairstyles
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = -100
+				scope:age < @baby_hair_age
+			}
+			modifier = {
+				add = -100
+				exists = this
+				OR = {
+					is_from_ruler_designer = yes
+					has_character_flag = has_scripted_appearance
+				}
+			}
+			# Different likelyhood of a clean shaven look in different cultures
+			modifier = {
+				add = @african_clothing_no_hair_chance
+				portrait_african_clothing_trigger = yes
+			}
+			modifier = {
+				add = 20
+				is_male = yes
+				OR = {
+					portrait_malay_clothing_trigger = yes
+					portrait_southeast_asian_clothing_trigger = yes
+				}
+			}
+			modifier = {
+				add = 2000
+				exists = this
+				has_nickname = nick_the_actually_bald
+			}
+			modifier = {
+				add = 2000
+				exists = this
+				has_character_modifier = hajj_halq_modifier
+			}
+			modifier = {
+				add = 2000
+				exists = this
+				has_character_modifier = shaven_bald_modifier
+			}
+			modifier = {
+				add = 2000
+				exists = this
+				has_character_flag = bald_head
+			}
+		}
+	}
+
+	ci_western_straight = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = western_hairstyles_straight
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 55
+				OR = {
+					NOT = { exists = this }
+					has_gene = {
+						category = gene_hair_type
+						template = hair_straight
+					}
+					has_gene = {
+						category = gene_hair_type
+						template = hair_straight_thin_beard
+					}
+				}
+				ci_portrait_imperialis_look_trigger = yes
+			}
+		}
+	}
+
+	ci_western_wavy = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = western_hairstyles_wavy
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 55
+				exists = this
+				has_gene = {
+					category = gene_hair_type
+					template = hair_wavy
+				}
+				ci_portrait_imperialis_look_trigger = yes
+			}
+		}
+	}
+
+	ci_western_curly = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = western_hairstyles_curly
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 55
+				exists = this
+				has_gene = {
+					category = gene_hair_type
+					template = hair_curly
+				}
+				ci_portrait_imperialis_look_trigger = yes
+			}
+		}
+	}
+
+	ci_western_afro = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = western_hairstyles_afro
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 55
+				exists = this
+				has_gene = {
+					category = gene_hair_type
+					template = hair_afro
+				}
+				ci_portrait_imperialis_look_trigger = yes
+			}
+		}
+	}
+
+	ci_ep2_hairstyles_western_nobility = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = ep2_hairstyles_western
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = { # Men
+				add = 55
+				is_female = no
+				OR = {
+					NOT = { exists = this }
+					has_gene = {
+						category = gene_hair_type
+						template = hair_straight
+					}
+					has_gene = {
+						category = gene_hair_type
+						template = hair_straight_thin_beard
+					}
+					has_gene = {
+						category = gene_hair_type
+						template = hair_wavy
+					}
+				}
+				ci_portrait_imperialis_look_trigger = yes
+				portrait_era1_trigger = yes
+				NOT = {
+					portrait_commoner_trigger = {
+						CULTURE_INPUT = byzantine
+					}
+				}
+			}
+			modifier = { # Women
+				add = 105
+				is_female = yes
+				OR = {
+					NOT = { exists = this }
+					has_gene = {
+						category = gene_hair_type
+						template = hair_straight
+					}
+					has_gene = {
+						category = gene_hair_type
+						template = hair_straight_thin_beard
+					}
+					has_gene = {
+						category = gene_hair_type
+						template = hair_wavy
+					}
+				}
+				ci_portrait_imperialis_look_trigger = yes
+				portrait_era1_trigger = yes
+				OR = {
+					portrait_high_nobles_trigger = {
+						CULTURE_INPUT = byzantine
+					}
+					portrait_royalty_trigger = {
+						CULTURE_INPUT = byzantine
+					}
+					portrait_imperial_trigger = {
+						CULTURE_INPUT = byzantine
+					}
+				}
+			}
+		}
+	}
+
+	ci_ep2_hairstyles_western_common = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = ep2_hairstyles_western_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 10
+				is_female = no
+				OR = {
+					NOT = { exists = this }
+					has_gene = {
+						category = gene_hair_type
+						template = hair_straight
+					}
+					has_gene = {
+						category = gene_hair_type
+						template = hair_straight_thin_beard
+					}
+					has_gene = {
+						category = gene_hair_type
+						template = hair_wavy
+					}
+				}
+				ci_portrait_imperialis_look_trigger = yes
+				has_ep2_dlc_trigger = yes
+			}
+		}
+	}
+
+	ci_sp3_hairstyles_western = { # Louis IX hairstyle
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = sp3_hairstyles
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 10
+				is_female = no
+				OR = {
+					NOT = { exists = this }
+					has_gene = {
+						category = gene_hair_type
+						template = hair_straight
+					}
+					has_gene = {
+						category = gene_hair_type
+						template = hair_straight_thin_beard
+					}
+					has_gene = {
+						category = gene_hair_type
+						template = hair_wavy
+					}
+				}
+				ci_portrait_imperialis_look_trigger = yes
+				has_dlc_feature = couture_of_the_capets
+			}
+			modifier = {
+				factor = 0
+				has_ep2_dlc_trigger = yes
+				NOR = {
+					portrait_era3_trigger = yes
+					portrait_era4_trigger = yes
+				}
+			}
+		}
+	}
+
+	ci_sp4_hairstyles_western_male = { # High/Late Medieval Style for men
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = sp4_western_hairstyles
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}   
+		weight = {
+			base = 0
+			modifier = {
+				add = 20
+				is_male = yes 
+				OR = {
+					has_gene = {
+						category = gene_hair_type
+						template = hair_wavy
+					}
+					has_gene = {
+						category = gene_hair_type
+						template = hair_curly
+					}
+				}
+				ci_portrait_imperialis_look_trigger = yes
+				has_sp4_dlc_trigger = yes
+			}
+			modifier = {
+				factor = 0
+				NOR = {
+					portrait_era3_trigger = yes   
+					portrait_era4_trigger = yes 
+				}			 
+			}
+		}
+	}
+
+	ci_sp4_hairstyles_western_female = { 
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = sp4_western_hairstyles
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}   
+		weight = {
+			base = 0
+			modifier = {
+				add = 20
+				is_female = yes 
+				OR = {
+					has_gene = {
+						category = gene_hair_type
+						template = hair_wavy
+					}
+					has_gene = {
+						category = gene_hair_type
+						template = hair_curly
+					}
+				}
+				ci_portrait_imperialis_look_trigger = yes
+				has_sp4_dlc_trigger = yes
+			}
+		}
+	}
+
+	ci_sp5_hairstyles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = sp5_hairstyles
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = { # Men
+				add = 15
+				is_female = no
+				OR = {
+					NOT = { exists = this }
+
+					has_gene = {
+						category = gene_hair_type
+						template = hair_curly
+					}
+					has_gene = {
+						category = gene_hair_type
+						template = hair_wavy
+					}
+				}
+				OR = {
+					ci_portrait_imperialis_look_trigger = yes
+					portrait_byzantine_clothing_trigger = yes
+				}
+				has_sp5_dlc_triggers = yes
+			}
+		}
+	}
+}
