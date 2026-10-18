@@ -1,0 +1,38 @@
+﻿# Visuais dos artefatos lendarios do Kensoriel (ver common/scripted_effects/ci_legendary_artifact_effects.txt).
+# Icones em gfx/interface/icons/artifact (copiados de Workspace\Modelos de artefatos); modelos 3D do vanilla.
+
+ci_lipheria = {
+	icon = "ci_sword_lipheria.dds"
+	asset = ep1_western_sword_01_a_portrait_entity
+	default_type = sword
+}
+
+ci_sanguinolius = {
+	icon = "ci_sword_sanguinolius.dds"
+	asset = ep1_western_sword_01_a_portrait_entity
+	default_type = sword
+}
+
+ci_ring_vitae = {
+	icon = "ci_ring_vitae.dds"
+	asset = ep1_generic_jewelry_01_a_entity
+	default_type = ring
+}
+
+ci_ring_ignis = {
+	icon = "ci_ring_ignis.dds"
+	asset = ep1_generic_jewelry_01_a_entity
+	default_type = ring
+}
+
+ci_ring_caeli = {
+	icon = "ci_ring_caeli.dds"
+	asset = ep1_generic_jewelry_01_a_entity
+	default_type = ring
+}
+
+ci_ring_terrae = {
+	icon = "ci_ring_terrae.dds"
+	asset = ep1_generic_jewelry_01_a_entity
+	default_type = ring
+}

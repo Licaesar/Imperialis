@@ -1,0 +1,14 @@
+﻿# Artefatos lendarios do Kensoriel: duas espadas e quatro aneis, entregues no inventario dele em 867, junto dos relicarios dos fundadores.
+# Reaproveita ci_create_founder_relic_effect (lendario, qualidade e riqueza 100, sem desgaste, reforja nem reparo). Nome e descricao em
+# ci_relic_<KEY>_name e _desc; modificador em ci_relic_<KEY>_modifier (common/modifiers/ci_legendary_artifact_modifiers.txt).
+
+ci_create_legendary_artifacts_effect = {
+	character:ci_kensoriel_liphe ?= {
+		ci_create_founder_relic_effect = { KEY = lipheria TYPE = sword VISUALS = ci_lipheria }
+		ci_create_founder_relic_effect = { KEY = sanguinolius TYPE = sword VISUALS = ci_sanguinolius }
+		ci_create_founder_relic_effect = { KEY = anulus_vitae TYPE = ring VISUALS = ci_ring_vitae }
+		ci_create_founder_relic_effect = { KEY = anulus_ignis TYPE = ring VISUALS = ci_ring_ignis }
+		ci_create_founder_relic_effect = { KEY = anulus_caeli TYPE = ring VISUALS = ci_ring_caeli }
+		ci_create_founder_relic_effect = { KEY = anulus_terrae TYPE = ring VISUALS = ci_ring_terrae }
+	}
+}

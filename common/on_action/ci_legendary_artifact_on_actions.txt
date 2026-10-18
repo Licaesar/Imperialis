@@ -1,0 +1,17 @@
+﻿##############################################
+# CULTUS IMPERIALIS - ARTEFATOS LENDARIOS DO KENSORIEL
+# Uma vez por campanha (global ci_legendary_artifacts_created), depois do lobby, como os relicarios dos fundadores.
+##############################################
+on_game_start_after_lobby = {
+	on_actions = { ci_legendary_artifacts_on_game_start }
+}
+
+ci_legendary_artifacts_on_game_start = {
+	trigger = {
+		NOT = { has_global_variable = ci_legendary_artifacts_created }
+	}
+	effect = {
+		set_global_variable = ci_legendary_artifacts_created
+		ci_create_legendary_artifacts_effect = yes
+	}
+}
