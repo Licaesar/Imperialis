@@ -766,7 +766,7 @@ ci_alia_atreides = {
 	trait = cautious_leader
 	trait = organizer
 
-	847.1.1 = {
+	849.1.1 = {
 		birth = yes
 		effect = { add_character_flag = do_not_generate_starting_family }
 	}
